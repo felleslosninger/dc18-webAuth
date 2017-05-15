@@ -1,0 +1,132 @@
+{
+  "grunt": {
+    "config": {
+      "path": "src/grunt/config/"
+    },
+    "tasks": {
+      "path": "src/grunt/tasks/"
+    }
+  },
+  "src": {
+    "path": "src/",
+    "templates": {
+      "path": "src/templates/",
+      "pages": "src/templates/pages/",
+      "articles": "src/templates/articles/",
+      "layout": "src/templates/layout/",
+      "sections": "src/templates/sections/"
+    },
+    "vendor": {
+      "path": "src/vendor/"
+    },
+    "sass": {
+      "path": "src/scss/",
+      "sassfile": "style.dev.scss",
+      "buildsassfile": "style.build.scss",
+      "icomoonfile": "src/scss/_icomoon.scss"
+    },
+    "css": {
+      "path": "src/css/"
+    },
+    "fonts": {
+      "path": "src/fonts/",
+      "icomoonpath": "src/fonts/icomoon/"
+    },
+    "js": {
+      "path": "src/js/"
+    },
+    "img": {
+      "path": "src/images/",
+      "relativepath": "../../images/"
+    },
+    "svg": {
+      "compressed": "src/images/svg/compressed/",
+      "output": "src/images/svg/output/",
+      "raw": "src/images/svg/raw/",
+      "svgfile": "_svg.scss"
+    }
+  },
+  "dev": {
+    "path": "dev/",
+    "html": {
+      "path": "dev/html",
+      "pages": {
+        "path": "dev/html/pages/"
+      }
+    },
+    "css": {
+      "path": "dev/css/",
+      "cssfile": "style.dev.css",
+      "buildcssfile": "style.build.css"
+    },
+    "img": {
+      "path": "dev/images/",
+      "relativepath": "../../images/"
+    },
+    "js": {
+      "path": "dev/js/",
+      "vendorfile": "vendor.js",
+      "scriptfile": "script.js"
+    },
+    "vendor": {
+      "path": "dev/js/vendor/"
+    },
+    "fonts": {
+      "path": "dev/fonts/"
+    },
+    "ftp": {
+      "auth": {
+        "host": "halogen.no",
+        "port": 21,
+        "authKey": "grunt"
+      },
+      "src": "dev/",
+      "dest": "/",
+      "exclusions": [
+        "dev/**/.DS_Store",
+        "dev/**/Thumbs.db",
+        "dev/tmp"
+      ]
+    },
+    "api_key": {
+      "google_maps": "AIzaSyCsrcZ5pSV2vtyT-93qwo712nXGV20GOj0",
+      "re_captcha": "6LeVihQTAAAAAEIiCJodHdcSnpVahEiI0alIDEpd"
+    }
+  },
+  "build": {
+    "path": "build/",
+    "css": {
+      "path": "build/css/",
+      "cssfile": "style.build.css",
+      "cssfileminified": "style.min.css"
+    },
+    "img": {
+      "path": "build/images/",
+      "relativepath": "~/images/"
+    },
+    "js": {
+      "path": "build/js/",
+      "vendorfile": "vendor.build.js",
+      "vendorfileminified": "vendor.min.js",
+      "scriptfile": "script.build.js",
+      "scriptfileminified": "script.min.js"
+    },
+    "fonts": {
+      "path": "build/fonts/"
+    },
+    "html": {
+      "path": "build/html",
+      "pages": {
+        "path": "build/html/pages"
+      },
+      "sections": {
+        "path": "build/html/sections"
+      }
+    },
+    "api_key": {
+      "google_maps": "AIzaSyCsrcZ5pSV2vtyT-93qwo712nXGV20GOj0",
+      "re_captcha": "6LeVihQTAAAAAEIiCJodHdcSnpVahEiI0alIDEpd"
+    }
+  },
+  "testDomain": "http://dev.halogen.no/clients/hydro.com/"
+}
