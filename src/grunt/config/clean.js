@@ -5,13 +5,12 @@ module.exports = {
 	, dev_img 			: [config.dev.img.path]
 	, dev_js 			: [config.dev.js.path]
 	, dev_html 			: [config.dev.html.path]
-	, dev_svg 			: [config.src.svg.compressed, config.src.svg.output, config.src.css + config.src.svg.svgfile]
-
+	
 	, build_sass 		: [config.build.css.path]
 	, build_fonts 		: [config.build.fonts.path]
 	, build_img 		: [config.build.img.path]
 	, build_js 			: [config.build.js.path]
 	, build_html 		: [config.build.html.path]
 
-	
+
 };

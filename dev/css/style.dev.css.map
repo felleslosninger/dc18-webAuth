@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;EAEE;AAaF;;EAEE;ACjBF;;;;;;;EAOE;AAEF,OAAQ;EACN,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,OAAO;EACf,KAAK,EDkBe,OAAM;ECjB1B,gBAAgB,EDUH,OAAU;;ACPzB,eAAgB;EACd,SAAS,EAAE,KAAK",
+"sources": ["../../src/scss/_colors.scss","../../src/scss/sections/_header.scss"],
+"names": [],
+"file": "style.dev.css"
+}

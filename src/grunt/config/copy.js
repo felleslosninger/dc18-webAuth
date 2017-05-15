@@ -1,17 +1,6 @@
 module.exports = {
 
-	src_svgcss: {
-		files: [{
-			expand: true,
-			cwd: config.src.svg.output,
-			src: [
-				config.src.svg.svgfile
-			],
-			dest: config.src.sass.path
-		}]
-	}
-
-	,
+	
 	dev_css: {
 		files: [
 			// CSS

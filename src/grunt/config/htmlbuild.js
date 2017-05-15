@@ -11,11 +11,6 @@ module.exports = function(grunt) {
 		pages[filename.replace('.html', '')] = abspath;
 	});
 
-	// Check every component, build mapping object
-	grunt.file.recurse(config.src.templates.articles, function(abspath, rootdir, subdir, filename) {
-		articles[filename.replace('.html', '')] = abspath;
-	});
-
 	// Check every layout, build mapping object
 	grunt.file.recurse(config.src.templates.layout, function(abspath, rootdir, subdir, filename) {
 		layouts[filename.replace('.html', '')] = abspath;
@@ -45,7 +40,6 @@ module.exports = function(grunt) {
 				},
 				sections: {
 					page: pages,
-					article: articles,
 					layout: layouts,
 					section: sections
 				}
@@ -58,9 +52,7 @@ module.exports = function(grunt) {
 				},
 				data: {
 					mode: 'DEV',
-					imgpath: config.dev.img.relativepath,
-					google_maps: config.dev.api_key.google_maps,
-					re_captcha: config.dev.api_key.re_captcha
+					imgpath: config.dev.img.relativepath
 				}
 			}
 		},
@@ -80,7 +72,6 @@ module.exports = function(grunt) {
 				},
 				sections: {
 					pages: pages,
-					article: articles,
 					layout: layouts,
 					section: sections
 				}
@@ -92,9 +83,7 @@ module.exports = function(grunt) {
 				},
 				data: {
 					mode: 'BUILD',
-					imgpath: config.build.img.relativepath,
-					google_maps: config.build.api_key.google_maps,
-					re_captcha: config.build.api_key.re_captcha
+					imgpath: config.build.img.relativepath
 				}
 			}
 		}

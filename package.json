@@ -1,7 +1,7 @@
 {
-  "name": "hydro.com",
+  "name": "idporten",
   "version": "2.0.0",
-  "description": "Hydro.com responsive version",
+  "description": "Redesign and re-implementation of front-end for idporten",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": ""
   },
-  "author": "Aleksy Goroszko",
+  "author": "Halogen AS",
   "license": "BSD-2-Clause",
   "bugs": {
     "url": ""

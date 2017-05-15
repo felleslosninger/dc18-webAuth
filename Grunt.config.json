@@ -12,7 +12,6 @@
     "templates": {
       "path": "src/templates/",
       "pages": "src/templates/pages/",
-      "articles": "src/templates/articles/",
       "layout": "src/templates/layout/",
       "sections": "src/templates/sections/"
     },
@@ -22,15 +21,13 @@
     "sass": {
       "path": "src/scss/",
       "sassfile": "style.dev.scss",
-      "buildsassfile": "style.build.scss",
-      "icomoonfile": "src/scss/_icomoon.scss"
+      "buildsassfile": "style.build.scss"
     },
     "css": {
       "path": "src/css/"
     },
     "fonts": {
-      "path": "src/fonts/",
-      "icomoonpath": "src/fonts/icomoon/"
+      "path": "src/fonts/"
     },
     "js": {
       "path": "src/js/"
@@ -38,12 +35,6 @@
     "img": {
       "path": "src/images/",
       "relativepath": "../../images/"
-    },
-    "svg": {
-      "compressed": "src/images/svg/compressed/",
-      "output": "src/images/svg/output/",
-      "raw": "src/images/svg/raw/",
-      "svgfile": "_svg.scss"
     }
   },
   "dev": {
@@ -87,10 +78,6 @@
         "dev/**/Thumbs.db",
         "dev/tmp"
       ]
-    },
-    "api_key": {
-      "google_maps": "AIzaSyCsrcZ5pSV2vtyT-93qwo712nXGV20GOj0",
-      "re_captcha": "6LeVihQTAAAAAEIiCJodHdcSnpVahEiI0alIDEpd"
     }
   },
   "build": {
@@ -122,11 +109,7 @@
       "sections": {
         "path": "build/html/sections"
       }
-    },
-    "api_key": {
-      "google_maps": "AIzaSyCsrcZ5pSV2vtyT-93qwo712nXGV20GOj0",
-      "re_captcha": "6LeVihQTAAAAAEIiCJodHdcSnpVahEiI0alIDEpd"
     }
   },
-  "testDomain": "http://dev.halogen.no/clients/hydro.com/"
+  "testDomain": "http://dev.halogen.no/clients/difi/idporten_redesign/"
 }

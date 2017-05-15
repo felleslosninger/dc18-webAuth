@@ -1,0 +1,25 @@
+/*
+* Color definitions
+*/
+/*
+* Applied colors, prefixed by ca_
+*/
+/*
+* Styles for pagre header
+*
+* ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
+* For more information: http://ecss.io
+*
+* Namespace: h (header)
+*/
+.h-Main {
+  display: block;
+  width: 100;
+  height: 3.125em;
+  color: #ffffff;
+  background-color: #253343; }
+
+.h-Main_Content {
+  max-width: 900px; }
+
+/*# sourceMappingURL=style.dev.css.map */

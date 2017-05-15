@@ -1,6 +1,6 @@
 module.exports = {
 
-	
+
 	options: {
 		nospawn: true
 	}
@@ -33,11 +33,10 @@ module.exports = {
 		'dev_js'
 		]
 	}
-	
+
 	, dev_img : {
 		files: [
 		config.src.img.path + '*.*'
-		, config.src.svg.raw + '*.*'
 		],
 		tasks: [
 		'dev_img'
@@ -47,12 +46,11 @@ module.exports = {
 		files: [
 		config.src.templates.pages + '*.*'
 		, config.src.templates.layout + '*.*'
-		, config.src.templates.articles + '*.*'
 		, config.src.templates.sections + '*.*'
 		],
 		tasks: [
 		'dev_html'
 		]
 	}
-	
+
 };

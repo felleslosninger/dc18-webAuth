@@ -1,0 +1,35 @@
+/*
+* Color definitions
+*/
+
+$white: #ffffff;
+$light_grey: #f7f8fa;
+$grey: #5e6b77;
+$dark_grey: #253343;
+$blue: #006cff;
+$dark_blue: #0060ee;
+$nearly_black: #222222;
+$black: #000000;
+
+
+
+/*
+* Applied colors, prefixed by ca_
+*/
+$ca_body-bg: $light_grey;
+$ca_body-text: $nearly_black;
+
+$ca_header-bg: $dark_grey;
+$ca_header-text: $white;
+
+$ca_footer-bg: $dark_grey;
+$ca_header-text: $white;
+
+$ca_button-bg: $blue;
+$ca_button-text: $white;
+$ca_button_hover-bg: $dark_blue;
+
+$ca_button-cancel-bg: $white;
+$ca_button-cancel-text: $grey;
+$ca_button-cancel-hover-bg: transparent;
+$ca_button-cancel-hover-text: $black;
