@@ -14,16 +14,36 @@
 }
 
 .f-Main_Content {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   font-size: $ta_footer-text;
   padding: 2.3em 0.7682em 10.9em 0.7682em;
+  @include mobile {
+    justify-content: flex-start;
+    padding-bottom: 9em;
+  }
 }
 
-.f-Main_Logo {}
+.f-Main_Logo {
+  width: 30px;
+  height: 30px;
+  margin: 5px 15px 0 0;
+  background: url('../images/svg/eid.svg') no-repeat top right;
+  @include mobile {
+    width: 26px;
+    height: 26px;
+  }
+}
 
 .f-Main_Info {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5em;
+  }
   p {
     margin: 0 5px;
   }
@@ -34,14 +54,22 @@
   color: $ca_footer-text;
   text-decoration: none;
   margin: 0 5px;
-  border-bottom: 1px solid $ca_link_border;
+  span {
+    border-bottom: 1px solid $ca_link_border;
+  }
   &:hover, &:focus {
-    color: $ca_footer_link-hover;
+    span {
+      color: $ca_footer_link-hover;
+    }
   }
   &[href^="tel:"] {
-    border-color: transparent;
+    span {
+      border-color: transparent;
+    }
     &:hover, &:focus {
-      border-color: $ca_link_border;
+      span {
+        border-color: $ca_link_border;
+      }
     }
   }
 }

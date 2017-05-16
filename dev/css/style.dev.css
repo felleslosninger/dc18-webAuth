@@ -555,12 +555,33 @@ button {
   color: #ffffff; }
 
 .f-Main_Content {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   font-size: 0.8125em;
   padding: 2.3em 0.7682em 10.9em 0.7682em; }
+  @media (max-width: 767px) {
+    .f-Main_Content {
+      justify-content: flex-start;
+      padding-bottom: 9em; } }
 
+.f-Main_Logo {
+  width: 30px;
+  height: 30px;
+  margin: 5px 15px 0 0;
+  background: url("../images/svg/eid.svg") no-repeat top right; }
+  @media (max-width: 767px) {
+    .f-Main_Logo {
+      width: 26px;
+      height: 26px; } }
+
+@media (max-width: 767px) {
+  .f-Main_Info {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5em; } }
 .f-Main_Info p {
   margin: 0 5px; }
 
@@ -568,13 +589,14 @@ button {
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
-  margin: 0 5px;
-  border-bottom: 1px solid #006cff; }
-  .f-Main_Link:hover, .f-Main_Link:focus {
+  margin: 0 5px; }
+  .f-Main_Link span {
+    border-bottom: 1px solid #006cff; }
+  .f-Main_Link:hover span, .f-Main_Link:focus span {
     color: #006cff; }
-  .f-Main_Link[href^="tel:"] {
+  .f-Main_Link[href^="tel:"] span {
     border-color: transparent; }
-    .f-Main_Link[href^="tel:"]:hover, .f-Main_Link[href^="tel:"]:focus {
-      border-color: #006cff; }
+  .f-Main_Link[href^="tel:"]:hover span, .f-Main_Link[href^="tel:"]:focus span {
+    border-color: #006cff; }
 
 /*# sourceMappingURL=style.dev.css.map */
