@@ -7,7 +7,7 @@ $c_light_grey: #f7f8fa;
 $c_grey: #5e6b77;
 $c_dark_grey: #253343;
 $c_blue: #006cff;
-$c_dark_blue: #0060ee;
+$c_dark_blue: #0867eb;
 $c_nearly_black: #222222;
 $c_black: #000000;
 
@@ -37,3 +37,7 @@ $ca_button-cancel-hover-bg: transparent;
 $ca_button-cancel-hover-text: $c_black;
 
 $ca_link_border: $c_blue;
+
+$ca_menu_element-bg: $c_blue;
+$ca_menu_element-border-hover: $c_white;
+$ca_menu_element_text: $c_white;
