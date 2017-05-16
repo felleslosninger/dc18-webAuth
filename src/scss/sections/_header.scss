@@ -9,12 +9,70 @@
 
 .h-Main {
   display: block;
-  width: 100;
+  width: 100%;
   height: 3.125em;
   color: $ca_header-text;
   background-color: $ca_header-bg;
 }
 
 .h-Main_Content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   max-width: 900px;
+  height: 3.125em;
+  margin: 0 auto;
+}
+
+.h_Main_Content_Link {
+  display: inline-block;
+  padding: 1.2857em 1.0714em;
+  color: $ca_header-text;
+  font-size: $t_size-normal;
+  font-weight: $t_weight-bold;
+  line-height: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover, &:focus {
+    background-color: $ca_header_link-hover;
+  }
+  .fa-angle-left {
+    font-weight: 800;
+    margin-right: 1em;
+    &.fa-lg {
+      line-height: 0.5em;
+    }
+  }
+}
+
+.h-Menu_Trigger {
+  padding: 1.2857em 1.0714em 1.2857em 2em;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: $ca_header-text;
+  font-size: $t_size-normal;
+  font-weight: $t_weight-bold;
+  line-height: 1em;
+  text-transform: uppercase;
+  &:hover, &:focus {
+    background-color: $ca_header_link-hover;
+  }
+  .fa-angle-down {
+    margin-left: 1em;
+    &.fa-lg {
+      line-height: 0.5em;
+    }
+  }
+}
+
+.h-Menu_Trigger-mobile {
+  display: none;
+}
+
+.h-Menu {
+  display: inline-block;
+  ul {
+    display: none;
+  }
 }

@@ -1,0 +1,13 @@
+/*
+* Common style and resets
+*/
+
+body {
+  background-color: $ca_body-bg;
+  color: $ca_body-text;
+  font-family: $t_fontfamily;
+}
+
+button {
+  font-family: $t_fontfamily;
+}
