@@ -474,7 +474,9 @@ main {
   flex: 1; }
 
 button {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  box-shadow: none; }
 
 /*
 * Styles for pagre header
@@ -532,9 +534,22 @@ button {
     margin-left: 1em; }
     .h-Menu_Trigger .fa-angle-down.fa-lg {
       line-height: 0.5em; }
+  @media (max-width: 767px) {
+    .h-Menu_Trigger {
+      display: none; } }
 
 .h-Menu_Trigger-mobile {
-  display: none; }
+  display: none;
+  background-color: #253343;
+  color: #ffffff;
+  margin-right: 1.0714em; }
+  @media (max-width: 767px) {
+    .h-Menu_Trigger-mobile {
+      display: block; } }
+
+@media (max-width: 767px) {
+  .h-Menu_Container {
+    display: none; } }
 
 .h-Menu {
   display: inline-block; }
@@ -565,7 +580,8 @@ button {
   @media (max-width: 767px) {
     .f-Main_Content {
       justify-content: flex-start;
-      padding-bottom: 9em; } }
+      padding-bottom: 9em;
+      width: auto; } }
 
 .f-Main_Logo {
   width: 30px;

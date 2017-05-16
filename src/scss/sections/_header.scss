@@ -64,10 +64,25 @@
       line-height: 0.5em;
     }
   }
+  @include mobile {
+    display: none;
+  }
 }
 
 .h-Menu_Trigger-mobile {
   display: none;
+  background-color: $ca_header-bg;
+  color: $ca_header-text;
+  margin-right: 1.0714em;
+  @include mobile {
+    display: block;
+  }
+}
+
+.h-Menu_Container {
+  @include mobile {
+    display: none;
+  }
 }
 
 .h-Menu {
