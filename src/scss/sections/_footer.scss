@@ -1,0 +1,47 @@
+/*
+* Styles for pagre header
+*
+* ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
+* For more information: http://ecss.io
+*
+* Namespace: f (footer)
+*/
+
+.f-Main {
+  width: 100%;
+  background-color: $ca_footer-bg;
+  color: $ca_footer-text;
+}
+
+.f-Main_Content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: $ta_footer-text;
+  padding: 2.3em 0.7682em 10.9em 0.7682em;
+}
+
+.f-Main_Logo {}
+
+.f-Main_Info {
+  p {
+    margin: 0 5px;
+  }
+}
+
+.f-Main_Link {
+  display: inline-block;
+  color: $ca_footer-text;
+  text-decoration: none;
+  margin: 0 5px;
+  border-bottom: 1px solid $ca_link_border;
+  &:hover, &:focus {
+    color: $ca_footer_link-hover;
+  }
+  &[href^="tel:"] {
+    border-color: transparent;
+    &:hover, &:focus {
+      border-color: $ca_link_border;
+    }
+  }
+}

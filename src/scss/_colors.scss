@@ -24,7 +24,8 @@ $ca_header-text: $c_white;
 $ca_header_link-hover: $c_blue;
 
 $ca_footer-bg: $c_dark_grey;
-$ca_header-text: $c_white;
+$ca_footer-text: $c_white;
+$ca_footer_link-hover: $c_blue;
 
 $ca_button-bg: $c_blue;
 $ca_button-text: $c_white;
@@ -34,3 +35,5 @@ $ca_button-cancel-bg: $c_white;
 $ca_button-cancel-text: $c_grey;
 $ca_button-cancel-hover-bg: transparent;
 $ca_button-cancel-hover-text: $c_black;
+
+$ca_link_border: $c_blue;

@@ -2,10 +2,23 @@
 * Common style and resets
 */
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: $ca_body-bg;
   color: $ca_body-text;
   font-family: $t_fontfamily;
+  line-height: 1.5em;
+  letter-spacing: 0.1px;
+}
+
+main {
+  flex: 1;
 }
 
 button {

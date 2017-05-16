@@ -457,10 +457,21 @@ table {
 /*
 * Common style and resets
 */
+html {
+  height: 100%; }
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: #f7f8fa;
   color: #222222;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.1px; }
+
+main {
+  flex: 1; }
 
 button {
   font-family: "Open Sans", sans-serif; }
@@ -529,5 +540,41 @@ button {
   display: inline-block; }
   .h-Menu ul {
     display: none; }
+
+/*
+* Styles for pagre header
+*
+* ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
+* For more information: http://ecss.io
+*
+* Namespace: f (footer)
+*/
+.f-Main {
+  width: 100%;
+  background-color: #253343;
+  color: #ffffff; }
+
+.f-Main_Content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.8125em;
+  padding: 2.3em 0.7682em 10.9em 0.7682em; }
+
+.f-Main_Info p {
+  margin: 0 5px; }
+
+.f-Main_Link {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 5px;
+  border-bottom: 1px solid #006cff; }
+  .f-Main_Link:hover, .f-Main_Link:focus {
+    color: #006cff; }
+  .f-Main_Link[href^="tel:"] {
+    border-color: transparent; }
+    .f-Main_Link[href^="tel:"]:hover, .f-Main_Link[href^="tel:"]:focus {
+      border-color: #006cff; }
 
 /*# sourceMappingURL=style.dev.css.map */
