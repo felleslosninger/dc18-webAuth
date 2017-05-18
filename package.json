@@ -4,7 +4,9 @@
   "description": "Redesign and re-implementation of front-end for idporten",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "grunt",
+    "build": "grunt build",
+    "deploy": "grunt deploy"
   },
   "browserify": {
     "transform": [
