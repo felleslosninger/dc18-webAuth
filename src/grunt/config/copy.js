@@ -28,7 +28,7 @@ module.exports = {
         expand: true,
         cwd: config.src.fonts.path,
         src: [
-          '*.*', '**/*'
+          '*.*', '**/*.*', '**/**/*.*'
         ],
         dest: config.dev.fonts.path
       }
