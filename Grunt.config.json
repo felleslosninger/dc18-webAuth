@@ -57,7 +57,8 @@
     "js": {
       "path": "dev/js/",
       "vendorfile": "vendor.js",
-      "scriptfile": "script.js"
+      "scriptfile": "script.js",
+      "mainfile": "dev/js/main.js"
     },
     "vendor": {
       "path": "dev/js/vendor/"

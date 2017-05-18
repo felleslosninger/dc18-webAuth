@@ -19,4 +19,4 @@ const menuEvents  = () => {
   });
 };
 
-menuEvents();
+export default menuEvents;
