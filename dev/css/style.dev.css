@@ -466,6 +466,9 @@ body {
 
 main {
   min-height: calc(100vh - 270px); }
+  @media (max-width: 767px) {
+    main {
+      min-height: calc(100vh - 355px); } }
 
 button {
   font-family: "Open Sans", sans-serif;
