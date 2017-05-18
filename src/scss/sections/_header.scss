@@ -58,6 +58,7 @@
   line-height: 1em;
   text-transform: uppercase;
   border: 1px solid transparent;
+  outline: none;
   &:hover, &:focus {
     background-color: $ca_menu_element-bg;
     border-color: $ca_header-text;
@@ -92,8 +93,8 @@
   display: none;
   background-color: $ca_header-bg;
   color: $ca_header-text;
-  // margin-right: 1.0714em;
   padding: 0.9em 1.0714em 1em 1.0714em;
+  outline: none;
   @include mobile {
     display: block;
     &.active {

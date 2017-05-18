@@ -530,7 +530,8 @@ button {
   font-weight: 600;
   line-height: 1em;
   text-transform: uppercase;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  outline: none; }
   .h-Menu_Trigger:hover, .h-Menu_Trigger:focus {
     background-color: #006cff;
     border-color: #ffffff; }
@@ -558,7 +559,8 @@ button {
   display: none;
   background-color: #253343;
   color: #ffffff;
-  padding: 0.9em 1.0714em 1em 1.0714em; }
+  padding: 0.9em 1.0714em 1em 1.0714em;
+  outline: none; }
   @media (max-width: 767px) {
     .h-Menu_Trigger-mobile {
       display: block; }
