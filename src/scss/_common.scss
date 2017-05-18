@@ -8,9 +8,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   background-color: $ca_body-bg;
   color: $ca_body-text;
   font-family: $t_fontfamily;
@@ -24,6 +21,7 @@ main {
   justify-content: center;
   align-content: center;
   align-items: center;
+  min-height: calc(100vh - 270px); // 270px =  footer height + header height
 }
 
 button {
