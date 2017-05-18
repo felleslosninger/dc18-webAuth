@@ -2,7 +2,7 @@
   width: 500px;
   margin: auto;
   padding: 0;
-  border: 1px solid #d3d3d3;
+  border: 1px solid $ca_box_border;
   border-radius: 4px;
 }
 
@@ -10,7 +10,6 @@
   display: flex;
   justify-content: space-between;
   padding: 0 1em;
-  border-bottom: 1px solid #e7e8ea;
   > * {
     display: flex;
     flex-direction: column;
@@ -20,8 +19,8 @@
 
 .Box_header-title {
   text-transform: uppercase;
-  font-size: 14px;
-  color: #222;
+  font-size: $t_size-normal;
+  color: $c_nearly_black;
   font-weight: 700;
   min-height: 60px;
   &.with-image {
@@ -50,14 +49,13 @@
 }
 
 .Box_main {
-  
+
 }
 
 .Box_footer {
   display: flex;
   justify-content: space-between;
   padding: 0 1em;
-  border-top: 1px solid #e7e8ea;
   > * {
     display: flex;
     flex-direction: column;
@@ -78,13 +76,27 @@
   }
   a {
     font-size: 14px;
-    color: #222;
+    color: $c_nearly_black;
+    text-decoration: none;
+    border-bottom: 1px solid $c_blue;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $c_blue;
+      border-bottom-color: transparent;
+    }
   }
 }
 .Box_footer-help {
+  padding-right: 1em;
   .fa {
     font-size: 20px;
-    color: #c2c3c4;
+    color: $ca_box_help_icon;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $c_nearly_black;
+    }
   }
 }
 
