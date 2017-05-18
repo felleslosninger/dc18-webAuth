@@ -59,11 +59,11 @@
   text-transform: uppercase;
   border: 1px solid transparent;
   &:hover, &:focus {
-    background-color: $ca_header_link-hover;
+    background-color: $ca_menu_element-bg;
     border-color: $ca_header-text;
   }
   .h-Menu-open & {
-    background-color: $ca_header_link-hover;
+    background-color: $ca_menu_element-bg;
   }
   .fa-angle-down {
     margin-left: 1em;
@@ -73,6 +73,18 @@
   }
   @include mobile {
     display: none;
+    .h-Menu_Container-open & {
+      display: block;
+      background: $ca_menu_element-bg;
+      width: 100%;
+      text-align: left;
+      position: relative;
+      padding-left: 1.2em;
+      span {
+        position: absolute;
+        right: 1.2em;
+      }
+    }
   }
 }
 
@@ -80,16 +92,31 @@
   display: none;
   background-color: $ca_header-bg;
   color: $ca_header-text;
-  margin-right: 1.0714em;
+  // margin-right: 1.0714em;
+  padding: 0.9em 1.0714em 1em 1.0714em;
   @include mobile {
     display: block;
+    &.active {
+      background-color: $ca_menu_element-bg;
+    }
   }
 }
 
 .h-Menu_Container {
   display: flex;
   @include mobile {
-    // display: none;
+    display: none;
+  }
+}
+
+.h-Menu_Container-open {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
   }
 }
 
@@ -103,20 +130,33 @@
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
   }
+  @include mobile {
+    .h-Menu_Container-open & {
+      display: block;
+      ul {
+        display: none;
+      }
+    }
+  }
 }
 
 .h-Menu-open ul {
   display: block;
+  @include mobile {
+    .h-Menu_Container-open & {
+      display: block;
+    }
+  }
 }
 
 .h-Main_Menu_Element {
   display: inline-block;
-  width: 100%;
+  width: calc(100% - 2.4em);
   font-size: $t_size-normal;
   font-weight: $t_weight-bold;
   color: $ca_menu_element-text;
   background-color: $ca_menu_element-bg;
-  padding: 1em 0 1em 1.2em;
+  padding: 1em 1.2em 1em 1.2em;
   border: 1px solid transparent;
   text-decoration: none;
   &:hover, &:focus {
