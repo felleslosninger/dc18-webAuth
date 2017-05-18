@@ -1,0 +1,26 @@
+/*
+* Styles for pagre header
+*
+* ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
+* For more information: http://ecss.io
+*
+* Namespace: ln (list-normal)
+*/
+
+.ln-List {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ln-List_Element {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: $t_size-normal;
+  padding: 0.7857em;
+  text-decoration: none;
+}
+
+.ln-List_Element_Service {
+  flex: 1;
+}
