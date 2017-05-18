@@ -23,7 +23,7 @@ main {
   align-items: center;
   min-height: calc(100vh - 270px); // 270px =  footer height + header height
   @include mobile {
-    min-height: calc(100vh - 355px);
+    min-height: calc(100vh - 357px);  // footer has more height on mobile
   }
 }
 
