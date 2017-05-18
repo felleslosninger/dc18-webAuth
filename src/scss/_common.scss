@@ -12,6 +12,9 @@ body {
 
 main {
   min-height: calc(100vh - 270px); // 270px =  footer height + header height
+  @include mobile {
+    min-height: calc(100vh - 355px);
+  }
 }
 
 button {
