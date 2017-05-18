@@ -2,14 +2,7 @@
 * Common style and resets
 */
 
-html {
-  height: 100%;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   background-color: $ca_body-bg;
   color: $ca_body-text;
   font-family: $t_fontfamily;
@@ -18,11 +11,11 @@ body {
 }
 
 main {
-  flex: 1;
+  min-height: calc(100vh - 270px); // 270px =  footer height + header height
 }
 
 button {
   font-family: $t_fontfamily;
   border: none;
-  box-shadow: none; 
+  box-shadow: none;
 }
