@@ -2,6 +2,11 @@
 * Common style and resets
 */
 
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
   background-color: $ca_body-bg;
   color: $ca_body-text;
@@ -11,6 +16,11 @@ body {
 }
 
 main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   min-height: calc(100vh - 270px); // 270px =  footer height + header height
   @include mobile {
     min-height: calc(100vh - 355px);
