@@ -5,11 +5,46 @@ var _test = require('./test/test');
 
 var _test2 = _interopRequireDefault(_test);
 
+var _header = require('./sections/header');
+
+var _header2 = _interopRequireDefault(_header);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _test2.default)();
+(0, _header2.default)();
 
-},{"./test/test":2}],2:[function(require,module,exports){
+},{"./sections/header":2,"./test/test":3}],2:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var menuEvents = function menuEvents() {
+  var $ = jQuery.noConflict();
+
+  var $menuContainer = $('.h-Menu_Container');
+  var $mobileMenuBtn = $('.h-Menu_Trigger-mobile');
+  var $subMenuBtn = $('.h-Menu_Trigger');
+  $mobileMenuBtn.on('click', function () {
+    $mobileMenuBtn.toggleClass('active');
+    $menuContainer.toggleClass('h-Menu_Container-open');
+  });
+  $subMenuBtn.on('click', function (event) {
+    var $selectedMenu = $(event.target).parent('.h-Menu');
+    if ($selectedMenu.hasClass('h-Menu-open')) {
+      // menu is open
+      $selectedMenu.removeClass('h-Menu-open'); // close it
+    } else {
+      $('.h-Menu-open').removeClass('h-Menu-open'); // close the other menu if open
+      $selectedMenu.addClass('h-Menu-open'); // open selected menu
+    }
+  });
+};
+
+exports.default = menuEvents;
+
+},{}],3:[function(require,module,exports){
 'use strict';
 
 var test = function test() {

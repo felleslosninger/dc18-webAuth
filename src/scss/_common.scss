@@ -4,6 +4,7 @@
 
 html {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -18,11 +19,15 @@ body {
 }
 
 main {
+  display: flex;
   flex: 1;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 button {
   font-family: $t_fontfamily;
   border: none;
-  box-shadow: none; 
+  box-shadow: none;
 }
