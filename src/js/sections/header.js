@@ -18,6 +18,11 @@ const menuEvents  = () => {
       $selectedMenu.addClass('h-Menu-open'); // open selected menu
     }
   });
+  // $(document).on('click', (event) => {
+  //   if (!$('.h-Menu_Container').contains($(event.target)) {
+  //     $('.h-Menu_Container').removeClass('h-Menu_Container-open');
+  //   }
+  // });
 };
 
 export default menuEvents;
