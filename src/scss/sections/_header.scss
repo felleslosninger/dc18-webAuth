@@ -70,7 +70,6 @@
   outline: none;
   span {
     border-bottom: 1px solid transparent;
-    // pointer-events: none;
   }
   &:hover, &:focus {
     background-color: $ca_menu_element-bg;
@@ -183,7 +182,7 @@
   text-decoration: none;
   span {
     border-bottom: 1px solid transparent;
-    // pointer-events: none;
+
   }
   &:hover, &focus {
     background-color: $ca_button_hover-bg;
