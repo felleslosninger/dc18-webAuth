@@ -9,7 +9,8 @@ const menuEvents  = () => {
     $menuContainer.toggleClass('h-Menu_Container-open');
   });
   $subMenuBtn.on('click', (event) => {
-    const $selectedMenu = $(event.target).parent('.h-Menu');
+    event.preventDefault();
+    const $selectedMenu = $(event.currentTarget).parent('.h-Menu');
     if ($selectedMenu.hasClass('h-Menu-open')) { // menu is open
       $selectedMenu.removeClass('h-Menu-open'); // close it
     } else {
