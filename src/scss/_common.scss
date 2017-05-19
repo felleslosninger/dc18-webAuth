@@ -16,12 +16,13 @@ body {
 }
 
 main {
-  display: flex;
+  //display: flex;
   flex: 1;
   justify-content: center;
   align-content: center;
   align-items: center;
   min-height: calc(100vh - 270px); // 270px =  footer height + header height
+  margin-top: 3em;
   @include mobile {
     min-height: calc(100vh - 357px);  // footer has more height on mobile
   }
@@ -31,4 +32,13 @@ button {
   font-family: $t_fontfamily;
   border: none;
   box-shadow: none;
+}
+
+
+// Mobile view
+@include mobile {
+  main {
+    display: block;
+    margin-top: 0;
+  }
 }
