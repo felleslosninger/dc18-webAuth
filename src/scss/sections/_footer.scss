@@ -61,6 +61,7 @@
   &:hover, &:focus {
     span {
       color: $ca_footer_link-hover;
+      border-color: $ca_footer_link-hover;
     }
   }
   &[href^="tel:"] {
@@ -69,7 +70,7 @@
     }
     &:hover, &:focus {
       span {
-        border-color: $ca_link_border;
+        border-color: $ca_footer_link-hover;
       }
     }
   }
