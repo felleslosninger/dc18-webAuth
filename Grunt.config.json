@@ -112,5 +112,17 @@
       }
     }
   },
-  "testDomain": "http://dev.halogen.no/clients/difi/idporten_redesign/"
+  "testDomain": "http://dev.halogen.no/clients/difi/idporten_redesign/",
+  "browserSync": {
+    "src": [
+      "dev/css/*.css",
+      "dev/html/pages/*.html",
+      "dev/images/png/*.png",
+      "dev/images/svg/*.svg",
+      "dev/images/*.*",
+      "dev/js/*.js",
+      "dev/vendor/*.js"
+    ],
+    "proxy": "idporten.local"
+  }
 }
