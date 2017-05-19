@@ -48,30 +48,17 @@
   p {
     margin: 0 5px;
   }
-  @include text-link($c_white, $c_blue, $c_white, $t_size_basis, 0.5em);
+  a {
+    @include text-link($ca_footer-text, $c_blue, $ca_footer_link-hover, $ca_footer-text, $t_size_basis, 0.5em);
+  }
 }
 
 .f-Main_Link {
   display: inline-block;
   color: $ca_footer-text;
   text-decoration: none;
-  span {
-    border-bottom: 1px solid $ca_link_border;
-  }
-  &:hover, &:focus {
-    span {
-      color: $ca_footer_link-hover;
-      border-color: $ca_footer_link-hover;
-    }
-  }
+
   &[href^="tel:"] {
-    span {
-      border-color: transparent;
-    }
-    &:hover, &:focus {
-      span {
-        border-color: $ca_footer_link-hover;
-      }
-    }
+    @include text-link($ca_footer-text, transparent, $ca_footer_link-hover, $ca_footer-text, $t_size_basis, 0.5em);
   }
 }

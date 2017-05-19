@@ -35,39 +35,38 @@ button {
   box-shadow: none;
 }
 
-@mixin text-link($linkColor: $c_nearly_black, $activeLinkColor: $c_blue, $activeBorderColor: $c_grey, $fontSize: $t_size-normal, $padding: 0.5em) {
-  a {
-    color: $linkColor;
-    text-decoration: none;
-    position: relative;
-    padding: $padding;
-    font-size: $fontSize;
-    &:hover,
-    &:active {
-      color: $activeLinkColor;
-      span {
-        &.fa {
-          color: $linkColor;
-        }
-      }
-    }
-    &:focus {
-      color: $activeLinkColor;
-      outline: 1px solid $activeBorderColor;
-      border-bottom-color: transparent;
-      text-decoration: none;
-      span {
-        border-bottom-color: transparent;
-        &.fa {
-          color: $linkColor;
-        }
-      }
-    }
+@mixin text-link($linkColor: $c_nearly_black, $borderColor: $c_blue, $activeLinkColor: $c_blue, $activeBorderColor: $c_grey, $fontSize: $t_size-normal, $padding: 0.5em) {
+  color: $linkColor;
+  text-decoration: none;
+  position: relative;
+  padding: $padding;
+  font-size: $fontSize;
+  &:hover,
+  &:active {
+    color: $activeLinkColor;
     span {
-      border-bottom: 1px solid $c_blue;
+      border-bottom-color: $activeLinkColor;
       &.fa {
-        border-bottom-color: transparent;
-                  }
+        color: $linkColor;
+      }
+    }
+  }
+  &:focus {
+    color: $activeLinkColor;
+    outline: 1px solid $activeBorderColor;
+    border-bottom-color: transparent;
+    text-decoration: none;
+    span {
+      border-bottom-color: transparent;
+      &.fa {
+        color: $linkColor;
+      }
+    }
+  }
+  span {
+    border-bottom: 1px solid $borderColor;
+    &.fa {
+      border-bottom-color: transparent;
     }
   }
 }
