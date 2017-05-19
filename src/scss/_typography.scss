@@ -5,9 +5,9 @@
 
 $t_fontfamily: 'Open Sans', sans-serif;
 
-$t_size-basis: 1em;
-$t_size-normal: 0.875em;
-$t_size-small: 0.8125em;
+$t_size-basis: 1em; // 16px
+$t_size-normal: (14 / 16) * 1em; // 14px
+$t_size-small: (13 / 16) * 1em; // 13px
 
 $t_weight-bold: 600;
 $t_weight_bolder: 700;
