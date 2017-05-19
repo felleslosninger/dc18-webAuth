@@ -17,8 +17,21 @@
   box-sizing: border-box;
   width: 100%;
   font-size: $t_size-normal;
-  padding: 0.7857em;
+  padding: 0.7857em 1.1429em;
   text-decoration: none;
+}
+
+.ln-List_Element_Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 80px;
+  overflow: hidden;
+  border: 1px solid red;
+  img {
+    width: 100%;
+  }
 }
 
 .ln-List_Element_Service {
