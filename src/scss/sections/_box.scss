@@ -6,7 +6,7 @@
   border-radius: 4px;
 }
 
-.Box_header {
+.Box_header, .Box_footer {
   display: flex;
   justify-content: space-between;
   padding: 0 1em;
@@ -23,7 +23,7 @@
   color: $c_nearly_black;
   font-weight: 700;
   min-height: 60px;
-  &.with-image {
+  &.with-logo {
     position: relative;
     padding-left: calc(0.5em + 25px);
     &:before {
@@ -34,10 +34,14 @@
       height: 25px;
       left: 0;
       background: {
-        image: url('../images/svg/eid-gray.svg');
         repeat: no-repeat;
         size: 100%;
       }
+    }
+  }
+  &.logo-eid-gray {
+    &:before {
+      @extend %logo-eid-gray;
     }
   }
 }
@@ -52,16 +56,6 @@
 
 }
 
-.Box_footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1em;
-  > * {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
 .Box_footer-links {
   ul {
     padding-left: 0;
@@ -89,9 +83,13 @@
 }
 .Box_footer-help {
   padding-right: 1em;
+  a {
+    text-decoration: none;
+  }
   .fa {
     font-size: 20px;
     color: $ca_box_help_icon;
+    text-decoration: none;
     &:hover,
     &:active,
     &:focus {
@@ -100,9 +98,25 @@
   }
 }
 
+
 // Mobile
 @include mobile {
   .Box {
     width: 100%;
+    border: 0;
+  }
+  .Box_header,
+  .Box_footer {
+    padding: 0 0.5em;
+  }
+  .Box_footer-help {
+    padding-right: 0;
+    .fa {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
