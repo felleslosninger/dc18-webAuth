@@ -4,7 +4,8 @@ const menuEvents  = () => {
   const $menuContainer = $('.h-Menu_Container');
   const $mobileMenuBtn = $('.h-Menu_Trigger-mobile');
   const $subMenuBtn = $('.h-Menu_Trigger');
-  $mobileMenuBtn.on('click', () => {
+  $mobileMenuBtn.on('click', (event) => {
+    event.preventDefault();
     $mobileMenuBtn.toggleClass('active');
     $menuContainer.toggleClass('h-Menu_Container-open');
   });
@@ -20,7 +21,9 @@ const menuEvents  = () => {
   });
   $(document).on('click', (event) => {
     if (!(document.getElementById('js-menues').contains(event.target))) {
-      $('.h-Menu').removeClass('h-Menu-open');
+      if (!($(event.currentTarget).hasClass('h-Menu_Trigger-mobile'))) {
+        $('.h-Menu').removeClass('h-Menu-open');
+      }
     }
   });
 };

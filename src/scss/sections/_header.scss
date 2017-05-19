@@ -94,6 +94,7 @@
     display: none;
     .h-Menu_Container-open & {
       display: block;
+      box-sizing: border-box;
       background: $ca_menu_element-bg;
       width: 100%;
       text-align: left;
