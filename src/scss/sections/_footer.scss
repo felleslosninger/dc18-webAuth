@@ -48,13 +48,13 @@
   p {
     margin: 0 5px;
   }
+  @include text-link($c_white, $c_blue, $c_white, $t_size_basis, 0.5em);
 }
 
 .f-Main_Link {
   display: inline-block;
   color: $ca_footer-text;
   text-decoration: none;
-  margin: 0 5px;
   span {
     border-bottom: 1px solid $ca_link_border;
   }
