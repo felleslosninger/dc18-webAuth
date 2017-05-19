@@ -11,23 +11,61 @@
   list-style: none;
   padding-left: 0;
   margin: 0;
-  background-color: $c_white;
+  background-color: $ca_list-bg;
 }
 
 .ln-List_Element {
   display: flex;
+  align-items: center;
   box-sizing: border-box;
   width: 100%;
+  color: $ca_list_element-text;
   font-size: $t_size-normal;
-  padding: 0.7857em;
+  line-height: 1.5em;
+  padding: 0.7857em 1.7142em 0.7857em 1.1429em;
   text-decoration: none;
+  .fa-angle-right {
+    font-weight: $t_weight-bold;
+  }
+  &:hover, &:focus {
+    color: $ca_list_element-hover-text;
+    background-color: $ca_list_element-hover-bg;
+  }
+}
+
+.ln-List_Element_Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 80px;
+  background-color: $ca_list-bg;
+  margin-right: 20px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
 }
 
 .ln-List_Element_Service {
   flex: 1;
 }
 
-.ln-List_Low-Priority {
+.ln-List_Element_Service_Name {
+  display: block;
+  font-weight: $t_weight_bolder;
+  text-transform: uppercase;
+  max-width: 100%;
+}
+
+.ln-List_Element_Service_Info {
+  display: block;
+  font-weight: $t_weight-bold;
+  text-transform: capitalize;
+  max-width: 100%;
+}
+
+.ln-List-lowPriority {
   list-style: none;
   padding-left: 0;
   margin: 1em 1em 0 1em;
