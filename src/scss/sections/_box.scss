@@ -9,7 +9,7 @@ $box-text_link-active_border: $c_grey;
 $box-text_link-size: $t_size-normal;
 
 $box-help-icon: #c2c3c4;
-$box-border-color: #d3d3d3;
+$box-border-color: #d3d3d3;;
 $box-text_link-padding: 0.5em;
 
 .Box {
@@ -29,6 +29,10 @@ $box-text_link-padding: 0.5em;
     flex-direction: column;
     justify-content: center;
   }
+}
+
+.Box_header {
+  border-bottom: 1px solid $ca_list-border;
 }
 
 .Box_header-title {

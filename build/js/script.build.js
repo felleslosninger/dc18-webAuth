@@ -26,18 +26,27 @@ var menuEvents = function menuEvents() {
   var $menuContainer = $('.h-Menu_Container');
   var $mobileMenuBtn = $('.h-Menu_Trigger-mobile');
   var $subMenuBtn = $('.h-Menu_Trigger');
-  $mobileMenuBtn.on('click', function () {
+  $mobileMenuBtn.on('click', function (event) {
+    event.preventDefault();
     $mobileMenuBtn.toggleClass('active');
     $menuContainer.toggleClass('h-Menu_Container-open');
   });
   $subMenuBtn.on('click', function (event) {
-    var $selectedMenu = $(event.target).parent('.h-Menu');
+    event.preventDefault();
+    var $selectedMenu = $(event.currentTarget).parent('.h-Menu');
     if ($selectedMenu.hasClass('h-Menu-open')) {
       // menu is open
       $selectedMenu.removeClass('h-Menu-open'); // close it
     } else {
       $('.h-Menu-open').removeClass('h-Menu-open'); // close the other menu if open
       $selectedMenu.addClass('h-Menu-open'); // open selected menu
+    }
+  });
+  $(document).on('click', function (event) {
+    if (!document.getElementById('js-menues').contains(event.target)) {
+      if (!$(event.currentTarget).hasClass('h-Menu_Trigger-mobile')) {
+        $('.h-Menu').removeClass('h-Menu-open');
+      }
     }
   });
 };
