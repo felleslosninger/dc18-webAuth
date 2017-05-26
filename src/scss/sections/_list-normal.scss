@@ -32,7 +32,20 @@
     color: $ca_list_element-hover-text;
     background-color: $ca_list_element-hover-bg;
   }
+
+  &.disabled {
+    color: $ca_list_element_disabled-text;
+    background-color: $ca_list_element_disabled-bg;
+    cursor: default;
+
+    &:hover, &:focus {
+      color: $ca_list_element_disabled-text;
+      background-color: $ca_list_element_disabled-bg;
+    }
+  }
 }
+
+
 
 .ln-List_Element_Logo {
   display: flex;
@@ -63,7 +76,7 @@
 .ln-List_Element_Service_Info {
   display: block;
   font-weight: $t_weight-normal;
-  text-transform: capitalize;
+  padding-right: 1em;
   max-width: 100%;
 }
 
