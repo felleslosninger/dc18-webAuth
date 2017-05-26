@@ -1,0 +1,45 @@
+/*
+* Styles for accordion with eid-lists
+*
+* ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
+* For more information: http://ecss.io
+*
+* Namespace: la (list-accordion)
+*/
+
+.la-List {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  background-color: $ca_list-bg;
+
+  .ln-List {
+    display: none;
+  }
+
+}
+
+.la-List_Element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: $t_size-normal;
+  font-weight: $t_weight_bolder;
+  line-height: 1.5em;
+  text-decoration: none;
+  color: $ca_body-text;
+  padding: 0.7857em 1rem 0.7857em 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid $ca_list-border;
+  .fa-angle-down {
+    font-weight: $t_weight_bolder;
+    font-size: $t_size-basis;
+  }
+  &[aria-expanded='true'] {
+    .fa-angle-down {
+      transform: rotateX(180deg);
+    }
+  }
+}
