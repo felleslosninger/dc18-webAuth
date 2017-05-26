@@ -35,6 +35,17 @@ $box-text_link-padding: 0.5em;
   border-bottom: 1px solid $ca_list-border;
 }
 
+.Box_footer {
+  border-top: 1px solid $ca_list-border;
+}
+
+.Box_inside-footer {
+  border-top: 1px solid $ca_list-border;
+  & + .Box_footer {
+    border-top-width: 0;
+  }
+}
+
 .Box_header-title {
   text-transform: uppercase;
   font-size: $t_size-normal;

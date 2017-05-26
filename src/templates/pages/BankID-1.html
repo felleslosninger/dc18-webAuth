@@ -1,0 +1,73 @@
+<!-- build:section recursive layout.commonheader -->
+<!-- /build -->
+
+<!-- build:section recursive section.header -->
+<!-- /build -->
+
+<!-- build:process -->
+<main>
+  <!-- build:section recursive section.dmy --><!-- /build -->
+  <section class='Box'>
+    <!-- build:section recursive section.box-header --><!--/build -->
+
+    <div class='Box_main'>
+      <div class='tb-Container'>
+        <!-- Tab header -->
+        <!-- class .tab-2 defines two tabs and is default. There are available classes .tab-3, .tab-4 too -->
+        <div class='tb-Header tab-2'>
+          <a href='#' class='active' data-target='tab-1'><span><span>BankID</span></span></a>
+          <a href='#' data-target='tab-2'><span><span>BankID på Mobil</span></span></a>
+        </div>
+        <!-- /Tab header -->
+
+        <div class='tb-Body'>
+
+          <!-- Tab 1 -->
+          <div class='tb-Tab active' data-id='tab-1'>
+            <iframe width='100%' height='350px' src='_iframe-BankID.html'></iframe>
+          </div>
+          <!-- /Tab 1 -->
+
+          <!-- Tab 2 -->
+          <div class='tb-Tab' data-id='tab-2'>
+
+            <!-- Progress dots -->
+            <div class='fm-Progress_Container'>
+              <div class='fm-Progress_Dot active'></div>
+              <div class='fm-Progress_Dot'></div>
+            </div>
+            <!-- /Progress dots -->
+
+            <!-- Form -->
+            <form>
+              <div class='fm-Fields'>
+                <label for='mobile'>Mobile number (8 digits)</label>
+                <input id='mobile' type='text' placeholder='Enter mobile number (8 digits)' />
+
+                <label class='error' for='mobile'>Date of birth</label>
+                <input id='mobile' type='text' placeholder='YYYY-MM-DD' />
+                <span class='error'>Please fill in your birthday date</span>
+              </div>
+
+              <div class='fm-Controls'>
+                <button class='btn btn-Normal'><span>Cancel</span></button>
+                <button class='btn btn-Action' type='submit'><span>Next</span></button>
+              </div>
+            </form>
+            <!-- /Form -->
+          </div>
+          <!-- /Tab 2 -->
+        </div>
+      </div>
+    </div>
+
+
+    <!-- build:section recursive section.box-footer --><!--/build -->
+  </section>
+</main>
+<!-- /build -->
+
+<!-- build:section section.footer -->
+<!-- /build -->
+<!-- build:section recursive layout.commonfooter -->
+<!-- /build -->

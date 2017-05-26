@@ -1,0 +1,152 @@
+form {
+//  display: flex;
+//  flex-direction: column;
+}
+
+$margin: 1em;
+
+.fm-Fields {
+  background-color: $c_white;
+  padding: $margin;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  font-size: $t_size-normal;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: {
+    top: $margin / 2;
+    left: $margin / 4;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  & + input {
+    margin-top: $margin / 4;
+    &:focus {
+      margin-top: calc(#{$margin} / 4 - 1px);
+    }
+  }
+  &.error {
+    color: $c_error;
+    & + input {
+      @include placeholder($c_error);
+    }
+  }
+}
+
+input, button, .btn {
+  display: flex;
+  border-radius: 4px;
+  height: 2em;
+  margin: 0.5em 0;
+  border: 0;
+  font-size: $t_size-normal;
+  outline: none;
+}
+input[type=submit], .btn {
+  height: 4.5em;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: $t_size-normal;
+}
+
+.btn {
+  > span {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+input[type=text] {
+  border: 1px solid $c_light_grey3;
+  padding: 8px 12px;
+  &:focus {
+    outline: none;
+    border: {
+      width: 2px;
+      color: $c_blue;
+    }
+    margin: {
+      left: -1px;
+      bottom: calc(#{$margin} / 2 - 1px);
+    }
+  }
+}
+
+.fm-Controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: $c_light_grey;
+  //border-bottom: 1px solid $c_light_grey3;
+  padding: $margin $margin $margin * 1.5 $margin;
+  > * {
+    width: calc(50% - 1em / 2);
+  }
+}
+
+.btn-Normal {
+  color: $c_grey;
+  background-color: $c_white;
+  border: 1px solid $c_light_grey3;
+  outline: none;
+  &:hover {
+    border-color: $c_medium_grey2;
+    background-color: $c_light_grey;
+  }
+  &:active {
+    border-color: $c_blue;
+    background-color: $c_light_grey;
+  }
+  &:focus {
+    border-color: $c_blue;
+    background-color: $c_light_grey;
+    > span {
+      border-bottom-color: $c_blue;
+    }
+  }
+}
+.btn-Action {
+  color: $c_white;
+  background-color: $c_blue;
+  &:hover {
+    border-color: $c_medium_grey2;
+    background-color: $c_blue2;
+  }
+  &:active {
+    border-color: $c_blue2;
+    background-color: $c_light_grey;
+  }
+  &:focus {
+    border-color: $c_blue2;
+    background-color: $c_dark_blue;
+    > span {
+      border-bottom-color: $c_white;
+    }
+  }
+}
+
+.fm-Progress_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+}
+
+.fm-Progress_Dot {
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 1em;
+  background-color: $c_medium_grey;
+  margin: 0 0.25em;
+  &.current,
+  &.active {
+    width: 1em;
+    height: 1em;
+    background-color: $c_blue;
+  }
+}
