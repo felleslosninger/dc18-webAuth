@@ -7,7 +7,7 @@ class SearchList {
   	this.countrycode = $('input[type=hidden]');
   	this.inputList = $('#js-country-list');
   	this.trigger = $('#js-trigger');
-    this.label = $('#js-country').first('label');
+    this.errorHandler = $('#js-country');
   	this.listElements = this.inputList.find('li');
   	this.current = 0;
   }
@@ -25,7 +25,7 @@ class SearchList {
 		});
 
 		self.inputField.on('keydown', function() {
-      self.label.removeClass('error');
+      self.errorHandler.removeClass('error');
 			if (!self.inputList.hasClass('open')) {
 				self.openMenu();
 			}
@@ -212,7 +212,7 @@ class SearchList {
 			}
 		});
     if (countryId === null) {
-			this.label.addClass('error');
+			this.errorHandler.addClass('error');
 		}
 	}
 };
