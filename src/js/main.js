@@ -1,6 +1,7 @@
 
-import test from './test/test';
 import menuEvents from './sections/header';
+import tab from './sections/tab';
 
-test();
+
 menuEvents();
+tab();

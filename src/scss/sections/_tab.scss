@@ -1,0 +1,122 @@
+
+.tb-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &.tab-3 {
+    a {
+      width: percentage(1/3);
+    }
+  }
+  &.tab-4 {
+    a {
+      width: percentage(1/4);
+    }
+  }
+  a {
+    display: flex;
+    position: relative;
+    height: 3.5em;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: $t_size-normal;
+    font-weight: 600;
+    color: $c_blue;
+    text-decoration: none;
+    background: $c_white;
+
+    & + a:not(.active) {
+      border-left: 1px solid $c_medium_grey;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: $c_medium_grey2;
+      height: 1px;
+    }
+
+    // Default hover state
+    &:hover, &:active {
+      background: $c_light_grey;
+      &:after {
+        background-color: $c_blue;
+        height: 3px;
+      }
+    }
+
+    // Default focus state
+    &:focus {
+      background: $c_light_grey;
+      &:after {
+        background-color: transparent;
+        height: 3px;
+      }
+      > span {
+        border-color: $c_grey;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        > span {
+          border-bottom-color: $c_blue;
+        }
+      }
+    }
+
+    &.active {
+      background-color: $c_blue;
+      color: $c_white;
+
+      // Active button hover state
+      &:hover, &:active {
+        background: $c_blue2;
+        &:after {
+          background-color: $c_black;
+        }
+      }
+
+      // Active button focus state
+      &:focus {
+        background-color: $c_blue2;
+        &:after {
+          background-color: transparent;
+        }
+        > span {
+          border-color: $c_white;
+          width: calc(100% - 8px);
+          height: calc(100% - 8px);
+          > span {
+            border-bottom-color: $c_white;
+          }
+        }
+      }
+    }
+
+    > span {
+      display: flex;
+      border: 2px solid transparent;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      justify-content: center;
+      align-items: center;
+      > span {
+        border-bottom: 1px solid transparent;
+        line-height: 1.4em;
+      }
+    }
+
+  }
+
+}
+
+
+.tb-Tab {
+  display: none;
+  &.active {
+    display: initial;
+  }
+}
