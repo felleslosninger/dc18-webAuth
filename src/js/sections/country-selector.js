@@ -7,6 +7,7 @@ class SearchList {
   	this.countrycode = $('input[type=hidden]');
   	this.inputList = $('#js-country-list');
   	this.trigger = $('#js-trigger');
+    this.label = $('#js-country').first('label');
   	this.listElements = this.inputList.find('li');
   	this.current = 0;
   }
@@ -24,6 +25,7 @@ class SearchList {
 		});
 
 		self.inputField.on('keydown', function() {
+      self.label.removeClass('error');
 			if (!self.inputList.hasClass('open')) {
 				self.openMenu();
 			}
@@ -165,11 +167,18 @@ class SearchList {
 		});
 
     $(document).on('click', (e) => {
-      if (!(document.getElementById('js-country').contains(e.target)) && 
+      if (!(document.getElementById('js-country').contains(e.target)) &&
           !(document.getElementById('js-country-list').contains(e.target))) {
         self.closeMenu();
       }
-    })
+    });
+
+    $("form").submit(function(e){
+			if (self.countrycode.val().length === 0) {
+				e.preventDefault();
+				self.checkInput(self.inputField.val());
+			}
+		});
 	}
 
 	openMenu() {
@@ -202,6 +211,9 @@ class SearchList {
 				}
 			}
 		});
+    if (countryId === null) {
+			this.label.addClass('error');
+		}
 	}
 };
 

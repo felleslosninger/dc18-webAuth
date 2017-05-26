@@ -23,7 +23,7 @@ $dropdown_text-hover: $c_blue;
   padding: 1rem 0;
   margin: 0 1rem 1rem 1rem;
   width: calc(100% - 2rem);
-  border-bottom: 1px solid $ca_label-border;
+  border-bottom: 1px solid $ca_legend-border;
 }
 
 .countrySelector-Form_InputContainer {
@@ -32,12 +32,25 @@ $dropdown_text-hover: $c_blue;
 }
 
 .countrySelector-Form_Input {
-  text-transform: capitalize;
+  display: flex;
+  input[type=text] {
+    flex: 1;
+    // border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .countrySelector-Form_Button {
+    font-size: 0.875em;
     background-color: $ca_list-bg;
-    padding: 1rem;
+    padding: 1em;
+    height: 3.3em;
+    border: 1px solid $c_light_grey3;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 0.25em;
 }
 
 .countrySelector-Form_List {
