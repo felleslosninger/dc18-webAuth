@@ -8,6 +8,7 @@ $c_light_grey2: #e6ebf0;
 $c_light_grey3: #e7e8ea;
 $c_medium_grey: #c8c8c8;
 $c_medium_grey2: #d2d2d2;
+$c_medium_grey2a: #b3b3b3;
 $c_medium_grey3: #9fa9b4;
 $c_grey: #5e6b77;
 $c_dark_grey: #253343;
@@ -57,5 +58,7 @@ $ca_list_element-text: $c_black;
 $ca_list_element-hover-text: $c_white;
 $ca_list_element-hover-bg: $c_blue;
 $ca_list-border: $c_light_grey2;
+$ca_list_element_disabled-text: $c_medium-grey2a;
+$ca_list_element_disabled-bg: $c_light_grey;
 
 $ca_legend-border: $c_medium_grey2;
