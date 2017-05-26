@@ -3,11 +3,11 @@ class SearchList {
   constructor() {
     const $ = jQuery.noConflict();
 
-  	this.inputField = $("input[type=text]");
-  	this.countrycode = $("input[type=hidden]");
-  	this.inputList = $("#js-country-list");
-  	this.trigger = $("#js-trigger");
-  	this.listElements = this.inputList.find("li");
+  	this.inputField = $('input[type=text]');
+  	this.countrycode = $('input[type=hidden]');
+  	this.inputList = $('#js-country-list');
+  	this.trigger = $('#js-trigger');
+  	this.listElements = this.inputList.find('li');
   	this.current = 0;
   }
 
@@ -16,34 +16,34 @@ class SearchList {
     const $ = jQuery.noConflict();
 		let self = this;
 
-		$("form").submit(function(e){
+		$('form').submit(function(e){
 			if (self.countrycode.val().length === 0) {
 				e.preventDefault();
 				self.checkInput(self.inputField.val());
 			}
 		});
 
-		self.inputField.on("keydown", function() {
-			if (!self.inputList.hasClass("open")) {
+		self.inputField.on('keydown', function() {
+			if (!self.inputList.hasClass('open')) {
 				self.openMenu();
 			}
 		});
 
-		self.inputField.on("keyup click input", function(e) {
+		self.inputField.on('keyup click input', function(e) {
 
 			if (e.keyCode === 27) { // Escape, close inputList if open
 				e.preventDefault();
-				if (self.inputList.hasClass("open")) {
+				if (self.inputList.hasClass('open')) {
 					self.closeMenu();
 				}
 				return true;
 			}
 			else if (e.keyCode === 38) { // Up arrow, go to last element in list if list open
 				e.preventDefault();
-				if (self.inputList.hasClass("open")) {
+				if (self.inputList.hasClass('open')) {
 					$.each(self.listElements, function(j) {
-						if ($(this).is(":visible")) {
-							$(this).find("> a").focus();
+						if ($(this).is(':visible')) {
+							$(this).find('> a').focus();
 							self.current = j;
 						}
 					});
@@ -52,11 +52,11 @@ class SearchList {
 			}
 			else if (e.keyCode === 40) { // Down arrow, go to first element in list if list open
 				e.preventDefault();
-				if (self.inputList.hasClass("open")) {
+				if (self.inputList.hasClass('open')) {
 					let found = false;
 					$.each(self.listElements, function(i) {
-						if ($(this).is(":visible") && !found) {
-							$(this).find("> a").focus();
+						if ($(this).is(':visible') && !found) {
+							$(this).find('> a').focus();
 							found = true;
 							self.current = i;
 						}
@@ -66,7 +66,7 @@ class SearchList {
 			}
 			if (this.value.length > 0) {
 				self.listElements.filter(function() {
-					let listElm = $(this).find("a").html().toLowerCase();
+					let listElm = $(this).find('a').html().toLowerCase();
 					let typedText =self.inputField.val().toLowerCase();
 					if (listElm.indexOf(typedText) === 0) {
 						$(this).show();
@@ -83,9 +83,9 @@ class SearchList {
 			}
 		});
 
-		self.trigger.on("click", function(e) {
+		self.trigger.on('click', function(e) {
 			e.preventDefault();
-			if (!self.inputList.hasClass("open")) {
+			if (!self.inputList.hasClass('open')) {
 				self.openMenu();
 			}
 			else {
@@ -93,35 +93,35 @@ class SearchList {
 			}
 		});
 
-		self.inputList.find("a").on("click", function(e) {
+		self.inputList.find('a').on('click', function(e) {
 			e.preventDefault();
 			self.inputField.val($(this).html());
-			self.countrycode.val($(this).attr("data-id"));
+			self.countrycode.val($(this).attr('data-id'));
 			self.closeMenu();
 		});
 
-		self.inputList.find("a").on("keydown", function(e) {
+		self.inputList.find('a').on('keydown', function(e) {
 			if (e.keyCode === 38) {
 				e.preventDefault();
 				let newCurrent = -1;
 				let toFocus = null;
 				$.each(self.listElements, function(i) {
-					if ($(this).is(":visible") && i < self.current) {
+					if ($(this).is(':visible') && i < self.current) {
 						newCurrent = i;
 						toFocus = $(this);
 					}
 				});
 				if (newCurrent === -1) {
 					$.each(self.listElements, function(j) {
-						if ($(this).is(":visible")) {
-							$(this).find("> a").focus();
+						if ($(this).is(':visible')) {
+							$(this).find('> a').focus();
 							self.current = j;
 						}
 					});
 				}
 				else {
 					if (toFocus !== null) {
-						toFocus.find("> a").focus();
+						toFocus.find('> a').focus();
 						self.current = newCurrent;
 					}
 				}
@@ -132,7 +132,7 @@ class SearchList {
 				let toFocus = null;
 				let found = false;
 				$.each(self.listElements, function(i) {
-					if ($(this).is(":visible") && i > self.current && !found) {
+					if ($(this).is(':visible') && i > self.current && !found) {
 						newCurrent = i;
 						toFocus = $(this);
 						found = true;
@@ -143,8 +143,8 @@ class SearchList {
 					self.current = 0;
 					found = false;
 					$.each(self.listElements, function(i) {
-						if ($(this).is(":visible") && !found) {
-							$(this).find("> a").focus();
+						if ($(this).is(':visible') && !found) {
+							$(this).find('> a').focus();
 							found = true;
 							self.current = i;
 						}
@@ -152,7 +152,7 @@ class SearchList {
 
 				}
 				else {
-					toFocus.find("> a").focus();
+					toFocus.find('> a').focus();
 					self.current = newCurrent;
 				}
 			}
@@ -160,7 +160,7 @@ class SearchList {
 				e.preventDefault();
 				self.inputField.val($(this).html());
 				self.closeMenu();
-				$(".button-holder").find("> .submit").focus();
+				$('.button-holder').find('> .submit').focus();
 			}
 		});
 	}
@@ -169,7 +169,7 @@ class SearchList {
     const $ = jQuery.noConflict();
 
 		this.inputList.slideDown(200, function() {
-			$(this).addClass("open");
+			$(this).addClass('open');
 		});
 	}
 
@@ -177,7 +177,7 @@ class SearchList {
     const $ = jQuery.noConflict();
 
 		this.inputList.slideUp(200, function() {
-			$(this).removeClass("open");
+			$(this).removeClass('open');
 		});
 	}
 
@@ -187,9 +187,9 @@ class SearchList {
 		let countryId = null;
 		$.each(self.listElements, function(i) {
 			if (countryId === null) {
-				let countryElm = $(this).find("> a");
+				let countryElm = $(this).find('> a');
 				if (countryElm.html().toLowerCase() === name.trim().toLowerCase()) {
-					countryId = countryElm.attr("data-id");
+					countryId = countryElm.attr('data-id');
 					self.countrycode.val(countryId);
 					return true;
 				}
@@ -204,7 +204,7 @@ const countrySelector = () => {
 
   const $ = jQuery.noConflict();
 
-	if ($("#js-country-list").length > 0) {
+	if ($('#js-country-list').length > 0) {
 		let searchCtrl = new SearchList();
 		searchCtrl.addEvents();
 	}
