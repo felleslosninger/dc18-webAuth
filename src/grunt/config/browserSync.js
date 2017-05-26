@@ -3,6 +3,7 @@ module.exports = {
     src : config.browserSync.src
   },
   options: {
-    proxy: config.browserSync.proxy
+    proxy: config.browserSync.proxy,
+    reloadDebounce: 500
   }
 }
