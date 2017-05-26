@@ -7,7 +7,8 @@ $c_light_grey: #f7f8fa;
 $c_light_grey2: #e6ebf0;
 $c_light_grey3: #e7e8ea;
 $c_medium_grey: #c8c8c8;
-$c_medium_grey2: #9fa9b4;
+$c_medium_grey2: #d2d2d2;
+$c_medium_grey3: #9fa9b4;
 $c_grey: #5e6b77;
 $c_dark_grey: #253343;
 $c_blue: #006cff;
@@ -43,7 +44,6 @@ $ca_button-cancel-hover-bg: transparent;
 $ca_button-cancel-hover-text: $c_black;
 
 $ca_link_border: $c_blue;
-$ca_list-border: $c_light_grey2;
 
 $ca_menu_element-bg: $c_blue;
 $ca_menu_element-border-hover: $c_white;
@@ -56,3 +56,6 @@ $ca_list-bg: $c_white;
 $ca_list_element-text: $c_black;
 $ca_list_element-hover-text: $c_white;
 $ca_list_element-hover-bg: $c_blue;
+$ca_list-border: $c_light_grey2;
+
+$ca_label-border: $c_medium_grey2;

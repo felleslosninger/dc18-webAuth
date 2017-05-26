@@ -89,3 +89,14 @@ iframe {
     margin-top: 0;
   }
 }
+
+.visuallyHidden { // used for labels etc visible only to screen readers and support tools
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

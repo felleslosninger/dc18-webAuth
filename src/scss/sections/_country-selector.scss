@@ -1,0 +1,100 @@
+/*
+* Styles for country selector
+*
+* ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
+* For more information: http://ecss.io
+*
+* Namespace: countrySelector
+*/
+
+$dropdown_bg-hover: $c_light_grey;
+$dropdown_text-hover: $c_blue;
+
+.countrySelector-Form {
+  fieldset { // turn off default browser styles
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+.countrySelector-Form_Legend {
+  display: block;
+  font-size: $t_size-normal;
+  padding: 1rem 0;
+  margin: 0 1rem 1rem 1rem;
+  width: calc(100% - 2rem);
+  border-bottom: 1px solid $ca_label-border;
+}
+
+.countrySelector-Form_InputContainer {
+  position: relative;
+  margin: 0 1rem;
+}
+
+.countrySelector-Form_Input {
+  text-transform: capitalize;
+}
+
+.countrySelector-Form_Button {
+    background-color: $ca_list-bg;
+    padding: 1rem;
+}
+
+.countrySelector-Form_List {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 295px;
+  overflow: auto;
+  list-style: none;
+  border-top: 1px solid $ca_list-border;
+  padding: 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 49px;
+  left: 0;
+  z-index: 10;
+
+  &.open {
+    display: block;
+  }
+
+  li a {
+    display: block;
+    box-sizing: border-box;
+    height: 50px;
+    margin-top: -1px;
+    padding: 10px 20px;
+    border: 1px solid $ca_list-border;
+    text-decoration: none;
+    color: $ca_body-text;
+    background-color: $ca_list-bg;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+
+    &:hover, &:focus {
+      color: $dropdown_text-hover;
+      background-color: $dropdown_bg-hover
+    }
+
+    &[data-id="at"] {background-image: url('../images/flag/AT.png');}
+		&[data-id="cz"] {background-image: url('../images/flag/CZ.png');}
+		&[data-id="dk"] {background-image: url('../images/flag/DK.png');}
+		&[data-id="ee"] {background-image: url('../images/flag/EE.png');}
+		&[data-id="fr"] {background-image: url('../images/flag/FR.png');}
+		&[data-id="de"] {background-image: url('../images/flag/DE.png');}
+		&[data-id="gr"] {background-image: url('../images/flag/GR.png');}
+		&[data-id="ie"] {background-image: url('../images/flag/IE.png');}
+		&[data-id="it"] {background-image: url('../images/flag/IT.png');}
+		&[data-id="lu"] {background-image: url('../images/flag/LU.png');}
+		&[data-id="nl"] {background-image: url('../images/flag/NL.png');}
+		&[data-id="pl"] {background-image: url('../images/flag/PL.png');}
+		&[data-id="pt"] {background-image: url('../images/flag/PT.png');}
+		&[data-id="ro"] {background-image: url('../images/flag/RO.png');}
+		&[data-id="sk"] {background-image: url('../images/flag/SK.png');}
+		&[data-id="si"] {background-image: url('../images/flag/SI.png');}
+		&[data-id="es"] {background-image: url('../images/flag/ES.png');}
+		&[data-id="se"] {background-image: url('../images/flag/SE.png');}
+		&[data-id="tr"] {background-image: url('../images/flag/TR.png');}
+  }
+}

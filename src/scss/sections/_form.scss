@@ -95,7 +95,7 @@ input[type=text] {
   border: 1px solid $c_light_grey3;
   outline: none;
   &:hover {
-    border-color: $c_medium_grey2;
+    border-color: $c_medium_grey3;
     background-color: $c_light_grey;
   }
   &:active {
@@ -114,7 +114,7 @@ input[type=text] {
   color: $c_white;
   background-color: $c_blue;
   &:hover {
-    border-color: $c_medium_grey2;
+    border-color: $c_medium_grey3;
     background-color: $c_blue2;
   }
   &:active {
