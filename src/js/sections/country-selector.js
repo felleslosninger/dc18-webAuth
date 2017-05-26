@@ -163,6 +163,13 @@ class SearchList {
 				$('.button-holder').find('> .submit').focus();
 			}
 		});
+
+    $(document).on('click', (e) => {
+      if (!(document.getElementById('js-country').contains(e.target)) && 
+          !(document.getElementById('js-country-list').contains(e.target))) {
+        self.closeMenu();
+      }
+    })
 	}
 
 	openMenu() {
