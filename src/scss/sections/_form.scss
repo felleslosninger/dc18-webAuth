@@ -3,6 +3,20 @@ form {
 //  flex-direction: column;
 }
 
+fieldset { // turn off default browser styles
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+legend {
+  display: block;
+  font-size: $t_size-normal;
+  padding: 1rem 0;
+  margin: 0 0 1rem 0;
+  width: calc(100% - 2rem);
+  border-bottom: 1px solid $ca_legend-border;
+}
+
 $margin: 1em;
 
 .fm-Fields {
@@ -11,6 +25,33 @@ $margin: 1em;
   display: flex;
   flex-direction: column;
 }
+.fm-Field {
+  display: flex;
+  flex-direction: column;
+  margin: {
+    top: $margin;
+  }
+  // First field in the form
+  &:first-child {
+    margin-top: 0;
+  }
+
+  // Error message
+  &.error {
+    input {
+      border-color: $c_error;
+    }
+    & + .fm-Message {
+      color: $c_error;
+      display: initial;
+    }
+  }
+}
+.fm-Message {
+  font-size: $t_size-normal;
+  margin-top: -$margin/4;
+  display: none;
+}
 
 label {
   display: flex;
@@ -18,11 +59,7 @@ label {
   text-transform: uppercase;
   font-weight: 600;
   margin: {
-    top: $margin;
     left: $margin / 4;
-  }
-  &:first-child {
-    margin-top: 0;
   }
   & + input {
     margin-top: $margin / 4;
@@ -30,6 +67,7 @@ label {
       margin-top: calc(#{$margin} / 4 - 1px);
     }
   }
+  /*
   &.error {
   //  color: $c_error;
     & + input {
@@ -41,13 +79,9 @@ label {
       }
     }
   }
+  */
 }
 
-.message {
-  font-size: $t_size-normal;
-  margin-top: -$margin/4;
-  display: none;
-}
 
 input, button, .btn {
   display: flex;

@@ -39,16 +39,20 @@
             <!-- /Progress dots -->
 
             <!-- Form -->
-            <form>
+            <form action='#'>
               <div class='fm-Fields'>
-                <label for='mobile'>Mobile number (8 digits)</label>
-                <input id='mobile' type='text' placeholder='Enter mobile number (8 digits)' />
-                <span class='message'>Please fill in your mobile number</span>
+                <div class='fm-Field'>
+                  <label for='mobile'>Mobile number (8 digits)</label>
+                  <input id='mobile' type='text' placeholder='Enter mobile number (8 digits)' />
+                </div>
+                <span class='fm-Message'>Please fill in your mobile number</span>
 
                 <!-- When label gets class .error then input and span.message change their look and present the error message -->
-                <label class='error' for='mobile'>Date of birth</label>
-                <input id='mobile' type='text' placeholder='YYYY-MM-DD' />
-                <span class='message'>Please fill in your birthday date</span>
+                <div class='fm-Field error'>
+                  <label for='mobile'>Date of birth</label>
+                  <input id='mobile' type='text' placeholder='YYYY-MM-DD' />
+                </div>
+                <span class='fm-Message'>Please fill in your birthday date</span>
 
               </div>
 
