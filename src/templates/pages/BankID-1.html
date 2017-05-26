@@ -43,16 +43,17 @@
               <div class='fm-Fields'>
                 <label for='mobile'>Mobile number (8 digits)</label>
                 <input id='mobile' type='text' placeholder='Enter mobile number (8 digits)' />
+                <span class='message'>Please fill in your mobile number</span>
 
+                <!-- When label gets class .error then input and span.message change their look and present the error message -->
                 <label class='error' for='mobile'>Date of birth</label>
                 <input id='mobile' type='text' placeholder='YYYY-MM-DD' />
-                <span class='error'>Please fill in your birthday date</span>
+                <span class='message'>Please fill in your birthday date</span>
+
               </div>
 
-              <div class='fm-Controls'>
-                <button class='btn btn-Normal'><span>Cancel</span></button>
-                <button class='btn btn-Action' type='submit'><span>Next</span></button>
-              </div>
+              <!-- build:section recursive section.form-controls-two_buttons --><!--/build -->
+
             </form>
             <!-- /Form -->
           </div>

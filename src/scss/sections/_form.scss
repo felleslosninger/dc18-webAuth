@@ -18,7 +18,7 @@ label {
   text-transform: uppercase;
   font-weight: 600;
   margin: {
-    top: $margin / 2;
+    top: $margin;
     left: $margin / 4;
   }
   &:first-child {
@@ -31,11 +31,22 @@ label {
     }
   }
   &.error {
-    color: $c_error;
+  //  color: $c_error;
     & + input {
-      @include placeholder($c_error);
+      //@include placeholder($c_error);
+      border-color: $c_error;
+      & + .message {
+        color: $c_error;
+        display: initial;
+      }
     }
   }
+}
+
+.message {
+  font-size: $t_size-normal;
+  margin-top: -$margin/4;
+  display: none;
 }
 
 input, button, .btn {
@@ -87,6 +98,15 @@ input[type=text] {
   > * {
     width: calc(50% - 1em / 2);
   }
+
+  &.with-Action {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &.with-Normal.with-Action {
+    flex-direction: row;
+  }
+
 }
 
 .btn-Normal {
