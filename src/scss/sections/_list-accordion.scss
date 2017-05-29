@@ -35,7 +35,7 @@
   border-bottom: 1px solid $ca_list-border;
   .fa-angle-down {
     font-weight: $t_weight_bolder;
-    font-size: $t_size-large; 
+    font-size: $t_size-large;
     &.addAnimation {
       animation: turndown 0.3s ease;
       animation-fill-mode: forwards;
@@ -46,5 +46,9 @@
       animation: turnup 0.3s ease;
       animation-fill-mode: forwards;
     }
+  }
+  &:hover, &:focus {
+    color: $ca_list_element-hover-text;
+    background-color: $ca_list_element-hover-bg;
   }
 }
