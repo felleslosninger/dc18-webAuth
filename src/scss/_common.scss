@@ -62,3 +62,7 @@ iframe {
   position: absolute;
   width: 1px;
 }
+
+.with-Link {
+  @include apply-text-link();
+}

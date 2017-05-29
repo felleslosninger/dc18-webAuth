@@ -227,3 +227,11 @@ input[type=text], input[type=password] {
     background-color: $c_blue;
   }
 }
+
+.fm-Password_Link {
+  font-size: $t_size-normal;
+  margin-top: 0.5em;
+  a {
+    padding: 0.5em;
+  }
+}
