@@ -45,7 +45,7 @@
     &:hover, &:active {
       background: $c_light_grey;
       &:after {
-        background-color: $c_blue;
+        background-color: $ca_normal;
         height: 3px;
       }
     }
@@ -62,18 +62,18 @@
         width: calc(100% - 4px);
         height: calc(100% - 4px);
         > span {
-          border-bottom-color: $c_blue;
+          border-bottom-color: $ca_focus;
         }
       }
     }
 
     &.active {
-      background-color: $c_blue;
+      background-color: $ca_normal;
       color: $c_white;
 
       // Active button hover state
       &:hover, &:active {
-        background: $c_blue2;
+        background: $ca_hover;
         &:after {
           background-color: $c_black;
         }
@@ -81,7 +81,7 @@
 
       // Active button focus state
       &:focus {
-        background-color: $c_blue2;
+        background-color: $ca_focus;
         &:after {
           background-color: transparent;
         }

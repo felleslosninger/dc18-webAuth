@@ -1,6 +1,6 @@
 form {
-//  display: flex;
-//  flex-direction: column;
+  //  display: flex;
+  //  flex-direction: column;
 }
 
 fieldset { // turn off default browser styles
@@ -70,16 +70,16 @@ label {
   /*
   &.error {
   //  color: $c_error;
-    & + input {
-      //@include placeholder($c_error);
-      border-color: $c_error;
-      & + .message {
-        color: $c_error;
-        display: initial;
-      }
-    }
-  }
-  */
+  & + input {
+  //@include placeholder($c_error);
+  border-color: $c_error;
+  & + .message {
+  color: $c_error;
+  display: initial;
+}
+}
+}
+*/
 }
 
 
@@ -103,6 +103,7 @@ input[type=submit], .btn {
 .btn {
   > span {
     border-bottom: 1px solid transparent;
+    margin: auto;
   }
 }
 
@@ -166,20 +167,23 @@ input[type=text] {
 }
 .btn-Action {
   color: $c_white;
-  background-color: $c_blue;
+  background-color: $ca_normal;
   &:hover {
-    border-color: $c_medium_grey3;
-    background-color: $c_blue2;
+    border-color: $ca_hover-border;
+    background-color: $ca_hover;
   }
   &:active {
-    border-color: $c_blue2;
-    background-color: $c_light_grey;
+    border-color: $ca_active-border;
+    background-color: $ca_active;
+    > span {
+      border-bottom-color: $ca_active_border;
+    }
   }
   &:focus {
     border-color: $c_blue2;
-    background-color: $c_dark_blue;
+    background-color: $ca_focus;
     > span {
-      border-bottom-color: $c_white;
+      border-bottom-color: $ca_focus_border;
     }
   }
 }
