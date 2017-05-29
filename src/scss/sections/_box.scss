@@ -4,7 +4,8 @@ $box_list_element-hover-text: $c_white;
 $box_list_element-hover-bg: $c_blue;
 
 $box-text_link: $c_nearly_black;
-$box-text_link-active: $c_blue;
+$box-text_link-border: $c_blue;
+$box-text_link-active: $c_grey;
 $box-text_link-active_border: $c_grey;
 $box-text_link-size: $t_size-normal;
 
@@ -90,7 +91,7 @@ $box-text_link-padding: 0.5em;
 
   // Add text link styling
   a {
-    @include text-link($box-text_link, $box-text_link, $box-text_link-active, $box-text_link-active_border, $box-text_link-size, $box-text_link-padding);
+    @include text-link($box-text_link, $box-text_link-border, $box-text_link-active, $box-text_link-active_border, $box-text_link-size, $box-text_link-padding);
   }
   ul {
     padding-left: 0;
