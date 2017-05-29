@@ -30,16 +30,25 @@
   line-height: 1.5em;
   text-decoration: none;
   color: $ca_body-text;
-  padding: 0.7857em 1rem 0.7857em 1rem;
+  padding: 1rem 1.4rem;
   text-decoration: none;
   border-bottom: 1px solid $ca_list-border;
   .fa-angle-down {
     font-weight: $t_weight_bolder;
-    font-size: $t_size-basis;
+    font-size: $t_size-large;
+    &.addAnimation {
+      animation: turndown 0.3s ease;
+      animation-fill-mode: forwards;
+    }
   }
   &[aria-expanded='true'] {
     .fa-angle-down {
-      transform: rotateX(180deg);
+      animation: turnup 0.3s ease;
+      animation-fill-mode: forwards;
     }
+  }
+  &:hover, &:focus {
+    color: $ca_list_element-hover-text;
+    background-color: $ca_list_element-hover-bg;
   }
 }
