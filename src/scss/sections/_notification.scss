@@ -7,6 +7,20 @@
   font-size: $t_size_normal;
   border: 2px solid $c_notification;
   border-radius: 4px;
+  &.with-Icon {
+    position: relative;
+    padding-left: 4em;
+    &:after {
+      @extend %notification;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2em;
+      height: 2em;
+      left: 1em;
+      top: 1em;
+    }
+  }
 }
 .fm-Fields .notification {
   margin: 0;
