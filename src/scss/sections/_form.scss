@@ -174,7 +174,10 @@ input[type=text] {
   }
   &:active {
     border-color: $c_blue2;
-    background-color: $c_light_grey;
+    background-color: $c_dark_blue;
+    > span {
+      border-bottom-color: $c_white;
+    }
   }
   &:focus {
     border-color: $c_blue2;
