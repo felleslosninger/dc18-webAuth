@@ -20,9 +20,6 @@ $dropdown_text-hover: $c_blue;
   display: flex;
   input[type=text] {
     flex: 1;
-    // border-right: none;
-    //border-top-right-radius: 0;
-    //border-bottom-right-radius: 0;
   }
 }
 
@@ -41,6 +38,9 @@ $dropdown_text-hover: $c_blue;
   height: auto;
   right: 1px;
   border-left-color: $c_light_grey3;
+  &:focus {
+    border: 1px solid $ca_button-bg;
+  }
 }
 .cs-Input_Placeholder {
   width: 100%;
