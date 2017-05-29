@@ -1,0 +1,13 @@
+
+
+
+.notification {
+  padding: 1em;
+  margin: 1em;
+  font-size: $t_size_normal;
+  border: 2px solid $c_notification;
+  border-radius: 4px;
+}
+.fm-Fields .notification {
+  margin: 0;
+}

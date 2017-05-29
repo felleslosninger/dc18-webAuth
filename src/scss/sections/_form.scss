@@ -15,28 +15,29 @@ legend {
   margin: 0 0 1rem 0;
   width: 100%;
   border-bottom: 1px solid $ca_legend-border;
+  @include apply-text-link();
 }
-
-$margin: 1em;
 
 .fm-Fields {
   background-color: $c_white;
-  padding: $margin;
+  padding: $box-padding;
   display: flex;
   flex-direction: column;
 }
+
+// Form field
 .fm-Field {
   display: flex;
   flex-direction: column;
   margin: {
-    top: $margin;
+    top: $box-padding;
   }
   // First field in the form
   &:first-child {
     margin-top: 0;
   }
 
-  // Error message
+  // Error message inside field
   &.error {
     input {
       border-color: $c_error;
@@ -46,44 +47,55 @@ $margin: 1em;
       display: initial;
     }
   }
+
+  // Child element having icon
+  .with-icon {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    > * {
+      &:first-child {
+        flex: 1;
+        flex-grow: 20;
+      }
+      &:last-child {
+        @include text-link($c_medium_grey3, $c_blue, $c_blue, $c_grey);
+        display: flex;
+        flex: 1;
+        flex-grow: 1;
+        justify-content: center;
+        flex-direction: column;
+        > .fa {
+          margin: auto;
+          font-size: 1.25em;
+        }
+      }
+    }
+  }
 }
 .fm-Message {
   font-size: $t_size-normal;
-  margin-top: -$margin/4;
+  margin-top: -$box-padding/4;
   display: none;
 }
 
-label {
+label, .label {
   display: flex;
   font-size: $t_size-normal;
   text-transform: uppercase;
   font-weight: 600;
   margin: {
-    left: $margin / 4;
+    left: $box-padding / 4;
   }
   & + input {
-    margin-top: $margin / 4;
+    margin-top: $box-padding / 4;
     &:focus {
-      margin-top: calc(#{$margin} / 4 - 1px);
+      margin-top: calc(#{$box-padding} / 4 - 1px);
     }
   }
-  /*
-  &.error {
-  //  color: $c_error;
-  & + input {
-  //@include placeholder($c_error);
-  border-color: $c_error;
-  & + .message {
-  color: $c_error;
-  display: initial;
-}
-}
-}
-*/
 }
 
-
-input, button, .btn {
+input, button, .btn, .text {
   display: flex;
   border-radius: 4px;
   height: 2em;
@@ -107,6 +119,7 @@ input[type=submit], .btn {
   }
 }
 
+// Text form field
 input[type=text], input[type=password] {
   border: 1px solid $c_light_grey3;
   padding: 8px 12px;
@@ -118,10 +131,16 @@ input[type=text], input[type=password] {
     }
     margin: {
       left: -1px;
-      bottom: calc(#{$margin} / 2 - 1px);
+      bottom: calc(#{$box-padding} / 2 - 1px);
     }
   }
 }
+// Text element which is not a form field
+.text {
+  padding: 2px 8px;
+  border-bottom: 1px solid $c_light_grey3;
+}
+
 
 .fm-Controls {
   display: flex;
@@ -129,7 +148,7 @@ input[type=text], input[type=password] {
   justify-content: space-between;
   background: $c_light_grey;
   //border-bottom: 1px solid $c_light_grey3;
-  padding: $margin $margin $margin * 1.5 $margin;
+  padding: $box-padding $box-padding $box-padding * 1.5 $box-padding;
   > * {
     width: calc(50% - 1em / 2);
   }
