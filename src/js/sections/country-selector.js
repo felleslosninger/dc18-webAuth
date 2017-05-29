@@ -26,6 +26,9 @@ class SearchList {
 
 		self.inputField.on('keydown', function() {
       self.errorHandler.removeClass('error');
+      if (e.keyCode === 9) {
+        return true;
+      }
 			if (!self.inputList.hasClass('open')) {
 				self.openMenu();
 			}

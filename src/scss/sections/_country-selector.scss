@@ -4,29 +4,26 @@
 * ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
 * For more information: http://ecss.io
 *
-* Namespace: countrySelector
+* Namespace: cs (countrySelector)
 */
 
 $dropdown_bg-hover: $c_light_grey;
 $dropdown_text-hover: $c_blue;
 
 
-.countrySelector-Form_InputContainer {
+.cs-InputContainer {
   position: relative;
   //margin: 0 1rem;
 }
 
-.countrySelector-Form_Input {
+.cs-Input {
   display: flex;
   input[type=text] {
     flex: 1;
-    // border-right: none;
-    //border-top-right-radius: 0;
-    //border-bottom-right-radius: 0;
   }
 }
 
-.countrySelector-Form_Button {
+.cs-Button {
   position: absolute;
 
   font-size: 0.875em;
@@ -41,14 +38,17 @@ $dropdown_text-hover: $c_blue;
   height: auto;
   right: 1px;
   border-left-color: $c_light_grey3;
+  &:focus {
+    border: 1px solid $ca_button-bg;
+  }
 }
-.countrySelector-Input_Placeholder {
+.cs-Input_Placeholder {
   width: 100%;
   display: flex;
   position: relative;
 }
 
-.countrySelector-Form_List {
+.cs-List {
   display: none;
   box-sizing: border-box;
   width: 100%;

@@ -3,14 +3,14 @@
     <div class='fm-Fields'>
       <legend>Use your National electronic ID to log in.</legend>
 
-      <div class='countrySelector-Form_InputContainer'>
+      <div class='cs-InputContainer'>
 
         <!-- Form field with class "error" and it affects both the input field and fm-Message field -->
-        <div class="countrySelector-Form_Input fm-Field error" id="js-country">
-          <div class='countrySelector-Input_Placeholder'>
+        <div class="cs-Input fm-Field" id="js-country">
+          <div class='cs-Input_Placeholder'>
             <label for="country" class="visuallyHidden">Enter or select country</label>
             <input type="text" id="country" placeholder="Enter country name" autocomplete="off" aria-haspopup="true">
-            <button class="countrySelector-Form_Button fa fa-angle-down" id="js-trigger"></button>
+            <button class="cs-Button fa fa-angle-down" id="js-trigger"></button>
           </div>
           <input type="hidden" name="countrycode" value="" />
         </div>
@@ -19,7 +19,7 @@
         <span class="fm-Message">Please select a country from the list</span>
         <!-- // Form field error message -->
 
-        <ul role="listbox" class="countrySelector-Form_List" id="js-country-list">
+        <ul role="listbox" class="cs-List" id="js-country-list">
           <li role="option"><a data-id="at" href="">Austria</a></li>
           <li role="option"><a data-id="cz" href="">Czech Republic</a></li>
           <li role="option"><a data-id="dk" href="">Denmark</a></li>
