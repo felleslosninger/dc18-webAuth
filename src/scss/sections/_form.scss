@@ -107,7 +107,7 @@ input[type=submit], .btn {
   }
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
   border: 1px solid $c_light_grey3;
   padding: 8px 12px;
   &:focus {

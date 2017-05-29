@@ -1,0 +1,52 @@
+<!-- build:section recursive layout.commonheader -->
+<!-- /build -->
+
+<!-- build:section recursive section.header -->
+<!-- /build -->
+
+<!-- build:process -->
+<main>
+  <!-- build:section recursive section.dmy --><!-- /build -->
+  <section class='Box'>
+    <!-- build:section recursive section.box-header --><!--/build -->
+
+    <div class='Box_main'>
+      <!-- Progress dots -->
+      <div class='fm-Progress_Container'>
+        <div class='fm-Progress_Dot active'></div>
+        <div class='fm-Progress_Dot'></div>
+      </div>
+      <!-- /Progress dots -->
+
+      <!-- Form -->
+      <form action='#'>
+        <div class='fm-Fields'>
+          <div class='fm-Field'>
+            <label for='idnumber'>Fødselsnummer (11 siffer)</label>
+            <input id='idnumber' type='text' placeholder='Fødselsnummer (11 siffer)' />
+          </div>
+          <span class='fm-Message'>Vennligst fyll inn fødselsnummeret ditt</span>
+
+          <!-- When label gets class .error then input and span.message change their look and present the error message -->
+          <div class='fm-Field'>
+            <label for='password'>Passord</label>
+            <input id='password' type='password' placeholder='******' />
+          </div>
+          <span class='fm-Message'>Vennligst skriv inn passordet ditt</span>
+          <a href='#'><span>Glemt passord?</span></a>
+        </div>
+
+        <!-- build:section recursive section.form-controls-two_buttons --><!--/build -->
+
+      </form>
+    </div>
+
+    <!-- build:section recursive section.box-footer_no-link --><!--/build -->
+  </section>
+</main>
+<!-- /build -->
+
+<!-- build:section section.footer -->
+<!-- /build -->
+<!-- build:section recursive layout.commonfooter -->
+<!-- /build -->
