@@ -44,44 +44,6 @@ iframe {
   width: 100%;
 }
 
-@mixin text-link($linkColor: $c_nearly_black, $borderColor: $c_blue, $activeLinkColor: $c_blue, $activeBorderColor: $c_grey, $fontSize: $t_size-normal, $padding: 0.5em) {
-  color: $linkColor;
-  text-decoration: none;
-  position: relative;
-  padding: $padding;
-  font-size: $fontSize;
-  &:hover,
-  &:active {
-    color: $activeLinkColor;
-    span {
-      border-bottom-color: $activeLinkColor;
-      &.fa {
-        color: $linkColor;
-      }
-    }
-  }
-  &:focus {
-    color: $activeLinkColor;
-    outline: 1px solid $activeBorderColor;
-    border-bottom-color: transparent;
-    text-decoration: none;
-    span {
-      border-bottom-color: transparent;
-      &.fa {
-        color: $linkColor;
-      }
-    }
-  }
-  span {
-    border-bottom: 1px solid $borderColor;
-    &.fa {
-      border-bottom-color: transparent;
-    }
-  }
-}
-
-
-
 // Mobile view
 @include mobile {
   main {

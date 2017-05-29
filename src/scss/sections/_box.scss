@@ -13,6 +13,8 @@ $box-help-icon: #c2c3c4;
 $box-border-color: #d3d3d3;;
 $box-text_link-padding: 0.5em;
 
+$box-padding: 1em;
+
 .Box {
   width: 500px;
   margin: auto;
@@ -83,7 +85,10 @@ $box-text_link-padding: 0.5em;
 }
 
 .Box_main {
-
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: $c_white;
 }
 
 
