@@ -1207,10 +1207,10 @@ input[type=submit], .btn {
   border-bottom: 1px solid transparent;
   margin: auto; }
 
-input[type=text] {
+input[type=text], input[type=password] {
   border: 1px solid #e7e8ea;
   padding: 8px 12px; }
-  input[type=text]:focus {
+  input[type=text]:focus, input[type=password]:focus {
     outline: none;
     border-width: 2px;
     border-color: #006cff;
