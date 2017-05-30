@@ -43,18 +43,18 @@
             <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
             <div class='h-Menu_Container' id='js-menues'>
                 <nav class='h-Menu'>
-                    <a href='' role='button' class='h-Menu_Trigger'><span>Kontaktdetaljer</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
+                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Kontaktdetaljer</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
                     <ul>
-                        <li><a href="" class="h-Main_Menu_Element"><span>Endre</span></a></li>
+                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
                     </ul>
                 </nav>
                 <div class='h-Menu'>
-                    <a href='' role='button' class='h-Menu_Trigger'><span>Språk</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
+                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Språk</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
                     <ul>
                         <li><a href="" class="h-Main_Menu_Element"><span>Bokmål</span></a></li>
                         <li><a href="" class="h-Main_Menu_Element"><span>Nynorsk</span></a></li>
                         <li><a href="" class="h-Main_Menu_Element"><span>Engelsk</span></a></li>
-                        <li><a href="" class="h-Main_Menu_Element"><span>Sámigiella</span></a></li>
+                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Sámigiella</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -69,7 +69,17 @@
         <section class='Box'>
             <div class='Box_header'>
                 <div class='Box_header-title with-logo logo-eid-gray'>Select an electronic id</div>
-                <div class='Box_header-provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
+
+                <nav class='mi-Menu' id='js-mi-menu'>
+                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='mi-Menu_Trigger'><span>Meny</span><span class='fa fa-bars fa-lg' aria-hidden="true"></span></a>
+                    <ul>
+                        <li><a href="" class="mi-Menu_Element"><span>MinID innstillinger</span></a></li>
+                        <li><a href="" class="mi-Menu_Element"><span>Registrere ny MinID bruker</span></a></li>
+                        <li><a href="" class="mi-Menu_Element"><span>Glemt passord</span></a></li>
+                        <li><a href="" class="mi-Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
+                    </ul>
+                </nav>
+
             </div>
 
             <div class='Box_main'>
@@ -95,7 +105,9 @@
                             <input id='password' type='password' placeholder='******' />
                         </div>
                         <span class='fm-Message'>Vennligst skriv inn passordet ditt</span>
-                        <a href='#'><span>Glemt passord?</span></a>
+                        <div class='fm-Password_Link with-Link'>
+                            <a href='#'><span>Glemt passord?</span></a>
+                        </div>
                     </div>
 
                     <!-- Controls placeholder with two buttons -->
@@ -110,14 +122,14 @@
 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
-                    <!-- <ul> -->
-                    <!-- <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li> -->
-                    <!-- <li><a href='#'><span>Menu 2</span></a></li> -->
-                    <!-- </ul> -->
+                    <ul>
+                        <li><a href='#'><span>Registrer ny bruker</span></a></li>
+                        <li><a href='#'><span>Bestill PIN-koder</span></a></li>
+                    </ul>
                 </div>
 
                 <div class='Box_footer-help'>
-                    <a href='#'><span class='fa fa-question-circle' alt='Help icon'></span></a>
+                    <a href='#'><span class='fa fa-question-circle' alt='Help icon' /></a>
                 </div>
             </div>
         </section>

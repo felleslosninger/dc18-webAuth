@@ -87,6 +87,37 @@ module.exports = function(grunt) {
         imgpath: config.build.img.relativepath
       }
     }
+  },
+  build_sections: {
+    cwd: config.src.templates.sections,
+    expand: true,
+    src: '*.html',
+    dest: config.build.html.sections.path,
+    options: {
+      beautify: true,
+      relative: true,
+      scripts: {
+        bundle: [
+          config.build.js.path + config.build.js.vendorfileminified
+        ],
+        main: config.build.js.path + config.build.js.scriptfileminified
+      },
+      sections: {
+        pages: pages,
+        layout: layouts,
+        section: sections
+      }
+
+      ,
+      styles: {
+        bundle: [],
+        main: config.build.css.path + config.build.css.cssfileminified
+      },
+      data: {
+        mode: 'BUILD',
+        imgpath: config.build.img.relativepath
+      }
+    }
   }
 };
 
