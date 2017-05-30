@@ -113,18 +113,16 @@ input, button, .btn, .text {
 }
 input[type=submit], .btn {
   height: 4.5em;
-  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   font-weight: 600;
   font-size: $t_size-normal;
-}
-
-.btn {
   > span {
     border-bottom: 1px solid transparent;
     margin: auto;
   }
 }
+
 
 // Text form field
 input[type=text], input[type=password] {
