@@ -1252,6 +1252,9 @@ input[type=text], input[type=password] {
   padding: 2px 8px;
   border-bottom: 1px solid #e7e8ea; }
 
+.disabled {
+  color: #5e6b77; }
+
 .fm-Controls {
   display: flex;
   flex-direction: row;
