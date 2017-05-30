@@ -819,6 +819,12 @@ iframe {
   border: 1px solid #d3d3d3;
   border-radius: 4px; }
 
+.Box_main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: #ffffff; }
+
 .Box_header, .Box_footer {
   display: flex;
   justify-content: space-between;
@@ -835,7 +841,8 @@ iframe {
   border-top: 1px solid #e6ebf0; }
 
 .Box_inside-footer {
-  border-top: 1px solid #e6ebf0; }
+  border-top: 1px solid #e6ebf0;
+  background-color: transparent; }
   .Box_inside-footer + .Box_footer {
     border-top-width: 0; }
 
@@ -861,12 +868,6 @@ iframe {
 .Box_header-provider img {
   max-height: 30px;
   width: auto; }
-
-.Box_main {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  background-color: #ffffff; }
 
 .Box_footer-links a {
   color: #222222;
@@ -1016,7 +1017,7 @@ iframe {
 .ln-List-lowPriority {
   list-style: none;
   padding-left: 0;
-  margin: 1em 1em 0 1em;
+  margin: 1em 1em 1em 1em;
   background-color: transparent;
   border: 1px solid #d3d3d3;
   border-radius: 4px; }
@@ -1103,7 +1104,7 @@ iframe {
 .tb-Tab {
   display: none; }
   .tb-Tab.active {
-    display: initial; }
+    display: block; }
 
 fieldset {
   border: none;
@@ -1229,14 +1230,13 @@ input, button, .btn, .text {
 
 input[type=submit], .btn {
   height: 4.5em;
-  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.875em; }
-
-.btn > span {
-  border-bottom: 1px solid transparent;
-  margin: auto; }
+  input[type=submit] > span, .btn > span {
+    border-bottom: 1px solid transparent;
+    margin: auto; }
 
 input[type=text], input[type=password] {
   border: 1px solid #e7e8ea;
@@ -1253,7 +1253,7 @@ input[type=text], input[type=password] {
   border-bottom: 1px solid #e7e8ea; }
 
 .disabled {
-  color: #5e6b77; }
+  color: #9fa9b4; }
 
 .fm-Controls {
   display: flex;
