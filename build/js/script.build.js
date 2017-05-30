@@ -21,6 +21,10 @@ var _accordion = require('./sections/accordion');
 
 var _accordion2 = _interopRequireDefault(_accordion);
 
+var _minidMenu = require('./sections/minid-menu');
+
+var _minidMenu2 = _interopRequireDefault(_minidMenu);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _header2.default)();
@@ -28,8 +32,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _countrySelector2.default)();
 (0, _disabledLinks2.default)();
 (0, _accordion2.default)();
+(0, _minidMenu2.default)();
 
-},{"./sections/accordion":2,"./sections/country-selector":3,"./sections/disabled-links":4,"./sections/header":5,"./sections/tab":6}],2:[function(require,module,exports){
+},{"./sections/accordion":2,"./sections/country-selector":3,"./sections/disabled-links":4,"./sections/header":5,"./sections/minid-menu":6,"./sections/tab":7}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -338,25 +343,52 @@ var menuEvents = function menuEvents() {
   var $menuContainer = $('.h-Menu_Container');
   var $mobileMenuBtn = $('.h-Menu_Trigger-mobile');
   var $subMenuBtn = $('.h-Menu_Trigger');
+  var $lastElement = $('.js-last');
+
   $mobileMenuBtn.on('click', function (event) {
     event.preventDefault();
     $mobileMenuBtn.toggleClass('active');
     $menuContainer.toggleClass('h-Menu_Container-open');
   });
+
   $subMenuBtn.on('click', function (event) {
     event.preventDefault();
-    var $selectedMenu = $(event.currentTarget).parent('.h-Menu');
+    var $currentTrigger = $(event.currentTarget);
+    var $selectedMenu = $currentTrigger.parent('.h-Menu');
     if ($selectedMenu.hasClass('h-Menu-open')) {
       // menu is open
       $selectedMenu.removeClass('h-Menu-open'); // close it
+      $currentTrigger.attr('aria-expanded', 'false');
     } else {
+      $('.h-Menu-open').find('.h-Menu_Trigger').attr('aria-expanded', 'false');
       $('.h-Menu-open').removeClass('h-Menu-open'); // close the other menu if open
       $selectedMenu.addClass('h-Menu-open'); // open selected menu
+      $currentTrigger.attr('aria-expanded', 'true');
     }
   });
+
+  $subMenuBtn.on('keydown', function (event) {
+    if (event.keyCode === 9 && event.shiftKey) {
+      // Shift+tab, go to last element in list if list open
+      event.preventDefault();
+      if ($(event.currentTarget).parent('.h-Menu').hasClass('h-Menu-open')) {
+        $lastElement.focus();
+      }
+    }
+  });
+
+  $lastElement.on('keydown', function (event) {
+    if (event.keyCode === 9 && !event.shiftKey) {
+      // Tab, go to menu trigger
+      event.preventDefault();
+      $('.h-Menu-open').find('.h-Menu_Trigger').focus();
+    }
+  });
+
   $(document).on('click', function (event) {
     if (!document.getElementById('js-menues').contains(event.target)) {
       if (!$(event.currentTarget).hasClass('h-Menu_Trigger-mobile')) {
+        $('.h-Menu_Trigger').attr('aria-expanded', 'false');
         $('.h-Menu').removeClass('h-Menu-open');
       }
     }
@@ -366,6 +398,57 @@ var menuEvents = function menuEvents() {
 exports.default = menuEvents;
 
 },{}],6:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var minidMenu = function minidMenu() {
+  var $ = jQuery.noConflict();
+
+  var $miMenu = $('.mi-Menu');
+  var $miMenuTrigger = $('.mi-Menu_Trigger');
+  var $lastMenuElement = $miMenu.find('.js-last');
+
+  $miMenuTrigger.on('click', function (e) {
+    e.preventDefault();
+    $miMenu.toggleClass('mi-Menu-open');
+    if ($miMenu.hasClass('mi-Menu-open')) {
+      $miMenuTrigger.attr('aria-expanded', 'true');
+    } else {
+      $miMenuTrigger.attr('aria-expanded', 'false');
+    }
+  });
+
+  $miMenuTrigger.on('keydown', function (e) {
+    if (e.keyCode === 9 && e.shiftKey) {
+      // Shift+tab, go to last element in list if list open
+      e.preventDefault();
+      if ($miMenu.hasClass('mi-Menu-open')) {
+        $lastMenuElement.focus();
+      }
+    }
+  });
+
+  $lastMenuElement.on('keydown', function (e) {
+    if (e.keyCode === 9 && !e.shiftKey) {
+      // Tab, go to menu trigger
+      e.preventDefault();
+      $miMenuTrigger.focus();
+    }
+  });
+
+  $(document).on('click', function (event) {
+    if (!document.getElementById('js-mi-menu').contains(event.target)) {
+      $miMenuTrigger.attr('aria-expanded', 'false');
+      $miMenu.removeClass('mi-Menu-open');
+    }
+  });
+};
+
+exports.default = minidMenu;
+
+},{}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
