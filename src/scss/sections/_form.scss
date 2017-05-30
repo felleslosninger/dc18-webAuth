@@ -18,6 +18,7 @@ legend {
   @include apply-text-link();
 }
 
+// Form fields placeholder
 .fm-Fields {
   background-color: $c_white;
   padding: $box-padding;
@@ -25,7 +26,7 @@ legend {
   flex-direction: column;
 }
 
-// Form field
+// General form field
 .fm-Field {
   display: flex;
   flex-direction: column;
@@ -54,15 +55,18 @@ legend {
     flex: 1;
     flex-direction: row;
     > * {
+      // The field itself
       &:first-child {
         flex: 1;
-        flex-grow: 20;
       }
+      // The icon on the right
       &:last-child {
         @include text-link($c_medium_grey3, $c_blue, $c_blue, $c_grey);
         display: flex;
         flex: 1;
-        flex-grow: 1;
+        max-width: 2em; // The same as text field size
+        width: 2em;
+        height: 2em;
         justify-content: center;
         flex-direction: column;
         > .fa {
@@ -73,12 +77,14 @@ legend {
     }
   }
 }
+// Message box under field, mostly used for error message
 .fm-Message {
   font-size: $t_size-normal;
   margin-top: -$box-padding/4;
   display: none;
 }
 
+// Form label
 label, .label {
   display: flex;
   font-size: $t_size-normal;
@@ -95,6 +101,7 @@ label, .label {
   }
 }
 
+// Form button
 input, button, .btn, .text {
   display: flex;
   border-radius: 4px;
@@ -135,13 +142,13 @@ input[type=text], input[type=password] {
     }
   }
 }
-// Text element which is not a form field
+// Text element which is not a form field but presents text similar way
 .text {
   padding: 2px 8px;
   border-bottom: 1px solid $c_light_grey3;
 }
 
-
+// Controls placeholder (cancel, submit etc.)
 .fm-Controls {
   display: flex;
   flex-direction: row;
@@ -163,6 +170,7 @@ input[type=text], input[type=password] {
 
 }
 
+// Normal button
 .btn-Normal {
   color: $c_grey;
   background-color: $c_white;
@@ -184,6 +192,7 @@ input[type=text], input[type=password] {
     }
   }
 }
+// Action button
 .btn-Action {
   color: $c_white;
   background-color: $ca_normal;
@@ -207,13 +216,14 @@ input[type=text], input[type=password] {
   }
 }
 
+// Progress container
 .fm-Progress_Container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 3em;
 }
-
+// Progress dots
 .fm-Progress_Dot {
   width: 0.65em;
   height: 0.65em;
