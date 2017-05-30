@@ -8,7 +8,11 @@ module.exports = function(grunt) {
     'clean:build_html'
 
     // PROD
-    , 'copy:build_fonts', 'copy:build_img', 'copy:build_sections', 'sass:build', 'concat:build'
+    , 'copy:build_fonts'
+    , 'copy:build_img'
+    //, 'copy:build_sections'
+    , 'sass:build'
+    , 'concat:build'
 
     // Minify CSS
     , 'cssmin:build', 'copy:build_css'
@@ -16,6 +20,7 @@ module.exports = function(grunt) {
     , 'uglify:build'
     // BUILD PROD HTML
     , 'htmlbuild:build'
+    , 'htmlbuild:build_sections'
 
   ]);
 };
