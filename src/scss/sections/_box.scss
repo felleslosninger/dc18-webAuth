@@ -23,6 +23,14 @@ $box-padding: 1em;
   border-radius: 4px;
 }
 
+// Main box container
+.Box_main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: $c_white;
+}
+
 // Common box header and footer stylings
 .Box_header, .Box_footer {
   display: flex;
@@ -48,6 +56,7 @@ $box-padding: 1em;
 // Class for elements inside .Box_main but pretending to look as part of the footer
 .Box_inside-footer {
   border-top: 1px solid $ca_list-border;
+  background-color: transparent;
   & + .Box_footer {
     border-top-width: 0;
   }
@@ -90,13 +99,7 @@ $box-padding: 1em;
   }
 }
 
-// Main box container
-.Box_main {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  background-color: $c_white;
-}
+
 
 // Footer links
 .Box_footer-links {
