@@ -28,7 +28,7 @@
   <![endif]-->
 </head>
 
-<body>
+<body class='hide-mobileMenu'>
     <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -60,58 +60,61 @@
 
         <section class='Box'>
             <div class='Box_header'>
-                <div class='Box_header-title with-logo logo-eid-gray'>Er dine kontaktopplysninger korrekt</div>
-                <div class='Box_header-provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
+                <div class='Box_header-title with-logo logo-eid-gray'>Select an electronic id</div>
+
+                <nav class='mi-Menu' id='js-mi-menu'>
+                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='mi-Menu_Trigger'><span>Meny</span><span class='fa fa-bars fa-lg' aria-hidden="true"></span></a>
+                    <ul>
+                        <li><a href="" class="mi-Menu_Element"><span>MinID innstillinger</span></a></li>
+                        <li><a href="" class="mi-Menu_Element"><span>Registrere ny MinID bruker</span></a></li>
+                        <li><a href="" class="mi-Menu_Element"><span>Glemt passord</span></a></li>
+                        <li><a href="" class="mi-Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
+                    </ul>
+                </nav>
+
             </div>
 
             <div class='Box_main'>
+                <!-- Progress dots -->
+                <div class='fm-Progress_Container'>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot active'></div>
+                </div>
+                <!-- /Progress dots -->
+
+                <!-- Notification -->
+                <div class='notification with-Icon with-Link'>
+                    You will now receive a single-use code by SMS form Difi. Don´t have your mobile phone with you?
+                    <a href=''><span>Use code from the PIN-code letter</span></a>
+                </div>
+                <!-- /Notification -->
 
                 <!-- Form -->
                 <form action='#'>
-                    <fieldset>
-                        <div class='fm-Fields'>
-                            <legend class='with-Link'>
-                                Registrering av kontaktinfo lar deg holde informasjonen brukt av offetlige tjenester oppdatert på et sted. <a href='#'><span>Les mer om kontaktregisteret</span></a>
-                            </legend>
-
-                            <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
-                            <div class='fm-Field'>
-                                <span class='label'>Mobile phone number</span>
-                                <div class='with-icon'>
-                                    <span class='text disabled'>Enter your phone number</span>
-                                    <a href='#'>
-      <span class='visuallyHidden'>Klikk her for å endre ditt telefonnummer</span>
-      <span class='fa fa-pencil'></span>
-    </a>
-                                </div>
-                            </div>
-                            <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
-                            <div class='fm-Field'>
-                                <span class='label'>Date of birth</span>
-                                <div class='with-icon'>
-                                    <span class='text disabled'>Enter your date of birth</span>
-                                    <a href='#'>
-      <span class='visuallyHidden'>Klikk her for å endre din fødselsdato</span>
-      <span class='fa fa-pencil'></span>
-    </a>
-                                </div>
-                            </div>
+                    <div class='fm-Fields'>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <label for='mobile'>Code from sms</label>
+                            <input id='mobile' type='text' maxlength='5' placeholder='Code from sms' />
+                            <!-- NOTE: is 5 the correct max-length? -->
                         </div>
+                        <span class='fm-Message'>Please fill in the code from the sms received</span>
+                    </div>
 
-                        <!-- Controls placeholder with action button only -->
-                        <div class='fm-Controls with-Action'>
-                            <button class='btn btn-Action' type='submit'><span>Bekreft og videre</span></button>
-                        </div>
-                        <!-- //Controls placeholder with action button only -->
-                    </fieldset>
+                    <!-- Controls placeholder with two buttons -->
+                    <div class='fm-Controls with-Normal with-Action'>
+                        <button class='btn btn-Normal'><span>Cancel</span></button>
+                        <button class='btn btn-Action' type='submit'><span>Next</span></button>
+                    </div>
+                    <!-- //Controls placeholder with two buttons -->
+
                 </form>
-                <!-- //Form -->
             </div>
 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
                     <ul>
-                        <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li>
+                        <li><a href='#'><span>Order PIN codes</span></a></li>
                     </ul>
                 </div>
 
@@ -119,8 +122,8 @@
                     <a href='#'><span class='fa fa-question-circle' alt='Help icon' /></a>
                 </div>
             </div>
-
         </section>
+        <div class='mi-Provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
     </main>
     <!-- /build -->
 
