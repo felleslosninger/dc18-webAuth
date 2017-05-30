@@ -107,7 +107,7 @@ var SearchList = function () {
 				}
 			});
 
-			self.inputField.on('keydown', function () {
+			self.inputField.on('keydown', function (e) {
 				self.errorHandler.removeClass('error');
 				if (e.keyCode === 9) {
 					return true;
@@ -263,6 +263,7 @@ var SearchList = function () {
 		value: function openMenu() {
 			var $ = jQuery.noConflict();
 
+			this.updateAria(true);
 			this.inputList.slideDown(200, function () {
 				$(this).addClass('open');
 			});
@@ -272,6 +273,7 @@ var SearchList = function () {
 		value: function closeMenu() {
 			var $ = jQuery.noConflict();
 
+			this.updateAria(false);
 			this.inputList.slideUp(200, function () {
 				$(this).removeClass('open');
 			});
@@ -295,6 +297,12 @@ var SearchList = function () {
 			if (countryId === null) {
 				this.errorHandler.addClass('error');
 			}
+		}
+	}, {
+		key: 'updateAria',
+		value: function updateAria(state) {
+			this.inputField.attr('aria-expanded', state);
+			this.trigger.attr('aria-expanded', state);
 		}
 	}]);
 
@@ -407,6 +415,11 @@ var minidMenu = function minidMenu() {
   var $ = jQuery.noConflict();
 
   var $miMenu = $('.mi-Menu');
+  if ($miMenu.length === 0) {
+    // Current page has no minID menu, no need to add event handlers
+    return;
+  }
+
   var $miMenuTrigger = $('.mi-Menu_Trigger');
   var $lastMenuElement = $miMenu.find('.js-last');
 
@@ -463,6 +476,12 @@ var menuEvents = function menuEvents() {
     var $el = $(event.currentTarget);
     var $target = $el.data('target');
     $el.addClass('active').siblings().removeClass('active').end().closest('.tb-Container').find('.tb-Tab').hide().end().find('[data-id=' + $target + ']').show();
+  });
+
+  $('.tb-Header a').on('mouseout', function (event) {
+    var $el = $(event.currentTarget);
+    $el.blur();
+    console.log('here');
   });
 };
 
