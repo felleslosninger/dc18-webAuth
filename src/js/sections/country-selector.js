@@ -24,7 +24,7 @@ class SearchList {
 			}
 		});
 
-		self.inputField.on('keydown', function() {
+		self.inputField.on('keydown', function(e) {
       self.errorHandler.removeClass('error');
       if (e.keyCode === 9) {
         return true;
@@ -187,6 +187,7 @@ class SearchList {
 	openMenu() {
     const $ = jQuery.noConflict();
 
+    this.updateAria(true);
 		this.inputList.slideDown(200, function() {
 			$(this).addClass('open');
 		});
@@ -195,6 +196,7 @@ class SearchList {
 	closeMenu() {
     const $ = jQuery.noConflict();
 
+    this.updateAria(false);
 		this.inputList.slideUp(200, function() {
 			$(this).removeClass('open');
 		});
@@ -218,6 +220,11 @@ class SearchList {
 			this.errorHandler.addClass('error');
 		}
 	}
+
+  updateAria(state) {
+    this.inputField.attr('aria-expanded', state);
+    this.trigger.attr('aria-expanded', state);
+  }
 };
 
 

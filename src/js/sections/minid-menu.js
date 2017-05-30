@@ -2,6 +2,11 @@ const minidMenu = () => {
   const $ = jQuery.noConflict();
 
   const $miMenu = $('.mi-Menu');
+  if ($miMenu.length === 0) {
+    // Current page has no minID menu, no need to add event handlers
+    return;
+  }
+
   const $miMenuTrigger = $('.mi-Menu_Trigger');
   const $lastMenuElement = $miMenu.find('.js-last');
 
