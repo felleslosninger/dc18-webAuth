@@ -349,6 +349,9 @@ var menuEvents = function menuEvents() {
   var $ = jQuery.noConflict();
 
   var $menuContainer = $('.h-Menu_Container');
+  if ($menuContainer.length === 0) {
+    return;
+  }
   var $mobileMenuBtn = $('.h-Menu_Trigger-mobile');
   var $subMenuBtn = $('.h-Menu_Trigger');
   var $lastElement = $('.js-last');
