@@ -1499,7 +1499,7 @@ input[type=text], input[type=password] {
   margin: 0; }
 
 /*
-* Styles for pagre header
+* Styles for MinID pages
 *
 * ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
 * For more information: http://ecss.io
@@ -1566,5 +1566,14 @@ input[type=text], input[type=password] {
     background-color: #134f9e; }
   .mi-Menu_Element:focus span {
     border-color: #ffffff; }
+
+.mi-Provider {
+  width: 500px;
+  margin: 1.5em auto;
+  text-align: right; }
+  .mi-Provider img {
+    max-height: 30px;
+    width: auto;
+    margin-right: 1em; }
 
 /*# sourceMappingURL=style.build.css.map */
