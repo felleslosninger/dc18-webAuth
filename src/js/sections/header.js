@@ -2,6 +2,9 @@ const menuEvents  = () => {
   const $ = jQuery.noConflict();
 
   const $menuContainer = $('.h-Menu_Container');
+  if($menuContainer.length === 0) {
+    return; 
+  }
   const $mobileMenuBtn = $('.h-Menu_Trigger-mobile');
   const $subMenuBtn = $('.h-Menu_Trigger');
   const $lastElement = $('.js-last');
