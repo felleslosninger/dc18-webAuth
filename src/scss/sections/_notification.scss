@@ -5,6 +5,7 @@
   padding: 1em;
   margin: 1em;
   font-size: $t_size_normal;
+  line-height: 1.5em;
   border: 2px solid $c_notification;
   border-radius: 4px;
   &.with-Icon {
@@ -19,6 +20,12 @@
       height: 2em;
       left: 1em;
       top: 1em;
+    }
+  }
+  &.with-Icon.icon-pin {
+    &:after {
+      @extend %pincode;
+
     }
   }
 }

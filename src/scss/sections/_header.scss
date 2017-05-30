@@ -119,6 +119,11 @@
       background-color: $ca_menu_element-bg;
     }
   }
+  .hide-mobileMenu & {
+    @include mobile {
+      display: none;
+    }
+  }
 }
 
 .h-Menu_Container {
