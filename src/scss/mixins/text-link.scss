@@ -35,8 +35,8 @@
   }
 }
 
-@mixin apply-text-link() {
+@mixin apply-text-link($fontSize: 1em, $padding: 0) {
   a {
-    @include text-link($c_nearly_black, $c_blue, $c_blue, $c_grey, 1em, 0);
+    @include text-link($c_nearly_black, $c_blue, $c_blue, $c_grey, $fontSize, $padding);
   }
 }

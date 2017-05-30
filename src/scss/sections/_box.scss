@@ -23,6 +23,7 @@ $box-padding: 1em;
   border-radius: 4px;
 }
 
+// Common box header and footer stylings
 .Box_header, .Box_footer {
   display: flex;
   justify-content: space-between;
@@ -34,14 +35,17 @@ $box-padding: 1em;
   }
 }
 
+// Box header
 .Box_header {
   border-bottom: 1px solid $ca_list-border;
 }
 
+// Box footer
 .Box_footer {
   border-top: 1px solid $ca_list-border;
 }
 
+// Class for elements inside .Box_main but pretending to look as part of the footer
 .Box_inside-footer {
   border-top: 1px solid $ca_list-border;
   & + .Box_footer {
@@ -49,6 +53,7 @@ $box-padding: 1em;
   }
 }
 
+// Box header title section
 .Box_header-title {
   text-transform: uppercase;
   font-size: $t_size-normal;
@@ -84,6 +89,7 @@ $box-padding: 1em;
   }
 }
 
+// Main box container
 .Box_main {
   display: flex;
   flex: 1;
@@ -91,13 +97,11 @@ $box-padding: 1em;
   background-color: $c_white;
 }
 
-
+// Footer links
 .Box_footer-links {
-
   // Add text link styling
-  a {
-    @include text-link($box-text_link, $box-text_link-border, $box-text_link-active, $box-text_link-active_border, $box-text_link-size, $box-text_link-padding);
-  }
+  @include apply-text-link($box-text_link-size, $box-text_link-padding);
+
   ul {
     padding-left: 0;
     list-style-type: none;
@@ -110,11 +114,10 @@ $box-padding: 1em;
   }
 }
 
+// Help icon to the right in the footer
 .Box_footer-help {
-
-  a {
-    @include text-link($box-text_link, $box-text_link, $box-text_link-active, $box-text_link-active_border, $box-text_link-size, $box-text_link-padding);
-  }
+  // Make icon text link
+  @include apply-text-link($box-text_link-size, $box-text_link-padding);
 
   .fa {
     display: flex;
@@ -129,7 +132,7 @@ $box-padding: 1em;
 }
 
 
-// Mobile
+// Mobile adjustments
 @include mobile {
   .Box {
     width: 100%;

@@ -849,20 +849,20 @@ iframe {
   padding: 0.5em;
   font-size: 0.875em; }
   .Box_footer-links a:hover, .Box_footer-links a:active {
-    color: #5e6b77; }
+    color: #006cff; }
     .Box_footer-links a:hover span, .Box_footer-links a:active span {
-      border-bottom-color: #5e6b77; }
+      border-bottom-color: #006cff; }
       .Box_footer-links a:hover span.fa, .Box_footer-links a:active span.fa {
-        color: #5e6b77; }
+        color: #006cff; }
   .Box_footer-links a:focus {
-    color: #5e6b77;
+    color: #006cff;
     outline: 1px solid #5e6b77;
     border-bottom-color: transparent;
     text-decoration: none; }
     .Box_footer-links a:focus span {
       border-bottom-color: transparent; }
       .Box_footer-links a:focus span.fa {
-        color: #5e6b77; }
+        color: #006cff; }
   .Box_footer-links a span {
     border-bottom: 1px solid #006cff; }
     .Box_footer-links a span.fa {
@@ -882,22 +882,22 @@ iframe {
   padding: 0.5em;
   font-size: 0.875em; }
   .Box_footer-help a:hover, .Box_footer-help a:active {
-    color: #5e6b77; }
+    color: #006cff; }
     .Box_footer-help a:hover span, .Box_footer-help a:active span {
-      border-bottom-color: #5e6b77; }
+      border-bottom-color: #006cff; }
       .Box_footer-help a:hover span.fa, .Box_footer-help a:active span.fa {
-        color: #5e6b77; }
+        color: #006cff; }
   .Box_footer-help a:focus {
-    color: #5e6b77;
+    color: #006cff;
     outline: 1px solid #5e6b77;
     border-bottom-color: transparent;
     text-decoration: none; }
     .Box_footer-help a:focus span {
       border-bottom-color: transparent; }
       .Box_footer-help a:focus span.fa {
-        color: #5e6b77; }
+        color: #006cff; }
   .Box_footer-help a span {
-    border-bottom: 1px solid #222222; }
+    border-bottom: 1px solid #006cff; }
     .Box_footer-help a span.fa {
       border-bottom-color: transparent; }
 .Box_footer-help .fa {
@@ -1135,8 +1135,7 @@ legend {
     flex: 1;
     flex-direction: row; }
     .fm-Field .with-icon > *:first-child {
-      flex: 1;
-      flex-grow: 20; }
+      flex: 1; }
     .fm-Field .with-icon > *:last-child {
       color: #9fa9b4;
       text-decoration: none;
@@ -1145,7 +1144,9 @@ legend {
       font-size: 0.875em;
       display: flex;
       flex: 1;
-      flex-grow: 1;
+      max-width: 2em;
+      width: 2em;
+      height: 2em;
       justify-content: center;
       flex-direction: column; }
       .fm-Field .with-icon > *:last-child:hover, .fm-Field .with-icon > *:last-child:active {
