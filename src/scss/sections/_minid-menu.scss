@@ -1,5 +1,5 @@
 /*
-* Styles for pagre header
+* Styles for MinID pages
 *
 * ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
 * For more information: http://ecss.io
@@ -8,6 +8,8 @@
 */
 
 
+
+// MinID menu
 
 .mi-Menu {
   margin-right: -1em;
@@ -84,5 +86,17 @@
     span {
         border-color: $ca_menu_element-border-hover;
     }
+  }
+}
+
+// MinID provider
+.mi-Provider {
+  width: 500px;
+  margin: 1.5em auto;
+  text-align: right;
+  img {
+    max-height: 30px;
+    width: auto;
+    margin-right: 1em;
   }
 }
