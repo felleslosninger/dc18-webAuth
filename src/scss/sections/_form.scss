@@ -147,6 +147,9 @@ input[type=text], input[type=password] {
   padding: 2px 8px;
   border-bottom: 1px solid $c_light_grey3;
 }
+.disabled {
+  color: $c_grey;
+}
 
 // Controls placeholder (cancel, submit etc.)
 .fm-Controls {
