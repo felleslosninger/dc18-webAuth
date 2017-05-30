@@ -28,16 +28,23 @@
   .fa-angle-right {
     font-weight: $t_weight-bold;
   }
-  &:hover, &:focus {
-    color: $ca_list_element-hover-text;
-    background-color: $ca_list_element-hover-bg;
-  }
 
   &.disabled {
     color: $ca_list_element_disabled-text;
     background-color: $ca_list_element_disabled-bg;
     cursor: default;
+  }
 
+  &.with-icon {
+    padding-right: 0;
+  }
+}
+a.ln-List_Element {
+  &:hover, &:focus {
+    color: $ca_list_element-hover-text;
+    background-color: $ca_list_element-hover-bg;
+  }
+  &.disabled {
     &:hover, &:focus {
       color: $ca_list_element_disabled-text;
       background-color: $ca_list_element_disabled-bg;
@@ -45,6 +52,13 @@
   }
 }
 
+// Form field having list element
+.fm-Field .ln-List_Element {
+  padding-right: 1.1429em;
+  &.with-icon {
+    padding-right: 0;
+  }
+}
 
 
 .ln-List_Element_Logo {
@@ -87,4 +101,17 @@
   background-color: transparent;
   border: 1px solid $ca_box_border;
   border-radius: 4px;
+}
+
+// Digipost lists
+.ln-List_Digitalpost {
+  list-style: none;
+  padding-left: 0;
+  margin: $box-padding;
+  background-color: transparent;
+  border: 1px solid $ca_box_border;
+  border-radius: 4px;
+}
+.fm-Fields .ln-List_Digitalpost {
+  margin: 0 ;
 }

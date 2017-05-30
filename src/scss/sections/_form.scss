@@ -21,7 +21,7 @@ legend {
 // Form fields placeholder
 .fm-Fields {
   background-color: $c_white;
-  padding: $box-padding;
+  padding: $box-padding-vertical $box-padding-horizontal;
   display: flex;
   flex-direction: column;
 }
@@ -31,7 +31,7 @@ legend {
   display: flex;
   flex-direction: column;
   margin: {
-    top: $box-padding;
+    top: $box-padding-vertical;
   }
   // First field in the form
   &:first-child {
@@ -54,6 +54,7 @@ legend {
     display: flex;
     flex: 1;
     flex-direction: row;
+    align-items: center;
     > * {
       // The field itself
       &:first-child {
@@ -64,19 +65,28 @@ legend {
         @include text-link($c_medium_grey3, $c_blue, $c_blue, $c_grey);
         display: flex;
         flex: 1;
-        max-width: 2em; // The same as text field size
-        width: 2em;
-        height: 2em;
+        max-width: calc(45px - 1em); // The same as text field size
+        width: calc(45px - 1em);
+        height: calc(45px - 1em);
         justify-content: center;
         flex-direction: column;
         > .fa {
           margin: auto;
-          font-size: 1.25em;
+          font-size: 20px;
         }
       }
     }
   }
+  .with-logo {
+    align-items: center;
+    > * {
+      &:first-child {
+        max-width: 80px;
+      }
+    }
+  }
 }
+
 // Message box under field, mostly used for error message
 .fm-Message {
   font-size: $t_size-normal;
@@ -156,7 +166,7 @@ input[type=text], input[type=password] {
   justify-content: space-between;
   background: $c_light_grey;
   //border-bottom: 1px solid $c_light_grey3;
-  padding: $box-padding $box-padding $box-padding * 1.5 $box-padding;
+  padding: $box-padding-vertical $box-padding $box-padding-vertical * 1.5 $box-padding;
   > * {
     width: calc(50% - 1em / 2);
   }
