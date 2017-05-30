@@ -17,8 +17,13 @@ const menuEvents  = () => {
     .find('[data-id=' + $target + ']')
     .show()
     ;
+  });
 
-  })
+  $('.tb-Header a').on('mouseout', (event) => {
+    const $el = $(event.currentTarget);
+    $el.blur();
+    console.log('here');
+  });
 
 };
 
