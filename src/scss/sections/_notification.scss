@@ -21,6 +21,12 @@
       top: 1em;
     }
   }
+  &.with-Icon.icon-pin {
+    &:after {
+      @extend %pincode;
+
+    }
+  }
 }
 .fm-Fields .notification {
   margin: 0;
