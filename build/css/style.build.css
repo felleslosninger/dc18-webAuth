@@ -1071,10 +1071,6 @@ iframe {
     .tb-Header a.active {
       background-color: #006cff;
       color: #ffffff; }
-      .tb-Header a.active:hover, .tb-Header a.active:active {
-        background: #134f9e; }
-        .tb-Header a.active:hover:after, .tb-Header a.active:active:after {
-          background-color: #000000; }
       .tb-Header a.active:focus {
         background-color: #134f9e; }
         .tb-Header a.active:focus:after {
@@ -1085,6 +1081,14 @@ iframe {
           height: calc(100% - 8px); }
           .tb-Header a.active:focus > span > span {
             border-bottom-color: #ffffff; }
+      .tb-Header a.active:hover, .tb-Header a.active:active, .tb-Header a.active:active:focus {
+        background: #134f9e; }
+        .tb-Header a.active:hover:after, .tb-Header a.active:active:after, .tb-Header a.active:active:focus:after {
+          background-color: #000000; }
+        .tb-Header a.active:hover > span, .tb-Header a.active:active > span, .tb-Header a.active:active:focus > span {
+          border-color: transparent; }
+          .tb-Header a.active:hover > span > span, .tb-Header a.active:active > span > span, .tb-Header a.active:active:focus > span > span {
+            border-bottom-color: transparent; }
     .tb-Header a > span {
       display: flex;
       border: 2px solid transparent;
@@ -1519,7 +1523,7 @@ input[type=text], input[type=password] {
 .mi-Menu_Trigger {
   display: block;
   height: 100%;
-  padding: 1.5em 2em;
+  padding: 1.6em 2em;
   border: none;
   border-top-right-radius: 4px;
   box-shadow: none;

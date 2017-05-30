@@ -71,13 +71,6 @@
       background-color: $ca_normal;
       color: $c_white;
 
-      // Active button hover state
-      &:hover, &:active {
-        background: $ca_hover;
-        &:after {
-          background-color: $c_black;
-        }
-      }
 
       // Active button focus state
       &:focus {
@@ -91,6 +84,19 @@
           height: calc(100% - 8px);
           > span {
             border-bottom-color: $c_white;
+          }
+        }
+      }
+      // Active button hover state
+      &:hover, &:active, &:active:focus {
+        background: $ca_hover;
+        &:after {
+          background-color: $c_black;
+        }
+        > span {
+          border-color: transparent;
+          > span {
+            border-bottom-color: transparent;
           }
         }
       }
