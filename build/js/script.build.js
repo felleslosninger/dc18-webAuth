@@ -379,12 +379,10 @@ var menuEvents = function menuEvents() {
   });
 
   $subMenuBtn.on('keydown', function (event) {
-    if (event.keyCode === 9 && event.shiftKey) {
-      // Shift+tab, go to last element in list if list open
+    // Shift+tab, go to last element in list if list open
+    if (event.keyCode === 9 && event.shiftKey && $(event.currentTarget).parent('.h-Menu').hasClass('h-Menu-open')) {
       event.preventDefault();
-      if ($(event.currentTarget).parent('.h-Menu').hasClass('h-Menu-open')) {
-        $lastElement.focus();
-      }
+      $lastElement.focus();
     }
   });
 
