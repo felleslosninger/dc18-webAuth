@@ -232,6 +232,7 @@ input[type=text], input[type=password] {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $ca_body-bg;
   height: 3em;
 }
 // Progress dots
