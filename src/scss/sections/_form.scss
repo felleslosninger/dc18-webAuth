@@ -164,7 +164,7 @@ input[type=text], input[type=password] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: $c_light_grey;
+  // background: $c_light_grey;
   //border-bottom: 1px solid $c_light_grey3;
   padding: $box-padding-vertical $box-padding $box-padding-vertical * 1.5 $box-padding;
   > * {
@@ -232,7 +232,6 @@ input[type=text], input[type=password] {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $ca_body-bg;
   height: 3em;
 }
 // Progress dots
