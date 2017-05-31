@@ -32,6 +32,11 @@ main {
   }
 }
 
+h1 {
+  font-size: $t_size_normal;
+  margin: 0;
+}
+
 button {
   font-family: $t_fontfamily;
   border: none;
