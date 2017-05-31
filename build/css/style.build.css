@@ -1512,7 +1512,7 @@ input[type=text], input[type=password] {
 
 .notification {
   padding: 1em;
-  margin: 1em;
+  margin: 1em 2.2857em;
   font-size: 0.875em;
   line-height: 1.5em;
   border: 2px solid #ffc922;
