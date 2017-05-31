@@ -67,22 +67,31 @@
             <div class='Box_main'>
                 <!-- Progress dots -->
                 <div class='fm-Progress_Container'>
-                    <div class='fm-Progress_Dot active'></div>
                     <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot active'></div>
                     <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot'></div>
                 </div>
                 <!-- /Progress dots -->
 
+                <!-- Notification -->
+                <div class='notification with-Icon with-Link'>
+                    You will now receive a single-use code by SMS form Difi. Don´t have your mobile phone with you?
+                    <a href=''><span>Use code from the PIN-code letter</span></a>
+                </div>
+                <!-- /Notification -->
+
                 <!-- Form -->
                 <form action='#'>
                     <div class='fm-Fields'>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
                         <div class='fm-Field'>
-                            <label for='idnumber'>Fødselsnummer (11 siffer)</label>
-                            <input id='idnumber' maxlength="11" type='text' placeholder='Fødselsnummer (11 siffer)' />
+                            <label for='mobile'>Code from sms (5 digits)</label>
+                            <input id='mobile' type='text' maxlength='5' placeholder='Code from sms (5 digits)' />
+                            <!-- NOTE: is 5 always the correct number of digits? -->
                         </div>
-                        <span class='fm-Message'>Vennligst fyll inn fødselsnummeret ditt</span>
+                        <span class='fm-Message'>Please fill in the code from the sms received</span>
                     </div>
 
                     <!-- Controls placeholder with two buttons -->
