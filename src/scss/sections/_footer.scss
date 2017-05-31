@@ -49,7 +49,7 @@
     margin: 0 5px;
   }
   a {
-    @include text-link($ca_footer-text, $c_blue, $ca_footer_link-hover, $ca_footer-text, $t_size_basis, 0.5em);
+    @include text-link($ca_footer-text, $c_white, $ca_footer_link-hover, $ca_footer-text, $t_size_basis, 0.5em);
   }
 }
 
