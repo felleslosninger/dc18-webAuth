@@ -1,0 +1,30 @@
+/*
+* Styles for receipt pages
+*
+* ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
+* For more information: http://ecss.io
+*
+* Namespace: receipt (receipt)
+*/
+
+.receipt {
+  text-align: center;
+  padding: 4.125em 2em 1em 2em;
+  @extend %check;
+  background-size: 50px 50px;
+  background-position: center 1em;
+
+  p {
+    padding-left: 1.4286em;
+    padding-right: 1.4286em;
+  }
+
+  // a {
+  //   color: $ca_body-text;
+  //   text-decoration: none;
+  //   border-bottom: 1px solid $ca_link_border;
+  //   &:hover, &:focus {
+  //     color: $ca_link_border;
+  //   }
+  // }
+}

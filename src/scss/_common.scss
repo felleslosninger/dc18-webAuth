@@ -33,7 +33,18 @@ main {
 }
 
 h1 {
-  font-size: $t_size_normal;
+  font-size: $t_size-normal;
+  margin: 0;
+}
+
+h2 {
+  font-size: $t_size-basis;
+  margin: 20px 0 5px 0;
+}
+
+p {
+  font-size: $t_size-normal;
+  line-height: 1.4em;
   margin: 0;
 }
 

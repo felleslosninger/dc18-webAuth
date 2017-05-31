@@ -31,11 +31,12 @@ const menuEvents  = () => {
   });
 
   $subMenuBtn.on('keydown', (event) => {
-    if (event.keyCode === 9 && event.shiftKey ) { // Shift+tab, go to last element in list if list open
-      event.preventDefault();
-      if ($(event.currentTarget).parent('.h-Menu').hasClass('h-Menu-open')) {
-        $lastElement.focus();
-      }
+    // Shift+tab, go to last element in list if list open
+    if (event.keyCode === 9 &&
+        event.shiftKey &&
+        $(event.currentTarget).parent('.h-Menu').hasClass('h-Menu-open')) {
+          event.preventDefault();
+          $lastElement.focus();
     }
   });
 

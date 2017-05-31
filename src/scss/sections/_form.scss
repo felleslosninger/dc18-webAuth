@@ -179,6 +179,9 @@ input[type=text], input[type=password] {
     flex-direction: row;
   }
 
+  &.with-Action-centered {
+    align-items: center;
+  }
 }
 
 // Normal button
