@@ -20,7 +20,7 @@
 
 </head>
 
-<body class='hide-mobileMenu'>
+<body>
     <!--[if lt IE 11]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -40,7 +40,15 @@
                         <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
                     </ul>
                 </nav>
-
+                <div class='h-Menu'>
+                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Språk</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
+                    <ul>
+                        <li><a href="" class="h-Main_Menu_Element"><span>Bokmål</span></a></li>
+                        <li><a href="" class="h-Main_Menu_Element"><span>Nynorsk</span></a></li>
+                        <li><a href="" class="h-Main_Menu_Element"><span>Engelsk</span></a></li>
+                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Sámigiella</span></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -52,61 +60,43 @@
 
         <section class='Box'>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-logo logo-eid-gray'>Select an electronic id</h1>
-
-                <nav class='mi-Menu' id='js-mi-menu'>
-                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='mi-Menu_Trigger'><span>Meny</span><span class='fa fa-bars fa-lg' aria-hidden="true"></span></a>
-                    <ul>
-                        <li><a href="" class="mi-Menu_Element"><span>MinID innstillinger</span></a></li>
-                        <li><a href="" class="mi-Menu_Element"><span>Registrere ny MinID bruker</span></a></li>
-                        <li><a href="" class="mi-Menu_Element"><span>Glemt passord</span></a></li>
-                        <li><a href="" class="mi-Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
-                    </ul>
-                </nav>
-
+                <h1 class='Box_header-title with-logo logo-eid-gray'>Register as a new MinID user</h1>
+                <div class='Box_header-provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
             </div>
 
             <div class='Box_main'>
-                <!-- Progress dots -->
-                <div class='fm-Progress_Container'>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot active'></div>
+                <ul class='ln-List-grey'>
+                    <li>
+                        <a href="" class='ln-List_Element'>
+                            <div class='ln-List_Element_Service'>
+                                <span class='ln-List_Element_Service_Name'>I have PIN codes</span>
+                                <span class='ln-List_Element_Service_Info'>Complete registration with PIN code letter</span>
+                            </div>
+                            <span class='fa fa-angle-right fa-lg'></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class='ln-List_Element ln-List_Element-grey'>
+                            <div class='ln-List_Element_Service'>
+                                <span class='ln-List_Element_Service_Name'>I don´t have PIN codes</span>
+                                <span class='ln-List_Element_Service_Info'>Order PIN code letter</span>
+                            </div>
+                            <span class='fa fa-angle-right fa-lg'></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Controls placeholder with only normal button -->
+                <div class='fm-Controls with-Normal'>
+                    <button class='btn btn-Normal'><span>Cancel</span></button>
                 </div>
-                <!-- /Progress dots -->
-
-                <!-- Notification -->
-                <div class='notification with-Icon with-Link'>
-                    You will now receive a single-use code by SMS form Difi. Don´t have your mobile phone with you?
-                    <a href=''><span>Use code from the PIN-code letter</span></a>
-                </div>
-                <!-- /Notification -->
-
-                <!-- Form -->
-                <form action='#'>
-                    <div class='fm-Fields'>
-                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
-                        <div class='fm-Field'>
-                            <label for='mobile'>Code from sms <span>(5 digits)</span></label>
-                            <input id='mobile' type='text' maxlength='5' placeholder='Code from sms (5 digits)' />
-                            <!-- NOTE: is 5 always the correct number of digits? -->
-                        </div>
-                        <span class='fm-Message'>Please fill in the code from the sms received</span>
-                    </div>
-
-                    <!-- Controls placeholder with two buttons -->
-                    <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Normal'><span>Cancel</span></button>
-                        <button class='btn btn-Action' type='submit'><span>Next</span></button>
-                    </div>
-                    <!-- //Controls placeholder with two buttons -->
-
-                </form>
+                <!-- //Controls placeholder with only normal button -->
             </div>
 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
                     <ul>
-                        <li><a href='#'><span>Order PIN codes</span></a></li>
+                        <li><a href='#'><span>What does the PIN code letter look like?</span></a></li>
                     </ul>
                 </div>
 
@@ -115,7 +105,6 @@
                 </div>
             </div>
         </section>
-        <div class='mi-Provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
     </main>
     <!-- /build -->
 
