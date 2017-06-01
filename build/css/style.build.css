@@ -516,6 +516,11 @@ main {
     main {
       min-height: calc(100vh - 357px); } }
 
+hr {
+  border: 0;
+  border-bottom: 1px solid #d3d3d3;
+  width: 100%; }
+
 h1 {
   font-size: 0.875em;
   margin: 0; }
@@ -1070,7 +1075,7 @@ a.ln-List_Element.disabled:hover, a.ln-List_Element.disabled:focus {
 .ln-List_Digitalpost {
   list-style: none;
   padding-left: 0;
-  margin: 2em;
+  margin: 2rem;
   background-color: transparent;
   border: 1px solid #d3d3d3;
   border-radius: 4px; }
@@ -1200,16 +1205,24 @@ legend {
       legend a span.fa {
         border-bottom-color: transparent; }
 
+.label + legend {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+  margin-right: 0;
+  padding: 0;
+  border-bottom: 0; }
+
 .fm-Fields {
   background-color: #ffffff;
-  padding: 1em 2em;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column; }
 
 .fm-Field {
   display: flex;
   flex-direction: column;
-  margin-top: 1em; }
+  margin-top: 1rem; }
   .fm-Field:first-child {
     margin-top: 0; }
   .fm-Field.error input {
@@ -1266,7 +1279,7 @@ legend {
 
 .fm-Message {
   font-size: 0.875em;
-  margin-top: -0.5em;
+  margin-top: -0.5rem;
   display: none; }
 
 label, .label {
@@ -1274,20 +1287,20 @@ label, .label {
   font-size: 0.875em;
   text-transform: uppercase;
   font-weight: 600;
-  margin-left: 0.5em; }
+  margin-left: 0.5rem; }
   label span, .label span {
     font-weight: 400;
     padding-left: 0.5em; }
   label + input, .label + input {
-    margin-top: 0.5em; }
+    margin-top: 0.5rem; }
     label + input:focus, .label + input:focus {
-      margin-top: calc(2em / 4 - 1px); }
+      margin-top: calc(2rem / 4 - 1px); }
 
 input, button, .btn, .text {
   display: flex;
   border-radius: 4px;
   height: 2em;
-  margin: 0.5em 0;
+  margin: 0.5rem 0;
   border: 0;
   font-size: 0.875em;
   outline: none; }
@@ -1310,27 +1323,29 @@ input[type=text], input[type=password] {
     border-width: 2px;
     border-color: #006cff;
     margin-left: -1px;
-    margin-bottom: calc(2em / 2 - 1px); }
+    margin-bottom: calc(2rem / 2 - 1px); }
 
 .text {
   padding: 2px 8px;
   border-bottom: 1px solid #e7e8ea; }
 
-.disabled {
-  color: #9fa9b4; }
-
 .fm-Controls {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1em 2em 1.5em 2em; }
+  padding: 1rem 1rem 1rem 1rem;
+  flex-wrap: wrap; }
   .fm-Controls > * {
-    width: calc(50% - 1em / 2); }
+    padding: 0 2rem;
+    margin: 0 1rem 1rem 1rem;
+    white-space: nowrap; }
   .fm-Controls.with-Action {
     flex-direction: column;
     align-items: flex-end; }
   .fm-Controls.with-Normal.with-Action {
     flex-direction: row; }
+    .fm-Controls.with-Normal.with-Action > * {
+      flex: 1; }
   .fm-Controls.with-Action-centered {
     align-items: center; }
 
@@ -1390,6 +1405,20 @@ input[type=text], input[type=password] {
   margin-top: 0.5em; }
   .fm-Password_Link a {
     padding: 0.5em; }
+
+.disabled {
+  color: #9fa9b4; }
+  .disabled .btn {
+    color: #9fa9b4;
+    background-color: #f7f8fa;
+    pointer-events: none;
+    cursor: default; }
+  .disabled a {
+    color: #9fa9b4;
+    pointer-events: none;
+    cursor: default; }
+  .disabled .with-Link a span {
+    border-bottom-color: #c8c8c8; }
 
 /*
 * Styles for country selector

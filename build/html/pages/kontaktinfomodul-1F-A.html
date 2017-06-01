@@ -58,13 +58,18 @@
 
             <div class='Box_main'>
 
+                <!-- Progress dots -->
+                <div class='fm-Progress_Container'>
+                    <div class='fm-Progress_Dot active'></div>
+                    <div class='fm-Progress_Dot'></div>
+                </div>
+                <!-- //Progress dots -->
+
                 <!-- Form -->
+                <!-- Add class .disabled to disable this section -->
                 <form action='#'>
                     <fieldset>
                         <div class='fm-Fields'>
-                            <legend class='with-Link'>
-                                Registrering av kontaktinfo lar deg holde informasjonen brukt av offetlige tjenester oppdatert på et sted. <a href='#'><span>Les mer om kontaktregisteret</span></a>
-                            </legend>
                             <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
                             <div class='fm-Field'>
                                 <span class='label'>Mobile phone number</span>
@@ -87,37 +92,39 @@
     </a>
                                 </div>
                             </div>
-                            <!-- This field has label, but as content has the list
-The elements have 3 columns, that's why element has classes
-with-logo - indicating that it has logo picture
-with-icon indicating that it has an action icon
--->
-                            <div class='fm-Field'>
-                                <span class='label'>Your digital postbox</span>
-                                <ul class='ln-List_Digitalpost'>
-                                    <li>
-                                        <span class='ln-List_Element with-logo with-icon'>
-        <span class='ln-List_Element_Logo'>
-          <img src='../../images/digipost-logo.jpg' alt='' />
-        </span>
-                                        <div class='ln-List_Element_Service'>
-                                            <span class='ln-List_Element_Service_Info'>Du mottar i dag post fra det offentlige til din postkasse hos Digipost</span>
-                                        </div>
-                                        <a href='#' class='ln-List_Element_Action'>
-          <span class='visuallyHidden'>Klikk her for å endre din digital postbox innstillinger</span>
-          <span class='fa fa-pencil'></span>
-        </a>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-
                         <!-- Controls placeholder with action button only -->
                         <div class='fm-Controls with-Action'>
                             <button class='btn btn-Action' type='submit'><span>Bekreft og videre</span></button>
                         </div>
                         <!-- //Controls placeholder with action button only -->
+
+                    </fieldset>
+                </form>
+                <!-- //Form -->
+
+                <hr />
+
+                <!-- Form -->
+                <!-- Add class .disabled to disable this section -->
+                <form class='disabled' action='#'>
+                    <fieldset>
+                        <div class='fm-Fields'>
+                            <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                            <div class='fm-Field'>
+                                <span class='label'>Din digitale postkasse</span>
+                                <legend class='with-Link'>
+                                    Med digital postkasse kan du enkelt motta og oppbevare viktig post fra det offentlige digitalt. Dette er informasjon som ikke kan sendes på e-post. <a href='#'><span>Les mer om digital postkasse</span></a>
+                                </legend>
+
+                            </div>
+                        </div>
+                        <!-- Controls placeholder with two buttons -->
+                        <div class='fm-Controls with-Normal with-Action'>
+                            <button class='btn btn-Action' type='submit'><span>Send meg informasjon på E-post</span></button>
+                            <button class='btn btn-Normal'><span>Videre</span></button>
+                        </div>
+                        <!-- //Controls placeholder with two buttons -->
                     </fieldset>
                 </form>
                 <!-- //Form -->
@@ -125,10 +132,9 @@ with-icon indicating that it has an action icon
 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
-                    <!-- <ul> -->
-                    <!-- <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li> -->
-                    <!-- <li><a href='#'><span>Menu 2</span></a></li> -->
-                    <!-- </ul> -->
+                    <ul>
+                        <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li>
+                    </ul>
                 </div>
 
                 <div class='Box_footer-help'>
