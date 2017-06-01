@@ -1739,4 +1739,10 @@ input[type=text], input[type=password] {
     padding-left: 1.4286em;
     padding-right: 1.4286em; }
 
+/*
+This is the temporary customization
+*/
+.dpb-Custom .fm-Controls > * {
+  padding: 0 1.5rem; }
+
 /*# sourceMappingURL=style.build.css.map */
