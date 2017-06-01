@@ -52,7 +52,7 @@
 
         <section class='Box'>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-logo logo-eid-gray'>Glemt passord</h1>
+                <h1 class='Box_header-title with-logo logo-eid-gray'>Register as a new MinID user</h1>
                 <div class='Box_header-provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
             </div>
 
@@ -64,15 +64,13 @@
                     <div class='fm-Progress_Dot active'></div>
                     <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
                 </div>
                 <!-- /Progress dots -->
 
                 <!-- Notification -->
-                <div class='notification with-Icon with-Link'>
-                    You will now receive a one-time code at your registered email address. If you do not receive the email, please see if it may have ended up in the spam filter.
-                    <br> Unable to access your email-account?
-                    <br>
-                    <a href=''><span>Use code from the PIN-code letter</span></a>
+                <div class='notification with-Icon'>
+                    The password must comprise at least 8 characters, including digits and letters. Valid characters are lower case and capital case letters from A to Z, digits and special characters.
                 </div>
                 <!-- /Notification -->
 
@@ -81,10 +79,15 @@
                     <div class='fm-Fields'>
                         <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
                         <div class='fm-Field'>
-                            <label for='mobile'>Code received by email (6 digits)</label>
-                            <input id='mobile' type='text' maxlength='6' placeholder='Code received by email (6 digits)' />
+                            <label for='password'>Create Password</label>
+                            <input id='password' type='password' placeholder='Create password' />
                         </div>
-                        <span class='fm-Message'>Please fill in the code from the e-mail received</span>
+                        <span class='fm-Message'>Please enter a password</span>
+                        <div class='fm-Field'>
+                            <label for='password'>Re-enter password</label>
+                            <input id='password' type='password' placeholder='Re-eneter password' />
+                        </div>
+                        <span class='fm-Message'>Passwords does not match</span>
                     </div>
 
                     <!-- Controls placeholder with two buttons -->

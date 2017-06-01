@@ -1014,6 +1014,9 @@ a.ln-List_Element:hover, a.ln-List_Element:focus {
 a.ln-List_Element.disabled:hover, a.ln-List_Element.disabled:focus {
   color: #b3b3b3;
   background-color: #f7f8fa; }
+.ln-List-grey a.ln-List_Element:hover, .ln-List-grey a.ln-List_Element:focus {
+  color: #000000;
+  background-color: #f7f8fa; }
 
 .fm-Field .ln-List_Element {
   padding-right: 1.1429em; }
@@ -1037,24 +1040,32 @@ a.ln-List_Element.disabled:hover, a.ln-List_Element.disabled:focus {
   flex: 1; }
 
 .ln-List_Element_Service_Name {
-  display: block;
   font-weight: 700;
   text-transform: uppercase;
   max-width: 100%; }
+  .ln-List-grey a.ln-List_Element:hover .ln-List_Element_Service_Name, .ln-List-grey a.ln-List_Element:focus .ln-List_Element_Service_Name {
+    border-bottom: 1px solid #000000;
+    margin-bottom: -1px; }
 
 .ln-List_Element_Service_Info {
   display: block;
   font-weight: 400;
   padding-right: 1em;
   max-width: 100%; }
+  .ln-List-grey .ln-List_Element_Service_Info {
+    font-weight: 600; }
 
-.ln-List-lowPriority {
+.ln-List-lowPriority,
+.ln-List-grey {
   list-style: none;
   padding-left: 0;
   margin: 1em 1em 1em 1em;
   background-color: transparent;
   border: 1px solid #d3d3d3;
   border-radius: 4px; }
+
+.ln-List-grey {
+  margin: 1em 2em; }
 
 .ln-List_Digitalpost {
   list-style: none;
@@ -1264,6 +1275,9 @@ label, .label {
   text-transform: uppercase;
   font-weight: 600;
   margin-left: 0.5em; }
+  label span, .label span {
+    font-weight: 400;
+    padding-left: 0.5em; }
   label + input, .label + input {
     margin-top: 0.5em; }
     label + input:focus, .label + input:focus {

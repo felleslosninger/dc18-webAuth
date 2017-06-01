@@ -40,7 +40,15 @@
                         <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
                     </ul>
                 </nav>
-
+                <div class='h-Menu'>
+                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Språk</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
+                    <ul>
+                        <li><a href="" class="h-Main_Menu_Element"><span>Bokmål</span></a></li>
+                        <li><a href="" class="h-Main_Menu_Element"><span>Nynorsk</span></a></li>
+                        <li><a href="" class="h-Main_Menu_Element"><span>Engelsk</span></a></li>
+                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Sámigiella</span></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -52,57 +60,44 @@
 
         <section class='Box'>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-logo logo-eid-gray'>Glemt passord</h1>
+                <h1 class='Box_header-title with-logo logo-eid-gray'>Register as a new MinID user</h1>
                 <div class='Box_header-provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
             </div>
 
             <div class='Box_main'>
-                <!-- Progress dots -->
-                <div class='fm-Progress_Container'>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot active'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
+                <ul class='ln-List-grey'>
+                    <li>
+                        <a href="" class='ln-List_Element'>
+                            <div class='ln-List_Element_Service'>
+                                <span class='ln-List_Element_Service_Name'>I have PIN codes</span>
+                                <span class='ln-List_Element_Service_Info'>Complete registration with PIN code letter</span>
+                            </div>
+                            <span class='fa fa-angle-right fa-lg'></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class='ln-List_Element ln-List_Element-grey'>
+                            <div class='ln-List_Element_Service'>
+                                <span class='ln-List_Element_Service_Name'>I don´t have PIN codes</span>
+                                <span class='ln-List_Element_Service_Info'>Order PIN code letter</span>
+                            </div>
+                            <span class='fa fa-angle-right fa-lg'></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Controls placeholder with only normal button -->
+                <div class='fm-Controls with-Normal'>
+                    <button class='btn btn-Normal'><span>Cancel</span></button>
                 </div>
-                <!-- /Progress dots -->
-
-                <!-- Notification -->
-                <div class='notification with-Icon with-Link'>
-                    You will now receive a one-time code at your registered email address. If you do not receive the email, please see if it may have ended up in the spam filter.
-                    <br> Unable to access your email-account?
-                    <br>
-                    <a href=''><span>Use code from the PIN-code letter</span></a>
-                </div>
-                <!-- /Notification -->
-
-                <!-- Form -->
-                <form action='#'>
-                    <div class='fm-Fields'>
-                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
-                        <div class='fm-Field'>
-                            <label for='mobile'>Code received by email (6 digits)</label>
-                            <input id='mobile' type='text' maxlength='6' placeholder='Code received by email (6 digits)' />
-                        </div>
-                        <span class='fm-Message'>Please fill in the code from the e-mail received</span>
-                    </div>
-
-                    <!-- Controls placeholder with two buttons -->
-                    <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Normal'><span>Cancel</span></button>
-                        <button class='btn btn-Action' type='submit'><span>Next</span></button>
-                    </div>
-                    <!-- //Controls placeholder with two buttons -->
-
-                </form>
+                <!-- //Controls placeholder with only normal button -->
             </div>
 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
-                    <!-- <ul> -->
-                    <!-- <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li> -->
-                    <!-- <li><a href='#'><span>Menu 2</span></a></li> -->
-                    <!-- </ul> -->
+                    <ul>
+                        <li><a href='#'><span>What does the PIN code letter look like?</span></a></li>
+                    </ul>
                 </div>
 
                 <div class='Box_footer-help'>
