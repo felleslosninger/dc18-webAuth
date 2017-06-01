@@ -17,7 +17,6 @@ $c_blue2: #0060ee;
 $c_dark_blue: #134f9e;
 $c_nearly_black: #222222;
 $c_black: #000000;
-
 $c_notification: #ffc922;
 $c_error: #FF0000;
 
@@ -25,6 +24,8 @@ $c_error: #FF0000;
 /*
 * Applied colors, prefixed by ca_
 */
+$ca_body_popup: #c0c7ca;
+$ca_body_popup_header: #f7f8fa;
 $ca_body-bg: $c_light_grey;
 $ca_body-text: $c_nearly_black;
 

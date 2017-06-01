@@ -138,6 +138,30 @@ $box-padding-vertical: $box-padding / 2;
   }
 }
 
+.Box_header-close {
+  // Make icon text link
+  @include apply-text-link($box-text_link-size, $box-text_link-padding);
+  a {
+    span.fa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: $ca_body-text;
+      text-decoration: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid $c_grey;
+      border-radius: 100%;
+      padding: 2px;
+      &:before {
+        margin-left: 1px;
+        margin-top: -2px;
+      }
+    }
+  }
+}
+
 
 // Mobile adjustments
 @include mobile {

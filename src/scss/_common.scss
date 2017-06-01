@@ -16,6 +16,20 @@ body {
   letter-spacing: 0.1px;
 }
 
+// Box on popup page
+.popup {
+  background-color: $ca_body_popup;
+  main {
+    display: flex;
+  }
+  .Box {
+    box-shadow: 0 0 1px 0 rgba(34, 49, 63, .3);
+  }
+  .Box_header {
+    background-color: $ca_body_popup_header
+  }
+}
+
 main {
   //display: flex;
   flex: 1;
