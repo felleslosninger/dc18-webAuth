@@ -1559,7 +1559,7 @@ input[type=text], input[type=password] {
       width: 2em;
       height: 2em;
       left: 1em;
-      top: 0.75em; }
+      top: 1em; }
 
 .fm-Fields .notification {
   margin: 0; }
