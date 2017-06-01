@@ -32,6 +32,12 @@ main {
   }
 }
 
+hr {
+  border: 0;
+  border-bottom: 1px solid $ca_box_border;
+  width: 100%;
+}
+
 h1 {
   font-size: $t_size-normal;
   margin: 0;

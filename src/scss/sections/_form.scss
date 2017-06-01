@@ -17,6 +17,17 @@ legend {
   border-bottom: 1px solid $ca_legend-border;
   @include apply-text-link();
 }
+// When legend comes after label span it has to follow the same margin
+.label + legend {
+  margin: {
+    top: $box-padding / 4;
+    bottom: 0;
+    left: $box-padding / 4;
+    right: 0;
+  }
+  padding: 0;
+  border-bottom: 0;
+}
 
 // Form fields placeholder
 .fm-Fields {
@@ -116,7 +127,7 @@ input, button, .btn, .text {
   display: flex;
   border-radius: 4px;
   height: 2em;
-  margin: 0.5em 0;
+  margin: $box-padding-vertical/2  0;
   border: 0;
   font-size: $t_size-normal;
   outline: none;
@@ -155,20 +166,21 @@ input[type=text], input[type=password] {
   padding: 2px 8px;
   border-bottom: 1px solid $c_light_grey3;
 }
-.disabled {
-  color: $c_medium_grey3;
-}
+
 
 // Controls placeholder (cancel, submit etc.)
 .fm-Controls {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // background: $c_light_grey;
-  //border-bottom: 1px solid $c_light_grey3;
-  padding: $box-padding-vertical $box-padding $box-padding-vertical * 1.5 $box-padding;
+//  margin: 0 $box-padding-horizontal;
+  padding: $box-padding-vertical $box-padding-horizontal / 2 $box-padding-vertical $box-padding-horizontal / 2;
+  flex-wrap: wrap;
   > * {
-    width: calc(50% - 1em / 2);
+    // width: calc(50% - #{$box-padding-horizontal} / 2);
+    padding: 0 $box-padding-horizontal;
+    margin: 0 $box-padding-horizontal / 2 $box-padding-vertical $box-padding-horizontal / 2;
+    white-space: nowrap;
   }
 
   &.with-Action {
@@ -177,6 +189,9 @@ input[type=text], input[type=password] {
   }
   &.with-Normal.with-Action {
     flex-direction: row;
+    > * {
+      flex: 1;
+    }
   }
 
   &.with-Action-centered {
@@ -257,5 +272,27 @@ input[type=text], input[type=password] {
   margin-top: 0.5em;
   a {
     padding: 0.5em;
+  }
+}
+
+
+// Disabled but visible form
+.disabled {
+  color: $c_medium_grey3;
+
+  // Disable buttons
+  .btn {
+    color: $c_medium_grey3;
+    background-color: $c_light_grey;
+    pointer-events: none;
+    cursor: default;
+  }
+  a {
+    color: $c_medium_grey3;
+    pointer-events: none;
+    cursor: default;
+  }
+  .with-Link a span {
+    border-bottom-color: $c_medium_grey;
   }
 }
