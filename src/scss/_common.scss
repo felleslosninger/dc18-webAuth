@@ -62,11 +62,11 @@ h2 {
   margin: 20px 0 5px 0;
 }
 
-p {
-  font-size: $t_size-normal;
-  line-height: 1.4em;
-  margin: 0;
-}
+// p { // Moved to _receipt where these attributes are needed
+  // font-size: $t_size-normal;
+  // line-height: 1.4em;
+  // margin: 0;
+// }
 
 button {
   font-family: $t_fontfamily;
