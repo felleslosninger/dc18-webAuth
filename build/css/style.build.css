@@ -504,6 +504,15 @@ body {
   line-height: 1.5em;
   letter-spacing: 0.1px; }
 
+.popup {
+  background-color: #c0c7ca; }
+  .popup main {
+    display: flex; }
+  .popup .Box {
+    box-shadow: 0 0 1px 0 rgba(34, 49, 63, 0.3); }
+  .popup .Box_header {
+    background-color: #f7f8fa; }
+
 main {
   flex: 1;
   justify-content: center;
@@ -963,6 +972,47 @@ iframe {
   width: 30px;
   height: 30px; }
 
+.Box_header-close a {
+  color: #222222;
+  text-decoration: none;
+  position: relative;
+  padding: 0.5em;
+  font-size: 0.875em; }
+  .Box_header-close a:hover, .Box_header-close a:active {
+    color: #006cff; }
+    .Box_header-close a:hover span, .Box_header-close a:active span {
+      border-bottom-color: #006cff; }
+      .Box_header-close a:hover span.fa, .Box_header-close a:active span.fa {
+        color: #006cff; }
+  .Box_header-close a:focus {
+    color: #006cff;
+    outline: 1px solid #5e6b77;
+    border-bottom-color: transparent;
+    text-decoration: none; }
+    .Box_header-close a:focus span {
+      border-bottom-color: transparent; }
+      .Box_header-close a:focus span.fa {
+        color: #006cff; }
+  .Box_header-close a span {
+    border-bottom: 1px solid #006cff; }
+    .Box_header-close a span.fa {
+      border-bottom-color: transparent; }
+.Box_header-close a span.fa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #222222;
+  text-decoration: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #5e6b77;
+  border-radius: 100%;
+  padding: 2px; }
+  .Box_header-close a span.fa:before {
+    margin-left: 1px;
+    margin-top: -2px; }
+
 @media (max-width: 767px) {
   .Box {
     width: 100%;
@@ -1318,7 +1368,7 @@ input[type=text], input[type=password] {
     border-width: 2px;
     border-color: #006cff;
     margin-left: -1px;
-    margin-bottom: calc(2rem / 2 - 1px); }
+    margin-bottom: calc(1rem / 2 - 1px); }
 
 .text {
   padding: 2px 8px;
