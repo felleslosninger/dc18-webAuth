@@ -103,6 +103,10 @@ label, .label {
   margin: {
     left: $box-padding / 4;
   }
+  span {
+    font-weight: $t_weight-normal;
+    padding-left: 0.5em;
+  }
   & + input {
     margin-top: $box-padding / 4;
     &:focus {
