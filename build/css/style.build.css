@@ -529,11 +529,6 @@ h2 {
   font-size: 1em;
   margin: 20px 0 5px 0; }
 
-p {
-  font-size: 0.875em;
-  line-height: 1.4em;
-  margin: 0; }
-
 button {
   font-family: "Open Sans", sans-serif;
   border: none;
@@ -1589,6 +1584,8 @@ input[type=text], input[type=password] {
       height: 2em;
       left: 1em;
       top: 1em; }
+  .notification p:first-of-type {
+    margin-top: 0; }
 
 .fm-Fields .notification {
   margin: 0; }
@@ -1686,6 +1683,9 @@ input[type=text], input[type=password] {
   background-size: 50px 50px;
   background-position: center 1em; }
   .receipt p {
+    font-size: 0.875em;
+    line-height: 1.4em;
+    margin: 0;
     padding-left: 1.4286em;
     padding-right: 1.4286em; }
 
