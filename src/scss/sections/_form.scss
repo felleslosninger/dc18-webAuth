@@ -73,7 +73,7 @@ legend {
       }
       // The icon on the right
       &:last-child {
-        @include text-link($c_medium_grey3, $c_blue, $c_blue, $c_grey);
+        @include text-link($c_medium_grey3, $c_medium_grey3, $c_white, $c_grey);
         display: flex;
         flex: 1;
         max-width: calc(45px - 1em); // The same as text field size
@@ -85,6 +85,11 @@ legend {
           margin: auto;
           font-size: 20px;
         }
+      }
+    }
+    > a {
+      &:last-child {
+        @include text-link($c_medium_grey3, $c_blue, $c_blue, $c_grey);
       }
     }
   }
