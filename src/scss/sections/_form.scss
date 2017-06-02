@@ -161,7 +161,7 @@ input[type=text], input[type=password] {
     }
     margin: {
       left: -1px;
-      bottom: calc(#{$box-padding} / 2 - 1px);
+      bottom: calc(#{$box-padding-vertical} / 2 - 1px);
     }
   }
 }
@@ -290,6 +290,7 @@ input[type=text], input[type=password] {
     background-color: $c_light_grey;
     pointer-events: none;
     cursor: default;
+    border-color: $c_light_grey;
   }
   a {
     color: $c_medium_grey3;

@@ -20,7 +20,7 @@
 
 </head>
 
-<body class='hide-mobileMenu'>
+<body class='hide-mobileMenu popup'>
     <!--[if lt IE 11]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -40,15 +40,7 @@
                         <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
                     </ul>
                 </nav>
-                <div class='h-Menu'>
-                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Språk</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
-                    <ul>
-                        <li><a href="" class="h-Main_Menu_Element"><span>Bokmål</span></a></li>
-                        <li><a href="" class="h-Main_Menu_Element"><span>Nynorsk</span></a></li>
-                        <li><a href="" class="h-Main_Menu_Element"><span>Engelsk</span></a></li>
-                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Sámigiella</span></a></li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </header>
@@ -59,21 +51,44 @@
     <main>
 
         <section class='Box'>
-
-
-            <div class='Box_main'>
-                <!-- Notification -->
-                <div class='notification with-Icon'>
-                    <strong>An error has occurred.</strong>
-                    <p>We are not able to direct you to the service.Please close your browser and try again.</p>
-                    <p>Please note: The log-in system cannot be opened from a favourite/bookmarked link.</p>
-                </div>
-                <!-- /Notification -->
+            <div class='Box_header'>
+                <h1 class='Box_header-title with-close-button'>Change e-mail</h1>
+                <span class='Box_header-close'>
+    <a href='#'>
+      <span class='fa fa-close'>
+        <span class='visuallyHidden'>Lukk dette vinduet</span>
+                </span>
+                </a>
+                </span>
             </div>
 
+            <div class='Box_main'>
 
+                <!-- Form -->
+                <form action='#'>
+                    <div class='fm-Fields'>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <label for='mobile'>E-mail</label>
+                            <input id='mobile' type='text' placeholder='E-mail' />
+                        </div>
+                        <span class='fm-Message'>Please fill in your email address</span>
+                        <div class='fm-Field'>
+                            <label for='mobile'>Repeat E-mail</label>
+                            <input id='mobile' type='text' placeholder='Repeat e-mail' />
+                        </div>
+                        <span class='fm-Message'>The e-mail addresses do not match</span>
+                    </div>
+                    <!-- Controls placeholder with two buttons -->
+                    <div class='fm-Controls with-Normal with-Action'>
+                        <button class='btn btn-Normal'><span>Cancel</span></button>
+                        <button class='btn btn-Action' type='submit'><span>Save</span></button>
+                    </div>
+                    <!-- //Controls placeholder with two buttons -->
+                </form>
+                <!-- //Form -->
+            </div>
         </section>
-
     </main>
     <!-- /build -->
 
