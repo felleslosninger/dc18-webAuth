@@ -2,7 +2,7 @@
 
 
 .notification {
-  padding: 1em;
+  padding: 1em 1em 1.5em 1em;;
   margin: 1em 2.2857em; // Same spacing as form fields (32px)
   font-size: $t_size_normal;
   line-height: 1.5em;
@@ -25,7 +25,22 @@
   &.with-Icon.icon-pin {
     &:after {
       @extend %pincode;
-
+      width: 2.25em;
+      height: 2.25em;
+    }
+  }
+  &.with-Icon.icon-email {
+    &:after {
+      @extend %email;
+      width: 2.5em;
+      height: 2.5em;
+    }
+  }
+  &.with-Icon.icon-sms {
+    &:after {
+      @extend %sms;
+      width: 2.5em;
+      height: 2.5em;
     }
   }
   p:first-of-type {
