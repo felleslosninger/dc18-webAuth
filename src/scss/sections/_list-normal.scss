@@ -50,11 +50,6 @@ a.ln-List_Element {
       background-color: $ca_list_element_disabled-bg;
     }
   }
-  .ln-List-grey &:hover,
-  .ln-List-grey &:focus {
-    color: $ca_list_element-text;
-    background-color: $ca_list_grey_element-hover-bg;
-  }
 }
 
 // Form field having list element
@@ -91,9 +86,8 @@ a.ln-List_Element {
   text-transform: uppercase;
   max-width: 100%;
 
-  .ln-List-grey a.ln-List_Element:hover &,
-  .ln-List-grey a.ln-List_Element:focus & {
-    border-bottom: 1px solid $ca_list_element-text;
+  .ln-List-simple a.ln-List_Element:focus & {
+    border-bottom: 1px solid $ca_list_element-hover-text;
     margin-bottom: -1px;
   }
 }
@@ -104,13 +98,13 @@ a.ln-List_Element {
   padding-right: 1em;
   max-width: 100%;
 
-  .ln-List-grey & {
+  .ln-List-simple & {
     font-weight: $t_weight-bold;
   }
 }
 
 .ln-List-lowPriority,
-.ln-List-grey {
+.ln-List-simple {
   list-style: none;
   padding-left: 0;
   margin: 1em 1em 1em 1em;
@@ -119,7 +113,7 @@ a.ln-List_Element {
   border-radius: 4px;
 }
 
-.ln-List-grey {
+.ln-List-simple {
   margin: 1em 2em;
 }
 
