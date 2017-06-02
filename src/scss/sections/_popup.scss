@@ -10,4 +10,18 @@
   .Box_header {
     background-color: $ca_body_popup_header
   }
+
+  // Hide header by default
+  header > * {
+    display: none;
+  }
+
+  // Hide all in footer
+  &:not(.with-footer) {
+
+  .f-Main_Content > * {
+    display: none;
+  }
+}
+
 }
