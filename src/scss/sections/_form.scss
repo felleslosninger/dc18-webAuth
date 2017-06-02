@@ -290,6 +290,7 @@ input[type=text], input[type=password] {
     background-color: $c_light_grey;
     pointer-events: none;
     cursor: default;
+    border-color: $c_light_grey;
   }
   a {
     color: $c_medium_grey3;
