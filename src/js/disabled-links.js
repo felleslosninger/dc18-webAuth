@@ -11,4 +11,4 @@ const disabledLinks = () => {
 
 }
 
-export default disabledLinks;
+disabledLinks();

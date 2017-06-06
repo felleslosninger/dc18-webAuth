@@ -57,4 +57,4 @@ const menuEvents  = () => {
   });
 };
 
-export default menuEvents;
+menuEvents();

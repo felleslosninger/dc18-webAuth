@@ -44,4 +44,4 @@ const minidMenu = () => {
   });
 };
 
-export default minidMenu;
+minidMenu();

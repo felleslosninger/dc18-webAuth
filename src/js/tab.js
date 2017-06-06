@@ -1,4 +1,4 @@
-const menuEvents  = () => {
+const tab  = () => {
   const $ = jQuery.noConflict();
 
   $('.tb-Header a').on('click', (event) => {
@@ -27,4 +27,4 @@ const menuEvents  = () => {
 
 };
 
-export default menuEvents;
+tab();
