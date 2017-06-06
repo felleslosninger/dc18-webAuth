@@ -306,3 +306,55 @@ input[type=text], input[type=password] {
     border-bottom-color: $c_medium_grey;
   }
 }
+
+// Radio buttons
+.fm-RadioButtons {
+  margin: 1em 0;
+  position: relative;
+  border: 1px solid $ca_list-border;
+  border-radius: 4px;
+  input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    outline: none;
+  }
+  input[type=radio] + label {
+    position: relative;
+    cursor: pointer;
+    text-transform: none;
+    margin: 0;
+    padding: 1.4286em 1.4286em 1.4286em 2.8571em;
+    border-bottom: 1px solid $ca_list-border;
+    &:before {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: $c_white;
+      border: 1px solid $ca_list-border;
+      border-radius: 15px;
+      margin-right: 5px;
+    }
+  }
+  input[type=radio]:checked + label:after {
+    display: block;
+    position: absolute;
+    top: 26px;
+    left: 16px;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: $c_blue;
+  }
+  input[type=radio]:hover + label,
+  input[type=radio]:focus + label {
+    background-color: $ca_list_grey_element-hover-bg;
+  }
+  input[type=radio]:last-of-type + label {
+    border-bottom: none;
+  }
+}
