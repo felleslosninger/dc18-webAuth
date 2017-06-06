@@ -25,12 +25,20 @@ $box-padding-vertical: $box-padding / 2;
   border-radius: 4px;
 }
 
+.Box-noBorder {
+  border: none;
+}
+
 // Main box container
 .Box_main {
   display: flex;
   flex: 1;
   flex-direction: column;
   background-color: $c_white;
+
+  .Box-noBorder & {
+    background-color: transparent; 
+  }
 }
 
 // Common box header and footer stylings
