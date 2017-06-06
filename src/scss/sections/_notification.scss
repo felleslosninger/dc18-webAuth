@@ -44,10 +44,31 @@
       height: 2.5em;
     }
   }
+  &.with-Icon.icon-alert {
+    &:after {
+      @extend %alert;
+      width: 2em;
+      height: 2em;
+    }
+  }
+  &.with-Icon.icon-error {
+    &:after {
+      @extend %error;
+      width: 2em;
+      height: 2em;
+    }
+  }
   p:first-of-type {
     margin-top: 0;
   }
 }
 .fm-Fields .notification {
   margin: 0;
+}
+
+
+
+// error
+.notification-error {
+  border-color: $c_error;
 }
