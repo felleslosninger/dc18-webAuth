@@ -49,6 +49,7 @@ a.ln-List_Element {
       color: $c_white;
     }
   }
+
   &:focus {
     .ln-List_Element_Service_Info,
     .ln-List_Element_Service_Name {
@@ -56,6 +57,7 @@ a.ln-List_Element {
       //border-bottom: 1px solid $c_light_grey2;
     }
   }
+
   &.disabled {
     &:hover, &:focus {
       color: $ca_list_element_disabled-text;
@@ -122,10 +124,6 @@ a.ln-List_Element {
   font-weight: $t_weight-normal;
   padding-right: 1em;
   max-width: 100%;
-
-  .ln-List-simple & {
-    font-weight: $t_weight-bold;
-  }
 }
 
 .ln-List-lowPriority,
