@@ -13,6 +13,7 @@ module.exports = function(grunt) {
     //, 'copy:build_sections'
     , 'sass:build'
     , 'concat:build'
+    , 'copy:build_js'
 
     // Minify CSS
     , 'cssmin:build', 'copy:build_css'

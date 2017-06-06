@@ -69,7 +69,7 @@ module.exports = function(grunt) {
         bundle: [
           config.build.js.path + config.build.js.vendorfileminified
         ],
-        main: config.build.js.path + config.build.js.scriptfileminified
+        main: config.htmlbuild,
       },
       sections: {
         pages: pages,

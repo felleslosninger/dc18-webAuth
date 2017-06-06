@@ -3,8 +3,6 @@ module.exports = {
     options: {
       transform: [["babelify"]]
     },
-    files: {
-      "dev/js/main.js": "src/js/main.js"
-    }
+    files: config.browserify
   }
 }

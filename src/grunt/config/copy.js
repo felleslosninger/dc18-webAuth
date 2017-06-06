@@ -73,6 +73,18 @@ module.exports = {
     ]
   },
 
+  build_js: {
+    files: [
+      {
+        expand: true,
+        cwd: config.dev.js.path,
+        src: [
+          '*.*'
+        ],
+        dest: config.build.js.path
+      }
+    ]
+  },
   build_css: {
     files: [{
       expand: true,
