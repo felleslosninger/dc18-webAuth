@@ -52,12 +52,14 @@ a.ln-List_Element {
   &:focus {
     .ln-List_Element_Service_Info,
     .ln-List_Element_Service_Name {
+      // Temporary not in use
       //border-bottom: 1px solid $c_light_grey2;
     }
   }
   &.disabled {
     &:hover, &:focus {
       color: $ca_list_element_disabled-text;
+      // Temporary not in use
       //background-color: $ca_list_element_disabled-bg;
     }
   }
