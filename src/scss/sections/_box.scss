@@ -37,7 +37,7 @@ $box-padding-vertical: $box-padding / 2;
   background-color: $c_white;
 
   .Box-noBorder & {
-    background-color: transparent; 
+    background-color: transparent;
   }
 }
 
@@ -45,7 +45,7 @@ $box-padding-vertical: $box-padding / 2;
 .Box_header, .Box_footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 1em;
+
   > * {
     display: flex;
     flex-direction: column;
@@ -55,11 +55,13 @@ $box-padding-vertical: $box-padding / 2;
 
 // Box header
 .Box_header {
+  padding: 0 $box-padding-horizontal / 2 0 $box-padding-horizontal / 2;
   border-bottom: 1px solid $ca_list-border;
 }
 
 // Box footer
 .Box_footer {
+  padding: 0 $box-padding-horizontal / 2 0 $box-padding-horizontal;
   border-top: 1px solid $ca_list-border;
 }
 
