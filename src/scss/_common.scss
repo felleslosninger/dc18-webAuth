@@ -88,3 +88,7 @@ iframe {
 .with-Link {
   @include apply-text-link();
 }
+
+.capitalize {
+  text-transform: uppercase;
+}
