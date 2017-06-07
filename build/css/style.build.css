@@ -872,17 +872,18 @@ iframe {
 
 .Box_header, .Box_footer {
   display: flex;
-  justify-content: space-between;
-  padding: 0 1em; }
+  justify-content: space-between; }
   .Box_header > *, .Box_footer > * {
     display: flex;
     flex-direction: column;
     justify-content: center; }
 
 .Box_header {
+  padding: 0 1rem 0 1rem;
   border-bottom: 1px solid #e6ebf0; }
 
 .Box_footer {
+  padding: 0 1rem 0 2rem;
   border-top: 1px solid #e6ebf0; }
 
 .Box_inside-footer {
@@ -1286,9 +1287,9 @@ legend {
   .fm-Field:first-child {
     margin-top: 0; }
   .fm-Field.error input {
-    border-color: #ff4a22; }
+    border-color: #ff0000; }
   .fm-Field.error + .fm-Message {
-    color: #ff4a22;
+    color: #ff0000;
     display: initial; }
   .fm-Field .with-icon {
     display: flex;
@@ -1742,7 +1743,7 @@ input[type=text], input[type=password] {
   margin: 0; }
 
 .notification-error {
-  border-color: #ff4a22; }
+  border-color: #ff0000; }
 
 /*
 * Styles for MinID pages
