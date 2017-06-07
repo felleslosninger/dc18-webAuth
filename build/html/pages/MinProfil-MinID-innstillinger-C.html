@@ -53,11 +53,11 @@
 
         <section class='Box'>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-close-button'>Select prefered login</h1>
+                <h1 class='Box_header-title with-close-button'>Change password</h1>
                 <span class='Box_header-close'>
     <a href='#'>
       <span class='fa fa-close'>
-        <span class='visuallyHidden'>Close window</span>
+        <span class='visuallyHidden'>Lukk dette vinduet</span>
                 </span>
                 </a>
                 </span>
@@ -65,29 +65,39 @@
 
             <div class='Box_main'>
 
-
                 <!-- Form -->
                 <form action='#'>
-                    <div class='fm-Fields with-Link'>
-
-                        <div class='fm-RadioButtons'>
-                            <input id='letter' type='radio' name="login-preference" checked='checked' value="letter" />
-                            <label for='letter'>Code from pin letter</label>
-                            <input id='sms' type='radio' name="login-preference" value="sms" />
-                            <label for='sms' class=''>Code from SMS (93282061)</label>
+                    <div class='fm-Fields'>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <label for='password-old'>Current password</label>
+                            <input id='password-old' type='password' placeholder='Current password' />
                         </div>
+                        <span class='fm-Message'>Passwords cannot be empty</span>
 
-                        <div class='fm-Password_Link with-Link'>
-                            <a href=''><span>Change mobile phone number</span></a>
+                        <div class='fm-Field'>
+                            <label for='password'>New password</label>
+                            <input id='password' type='password' placeholder='New password' />
                         </div>
+                        <span class='fm-Message'>Please enter a password</span>
 
+                        <div class='fm-Field'>
+                            <label for='password2'>Re-enter new password</label>
+                            <input id='password2' type='password' placeholder='Re-enter new password' />
+                        </div>
+                        <span class='fm-Message'>Passwords does not match</span>
                     </div>
-
-
+                    <!-- Controls placeholder with two buttons -->
+                    <div class='fm-Controls with-Normal with-Action'>
+                        <button class='btn btn-Normal'><span>Cancel</span></button>
+                        <button class='btn btn-Action' type='submit'><span>Save</span></button>
+                    </div>
+                    <!-- //Controls placeholder with two buttons -->
                 </form>
+                <!-- //Form -->
             </div>
-
         </section>
+
 
     </main>
     <!-- /build -->
