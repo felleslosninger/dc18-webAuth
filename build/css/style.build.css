@@ -1287,9 +1287,9 @@ legend {
   .fm-Field:first-child {
     margin-top: 0; }
   .fm-Field.error input {
-    border-color: #ff4a22; }
+    border-color: #ff0000; }
   .fm-Field.error + .fm-Message {
-    color: #ff4a22;
+    color: #ff0000;
     display: initial; }
   .fm-Field .with-icon {
     display: flex;
@@ -1743,7 +1743,7 @@ input[type=text], input[type=password] {
   margin: 0; }
 
 .notification-error {
-  border-color: #ff4a22; }
+  border-color: #ff0000; }
 
 /*
 * Styles for MinID pages
