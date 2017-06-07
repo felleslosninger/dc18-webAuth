@@ -39,6 +39,10 @@ $box-padding-vertical: $box-padding / 2;
   .Box-noBorder & {
     background-color: transparent;
   }
+
+  img { 
+    align-self: center;
+  }
 }
 
 // Common box header and footer stylings
