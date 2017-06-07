@@ -872,17 +872,18 @@ iframe {
 
 .Box_header, .Box_footer {
   display: flex;
-  justify-content: space-between;
-  padding: 0 1em; }
+  justify-content: space-between; }
   .Box_header > *, .Box_footer > * {
     display: flex;
     flex-direction: column;
     justify-content: center; }
 
 .Box_header {
+  padding: 0 1rem 0 1rem;
   border-bottom: 1px solid #e6ebf0; }
 
 .Box_footer {
+  padding: 0 1rem 0 2rem;
   border-top: 1px solid #e6ebf0; }
 
 .Box_inside-footer {
