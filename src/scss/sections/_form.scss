@@ -155,7 +155,7 @@ input[type=submit], .btn {
 
 
 // Text form field
-input[type=text], input[type=password] {
+input[type=text], input[type=password], textarea {
   border: 1px solid $c_light_grey3;
   padding: 8px 12px;
   &:focus {
@@ -164,16 +164,21 @@ input[type=text], input[type=password] {
       width: 2px;
       color: $c_blue;
     }
-    margin: {
-      left: -1px;
-      bottom: calc(#{$box-padding-vertical} / 2 - 1px);
-    }
+    // margin: {
+    //   left: -1px;
+    //   bottom: calc(#{$box-padding-vertical} / 2 - 1px);
+    // }
+    padding: 7px 11px; // to avoid jumping fields
   }
 }
 // Text element which is not a form field but presents text similar way
 .text {
   padding: 2px 8px;
   border-bottom: 1px solid $c_light_grey3;
+}
+textarea {
+  height: 10em;
+  border-radius: 4px;
 }
 
 
