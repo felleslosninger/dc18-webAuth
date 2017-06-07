@@ -66,9 +66,38 @@
   margin: 0;
 }
 
-
-
 // error
 .notification-error {
   border-color: $c_error;
+}
+
+
+// DRIFTSMELDING
+.driftsmelding {
+  background: $c_notification;
+  font-size: $t_size_normal;
+  padding: 1em;
+  display: flex;
+  &.with-Icon {
+    position: relative;
+    padding-left: 4em;
+    &:after {
+      @extend %alert;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2em;
+      height: 2em;
+      left: 1em;
+      top: 1em;
+    }
+  }
+  .title {
+    display: flex;
+    font-weight: 700;
+    padding-right: 0.5em;
+  }
+  .message {
+    display: flex;
+  }
 }
