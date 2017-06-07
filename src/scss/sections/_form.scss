@@ -281,7 +281,7 @@ textarea {
   }
 }
 
-.fm-Password_Link {
+.fm-form_link {
   font-size: $t_size-normal;
   margin-top: 0.5em;
   a {
@@ -333,7 +333,8 @@ textarea {
     &:before {
       display: block;
       position: absolute;
-      top: 20px;
+      top: 50%;
+      margin-top: -11px; // Half of height and one pixel of border
       left: 10px;
       content: "";
       width: 20px;
@@ -347,7 +348,8 @@ textarea {
   input[type=radio]:checked + label:after {
     display: block;
     position: absolute;
-    top: 26px;
+    top: 50%;
+    margin-top: -5px; // Half of height
     left: 16px;
     content: "";
     width: 10px;
@@ -362,4 +364,42 @@ textarea {
   input[type=radio]:last-of-type + label {
     border-bottom: none;
   }
+}
+
+.fm-RadioButtons.with-Logo {
+  input[type=radio] + label {
+    padding: {
+      left: 1.4286 / 2 * 1em;
+      right: 1.4286 / 2 * 1em;
+    }
+    &:before {
+      left: auto;
+      right: 5px;
+    }
+  }
+  input[type=radio]:checked + label:after {
+    left: auto;
+    right: 16px;
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    height: 50px;
+    width: 80px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin-right: 20px;
+    overflow: hidden;
+    img {
+          width: 100%;
+    }
+  }
+}
+
+// When there is a label element, buttons are closer to it
+.label + .fm-RadioButtons {
+  margin-top: 0.5em;
 }

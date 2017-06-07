@@ -785,7 +785,7 @@ iframe {
 .f-Main_Logo {
   width: 30px;
   height: 30px;
-  margin: 5px 15px 0 0;
+  margin: 15px 15px 0 0;
   background: url("../images/svg/eid.svg") no-repeat top right; }
   @media (max-width: 767px) {
     .f-Main_Logo {
@@ -872,6 +872,8 @@ iframe {
   background-color: #ffffff; }
   .Box-noBorder .Box_main {
     background-color: transparent; }
+  .Box_main img {
+    align-self: center; }
 
 .Box_header, .Box_footer {
   display: flex;
@@ -1017,7 +1019,7 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 15px;
   color: #222222;
   text-decoration: none;
   width: 18px;
@@ -1027,7 +1029,9 @@ iframe {
   padding: 2px; }
   .Box_header-close a span.fa:before {
     margin-left: 1px;
-    margin-top: -2px; }
+    margin-top: -1px; }
+.Box_header-close a:hover span.fa {
+  border-color: #006cff; }
 
 @media (max-width: 767px) {
   .Box {
@@ -1404,19 +1408,22 @@ input[type=submit], .btn {
     border-bottom: 1px solid transparent;
     margin: auto; }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], textarea {
   border: 1px solid #e7e8ea;
   padding: 8px 12px; }
-  input[type=text]:focus, input[type=password]:focus {
+  input[type=text]:focus, input[type=password]:focus, textarea:focus {
     outline: none;
     border-width: 2px;
     border-color: #006cff;
-    margin-left: -1px;
-    margin-bottom: calc(1rem / 2 - 1px); }
+    padding: 7px 11px; }
 
 .text {
   padding: 2px 8px;
   border-bottom: 1px solid #e7e8ea; }
+
+textarea {
+  height: 10em;
+  border-radius: 4px; }
 
 .fm-Controls {
   display: flex;
@@ -1489,10 +1496,10 @@ input[type=text], input[type=password] {
     height: 1em;
     background-color: #006cff; }
 
-.fm-Password_Link {
+.fm-form_link {
   font-size: 0.875em;
   margin-top: 0.5em; }
-  .fm-Password_Link a {
+  .fm-form_link a {
     padding: 0.5em; }
 
 .disabled {
@@ -1529,7 +1536,8 @@ input[type=text], input[type=password] {
     .fm-RadioButtons input[type=radio] + label:before {
       display: block;
       position: absolute;
-      top: 20px;
+      top: 50%;
+      margin-top: -11px;
       left: 10px;
       content: "";
       width: 20px;
@@ -1541,7 +1549,8 @@ input[type=text], input[type=password] {
   .fm-RadioButtons input[type=radio]:checked + label:after {
     display: block;
     position: absolute;
-    top: 26px;
+    top: 50%;
+    margin-top: -5px;
     left: 16px;
     content: "";
     width: 10px;
@@ -1553,6 +1562,32 @@ input[type=text], input[type=password] {
     background-color: #f7f8fa; }
   .fm-RadioButtons input[type=radio]:last-of-type + label {
     border-bottom: none; }
+
+.fm-RadioButtons.with-Logo input[type=radio] + label {
+  padding-left: 0.7143em;
+  padding-right: 0.7143em; }
+  .fm-RadioButtons.with-Logo input[type=radio] + label:before {
+    left: auto;
+    right: 5px; }
+.fm-RadioButtons.with-Logo input[type=radio]:checked + label:after {
+  left: auto;
+  right: 16px; }
+.fm-RadioButtons.with-Logo span {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+.fm-RadioButtons.with-Logo .logo {
+  height: 50px;
+  width: 80px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  margin-right: 20px;
+  overflow: hidden; }
+  .fm-RadioButtons.with-Logo .logo img {
+    width: 100%; }
+
+.label + .fm-RadioButtons {
+  margin-top: 0.5em; }
 
 /*
 * Styles for country selector
