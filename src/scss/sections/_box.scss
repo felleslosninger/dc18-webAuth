@@ -45,6 +45,23 @@ $box-padding-vertical: $box-padding / 2;
   }
 }
 
+.Box_Section {
+  background-color: $c_white;
+  padding: $box-padding-vertical $box-padding-horizontal;
+  display: flex;
+  flex-direction: column;
+  span, p {
+    font-size: $t_size-normal;
+    margin-left: 0.5em;
+  }
+  .label {
+    margin-top: 0.5em;
+  }
+  .align-right {
+    align-self: flex-end;
+  }
+}
+
 // Common box header and footer stylings
 .Box_header, .Box_footer {
   display: flex;
