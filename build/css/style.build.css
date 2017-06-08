@@ -1075,7 +1075,6 @@ iframe {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  cursor: pointer;
   width: 100%;
   color: #000000;
   font-size: 0.875em;
@@ -1092,13 +1091,15 @@ iframe {
   .ln-List_Element.with-icon {
     padding-right: 0; }
 
-a.ln-List_Element:hover, a.ln-List_Element:focus {
-  color: #ffffff;
-  background-color: #006cff; }
-  a.ln-List_Element:hover .ln-List_Element_Action, a.ln-List_Element:focus .ln-List_Element_Action {
-    color: #ffffff; }
-a.ln-List_Element.disabled:hover, a.ln-List_Element.disabled:focus {
-  color: #b3b3b3; }
+a.ln-List_Element {
+  cursor: pointer; }
+  a.ln-List_Element:hover, a.ln-List_Element:focus {
+    color: #ffffff;
+    background-color: #006cff; }
+    a.ln-List_Element:hover .ln-List_Element_Action, a.ln-List_Element:focus .ln-List_Element_Action {
+      color: #ffffff; }
+  a.ln-List_Element.disabled:hover, a.ln-List_Element.disabled:focus {
+    color: #b3b3b3; }
 
 .ln-List > li:last-child .ln-List_Element {
   border-bottom: 0; }
@@ -1159,7 +1160,13 @@ a.ln-List_Element.disabled:hover, a.ln-List_Element.disabled:focus {
     border-bottom-right-radius: 4px; }
 
 .ln-List-simple {
-  margin: 1em 2em; }
+  margin: 1rem 2rem; }
+
+.fm-Field .ln-List-simple {
+  margin: 1rem 0; }
+
+.fm-Field .label + .ln-List-simple {
+  margin-top: 0; }
 
 .fm-Fields .ln-List_Digitalpost {
   margin: 0; }
