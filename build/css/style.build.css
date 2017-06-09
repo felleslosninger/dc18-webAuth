@@ -598,6 +598,33 @@ iframe {
 .capitalize {
   text-transform: uppercase; }
 
+.ingress {
+  display: block;
+  font-size: 0.875em;
+  margin: 1rem  0 0;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid #e7e8ea; }
+
+.help-Link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 2.5rem 2rem; }
+  .help-Link a {
+    align-self: flex-end;
+    text-decoration: none;
+    color: #c2c3c4; }
+    .help-Link a:hover, .help-Link a:focus {
+      color: #006cff; }
+  .help-Link .fa {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    margin: auto; }
+
 table {
   width: 100%;
   margin: 1em 0; }
@@ -751,6 +778,10 @@ table {
   @media (max-width: 767px) {
     .h-Menu_Container-open .h-Menu-open ul {
       display: block; } }
+
+@media (max-width: 767px) {
+  .h-Menu_Container-open .h-Menu-preOpened ul {
+    display: block; } }
 
 .h-Main_Menu_Element {
   display: inline-block;
@@ -916,7 +947,8 @@ table {
 
 .Box_footer {
   padding: 0 1rem 0 2rem;
-  border-top: 1px solid #e6ebf0; }
+  border-top: 1px solid #e6ebf0;
+  min-height: 3.5em; }
 
 .Box_inside-footer {
   border-top: 1px solid #e6ebf0;
@@ -1334,7 +1366,6 @@ legend {
     display: initial; }
   .fm-Field .with-icon {
     display: flex;
-    flex: 1;
     flex-direction: row;
     align-items: center; }
     .fm-Field .with-icon > *:first-child {
@@ -1372,8 +1403,8 @@ legend {
         .fm-Field .with-icon > *:last-child span.fa {
           border-bottom-color: transparent; }
       .fm-Field .with-icon > *:last-child > .fa {
-        margin: auto;
-        font-size: 20px; }
+        font-size: 20px;
+        align-self: center; }
     .fm-Field .with-icon > a:last-child {
       color: #9fa9b4;
       text-decoration: none;
@@ -1748,7 +1779,10 @@ textarea {
   margin: 0;
   background-color: #ffffff; }
   .la-List .la-List_Region {
-    display: none; }
+    display: none;
+    border-bottom: 1px solid #e6ebf0; }
+    .la-List .la-List_Region.open {
+      display: block; }
 
 .la-List_Element {
   display: flex;
