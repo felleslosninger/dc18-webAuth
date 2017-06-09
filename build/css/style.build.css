@@ -1442,8 +1442,11 @@ input[type=text], input[type=password], textarea {
   border-bottom: 1px solid #e7e8ea; }
 
 textarea {
+  font-size: 0.875em;
   height: 10em;
-  border-radius: 4px; }
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  outline: none; }
 
 .fm-Controls {
   display: flex;
@@ -1730,7 +1733,7 @@ textarea {
   padding-left: 0;
   margin: 0;
   background-color: #ffffff; }
-  .la-List .ln-List {
+  .la-List .la-List_Region {
     display: none; }
 
 .la-List_Element {
