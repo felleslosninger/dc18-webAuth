@@ -208,7 +208,7 @@ textarea {
   &.with-Normal.with-Action {
     flex-direction: row;
     > * {
-      flex: 1;
+      flex: 1 1 auto;
     }
   }
 
