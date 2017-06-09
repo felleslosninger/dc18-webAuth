@@ -92,3 +92,23 @@ iframe {
 .capitalize {
   text-transform: uppercase;
 }
+
+
+table {
+  width: 100%;
+  margin: 1em 0;
+  tr {
+    padding: 0.5em 0;
+  }
+  td {
+    font-size: $t_size-normal;
+    padding: 1em 0.5em 0.35em 0.5em;
+    border-bottom: 1px solid $c_light_grey2;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
