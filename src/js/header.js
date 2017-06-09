@@ -19,8 +19,9 @@ const menuEvents  = () => {
     event.preventDefault();
     const $currentTrigger = $(event.currentTarget);
     const $selectedMenu = $currentTrigger.parent('.h-Menu');
-    if ($selectedMenu.hasClass('h-Menu-open')) { // menu is open
+    if ($selectedMenu.hasClass('h-Menu-open') || $selectedMenu.hasClass('h-Menu-preOpened') ) { // menu is open
       $selectedMenu.removeClass('h-Menu-open'); // close it
+      $selectedMenu.removeClass('h-Menu-preOpened'); // If user chose to close preopened menu (mobile)
       $currentTrigger.attr('aria-expanded', 'false');
     } else {
       $('.h-Menu-open').find('.h-Menu_Trigger').attr('aria-expanded', 'false');

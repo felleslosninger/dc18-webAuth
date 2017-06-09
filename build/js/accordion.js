@@ -5,6 +5,10 @@ var accordion = function accordion() {
 
   var $ = jQuery.noConflict();
 
+  if ($('.js-initially-open').length > 0) {
+    $('.js-initially-open').click();
+  }
+
   $('.la-List_Element').on('click', function (e) {
     e.preventDefault();
     var $target = $(e.currentTarget);
@@ -23,6 +27,12 @@ var accordion = function accordion() {
     $list.slideToggle(300, function () {
       $list.toggleClass('open');
     });
+  });
+
+  $(document).ready(function () {
+    if ($('.js-initially-open').length > 0) {
+      $('.js-initially-open').click();
+    }
   });
 };
 

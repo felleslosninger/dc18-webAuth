@@ -175,6 +175,14 @@
   }
 }
 
+.h-Menu-preOpened ul {
+  @include mobile {
+    .h-Menu_Container-open & {
+      display: block;
+    }
+  }
+}
+
 .h-Main_Menu_Element {
   display: inline-block;
   box-sizing: border-box;
