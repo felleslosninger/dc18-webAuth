@@ -84,6 +84,7 @@ $box-padding-vertical: $box-padding / 2;
 .Box_footer {
   padding: 0 $box-padding-horizontal / 2 0 $box-padding-horizontal;
   border-top: 1px solid $ca_list-border;
+  min-height: 3.5em; // for empty footer
 }
 
 // Class for elements inside .Box_main but pretending to look as part of the footer

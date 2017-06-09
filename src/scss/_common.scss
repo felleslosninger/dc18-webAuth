@@ -92,3 +92,35 @@ iframe {
 .capitalize {
   text-transform: uppercase;
 }
+
+.ingress {
+  display: block;
+  font-size: $t_size-normal;
+  margin: 1rem  0 0;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid $c_light_grey3;
+}
+
+.help-Link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 2.5rem 2rem;
+  a {
+    align-self: flex-end;
+    text-decoration: none;
+    color: $ca_box_help_icon;
+    &:hover, &:focus {
+      color: $c_blue;
+    }
+  }
+  .fa {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    margin: auto;
+  }
+}
