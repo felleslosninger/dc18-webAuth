@@ -1449,9 +1449,9 @@ label, .label {
   label span, .label span {
     font-weight: 400;
     padding-left: 0.5em; }
-  label + input, .label + input {
+  label + input, label + textarea, .label + input, .label + textarea {
     margin-top: 0.5rem; }
-    label + input:focus, .label + input:focus {
+    label + input:focus, label + textarea:focus, .label + input:focus, .label + textarea:focus {
       margin-top: calc(2rem / 4 - 1px); }
 
 input, button, .btn, .text {
@@ -1480,7 +1480,8 @@ input[type=text], input[type=password], textarea {
     outline: none;
     border-width: 2px;
     border-color: #006cff;
-    padding: 7px 11px; }
+    margin-left: -1px;
+    margin-bottom: calc(1rem / 2 - 1px); }
 
 .text {
   padding: 2px 8px;

@@ -22,7 +22,7 @@ var menuEvents = function menuEvents() {
     event.preventDefault();
     var $currentTrigger = $(event.currentTarget);
     var $selectedMenu = $currentTrigger.parent('.h-Menu');
-    if ($selectedMenu.hasClass('h-Menu-open')) {
+    if ($selectedMenu.hasClass('h-Menu-open') || $selectedMenu.hasClass('h-Menu-preOpened')) {
       // menu is open
       $selectedMenu.removeClass('h-Menu-open'); // close it
       $selectedMenu.removeClass('h-Menu-preOpened'); // If user chose to close preopened menu (mobile)
