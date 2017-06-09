@@ -63,7 +63,7 @@ legend {
   // Child element having icon
   .with-icon {
     display: flex;
-    flex: 1;
+    //flex: 1;
     flex-direction: row;
     align-items: center;
     > * {
@@ -82,8 +82,9 @@ legend {
         justify-content: center;
         flex-direction: column;
         > .fa {
-          margin: auto;
+          //margin: auto;
           font-size: 20px;
+          align-self: center;
         }
       }
     }
