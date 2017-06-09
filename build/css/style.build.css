@@ -1510,7 +1510,7 @@ textarea {
   .fm-Controls.with-Normal.with-Action {
     flex-direction: row; }
     .fm-Controls.with-Normal.with-Action > * {
-      flex: 1; }
+      flex: 1 1 auto; }
   .fm-Controls.with-Action-centered {
     align-items: center; }
 
