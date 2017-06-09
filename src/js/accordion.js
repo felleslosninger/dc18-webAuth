@@ -2,6 +2,10 @@ const accordion = () => {
 
   const $ = jQuery.noConflict();
 
+  if ($('.js-initially-open').length > 0) {
+    $('.js-initially-open').click();
+  }
+
   $('.la-List_Element').on('click', (e) => {
     e.preventDefault();
     let $target = $(e.currentTarget);
@@ -21,6 +25,12 @@ const accordion = () => {
       $list.toggleClass('open');
     });
 
+  });
+
+  $(document).ready( () => {
+    if ($('.js-initially-open').length > 0) {
+      $('.js-initially-open').click();
+    }
   });
 };
 

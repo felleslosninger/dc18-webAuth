@@ -16,6 +16,10 @@
   .la-List_Region {
     display: none;
     border-bottom: 1px solid $ca_list-border;
+
+    &.open {
+      display: block;
+    }
   }
 
 }
