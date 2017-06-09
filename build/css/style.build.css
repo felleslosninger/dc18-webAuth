@@ -598,6 +598,20 @@ iframe {
 .capitalize {
   text-transform: uppercase; }
 
+table {
+  width: 100%;
+  margin: 1em 0; }
+  table tr {
+    padding: 0.5em 0; }
+  table td {
+    font-size: 0.875em;
+    padding: 1em 0.5em 0.35em 0.5em;
+    border-bottom: 1px solid #e6ebf0; }
+    table td:first-child {
+      padding-left: 0; }
+    table td:last-child {
+      padding-right: 0; }
+
 /*
 * Styles for pagre header
 *
