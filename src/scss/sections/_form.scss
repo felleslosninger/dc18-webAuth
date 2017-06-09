@@ -124,7 +124,7 @@ label, .label {
     font-weight: $t_weight-normal;
     padding-left: 0.5em;
   }
-  & + input {
+  & + input, & + textarea {
     margin-top: $box-padding / 4;
     &:focus {
       margin-top: calc(#{$box-padding} / 4 - 1px);
@@ -165,11 +165,11 @@ input[type=text], input[type=password], textarea {
       width: 2px;
       color: $c_blue;
     }
-    // margin: {
-    //   left: -1px;
-    //   bottom: calc(#{$box-padding-vertical} / 2 - 1px);
-    // }
-    padding: 7px 11px; // to avoid jumping fields
+     margin: {
+       left: -1px;
+       bottom: calc(#{$box-padding-vertical} / 2 - 1px);
+     }
+    //padding: 7px 11px; // to avoid jumping fields
   }
 }
 // Text element which is not a form field but presents text similar way
