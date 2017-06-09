@@ -18,7 +18,6 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  cursor: pointer;
   width: 100%;
   color: $ca_list_element-text;
   font-size: $t_size-normal;
@@ -41,6 +40,7 @@
   }
 }
 a.ln-List_Element {
+  cursor: pointer;
   &:hover, &:focus {
     color: $ca_list_element-hover-text;
     background-color: $ca_list_element-hover-bg;
@@ -151,8 +151,17 @@ a.ln-List_Element {
   }
 }
 
+// Simple list
 .ln-List-simple {
-  margin: 1em 2em;
+  margin: $box-padding / 2 $box-padding;
+}
+// Simple list inside form field
+.fm-Field .ln-List-simple {
+  margin: $box-padding / 2 0;
+}
+// Simple list following .label element in form field
+.fm-Field .label + .ln-List-simple {
+  margin-top: 0;
 }
 
 .fm-Fields .ln-List_Digitalpost {
