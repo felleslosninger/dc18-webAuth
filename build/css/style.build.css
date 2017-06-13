@@ -928,6 +928,8 @@ table {
   .Box_Section span, .Box_Section p {
     font-size: 0.875em;
     margin-left: 0.5em; }
+  .Box_Section p span {
+    font-size: 1em; }
   .Box_Section .label {
     margin-top: 0.5em; }
   .Box_Section .align-right {
