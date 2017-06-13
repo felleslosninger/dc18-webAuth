@@ -54,6 +54,9 @@ $box-padding-vertical: $box-padding / 2;
     font-size: $t_size-normal;
     margin-left: 0.5em;
   }
+  p span {
+    font-size: 1em;
+  }
   .label {
     margin-top: 0.5em;
   }
