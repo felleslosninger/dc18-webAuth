@@ -935,6 +935,13 @@ table {
   .Box_Section .align-right {
     align-self: flex-end; }
 
+.Box_Section-Icon {
+  padding: 0.5rem 2rem 0; }
+  .Box_Section-Icon img {
+    max-height: 37px;
+    width: auto;
+    align-self: flex-end; }
+
 .Box_header, .Box_footer {
   display: flex;
   justify-content: space-between; }
