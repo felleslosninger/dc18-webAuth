@@ -936,7 +936,7 @@ table {
     align-self: flex-end; }
 
 .Box_Section-Icon {
-  padding: 0.5rem 2rem 0; }
+  padding: 1rem 2rem 0; }
   .Box_Section-Icon img {
     max-height: 37px;
     width: auto;
@@ -2003,4 +2003,4 @@ This is the temporary customization
   .popup:not(.with-footer) .f-Main_Content > * {
     display: none; }
 
-/*# sourceMappingURL=style.build.css.map */
+/*# sourceMappingURL=style.css.map */
