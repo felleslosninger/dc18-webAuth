@@ -46,11 +46,7 @@ module.exports = function(grunt) {
         section: sections
       }
       ,
-      styles: {
-        bundle: [],
-        main: config.dev.css.path + config.dev.css.cssfile,
-        build: []
-      },
+      styles: config.htmlbuild.css.dev,
       data: {
         mode: 'DEV',
         imgpath: config.dev.img.relativepath
@@ -69,7 +65,7 @@ module.exports = function(grunt) {
         bundle: [
           config.build.js.path + config.build.js.vendorfileminified
         ],
-        main: config.htmlbuild,
+        main: config.htmlbuild.scripts.main,
       },
       sections: {
         pages: pages,
@@ -78,10 +74,7 @@ module.exports = function(grunt) {
       }
 
       ,
-      styles: {
-        bundle: [],
-        main: config.build.css.path + config.build.css.cssfileminified
-      },
+      styles: config.htmlbuild.css.build,
       data: {
         mode: 'BUILD',
         imgpath: config.build.img.relativepath
@@ -109,10 +102,7 @@ module.exports = function(grunt) {
       }
 
       ,
-      styles: {
-        bundle: [],
-        main: config.build.css.path + config.build.css.cssfileminified
-      },
+      styles: config.htmlbuild.css.build,
       data: {
         mode: 'BUILD',
         imgpath: config.build.img.relativepath
