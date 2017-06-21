@@ -66,7 +66,7 @@ $box-padding-vertical: $box-padding / 2;
 }
 
 .Box_Section-Icon {
-  padding: $box-padding-vertical / 2 $box-padding-horizontal 0;
+  padding: $box-padding-vertical $box-padding-horizontal 0;
   img {
     max-height: 37px;
     width: auto;
