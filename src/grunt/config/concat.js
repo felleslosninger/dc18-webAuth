@@ -11,17 +11,13 @@ module.exports = {
   }
   , build : {
     files : [
-//      { 
-//        src: [config.dev.js.path + '*.js']
-//        , dest: config.build.js.path + config.build.js.scriptfile
-//      }, 
+      //      { 
+      //        src: [config.dev.js.path + '*.js']
+      //        , dest: config.build.js.path + config.build.js.scriptfile
+      //      },
       { 
         src: [config.dev.vendor.path + '*.js', config.dev.vendor.path + '**/*.js']
         , dest: config.build.js.path + config.build.js.vendorfile
-      }
-      , { 
-        src: [config.dev.css.path + config.dev.css.buildcssfile]
-        , dest: config.build.css.path + config.build.css.cssfile
       }
     ]
   }

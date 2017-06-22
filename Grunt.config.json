@@ -125,15 +125,31 @@
     ],
     "proxy": "idporten.local"
   },
-  "htmlbuild": [
-    "build/js/accordion.js",
-    "build/js/country-selector.js",
-    "build/js/disabled-links.js",
-    "build/js/header.js",
-    "build/js/minid-menu.js",
-    "build/js/tab.js",
-    "build/js/toggleMenues.js"
-  ],
+  "htmlbuild": {
+    "scripts": {
+      "main": [
+        "build/js/accordion.js",
+        "build/js/country-selector.js",
+        "build/js/disabled-links.js",
+        "build/js/header.js",
+        "build/js/minid-menu.js",
+        "build/js/tab.js",
+        "build/js/toggleMenues.js"
+      ]
+    },
+    "css": {
+      "dev": {
+        "all": "dev/css/style.css",
+        "kontaktinfomodul": "dev/css/kontaktinfomodul.css",
+        "minprofil": "dev/css/minprofil.css"
+      },
+      "build": {
+        "all": "build/css/style.css",
+        "kontaktinfomodul": "build/css/kontaktinfomodul.css",
+        "minprofil": "build/css/minprofil.css"
+      }
+    }
+  },
   "browserify": {
     "dev/js/accordion.js": "src/js/accordion.js",
     "dev/js/country-selector.js": "src/js/country-selector.js",
