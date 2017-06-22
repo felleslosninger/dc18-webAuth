@@ -65,12 +65,18 @@ $box-padding-vertical: $box-padding / 2;
   }
 }
 
-.Box_Section-Icon {
-  padding: $box-padding-vertical $box-padding-horizontal 0;
+.Box_Section-ServiceProvider {
+  padding: $box-padding-vertical;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom: 1px solid $ca_list-border;
   img {
-    max-height: 37px;
+    max-height: 32px;
     width: auto;
     align-self: flex-end;
+  }
+  @include mobile {
+    display: none;
   }
 }
 

@@ -131,7 +131,8 @@
     "build/js/disabled-links.js",
     "build/js/header.js",
     "build/js/minid-menu.js",
-    "build/js/tab.js"
+    "build/js/tab.js",
+    "build/js/toggleMenues.js"
   ],
   "browserify": {
     "dev/js/accordion.js": "src/js/accordion.js",
@@ -139,6 +140,7 @@
     "dev/js/disabled-links.js": "src/js/disabled-links.js",
     "dev/js/header.js": "src/js/header.js",
     "dev/js/minid-menu.js": "src/js/minid-menu.js",
-    "dev/js/tab.js": "src/js/tab.js"
+    "dev/js/tab.js": "src/js/tab.js",
+    "dev/js/toggleMenues.js": "src/js/toggleMenues.js"
   }
 }

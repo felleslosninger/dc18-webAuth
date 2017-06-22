@@ -183,6 +183,21 @@
   }
 }
 
+.h-Menu-MinID {
+  display: none;
+  .h-Menu_Container-open & {
+    display: none;
+  }
+}
+
+.h-Menu-MinID-active {
+  .h-Menu_Container-open & {
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
 .h-Main_Menu_Element {
   display: inline-block;
   box-sizing: border-box;
