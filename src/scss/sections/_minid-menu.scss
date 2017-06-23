@@ -36,11 +36,11 @@
 }
 
 .mi-Menu_Trigger {
-  display: flex;
+  display: block;
+  position: relative;
   height: 100%;
-  padding: 1.14em; //1.6em 1.14em;
+  padding: 1.14em;
   border: none;
-  // border-top-right-radius: 4px;
   box-shadow: none;
   background-color: transparent;
   color: $ca_body-text;
@@ -50,19 +50,26 @@
   text-decoration: none;
   text-transform: uppercase;
   outline: none;
-  justify-content: center;
+  box-sizing: border-box;
   img {
     width: 3.625em;
     height: 2em;
-    align-self: center;
+    margin-right: 2em;
+    @include mobile {
+      margin-right: 0;
+    }
   }
   span {
     border: 1px solid transparent;
+    &.visuallyHidden {
+      border: none;
+    }
   }
   .fa-bars {
-    margin-left: 1em;
+    position: absolute;
+    top: 1.25em;
+    right: 1rem;
     border: none;
-    align-self: center;
   }
   &:hover, &:focus, .mi-Menu-open & {
     background-color: $ca_button-bg;
