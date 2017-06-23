@@ -3,8 +3,8 @@ class SearchList {
   constructor() {
     const $ = jQuery.noConflict();
 
-    this.inputField = $('input[type=text]');
-    this.countrycode = $('input[type=hidden]');
+    this.inputField = $('#js-country').find('input[type=text]');
+    this.countrycode = $('#js-country').find('input[type=hidden]');
     this.inputList = $('#js-country-list');
     this.trigger = $('#js-trigger');
     this.errorHandler = $('#js-country');
