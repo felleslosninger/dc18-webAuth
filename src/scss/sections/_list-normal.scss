@@ -29,7 +29,9 @@
     font-weight: $t_weight-bold;
   }
 
-  &.disabled {
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
     color: $ca_list_element_disabled-text;
     background-color: $ca_list_element_disabled-bg;
     cursor: default;

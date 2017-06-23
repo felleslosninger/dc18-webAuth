@@ -32,7 +32,7 @@ $dropdown_text-hover: $c_blue;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   margin-top: 0.25em;
-  top: 1px;
+  // top: 1px;
   bottom: 1px;
   height: auto;
   right: 1px;
@@ -58,11 +58,9 @@ $dropdown_text-hover: $c_blue;
   padding: 0;
   margin: 0 auto;
   position: absolute;
-  top: 49px;
+  top: 53px;
   left: 0;
   z-index: 10;
-
-
 
   &.open {
     display: block;
