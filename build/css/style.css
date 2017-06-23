@@ -783,6 +783,15 @@ table {
   .h-Menu_Container-open .h-Menu-preOpened ul {
     display: block; } }
 
+.h-Menu-MinID {
+  display: none; }
+  .h-Menu_Container-open .h-Menu-MinID {
+    display: none; }
+
+@media (max-width: 767px) {
+  .h-Menu_Container-open .h-Menu-MinID-active {
+    display: block; } }
+
 .h-Main_Menu_Element {
   display: inline-block;
   box-sizing: border-box;
@@ -935,12 +944,18 @@ table {
   .Box_Section .align-right {
     align-self: flex-end; }
 
-.Box_Section-Icon {
-  padding: 1rem 2rem 0; }
-  .Box_Section-Icon img {
-    max-height: 37px;
+.Box_Section-ServiceProvider {
+  padding: 1rem;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom: 1px solid #e6ebf0; }
+  .Box_Section-ServiceProvider img {
+    max-height: 32px;
     width: auto;
     align-self: flex-end; }
+  @media (max-width: 767px) {
+    .Box_Section-ServiceProvider {
+      display: none; } }
 
 .Box_header, .Box_footer {
   display: flex;
@@ -1909,16 +1924,19 @@ textarea {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     z-index: 10; }
+  @media (max-width: 767px) {
+    .mi-Menu {
+      margin-right: -0.5em; } }
 
 .mi-Menu-open ul {
   display: block; }
 
 .mi-Menu_Trigger {
   display: block;
+  position: relative;
   height: 100%;
-  padding: 1.6em 1.14em;
+  padding: 1.14em;
   border: none;
-  border-top-right-radius: 4px;
   box-shadow: none;
   background-color: transparent;
   color: #222222;
@@ -1927,17 +1945,39 @@ textarea {
   line-height: 1em;
   text-decoration: none;
   text-transform: uppercase;
-  outline: none; }
+  outline: none;
+  box-sizing: border-box; }
+  .mi-Menu_Trigger img {
+    width: 3.625em;
+    height: 2em;
+    margin-right: 2em; }
+    @media (max-width: 767px) {
+      .mi-Menu_Trigger img {
+        margin-right: 0; } }
   .mi-Menu_Trigger span {
     border: 1px solid transparent; }
+    .mi-Menu_Trigger span.visuallyHidden {
+      border: none; }
   .mi-Menu_Trigger .fa-bars {
-    margin-left: 1em;
+    position: absolute;
+    top: 1.25em;
+    right: 1rem;
     border: none; }
   .mi-Menu_Trigger:hover, .mi-Menu_Trigger:focus, .mi-Menu-open .mi-Menu_Trigger {
     background-color: #006cff;
     color: #ffffff; }
   .mi-Menu_Trigger:focus span {
     border-bottom-color: #ffffff; }
+
+.mi-Menu_Trigger-disabled {
+  cursor: default; }
+  .mi-Menu_Trigger-disabled .fa-bars {
+    display: none; }
+  .mi-Menu_Trigger-disabled .visuallyHidden {
+    display: none; }
+  .mi-Menu_Trigger-disabled:hover, .mi-Menu_Trigger-disabled:focus {
+    background-color: transparent;
+    color: #222222; }
 
 .mi-Menu_Element {
   display: inline-block;
@@ -1958,13 +1998,17 @@ textarea {
     border-color: #ffffff; }
 
 .mi-Provider {
-  width: 500px;
+  display: none;
+  width: 100%;
   margin: 1.5em auto;
   text-align: right; }
   .mi-Provider img {
     max-height: 30px;
     width: auto;
     margin-right: 1em; }
+  @media (max-width: 767px) {
+    .mi-Provider {
+      display: block; } }
 
 /*
 * Styles for receipt pages

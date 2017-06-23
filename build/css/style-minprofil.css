@@ -779,6 +779,15 @@ table {
   .h-Menu_Container-open .h-Menu-preOpened ul {
     display: block; } }
 
+.h-Menu-MinID {
+  display: none; }
+  .h-Menu_Container-open .h-Menu-MinID {
+    display: none; }
+
+@media (max-width: 767px) {
+  .h-Menu_Container-open .h-Menu-MinID-active {
+    display: block; } }
+
 .h-Main_Menu_Element {
   display: inline-block;
   box-sizing: border-box;
@@ -931,12 +940,18 @@ table {
   .Box_Section .align-right {
     align-self: flex-end; }
 
-.Box_Section-Icon {
-  padding: 1rem 2rem 0; }
-  .Box_Section-Icon img {
-    max-height: 37px;
+.Box_Section-ServiceProvider {
+  padding: 1rem;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom: 1px solid #e6ebf0; }
+  .Box_Section-ServiceProvider img {
+    max-height: 32px;
     width: auto;
     align-self: flex-end; }
+  @media (max-width: 767px) {
+    .Box_Section-ServiceProvider {
+      display: none; } }
 
 .Box_header, .Box_footer {
   display: flex;
