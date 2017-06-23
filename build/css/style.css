@@ -1002,8 +1002,7 @@ table {
       background-size: 100%; }
 
 .Box_header-provider img {
-  max-height: 30px;
-  width: auto; }
+  height: 2em; }
 
 .Box_footer-links a {
   color: #222222;
@@ -1948,7 +1947,6 @@ textarea {
   outline: none;
   box-sizing: border-box; }
   .mi-Menu_Trigger img {
-    width: 3.625em;
     height: 2em;
     margin-right: 2em; }
     @media (max-width: 767px) {

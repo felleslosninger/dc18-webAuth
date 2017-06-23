@@ -998,8 +998,7 @@ table {
       background-size: 100%; }
 
 .Box_header-provider img {
-  max-height: 30px;
-  width: auto; }
+  height: 2em; }
 
 .Box_footer-links a {
   color: #222222;
