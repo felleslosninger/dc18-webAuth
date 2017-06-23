@@ -48,6 +48,8 @@
 
             <!-- build:section recursive section.form-field_birthdate --><!--/build -->
 
+            <br />
+
             <div class='cs-InputContainer'>
 
               <div class="cs-Input fm-Field" id="js-country">
@@ -145,13 +147,64 @@
         <span class='title'>ELECTRONIC MAIL</span>
       </div>
 
-      <div class='driftsmelding'>
-        <span class='title'>ACCORDION</span>
-      </div>
+      <div class='driftsmelding'><span class='title'>ACCORDION</span></div>
 
-      <div class='driftsmelding'>
-        <span class='title'>TABS</span>
-      </div>
+      <ul class='la-List'>
+        <li>
+          <div role='heading'>
+            <!-- NOTE: Add class js-initially-open if panel should open when page opens -->
+            <a role='button' aria-expanded="false" aria-controls="content-1" id="alternative-1" href='' class='la-List_Element'>Panel 1<span class='fa fa-angle-down'></span></a>
+          </div>
+
+          <div role="region" aria-labelledby="alternative-1" id="content-1" class="la-List_Region">
+            <div class='Box_Section'>
+              <p>Content of Accordion panel 1</p>
+            </div>
+          </div>
+
+        </li>
+        <li>
+          <div role='heading'>
+            <a role='button' aria-expanded="false" aria-controls="content-2" id="alternative-2" href='' class='la-List_Element'>Panel 2<span class='fa fa-angle-down'></span></a>
+          </div>
+          <div role="region" aria-labelledby="alternative-2" id="content-2" class="la-List_Region">
+            <div class='Box_Section'>
+              <p>Content of Accordion panel 2</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <div class='driftsmelding'><span class='title'>TABS</span></div>
+      <div class='tb-Container'>
+        <!-- Tab header -->
+        <!-- class .tab-2 defines two tabs and is default. There are available classes .tab-3, .tab-4 too -->
+        <div class='tb-Header tab-2'>
+          <a href='#' class='active' data-target='tab-1'><span><span>Tab-1</span></span></a>
+          <a href='#' data-target='tab-2'><span><span>Tab-2</span></span></a>
+        </div>
+        <!-- //Tab header -->
+
+        <!-- Tabs container -->
+        <div class='tb-Body'>
+          <!-- Tab 1 -->
+          <div class='tb-Tab active' data-id='tab-1'>
+            <div class="Box_Section">
+              <p>Content of tab 1</p>
+            </div>
+          </div>
+          <!-- /Tab 1 -->
+
+          <!-- Tab 2 -->
+          <div class='tb-Tab' data-id='tab-2'>
+            <div class="Box_Section">
+              <p>Content of tab 1</p>
+            </div>
+          </div>
+            <!-- // Tab 2 -->
+        </div>
+
 
       <div class='driftsmelding'><span class='title'>RECEIPT</span></div>
       <div class='Box_Section'>
