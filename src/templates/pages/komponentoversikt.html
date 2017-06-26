@@ -139,12 +139,77 @@
       <!-- build:section recursive section.box-header_bankid-mobil --><!--/build -->
 
 
-      <div class='driftsmelding'>
-        <span class='title'>SELECTOR</span>
+      <div class='driftsmelding'><span class='title'>SELECTOR</span></div>
+      <div class='Box_main'>
+        <!-- build:section recursive section.list-normal --><!--/build -->
+      </div>
+      <div class='Box_main Box_inside-footer'>
+        <!-- build:section recursive section.list-normal_low-priority --><!--/build -->
       </div>
 
-      <div class='driftsmelding'>
-        <span class='title'>ELECTRONIC MAIL</span>
+      <div class='driftsmelding'><span class='title'>ELECTRONIC MAIL BOX</span></div>
+      <div class='Box_main'>
+        <div class="fm-Fields">
+          <!-- build:section recursive section.form-button_digital_postbox-with_edit --><!--/build -->
+
+          <div class='fm-Field'>
+            <div class='label'>Din aktive postkasse</div>
+            <ul class="ln-List ln-List_Digitalpost">
+              <li>
+                <div class="ln-List_Element with-logo" href="#">
+                  <span class="ln-List_Element_Logo">
+                    <img src="../../images/digipost-logo.jpg" alt="">
+                  </span>
+                  <div class="ln-List_Element_Service">
+                    <span class="ln-List_Element_Service_Info">Du mottar i dag post fra det offentlige til din postkasse hos Digipost</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class='fm-Field'>
+
+            <div class='label'>Endre til</div>
+            <ul class="ln-List ln-List-simple">
+              <li>
+                <a href="" class="ln-List_Element">
+                  <span class="ln-List_Element_Logo">
+                    <img src='../../images/eboks-logo.jpg' alt='' />
+                  </span>
+                  <div class="ln-List_Element_Service">
+                    <span class="ln-List_Element_Service_Info">Du må opprette en postkasse hos e-Boks før du kan endre til denne</span>
+                  </div>
+                  <span class="fa fa-angle-right fa-lg"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class='label'>Velg digital postkasse</div>
+          <div class='fm-RadioButtons with-Logo'>
+            <input id='digipost' type='radio' name="provider" checked='checked' value="digipost"/>
+            <label for='digipost'>
+              <span class='logo'>
+                <img src='../../images/digipost-logo.jpg' alt='' />
+              </span>
+              <span>
+                Velg din postkasse hos Digipost
+              </span>
+            </label>
+
+            <input id='eboks' type='radio' name="provider" checked='checked' value="eboks"/>
+            <label for='eboks'>
+              <span class='logo'>
+                <img src='../../images/eboks-logo.jpg' alt='' />
+              </span>
+              <span>
+                Velg din postkasse hos e-Boks
+              </span>
+            </label>
+          </div>
+
+        </div>
       </div>
 
       <div class='driftsmelding'><span class='title'>ACCORDION</span></div>
@@ -205,16 +270,30 @@
             <!-- // Tab 2 -->
         </div>
 
+      <div class='driftsmelding'><span class='title'>OPERATIONS ALERT</span></div>
+      <!-- build:section recursive section.driftsmelding --><!--/build -->
+      <br />
+      <br />
 
-      <div class='driftsmelding'><span class='title'>RECEIPT</span></div>
+      <div class='driftsmelding'><span class='title'>404</span></div>
       <div class='Box_Section'>
-        <p class="with-Link"><a href="MinID-Ny-bruker-7A.html"><span>Eksempel</span></a></p>
+        <p class="with-Link"><a href="Statisk-HTML-404.html"><span>Eksempel</span></a></p>
+      </div>
+
+      <div class='driftsmelding'><span class='title'>WARNING</span></div>
+      <div class='Box_Section'>
+        <p class="with-Link"><a href="Statisk-HTML-1-advarsel.html"><span>Eksempel</span></a></p>
       </div>
 
       <div class='driftsmelding'><span class='title'>POPUP</span></div>
       <div class='Box_Section'>
         <p class="with-Link"><a href="MinProfil-kontaktdetaljer-2AA.html"><span>Eksempel 1</span></a></p>
         <p class="with-Link"><a href="Bruker-fra-utlandet-2.html"><span>Eksempel 2</span></a></p>
+      </div>
+
+      <div class='driftsmelding'><span class='title'>RECEIPT</span></div>
+      <div class='Box_Section'>
+        <p class="with-Link"><a href="MinID-Ny-bruker-7A.html"><span>Eksempel</span></a></p>
       </div>
 
       <div class='driftsmelding'><span class='title'>HELP LINK</span></div>
