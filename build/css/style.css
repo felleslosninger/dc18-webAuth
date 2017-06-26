@@ -1386,6 +1386,7 @@ legend {
     border-color: #ff0000; }
   .fm-Field.error + .fm-Message {
     color: #ff0000;
+    display: block;
     display: initial; }
   .fm-Field .with-icon {
     display: flex;
