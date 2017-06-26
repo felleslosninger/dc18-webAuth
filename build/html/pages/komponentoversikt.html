@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html dir="ltr" lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>[BUILD] PAGE TITLE</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../fonts/open-sans/open-sans.css">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+
+</head>
+
+<body>
+    <!--[if lt IE 11]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+    <!-- SECTION: HEADER -->
+
+    <header class='h-Main'>
+
+        <div class='h-Main_Content'>
+            <a href="" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
+
+            <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
+            <div class='h-Menu_Container' id='js-menues'>
+                <nav class='h-Menu'>
+                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Kontaktdetaljer</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
+                    <ul>
+                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- /SECTION: HEADER -->
+
+
+    <main>
+        <div>
+
+            <section class='Box'>
+                <div class='driftsmelding'><span class='title'>TYPOGRAPHY</span></div>
+                <div class='Box_main'>
+                    <div class='Box_Section'>
+                        <p>
+                            Din registrerte kontaktinformasjon kan benyttes til saksbehandling i offentlig sektor. Når vedtak eller andre viktige brev sendes deg digitalt, får du varsel på SMS eller e-post om hvor du skal logge inn for å lese brevet.
+                        </p>
+                        <p class="with-Link">Les mer om<a href=""><span>kommunikasjon på nett med det offentlige</span></a></p>
+                    </div>
+                </div>
+
+                <div class='driftsmelding'><span class='title'>BUTTONS AND LINKS</span></div>
+                <div class='Box_main'>
+                    <form>
+                        <!-- Controls placeholder with two buttons -->
+                        <div class='fm-Controls with-Normal with-Action'>
+                            <button class='btn btn-Normal'><span>Cancel</span></button>
+                            <button class='btn btn-Action' type='submit'><span>Next</span></button>
+                        </div>
+                        <!-- //Controls placeholder with two buttons -->
+                        <div class='fm-Fields'>
+                            <div class='fm-form_link with-Link'>
+                                <a href='#'><span>Glemt passord?</span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class='driftsmelding'><span class='title'>INPUT FIELDS</span></div>
+                <div class='Box_main'>
+                    <form>
+                        <div class='fm-Fields'>
+                            <div class='fm-Field'>
+                                <label for='idnumber'>Fødselsnummer <span>(11 siffer)</span></label>
+                                <input id='idnumber' maxlength="11" type='tel' placeholder='Fødselsnummer (11 siffer)' />
+                            </div>
+                            <span class='fm-Message'>Vennligst fyll inn fødselsnummeret ditt</span>
+
+                            <div class='fm-Field'>
+                                <label for='password'>Passord</label>
+                                <input id='password' type='password' placeholder='******' />
+                            </div>
+                            <span class='fm-Message'>Vennligst skriv inn passordet ditt</span>
+
+                            <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                            <div class='fm-Field error'>
+                                <label for='birthdate'>Date of birth</label>
+                                <input id='birthdate' type='text' placeholder='YYYY-MM-DD' />
+                            </div>
+                            <span class='fm-Message'>Please fill in your birthday date</span>
+
+                            <br />
+
+                            <div class='cs-InputContainer'>
+
+                                <div class="cs-Input fm-Field" id="js-country">
+                                    <div class='cs-Input_Placeholder'>
+                                        <label for="country" class="visuallyHidden">Enter or select country</label>
+                                        <input type="text" id="country" placeholder="Enter country name" autocomplete="off" aria-haspopup="true" aria-expanded="false">
+                                        <button class="cs-Button fa fa-angle-down" id="js-trigger" aria-haspopup="true" aria-expanded="false"></button>
+                                    </div>
+                                    <input type="hidden" name="countrycode" value="" />
+                                </div>
+                                <span class="fm-Message">Please select a country from the list</span>
+                                <ul role="listbox" class="cs-List" id="js-country-list">
+                                    <li role="option"><a data-id="at" href="">Austria</a></li>
+                                    <li role="option"><a data-id="cz" href="">Czech Republic</a></li>
+                                    <li role="option"><a data-id="dk" href="">Denmark</a></li>
+                                    <li role="option"><a data-id="ee" href="">Estonia</a></li>
+                                    <li role="option"><a data-id="fr" href="">France</a></li>
+                                    <li role="option"><a data-id="de" href="">Germany</a></li>
+                                    <li role="option"><a data-id="gr" href="">Greece</a></li>
+                                    <li role="option"><a data-id="ie" href="">Ireland</a></li>
+                                    <li role="option"><a data-id="it" href="">Italy</a></li>
+                                    <li role="option"><a data-id="lu" href="">Luxembourg</a></li>
+                                    <li role="option"><a data-id="nl" href="">Netherlands</a></li>
+                                    <li role="option"><a data-id="pl" href="">Poland</a></li>
+                                    <li role="option"><a data-id="pt" href="">Portugal</a></li>
+                                    <li role="option"><a data-id="ro" href="">Romania</a></li>
+                                    <li role="option"><a data-id="sk" href="">Slovakia</a></li>
+                                    <li role="option"><a data-id="si" href="">Slovenia</a></li>
+                                    <li role="option"><a data-id="es" href="">Spain</a></li>
+                                    <li role="option"><a data-id="se" href="">Sweden</a></li>
+                                    <li role="option"><a data-id="tr" href="">Turkey</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class='driftsmelding'><span class='title'>FIELDS WITH EDIT POSSIBILITY</span></div>
+                <div class='Box_main'>
+                    <form>
+                        <div class='fm-Fields'>
+                            <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                            <div class='fm-Field'>
+                                <span class='label'>Mobile phone number</span>
+                                <div class='with-icon'>
+                                    <span class='text disabled'>98712345</span>
+                                    <a href='#'>
+      <span class='visuallyHidden'>Klikk her for å endre ditt telefonnummer</span>
+      <span class='fa fa-pencil'></span>
+    </a>
+                                </div>
+                            </div>
+                            <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                            <div class='fm-Field'>
+                                <span class='label'>Date of birth</span>
+                                <div class='with-icon'>
+                                    <span class='text disabled'>1989-06-11</span>
+                                    <a href='#'>
+      <span class='visuallyHidden'>Klikk her for å endre din fødselsdato</span>
+      <span class='fa fa-pencil'></span>
+    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class='driftsmelding'><span class='title'>NOTIFICATIONS</span></div>
+                <div class='notification with-Icon'>
+                    The password must comprise at least 8 characters, including digits and letters. Valid characters are lower case and capital case letters from A to Z, digits and special characters.
+                </div>
+                <div class='notification with-Icon icon-pin'>
+                    Use PIN-codes from letter dated 30.09.2016
+                </div>
+                <div class='notification with-Icon with-Link icon-sms'>
+                    You will now receive a single-use code by SMS form Difi. Don´t have your mobile phone with you?
+                    <br>
+                    <a href=''><span>Use code from the PIN-code letter</span></a>
+                </div>
+                <div class='notification with-Icon with-Link icon-email'>
+                    You will now receive a one-time code at your registered email address. If you do not receive the email, please see if it may have ended up in the spam filter.
+                    <br> Unable to access your email-account?
+                    <br>
+                    <a href=''><span>Use code from the PIN-code letter</span></a>
+                </div>
+                <div class='notification notification-error with-Icon icon-error'>
+                    This is an error notification
+                </div>
+
+                <div class='driftsmelding'><span class='title'>STEP INDICATOR</span></div>
+                <div class='Box_main'>
+                    <!-- Progress dots -->
+                    <div class='fm-Progress_Container'>
+                        <div class='fm-Progress_Dot'></div>
+                        <div class='fm-Progress_Dot active'></div>
+                    </div>
+                </div>
+
+                <div class='driftsmelding'><span class='title'>TITLE BARS</span></div>
+                <div class='Box_header'>
+                    <h1 class='Box_header-title with-logo logo-eid-gray'>Select an electronic id</h1>
+                </div>
+                <div class='Box_header'>
+                    <h1 class='Box_header-title with-logo logo-eid-gray'>Glemt passord</h1>
+                    <div class='Box_header-provider'><img src='../../images/svg/minid-m-kant.svg' alt='MinID logo' /></div>
+                </div>
+                <div class='Box_header'>
+                    <h1 class='Box_header-title with-logo logo-eid-gray'>Select an electronic id</h1>
+
+                    <nav class='mi-Menu' id='js-mi-menu'>
+
+                        <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='mi-Menu_Trigger mi-Menu_Trigger-disabled'>
+    <img src='../../images/svg/minid-m-kant.svg' alt="minid logo" />
+    <span class="visuallyHidden">Meny</span>
+    <span class='fa fa-bars fa-lg' aria-hidden="true"></span></a>
+                        <ul>
+                            <li><a href="" class="mi-Menu_Element"><span>MinID innstillinger</span></a></li>
+                            <li><a href="" class="mi-Menu_Element"><span>Registrere ny MinID bruker</span></a></li>
+                            <li><a href="" class="mi-Menu_Element"><span>Glemt passord</span></a></li>
+                            <li><a href="" class="mi-Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div class='Box_header'>
+                    <h1 class='Box_header-title with-logo logo-eid-gray'>Logg inn med BankID på mobil</h1>
+                    <div class='Box_header-provider'><img src='../../images/BankID-mobil.png' alt='BankID på mobil logo' /></div>
+                </div>
+
+
+                <div class='driftsmelding'><span class='title'>SELECTOR</span></div>
+                <div class='Box_main'>
+                    <ul class='ln-List'>
+                        <li>
+                            <a href="" class='ln-List_Element'>
+      <span class='ln-List_Element_Logo'>
+        <img src='../../images/minid.jpeg' alt='' />
+      </span>
+      <div class='ln-List_Element_Service'>
+        <span class='ln-List_Element_Service_Name'>Minid</span>
+        <span class='ln-List_Element_Service_Info'>Uses code from sms or PIN code letter</span>
+      </div>
+      <span class='fa fa-angle-right fa-lg'></span>
+    </a>
+                        </li>
+                        <li>
+                            <a href="" class='ln-List_Element'>
+      <span class='ln-List_Element_Logo'>
+        <img src='../../images/bankid.jpeg' alt='' />
+      </span>
+      <div class='ln-List_Element_Service'>
+        <span class='ln-List_Element_Service_Name'>Bankid</span>
+        <span class='ln-List_Element_Service_Info'>With codes or mobile application</span>
+      </div>
+      <span class='fa fa-angle-right fa-lg'></span>
+    </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class='Box_main Box_inside-footer'>
+                    <ul class='ln-List ln-List-lowPriority'>
+                        <li>
+                            <a href="" class='ln-List_Element'>
+      <span class='ln-List_Element_Logo'>
+        <img src='../../images/nav.jpg' alt='' />
+      </span>
+      <div class='ln-List_Element_Service'>
+        <span class='ln-List_Element_Service_Name'>minid</span>
+        <span class='ln-List_Element_Service_Info'>one day password or username</span>
+      </div>
+      <span class='fa fa-angle-right fa-lg'></span>
+    </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class='driftsmelding'><span class='title'>ELECTRONIC MAIL BOX</span></div>
+                <div class='Box_main'>
+                    <div class="fm-Fields">
+                        <!-- This field has label, but as content has the list
+The elements have 3 columns, that's why element has classes
+with-logo - indicating that it has logo picture
+with-icon indicating that it has an action icon
+-->
+                        <div class='fm-Field'>
+                            <span class='label'>Your digital postbox</span>
+                            <ul class='ln-List ln-List_Digitalpost'>
+                                <li>
+                                    <a class='ln-List_Element with-logo with-icon' href='#'>
+        <span class='ln-List_Element_Logo'>
+          <img src='../../images/digipost-logo.jpg' alt='' />
+        </span>
+        <div class='ln-List_Element_Service'>
+          <span class='ln-List_Element_Service_Info'>Du mottar i dag post fra det offentlige til din postkasse hos Digipost</span>
+        </div>
+        <span class='ln-List_Element_Action'>
+          <span class='visuallyHidden'>Klikk her for å endre din digital postbox innstillinger</span>
+          <span class='fa fa-pencil'></span>
+        </span>
+      </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class='fm-Field'>
+                            <div class='label'>Din aktive postkasse</div>
+                            <ul class="ln-List ln-List_Digitalpost">
+                                <li>
+                                    <div class="ln-List_Element with-logo" href="#">
+                                        <span class="ln-List_Element_Logo">
+                    <img src="../../images/digipost-logo.jpg" alt="">
+                  </span>
+                                        <div class="ln-List_Element_Service">
+                                            <span class="ln-List_Element_Service_Info">Du mottar i dag post fra det offentlige til din postkasse hos Digipost</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class='fm-Field'>
+
+                            <div class='label'>Endre til</div>
+                            <ul class="ln-List ln-List-simple">
+                                <li>
+                                    <a href="" class="ln-List_Element">
+                  <span class="ln-List_Element_Logo">
+                    <img src='../../images/eboks-logo.jpg' alt='' />
+                  </span>
+                  <div class="ln-List_Element_Service">
+                    <span class="ln-List_Element_Service_Info">Du må opprette en postkasse hos e-Boks før du kan endre til denne</span>
+                  </div>
+                  <span class="fa fa-angle-right fa-lg"></span>
+                </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class='label'>Velg digital postkasse</div>
+                        <div class='fm-RadioButtons with-Logo'>
+                            <input id='digipost' type='radio' name="provider" checked='checked' value="digipost" />
+                            <label for='digipost'>
+              <span class='logo'>
+                <img src='../../images/digipost-logo.jpg' alt='' />
+              </span>
+              <span>
+                Velg din postkasse hos Digipost
+              </span>
+            </label>
+
+                            <input id='eboks' type='radio' name="provider" checked='checked' value="eboks" />
+                            <label for='eboks'>
+              <span class='logo'>
+                <img src='../../images/eboks-logo.jpg' alt='' />
+              </span>
+              <span>
+                Velg din postkasse hos e-Boks
+              </span>
+            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class='driftsmelding'><span class='title'>ACCORDION</span></div>
+
+                <ul class='la-List'>
+                    <li>
+                        <div role='heading'>
+                            <!-- NOTE: Add class js-initially-open if panel should open when page opens -->
+                            <a role='button' aria-expanded="false" aria-controls="content-1" id="alternative-1" href='' class='la-List_Element'>Panel 1<span class='fa fa-angle-down'></span></a>
+                        </div>
+
+                        <div role="region" aria-labelledby="alternative-1" id="content-1" class="la-List_Region">
+                            <div class='Box_Section'>
+                                <p>Content of Accordion panel 1</p>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div role='heading'>
+                            <a role='button' aria-expanded="false" aria-controls="content-2" id="alternative-2" href='' class='la-List_Element'>Panel 2<span class='fa fa-angle-down'></span></a>
+                        </div>
+                        <div role="region" aria-labelledby="alternative-2" id="content-2" class="la-List_Region">
+                            <div class='Box_Section'>
+                                <p>Content of Accordion panel 2</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <div class='driftsmelding'><span class='title'>TABS</span></div>
+                <div class='tb-Container'>
+                    <!-- Tab header -->
+                    <!-- class .tab-2 defines two tabs and is default. There are available classes .tab-3, .tab-4 too -->
+                    <div class='tb-Header tab-2'>
+                        <a href='#' class='active' data-target='tab-1'><span><span>Tab-1</span></span></a>
+                        <a href='#' data-target='tab-2'><span><span>Tab-2</span></span></a>
+                    </div>
+                    <!-- //Tab header -->
+
+                    <!-- Tabs container -->
+                    <div class='tb-Body'>
+                        <!-- Tab 1 -->
+                        <div class='tb-Tab active' data-id='tab-1'>
+                            <div class="Box_Section">
+                                <p>Content of tab 1</p>
+                            </div>
+                        </div>
+                        <!-- /Tab 1 -->
+
+                        <!-- Tab 2 -->
+                        <div class='tb-Tab' data-id='tab-2'>
+                            <div class="Box_Section">
+                                <p>Content of tab 1</p>
+                            </div>
+                        </div>
+                        <!-- // Tab 2 -->
+                    </div>
+
+                    <div class='driftsmelding'><span class='title'>OPERATIONS ALERT</span></div>
+                    <!-- Driftsmelding -->
+                    <div class='driftsmelding with-Icon'>
+                        <span class='title'>Driftsmelding:</span>
+                        <span class='message'>Driftsmelding om noe som skal meldes fra om. Det meldes om enda mer informasjon.</span>
+                    </div>
+                    <!-- //Driftsmelding -->
+                    <br />
+                    <br />
+
+                    <div class='driftsmelding'><span class='title'>404</span></div>
+                    <div class='Box_Section'>
+                        <p class="with-Link"><a href="Statisk-HTML-404.html"><span>Eksempel</span></a></p>
+                    </div>
+
+                    <div class='driftsmelding'><span class='title'>WARNING</span></div>
+                    <div class='Box_Section'>
+                        <p class="with-Link"><a href="Statisk-HTML-1-advarsel.html"><span>Eksempel</span></a></p>
+                    </div>
+
+                    <div class='driftsmelding'><span class='title'>POPUP</span></div>
+                    <div class='Box_Section'>
+                        <p class="with-Link"><a href="MinProfil-kontaktdetaljer-2AA.html"><span>Eksempel 1</span></a></p>
+                        <p class="with-Link"><a href="Bruker-fra-utlandet-2.html"><span>Eksempel 2</span></a></p>
+                    </div>
+
+                    <div class='driftsmelding'><span class='title'>RECEIPT</span></div>
+                    <div class='Box_Section'>
+                        <p class="with-Link"><a href="MinID-Ny-bruker-7A.html"><span>Eksempel</span></a></p>
+                    </div>
+
+                    <div class='driftsmelding'><span class='title'>HELP LINK</span></div>
+                    <div class="Box_footer">
+                        <div class='Box_footer-links'></div>
+                        <div class='Box_footer-help'>
+                            <a href='#'><span class='fa fa-question-circle' alt='Help icon' /></a>
+                        </div>
+                    </div>
+
+            </section>
+
+            </div>
+    </main>
+    <!-- /build -->
+
+    <!-- SECTION: FOOTER -->
+
+    <footer class="f-Main">
+        <div class='f-Main_Content'>
+            <div class='f-Main_Logo' aria-hidden="true"></div>
+            <div class='f-Main_Info'>
+                <a href="" class='f-Main_Link'><span>Kontaktskjema</span></a>
+                <a href="tel:+4780030300" class='f-Main_Link'><span>Tlf: 800 30 300</span></a>
+                <a href="" class='f-Main_Link'><span>Hjelp til innlogging</span></a>
+                <a href="" class='f-Main_Link'><span>Sikkerhet og personvern</span></a>
+                <p>Driftet av Direktoratet for forvaltning og IKT (Difi)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- /SECTION: FOOTER -->
+
+    <script type="text/javascript" src="../../js/vendor.min.js"></script>
+    <script type="text/javascript" src="../../js/accordion.js"></script>
+    <script type="text/javascript" src="../../js/country-selector.js"></script>
+    <script type="text/javascript" src="../../js/disabled-links.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript" src="../../js/minid-menu.js"></script>
+    <script type="text/javascript" src="../../js/tab.js"></script>
+    <script type="text/javascript" src="../../js/toggleMenues.js"></script>
+</body>
+
+</html>
