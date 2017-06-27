@@ -9,13 +9,25 @@ const toggleForm = () => {
 
   const $formToggler = $('.js-toggleForm');
   const progressDots = $('.fm-Progress_Dot');
+  const $secondForm = $('.dpb-Custom');
 
   $formToggler.on('click', (e) => {
+    console.log("trykker på knappen");
     e.preventDefault();
-    $('form.disabled').removeClass('disabled');
+    // Enable next form:
+    $secondForm.removeClass('disabled');
+    $secondForm.find('a').attr('tabindex', '0');
+    $secondForm.find('button').attr('tabindex', '0');
+
+    // Disalbe current form:
     $formToggler.closest('form').addClass('disabled');
+    $formToggler.attr('tabindex', '-1');
+    $('.with-icon').find('a').attr('tabindex', '-1');
+
+    // Advance progress
     $(progressDots[0]).removeClass('active');
     $(progressDots[1]).addClass('active');
+
   });
 }
 
