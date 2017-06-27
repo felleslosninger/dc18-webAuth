@@ -6,6 +6,9 @@
 
 <!-- build:process -->
 <main>
+
+  <!-- NOTE: this is now identical to kontaktinfomodul-1F-A.html -->
+
   <!-- build:section recursive section.dmy --><!-- /build -->
   <section class='Box'>
     <!-- build:section recursive section.box-header-top --><!--/build -->
@@ -13,17 +16,22 @@
 
     <div class='Box_main'>
 
-      <!-- build:section recursive section.form-progress_dots-2_2 --><!--/build-->
+      <!-- build:section recursive section.form-progress_dots-2_1 --><!--/build-->
 
       <!-- Form -->
       <!-- Add class .disabled to disable this section -->
-      <form class='disabled' action='#'>
+      <form>
         <fieldset>
           <div class='fm-Fields'>
             <!-- build:section recursive section.form-field_mobile-with_edit --><!--/build -->
             <!-- build:section recursive section.form-field_birthdate-with_edit --><!--/build -->
           </div>
-          <!-- build:section recursive section.form-controls-action_button_only-confirm_and_proceed --><!--/build -->
+          <!-- Controls placeholder with action button only -->
+          <!-- NOTE: class 'js-toggleForm' added. Used by JavaScript to enable next when button clicked -->
+          <div class='fm-Controls with-Action'>
+            <button class='btn btn-Action js-toggleForm'><span>Bekreft og gå videre</span></button>
+          </div>
+          <!-- //Controls placeholder with action button only -->
 
         </fieldset>
       </form>
@@ -32,8 +40,8 @@
       <hr />
 
       <!-- Form -->
-        <!-- Add class .disabled to disable this section -->
-      <form class='dpb-Custom' action='#'>
+      <!-- Add class .disabled to disable this section -->
+      <form class='disabled dpb-Custom'>
         <fieldset>
           <div class='fm-Fields'>
             <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->

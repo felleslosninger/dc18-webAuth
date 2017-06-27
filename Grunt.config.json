@@ -134,7 +134,8 @@
         "build/js/header.js",
         "build/js/minid-menu.js",
         "build/js/tab.js",
-        "build/js/toggleMenues.js"
+        "build/js/toggleMenues.js",
+        "build/js/toggleForm.js"
       ]
     },
     "css": {
@@ -157,6 +158,7 @@
     "dev/js/header.js": "src/js/header.js",
     "dev/js/minid-menu.js": "src/js/minid-menu.js",
     "dev/js/tab.js": "src/js/tab.js",
-    "dev/js/toggleMenues.js": "src/js/toggleMenues.js"
+    "dev/js/toggleMenues.js": "src/js/toggleMenues.js",
+    "dev/js/toggleForm.js": "src/js/toggleForm.js"
   }
 }
