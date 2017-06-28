@@ -66,6 +66,9 @@ $box-padding-vertical: $box-padding / 2;
 }
 
 .Box_Section-ServiceProvider {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: $box-padding-vertical;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
@@ -78,6 +81,13 @@ $box-padding-vertical: $box-padding / 2;
   @include mobile {
     display: none;
   }
+}
+
+.Box_Section_Title {
+  font: $t_weight-bold $t_size_normal $t_fontfamily;
+  color: $ca_box-serviceprovider;
+  text-transform: uppercase;
+
 }
 
 // Common box header and footer stylings

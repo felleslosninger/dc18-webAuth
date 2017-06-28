@@ -23,6 +23,9 @@
   max-width: 900px;
   height: 3.125em;
   margin: 0 auto;
+  @include mobile {
+    flex-direction: row-reverse;
+  }
 }
 
 .h_Main_Content_Link {
@@ -52,6 +55,22 @@
     &.fa-lg {
       line-height: 0.5em;
     }
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.h-Main_Content_Provider {
+  display: none;
+  padding: 1.2857em 1.0714em;
+  color: $ca_header-text;
+  font-size: $ta_header-text;
+  font-weight: $t_weight-bold;
+  line-height: 1em;
+  text-transform: uppercase;
+  @include mobile {
+    display: block;
   }
 }
 
