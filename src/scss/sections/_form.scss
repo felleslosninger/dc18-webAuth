@@ -89,10 +89,15 @@ legend {
         }
       }
     }
-    > a {
+    > a,
+    > button {
       &:last-child {
         @include text-link($c_medium_grey3, $c_blue, $c_blue, $c_grey);
       }
+    }
+    > button {
+      background-color: transparent;
+      border-radius: 0;
     }
   }
   .with-logo {

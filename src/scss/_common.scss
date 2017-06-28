@@ -78,6 +78,12 @@ iframe {
   width: 1px;
 }
 
+.visuallyAsLink {
+  @include text-link($c_nearly_black, $c_blue, $c_blue, $c_grey, $t_size-normal, 0);
+  background-color: transparent;
+  border-radius: 0;
+}
+
 .with-Link {
   @include apply-text-link();
 }
