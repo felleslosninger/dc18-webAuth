@@ -28,6 +28,10 @@
   }
 }
 
+.h-Main_Content-noBackLink {
+  flex-direction: row-reverse;
+}
+
 .h_Main_Content_Link {
   display: inline-block;
   padding: 1.2857em 1.0714em;
@@ -56,6 +60,10 @@
       line-height: 0.5em;
     }
   }
+  .h-Main_Content-noBackLink & {
+    display: none;
+  }
+  
   @include mobile {
     display: none;
   }
