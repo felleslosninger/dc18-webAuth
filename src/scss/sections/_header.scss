@@ -23,13 +23,6 @@
   max-width: 900px;
   height: 3.125em;
   margin: 0 auto;
-  @include mobile {
-    flex-direction: row-reverse;
-  }
-}
-
-.h-Main_Content-noBackLink {
-  flex-direction: row-reverse;
 }
 
 .h_Main_Content_Link {
@@ -63,7 +56,7 @@
   .h-Main_Content-noBackLink & {
     display: none;
   }
-  
+
   @include mobile {
     display: none;
   }
