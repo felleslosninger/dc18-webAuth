@@ -593,7 +593,7 @@ iframe {
     border-bottom: 1px solid #006cff; }
     .visuallyAsLink span.fa {
       border-bottom-color: transparent; }
-  .notification .visuallyAsLink {
+  .notification .visuallyAsLink, p .visuallyAsLink {
     font-size: 1em; }
 
 .with-Link a {
