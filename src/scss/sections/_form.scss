@@ -51,8 +51,20 @@ legend {
 
   // Error message inside field
   &.error {
-    input {
-      border-color: $c_error;
+    input, input[type=text], input[type=password], input[type=email], input[type=tel], textarea  {
+      border: 2px solid $c_error;
+      &:focus {
+        border-color: $c_blue;
+        margin-bottom: calc(#{$box-padding-vertical} / 2);
+      }
+    }
+    label, .label {
+      & + input, & + textarea {
+        &:focus {
+          margin-top: calc(#{$box-padding} / 4);
+          margin-left: 0;
+        }
+      }
     }
     & + .fm-Message {
       color: $c_error;
@@ -68,8 +80,21 @@ legend {
   // Warning message inside field
   &.warning {
     input {
-      border-color: $c_notification;
+      border: 2px solid $c_notification;
+      &:focus {
+        border-color: $c_blue;
+        margin-bottom: calc(#{$box-padding-vertical} / 2);
+      }
     }
+    label, .label {
+      & + input, & + textarea {
+        &:focus {
+          margin-top: calc(#{$box-padding} / 4);
+          margin-left: 0;
+        }
+      }
+    }
+
     & + .fm-Message {
       display: none;
     }
