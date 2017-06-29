@@ -570,6 +570,7 @@ iframe {
   width: 1px; }
 
 .visuallyAsLink {
+  display: inline-block;
   color: #222222;
   text-decoration: none;
   position: relative;
@@ -596,6 +597,8 @@ iframe {
     border-bottom: 1px solid #006cff; }
     .visuallyAsLink span.fa {
       border-bottom-color: transparent; }
+  .notification .visuallyAsLink {
+    font-size: 1em; }
 
 .with-Link a {
   color: #222222;
@@ -690,9 +693,6 @@ table {
   max-width: 900px;
   height: 3.125em;
   margin: 0 auto; }
-  @media (max-width: 767px) {
-    .h-Main_Content {
-      flex-direction: row-reverse; } }
 
 .h_Main_Content_Link {
   display: inline-block;
@@ -715,6 +715,8 @@ table {
     border: none; }
     .h_Main_Content_Link .fa-angle-left.fa-lg {
       line-height: 0.5em; }
+  .h-Main_Content-noBackLink .h_Main_Content_Link {
+    display: none; }
   @media (max-width: 767px) {
     .h_Main_Content_Link {
       display: none; } }
@@ -1441,7 +1443,9 @@ legend {
   .fm-Field.error + .fm-Message {
     color: #ff0000;
     display: block;
-    display: initial; }
+    display: initial;
+    line-height: 1.2em;
+    padding-top: 0.3em; }
   .fm-Field .with-icon {
     display: flex;
     flex-direction: row;
