@@ -58,8 +58,39 @@ legend {
       color: $c_error;
       display: block; // IE11
       display: initial;
-      line-height: 1.2em;
-      padding-top: 0.3em;
+    }
+    & + .fm-Message-warning,
+    & + .fm-Message + .fm-Message-warning {
+      display: none;
+    }
+  }
+
+  // Warning message inside field
+  &.warning {
+    input {
+      border-color: $c_notification;
+    }
+    & + .fm-Message {
+      display: none;
+    }
+    & + .fm-Message + .fm-Message-warning {
+      display: block; // IE11
+      display: initial;
+    }
+  }
+
+  &.warning.error {
+    input {
+      border-color: $c_error;
+    }
+    & + .fm-Message {
+      color: $c_error;
+      display: block; // IE11
+      display: initial;
+    }
+    & + .fm-Message + .fm-Message-warning {
+      display: block; // IE11
+      display: initial;
     }
   }
 
@@ -113,10 +144,29 @@ legend {
 }
 
 // Message box under field, mostly used for error message
-.fm-Message {
+.fm-Message,
+.fm-Message-warning {
   font-size: $t_size-normal;
-  margin-top: -$box-padding/4;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+  padding: 0.5em 0 0 4em;
   display: none;
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 0;
+    left: 1em;
+  }
+}
+.fm-Message:before {
+  @extend %error;
+}
+.fm-Message-warning:before {
+  @extend %notification ;
 }
 
 // Form label
