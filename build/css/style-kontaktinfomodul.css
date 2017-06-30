@@ -1480,6 +1480,12 @@ legend {
     .fm-Field .with-icon > button {
       background-color: transparent;
       border-radius: 0; }
+      .fm-Field .with-icon > button:last-child {
+        max-width: 45px;
+        max-height: 45px;
+        height: 45px;
+        align-items: center;
+        margin: 0; }
   .fm-Field .with-logo {
     align-items: center; }
     .fm-Field .with-logo > *:first-child {
