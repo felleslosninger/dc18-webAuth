@@ -157,9 +157,17 @@ legend {
         @include text-link($c_medium_grey3, $c_blue, $c_blue, $c_grey);
       }
     }
+    // Button does not behave like <a> so has to be styled separately
     > button {
       background-color: transparent;
       border-radius: 0;
+      &:last-child {
+        max-width: 45px;
+        max-height: 45px;
+        height: 45px;
+        align-items: center;
+        margin: 0;
+      }
     }
   }
   .with-logo {
