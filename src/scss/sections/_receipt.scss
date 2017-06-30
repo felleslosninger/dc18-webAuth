@@ -10,9 +10,12 @@
 .receipt {
   text-align: center;
   padding: 4.125em 2em 1em 2em;
-  @extend %check;
   background-size: 50px 50px;
   background-position: center 1em;
+  @extend %check;
+  &.warning {
+    @extend %notification;
+  }
 
   p {
     font-size: $t_size-normal;
