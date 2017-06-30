@@ -67,6 +67,13 @@ iframe {
   }
 }
 
+.small {
+  font-size: $t_size-small;
+}
+.normal {
+  font-size: $t_size-normal;
+}
+
 .visuallyHidden { // used for labels etc visible only to screen readers and support tools
   border: 0;
   clip: rect(0 0 0 0);
