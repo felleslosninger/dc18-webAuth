@@ -2004,6 +2004,9 @@ textarea {
     height: 2em; }
   .notification p:first-of-type {
     margin-top: 0; }
+  .notification .highlight {
+    margin-top: 1em;
+    font-weight: 600; }
 
 .fm-Fields .notification {
   margin: 0; }
