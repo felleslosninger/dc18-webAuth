@@ -48,16 +48,6 @@
         <form>
           <div class='fm-Fields'>
 
-            <p>
-              Paragraph text inside .fm-Fields
-            </p>
-            <p class='normal'>
-              Paragraph text inside .fm-Fields with class .normal
-            </p>
-            <p class='small'>
-              Paragraph text inside .fm-Fields with class .small
-            </p>
-
             <!-- build:section recursive section.form-field_personal-id --><!--/build -->
 
             <div class='fm-Field'>
@@ -185,29 +175,45 @@
       </div>
 
       <div class='driftsmelding'><span class='title'>NOTIFICATIONS</span></div>
-      <div class='notification with-Icon'>
-        The password must comprise at least 8 characters, including digits and letters.
-        Valid characters are lower case and capital case letters from A to Z, digits and special characters.
-      </div>
-      <div class='notification with-Icon icon-pin'>
-        Use PIN-codes from letter dated 30.09.2016
-      </div>
-      <div class='notification with-Icon with-Link icon-sms'>
-        You will now receive a single-use code by SMS form Difi. Don´t have your mobile phone with you?
-        <br>
-        <a href=''><span>Use code from the PIN-code letter</span></a>
-      </div>
-      <div class='notification with-Icon with-Link icon-email'>
-        You will now receive a one-time code at your registered email address.
-        If you do not receive the email, please see if it may have ended up in the spam filter.
-        <br>
-        Unable to access your email-account?
-        <br>
-        <a href=''><span>Use code from the PIN-code letter</span></a>
-      </div>
-      <div class='notification notification-error with-Icon icon-error'>
-        This is an error notification
-      </div>
+      <form>
+        <div class='fm-Fields'>
+          <div class='notification with-Icon'>
+            The password must comprise at least 8 characters, including digits and letters.
+            Valid characters are lower case and capital case letters from A to Z, digits and special characters.
+          </div>
+          <p class='normal'>
+            Dersom du har et utenlandsk nummer, husk å oppgi landskode (eks. <strong>+47</strong> eller <strong>0046</strong> for Sverige)
+          </p>
+        </div>
+        <div class='fm-Fields'>
+          <div class='notification with-Icon icon-pin'>
+            Use PIN-codes from letter dated 30.09.2016
+            <div class='highlight'>Last logged in: 07.06.2017 kl: 10:01</div>
+          </div>
+        </div>
+        <div class='fm-Fields'>
+          <div class='notification with-Icon with-Link icon-sms'>
+            You will now receive a single-use code by SMS form Difi. Don´t have your mobile phone with you?
+            <br>
+            <a href=''><span>Use code from the PIN-code letter</span></a>
+          </div>
+        </div>
+        <div class='fm-Fields'>
+          <div class='notification with-Icon with-Link icon-email'>
+            You will now receive a one-time code at your registered email address.
+            If you do not receive the email, please see if it may have ended up in the spam filter.
+            <br>
+            Unable to access your email-account?
+            <br>
+            <a href=''><span>Use code from the PIN-code letter</span></a>
+          </div>
+        </div>
+        <div class='fm-Fields'>
+          <div class='notification notification-error with-Icon icon-error'>
+            This is an error notification
+          </div>
+        </div>
+      </form>
 
       <div class='driftsmelding'><span class='title'>STEP INDICATOR</span></div>
       <div class='Box_main'>
