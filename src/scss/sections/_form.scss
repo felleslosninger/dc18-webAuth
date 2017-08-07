@@ -301,9 +301,12 @@ textarea {
     align-items: flex-end;
   }
   &.with-Normal.with-Action {
-    flex-direction: row;
+    flex-direction: row-reverse;
     > * {
       flex: 1 1 0;
+    }
+    &.reverse-Order {
+      flex-direction: row;
     }
   }
 
