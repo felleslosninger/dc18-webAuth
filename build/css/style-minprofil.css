@@ -1577,9 +1577,11 @@ textarea {
     flex-direction: column;
     align-items: flex-end; }
   .fm-Controls.with-Normal.with-Action {
-    flex-direction: row; }
+    flex-direction: row-reverse; }
     .fm-Controls.with-Normal.with-Action > * {
-      flex: 1 1 auto; }
+      flex: 1 1 0; }
+    .fm-Controls.with-Normal.with-Action.reverse-Order {
+      flex-direction: row; }
   .fm-Controls.with-Action-centered {
     align-items: center; }
 
