@@ -1763,6 +1763,8 @@ textarea {
   .notification.with-Icon.icon-error:after {
     width: 2em;
     height: 2em; }
+  .notification h1 {
+    font-size: 1em; }
   .notification p:first-of-type {
     margin-top: 0; }
   .notification .highlight {
