@@ -510,6 +510,9 @@ html {
   box-sizing: border-box; }
 
 body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
   background-color: #f7f8fa;
   color: #222222;
   font-family: "Open Sans", sans-serif;
@@ -517,16 +520,13 @@ body {
   letter-spacing: 0.1px; }
 
 main {
-  flex: 1;
+  flex: 1 0 auto;
   justify-content: center;
   align-content: center;
   align-items: center;
-  min-height: calc(100vh - 270px);
+  box-sizing: border-box;
   margin-top: 3em;
   margin-bottom: 3em; }
-  @media (max-width: 767px) {
-    main {
-      min-height: calc(100vh - 357px); } }
 
 hr {
   border: 0;
@@ -688,6 +688,7 @@ table {
 .h-Main {
   display: block;
   width: 100%;
+  min-height: 3.125em;
   height: 3.125em;
   color: #ffffff;
   background-color: #253343;
@@ -875,7 +876,8 @@ table {
 .f-Main {
   width: 100%;
   background-color: #253343;
-  color: #ffffff; }
+  color: #ffffff;
+  margin-top: auto; }
 
 .f-Main_Content {
   display: flex;
