@@ -9,6 +9,9 @@ html {
 }
 
 body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
   background-color: $ca_body-bg;
   color: $ca_body-text;
   font-family: $t_fontfamily;
@@ -17,18 +20,14 @@ body {
 }
 
 main {
-  flex: 1;
+  flex: 1 0 auto; // fill the space, and make sure the footer resides at the bottom
   justify-content: center;
   align-content: center;
   align-items: center;
   box-sizing: border-box;
-  min-height: calc(100vh - 378.5px); // 270px =  footer height + header height
   margin: {
     top: 3em;
     bottom: 3em;
-  }
-  @include mobile {
-    min-height: calc(100vh - 457px);  // footer has more height on mobile
   }
 }
 
