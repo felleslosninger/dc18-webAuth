@@ -1,9 +1,7 @@
 // Box on popup page
 .popup {
   background-color: $ca_body_popup;
-  main {
-    //display: flex;
-  }
+
   .Box {
     box-shadow: 0 0 1px 0 rgba(34, 49, 63, .3);
   }
@@ -19,9 +17,17 @@
   // Hide all in footer
   &:not(.with-footer) {
 
-  .f-Main_Content > * {
-    display: none;
+    .f-Main_Content > * {
+      display: none;
+    }
+
+    main {
+      min-height: calc(100vh - 317.5px);
+      @include mobile {
+        min-height: calc(100vh - 245px);
+      }
+    }
+
   }
-}
 
 }
