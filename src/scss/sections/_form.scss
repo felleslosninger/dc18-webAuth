@@ -8,7 +8,7 @@ fieldset { // turn off default browser styles
   margin: 0;
   padding: 0;
 }
-legend {
+legend, .legend-Style {
   display: block;
   font-size: $t_size-normal;
   padding: 1rem 0;
@@ -18,7 +18,8 @@ legend {
   @include apply-text-link();
 }
 // When legend comes after label span it has to follow the same margin
-.label + legend {
+.label + legend,
+.label + .legend-Style {
   margin: {
     top: $box-padding / 4;
     bottom: 0;
