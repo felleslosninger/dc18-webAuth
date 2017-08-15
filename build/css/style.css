@@ -1398,40 +1398,41 @@ fieldset {
   margin: 0;
   padding: 0; }
 
-legend {
+legend, .legend-Style {
   display: block;
   font-size: 0.875em;
   padding: 1rem 0;
   margin: 0 0 1rem 0;
   width: 100%;
   border-bottom: 1px solid #d2d2d2; }
-  legend a {
+  legend a, .legend-Style a {
     color: #222222;
     text-decoration: none;
     position: relative;
     padding: 0;
     font-size: 1em; }
-    legend a:hover, legend a:active {
+    legend a:hover, legend a:active, .legend-Style a:hover, .legend-Style a:active {
       color: #006cff; }
-      legend a:hover span, legend a:active span {
+      legend a:hover span, legend a:active span, .legend-Style a:hover span, .legend-Style a:active span {
         border-bottom-color: #006cff; }
-        legend a:hover span.fa, legend a:active span.fa {
+        legend a:hover span.fa, legend a:active span.fa, .legend-Style a:hover span.fa, .legend-Style a:active span.fa {
           color: #006cff; }
-    legend a:focus {
+    legend a:focus, .legend-Style a:focus {
       color: #006cff;
       outline: 1px solid #5e6b77;
       border-bottom-color: transparent;
       text-decoration: none; }
-      legend a:focus span {
+      legend a:focus span, .legend-Style a:focus span {
         border-bottom-color: transparent; }
-        legend a:focus span.fa {
+        legend a:focus span.fa, .legend-Style a:focus span.fa {
           color: #006cff; }
-    legend a span {
+    legend a span, .legend-Style a span {
       border-bottom: 1px solid #006cff; }
-      legend a span.fa {
+      legend a span.fa, .legend-Style a span.fa {
         border-bottom-color: transparent; }
 
-.label + legend {
+.label + legend,
+.label + .legend-Style {
   margin-top: 0.5rem;
   margin-bottom: 0;
   margin-left: 0.5rem;
