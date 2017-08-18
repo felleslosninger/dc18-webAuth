@@ -159,6 +159,7 @@
     "dev/js/minid-menu.js": "src/js/minid-menu.js",
     "dev/js/tab.js": "src/js/tab.js",
     "dev/js/toggleMenues.js": "src/js/toggleMenues.js",
-    "dev/js/toggleForm.js": "src/js/toggleForm.js"
+    "dev/js/toggleForm.js": "src/js/toggleForm.js",
+    "dev/js/handleButtonKeyPress.js": "src/js/handleButtonKeyPress.js"
   }
 }
