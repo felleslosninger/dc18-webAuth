@@ -237,6 +237,7 @@ input, button, .btn, .text {
   border: 0;
   font-size: $t_size-normal;
   outline: none;
+  text-decoration: none;  // in case btn is used for a-tags with role="button"
 }
 input[type=submit], .btn {
   height: 4.5em;
@@ -246,7 +247,8 @@ input[type=submit], .btn {
   font-size: $t_size-normal;
   > span {
     border-bottom: 1px solid transparent;
-    margin: auto;
+    margin: 0 auto;
+    line-height: normal;
   }
 }
 
