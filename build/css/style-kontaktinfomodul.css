@@ -1533,7 +1533,8 @@ input, button, .btn, .text {
   margin: 0.5rem 0;
   border: 0;
   font-size: 0.875em;
-  outline: none; }
+  outline: none;
+  text-decoration: none; }
 
 input[type=submit], .btn {
   height: 4.5em;
@@ -1543,7 +1544,8 @@ input[type=submit], .btn {
   font-size: 0.875em; }
   input[type=submit] > span, .btn > span {
     border-bottom: 1px solid transparent;
-    margin: auto; }
+    margin: 0 auto;
+    line-height: normal; }
 
 input[type=text], input[type=password], input[type=email], input[type=tel], textarea {
   border: 1px solid #e7e8ea;

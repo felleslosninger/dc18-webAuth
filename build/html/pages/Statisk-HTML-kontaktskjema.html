@@ -17,8 +17,6 @@
 
     <link type="text/css" rel="stylesheet" href="../../css/style.css" />
 
-    <script type="text/javascript" src="../../js/handleButtonKeyPress.js"></script>
-
 </head>
 <!-- use class .popup to hiden header and footer, or use .popup .with-footer to keep footer -->
 
@@ -110,8 +108,8 @@
                     </div>
                     <!-- Controls placeholder with two buttons -->
                     <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Action' type='submit'><span>Send</span></button>
-                        <button class='btn btn-Normal'><span>Cancel</span></button>
+                        <button class='btn btn-Action' type="submit"><span>Send</span></button>
+                        <a role="button" class='btn btn-Normal' href="#" onKeyPress="handleButtonKeyPress(event)"><span>Cancel</span></a>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
                 </form>
