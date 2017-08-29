@@ -2,7 +2,7 @@
 
 
 .notification {
-  padding: 1em 1em 1.5em 1em;;
+  padding: 1em 1em 1.5em 1em;
   margin: 1em 2.2857em; // Same spacing as form fields (32px)
   font-size: $t_size_normal;
   line-height: 1.5em;
@@ -79,6 +79,29 @@
 // error
 .notification-error {
   border-color: $c_error;
+}
+
+// 404
+.notification-404 {
+  padding: 1em 0 1.5em 0;
+  margin: 1em 0;
+  border: none;
+  background-color: transparent;
+  font-size: $t_size-large;
+  line-height: 1.2em;
+  h1 {
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 0.5em 0 1.5em 0;
+  }
+  h2 {
+    font-size: 0.8889em;
+    margin: 2em 0 0 0;
+  }
+  p {
+    font-size: 0.7778em;
+    margin-top: 0;
+  }
 }
 
 
