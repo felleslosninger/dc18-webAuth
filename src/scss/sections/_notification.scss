@@ -81,8 +81,8 @@
   border-color: $c_error;
 }
 
-// 404
-.notification-404 {
+// Error pages uses this variant
+.notification-errorPage {
   padding: 1em 0 1.5em 0;
   margin: 1em 0;
   border: none;

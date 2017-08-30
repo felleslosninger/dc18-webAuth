@@ -29,6 +29,10 @@
   }
 }
 
+.f-Main_Content-singleLine {
+  justify-content: center;
+}
+
 .f-Main_Logo {
   width: 30px;
   height: 30px;
@@ -51,6 +55,9 @@
   }
   a {
     @include text-link($ca_footer-text, $c_white, $ca_footer_link-hover, $ca_footer-text, $t_size_basis, 0.5em);
+  }
+  .f-Main_Content-singleLine & {
+    align-self: flex-end;
   }
 }
 
