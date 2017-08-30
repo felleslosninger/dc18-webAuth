@@ -897,6 +897,9 @@ table {
       padding-bottom: 9em;
       width: auto; } }
 
+.f-Main_Content-singleLine {
+  justify-content: center; }
+
 .f-Main_Logo {
   width: 30px;
   height: 30px;
@@ -939,6 +942,8 @@ table {
     border-bottom: 1px solid #ffffff; }
     .f-Main_Info a span.fa {
       border-bottom-color: transparent; }
+.f-Main_Content-singleLine .f-Main_Info {
+  align-self: flex-end; }
 
 .f-Main_Link {
   display: inline-block;
@@ -2023,21 +2028,21 @@ textarea {
 .notification-error {
   border-color: #ff0000; }
 
-.notification-404 {
+.notification-errorPage {
   padding: 1em 0 1.5em 0;
   margin: 1em 0;
   border: none;
   background-color: transparent;
   font-size: 1.125em;
   line-height: 1.2em; }
-  .notification-404 h1 {
+  .notification-errorPage h1 {
     font-size: 1em;
     text-transform: uppercase;
     margin: 0.5em 0 1.5em 0; }
-  .notification-404 h2 {
+  .notification-errorPage h2 {
     font-size: 0.8889em;
     margin: 2em 0 0 0; }
-  .notification-404 p {
+  .notification-errorPage p {
     font-size: 0.7778em;
     margin-top: 0; }
 
