@@ -84,6 +84,7 @@ $dropdown_text-hover: $c_blue;
       background-color: $dropdown_bg-hover
     }
 
+/* The foloowing are moved to a separate file: flags.scss, to enable Difi to edit it directly
     &[data-id="at"] {background-image: url('../images/flag/AT.png');}
     &[data-id="cz"] {background-image: url('../images/flag/CZ.png');}
     &[data-id="dk"] {background-image: url('../images/flag/DK.png');}
@@ -103,5 +104,6 @@ $dropdown_text-hover: $c_blue;
     &[data-id="es"] {background-image: url('../images/flag/ES.png');}
     &[data-id="se"] {background-image: url('../images/flag/SE.png');}
     &[data-id="tr"] {background-image: url('../images/flag/TR.png');}
+    */
   }
 }

@@ -142,12 +142,14 @@
       "dev": {
         "all": "dev/css/style.css",
         "kontaktinfomodul": "dev/css/kontaktinfomodul.css",
-        "minprofil": "dev/css/minprofil.css"
+        "minprofil": "dev/css/minprofil.css",
+        "flags": "dev/css/flags.css"
       },
       "build": {
         "all": "build/css/style.css",
         "kontaktinfomodul": "build/css/kontaktinfomodul.css",
-        "minprofil": "build/css/minprofil.css"
+        "minprofil": "build/css/minprofil.css",
+        "flags": "build/css/flags.css"
       }
     }
   },
