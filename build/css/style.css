@@ -1891,28 +1891,7 @@ textarea {
     color: #222222;
     background-color: #ffffff;
     background-repeat: no-repeat;
-    background-position: calc(100% - 1rem) center;
-    /* The foloowing are moved to a separate file: flags.scss, to enable Difi to edit it directly
-        &[data-id="at"] {background-image: url('../images/flag/AT.png');}
-        &[data-id="cz"] {background-image: url('../images/flag/CZ.png');}
-        &[data-id="dk"] {background-image: url('../images/flag/DK.png');}
-        &[data-id="ee"] {background-image: url('../images/flag/EE.png');}
-        &[data-id="fr"] {background-image: url('../images/flag/FR.png');}
-        &[data-id="de"] {background-image: url('../images/flag/DE.png');}
-        &[data-id="gr"] {background-image: url('../images/flag/GR.png');}
-        &[data-id="ie"] {background-image: url('../images/flag/IE.png');}
-        &[data-id="it"] {background-image: url('../images/flag/IT.png');}
-        &[data-id="lu"] {background-image: url('../images/flag/LU.png');}
-        &[data-id="nl"] {background-image: url('../images/flag/NL.png');}
-        &[data-id="pl"] {background-image: url('../images/flag/PL.png');}
-        &[data-id="pt"] {background-image: url('../images/flag/PT.png');}
-        &[data-id="ro"] {background-image: url('../images/flag/RO.png');}
-        &[data-id="sk"] {background-image: url('../images/flag/SK.png');}
-        &[data-id="si"] {background-image: url('../images/flag/SI.png');}
-        &[data-id="es"] {background-image: url('../images/flag/ES.png');}
-        &[data-id="se"] {background-image: url('../images/flag/SE.png');}
-        &[data-id="tr"] {background-image: url('../images/flag/TR.png');}
-        */ }
+    background-position: calc(100% - 1rem) center; }
     .cs-List li a:hover, .cs-List li a:focus {
       color: #006cff;
       background-color: #f7f8fa; }
