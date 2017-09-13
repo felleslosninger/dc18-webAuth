@@ -678,7 +678,7 @@ table {
       padding-right: 0; }
 
 /*
-* Styles for pagre header
+* Styles for page header
 *
 * ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
 * For more information: http://ecss.io
@@ -727,9 +727,32 @@ table {
     display: none; }
   @media (max-width: 767px) {
     .h_Main_Content_Link {
+      display: none; }
+      .h_Main_Content_Link.h_Main_Content_Link-keepOnMobile {
+        display: inline-block; } }
+  @media (max-width: 479px) {
+    .h_Main_Content_Link.h_Main_Content_Link-keepOnMobile span:last-of-type {
       display: none; } }
+  @media (max-width: 767px) {
+    .h-Menu_Container .h_Main_Content_Link {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      font-size: 0.875em;
+      font-weight: 600;
+      color: #ffffff;
+      background-color: #006cff;
+      padding: 1em 1.2em 1em 1.2em;
+      text-decoration: none; }
+      .h-Menu_Container .h_Main_Content_Link span {
+        border-bottom: 1px solid transparent; }
+      .h-Menu_Container .h_Main_Content_Link:hover, .h-Menu_Container .h_Main_Content_Link:focus {
+        background-color: #134f9e; }
+      .h-Menu_Container .h_Main_Content_Link:focus span {
+        border-color: #ffffff; } }
 
-.h-Main_Content_Provider {
+.h-Main_Content_Provider,
+.h-Main_Username {
   display: none;
   padding: 1.2857em 1.0714em;
   color: #ffffff;
@@ -738,8 +761,18 @@ table {
   line-height: 1em;
   text-transform: uppercase; }
   @media (max-width: 767px) {
-    .h-Main_Content_Provider {
+    .h-Main_Content_Provider,
+    .h-Main_Username {
       display: block; } }
+
+.h-Main_Username {
+  font-weight: 400;
+  align-self: center; }
+  .h-Menu_Container .h-Main_Username {
+    display: block; }
+    @media (max-width: 767px) {
+      .h-Menu_Container .h-Main_Username {
+        display: none; } }
 
 .h-Menu_Trigger {
   display: block;
