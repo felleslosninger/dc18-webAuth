@@ -6,6 +6,12 @@
   }
 }
 
+@mixin smallmobile {
+  @media (max-width: 479px) {
+   @content;
+  }
+}
+
 @mixin placeholder($color) {
   &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: $color;

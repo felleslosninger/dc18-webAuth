@@ -1,5 +1,5 @@
 /*
-* Styles for pagre header
+* Styles for page header
 *
 * ECSS naming convention for classes is used: .[namespace][-ModuleOrComponent][_ChildNode][-variant]
 * For more information: http://ecss.io
@@ -60,10 +60,45 @@
 
   @include mobile {
     display: none;
+    &.h_Main_Content_Link-keepOnMobile {
+      display: inline-block;
+    }
+  }
+
+  @include smallmobile {
+    &.h_Main_Content_Link-keepOnMobile span:last-of-type {
+      display: none;
+    }
+  }
+
+  .h-Menu_Container & {
+    @include mobile {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      font-size: $t_size-normal;
+      font-weight: $t_weight-bold;
+      color: $ca_menu_element-text;
+      background-color: $ca_menu_element-bg;
+      padding: 1em 1.2em 1em 1.2em;
+      text-decoration: none;
+      span {
+        border-bottom: 1px solid transparent;
+      }
+      &:hover, &:focus {
+        background-color: $ca_button_hover-bg;
+      }
+      &:focus {
+        span {
+            border-color: $ca_menu_element-border-hover;
+        }
+      }
+    }
   }
 }
 
-.h-Main_Content_Provider {
+.h-Main_Content_Provider,
+.h-Main_Username {
   display: none;
   padding: 1.2857em 1.0714em;
   color: $ca_header-text;
@@ -73,6 +108,18 @@
   text-transform: uppercase;
   @include mobile {
     display: block;
+  }
+}
+
+.h-Main_Username {
+  font-weight: $t_weight-normal;
+  align-self: center;
+
+  .h-Menu_Container & {
+    display: block;
+    @include mobile {
+      display: none;
+    }
   }
 }
 
