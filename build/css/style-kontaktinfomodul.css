@@ -1429,6 +1429,9 @@ legend, .legend-Style {
   .fm-Field.warning + .fm-Message-warning, .fm-Field.warning + .fm-Message + .fm-Message-warning {
     display: block;
     display: initial; }
+  .fm-Field.warning .with-icon button {
+    border: 2px solid #ffc922;
+    border-radius: 4px; }
   .fm-Field.warning.error input {
     border-color: #ff0000; }
     .fm-Field.warning.error input:focus {
