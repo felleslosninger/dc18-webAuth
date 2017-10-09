@@ -104,6 +104,10 @@ legend, .legend-Style {
       display: block; // IE11
       display: initial;
     }
+    .with-icon button {
+      border: 2px solid $c_notification;
+      border-radius: 4px;
+    }
   }
 
   &.warning.error {
