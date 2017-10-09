@@ -515,3 +515,68 @@ textarea {
 .label + .fm-RadioButtons {
   margin-top: 0.5em;
 }
+
+// Checkbox
+.fm-Checkbox {
+  margin: 0;
+  position: relative;
+  border: 1px solid $ca_list-border;
+  border-radius: 4px;
+  input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    outline: none;
+  }
+  input[type=checkbox] + label {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    text-transform: none;
+    margin: 0;
+    padding: 0.7857em 1.7142em 0.7857em 1.1429em;
+    border-bottom: 1px solid $ca_list-border;
+    &:after {
+      display: block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: $c_white;
+      border: 1px solid $ca_list-border;
+    }
+  }
+  input[type=checkbox]:checked + label:after {
+    @extend %checked;
+
+  }
+  input[type=checkbox]:hover + label,
+  input[type=checkbox]:focus + label {
+    background-color: $ca_list_grey_element-hover-bg;
+  }
+  input[type=checkbox]:last-of-type + label {
+    border-bottom: none;
+  }
+}
+  .fm-Checkbox_Info {
+    flex: 1;
+    display: block;
+    font-weight: $t_weight-normal;
+    padding: 0;
+    max-width: 100%;
+  }
+  .fm-Checkbox_Logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 80px;
+    background-color: $ca_list-bg;
+    border-radius: 2px;
+    margin-right: 20px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+}
