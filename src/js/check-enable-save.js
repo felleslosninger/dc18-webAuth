@@ -1,4 +1,4 @@
-const saveEnabler = () => {
+const checkEnableSave = () => {
 
   const $ = jQuery.noConflict();
 
@@ -14,4 +14,4 @@ const saveEnabler = () => {
 
 };
 
-saveEnabler();
+checkEnableSave();

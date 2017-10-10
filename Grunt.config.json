@@ -136,7 +136,7 @@
         "build/js/tab.js",
         "build/js/toggleMenues.js",
         "build/js/toggleForm.js",
-        "build/js/save-enabler.js"
+        "build/js/check-enable-save.js"
       ]
     },
     "css": {
@@ -164,6 +164,6 @@
     "dev/js/toggleMenues.js": "src/js/toggleMenues.js",
     "dev/js/toggleForm.js": "src/js/toggleForm.js",
     "dev/js/handleButtonKeyPress.js": "src/js/handleButtonKeyPress.js",
-    "dev/js/save-enabler.js": "src/js/save-enabler.js"
+    "dev/js/check-enable-save.js": "src/js/check-enable-save.js"
   }
 }

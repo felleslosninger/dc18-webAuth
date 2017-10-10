@@ -59,44 +59,65 @@
 
         <section class='Box'>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-close-button'>Change mobile number</h1>
+                <h1 class='Box_header-title with-close-button'>Endre postkasseleverandør</h1>
                 <span class='Box_header-close'>
     <a href='#'>
       <span class='fa fa-close'>
-        <span class='visuallyHidden'>Lukk dette vinduet</span>
+        <span class='visuallyHidden'>Close window</span>
                 </span>
                 </a>
                 </span>
             </div>
 
             <div class='Box_main'>
+                <div class='notification with-Icon'>
+                    <p>Ved bytte av postkasse kan det ta opptil syv dager før offentlig post kommer i din nye postkasse. I denne perioden må du sjekke begge postkasser for ny post.</p>
+                    <p>Flytting av post til din nye postkasse kan du gjøre i din gamle postkasse.</p>
+                </div>
 
                 <!-- Form -->
                 <form action='#'>
                     <div class='fm-Fields'>
-                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
-                        <div class='fm-Field'>
-                            <label for='mobile'>Mobile phone </label>
-                            <input id='mobile' type='tel' placeholder='Mobile phone' />
-                        </div>
-                        <span class='fm-Message'>Please fill in your mobile phone number</span>
+                        <div class='label'>Velg digital postkasse</div>
+                        <div class='fm-RadioButtons with-Logo'>
+                            <input id='digipost' type='radio' name="provider" value="digipost" />
+                            <label for='digipost'>
+              <span class='logo'>
+                <img src='../../images/digipost-logo.jpg' alt='' />
+              </span>
+              <span>
+                Velg din postkasse hos Digipost
+              </span>
+            </label>
 
-                        <div class='fm-Field'>
-                            <label for='mobile'>Repeat mobile phone</label>
-                            <input id='mobile' type='tel' placeholder='Mobile phone' />
+                            <input id='eboks' type='radio' name="provider" checked='checked' value="eboks" />
+                            <label for='eboks'>
+              <span class='logo'>
+                <img src='../../images/eboks-logo.jpg' alt='' />
+              </span>
+              <span>
+                Velg din postkasse hos e-Boks
+              </span>
+            </label>
                         </div>
-                        <span class='fm-Message'>The numbers do not match</span>
+                        <div class='fm-form_link with-Link'>
+                            <a href='#'><span>Deaktivér postkasse</span></a>
+                        </div>
+
                     </div>
+
                     <!-- Controls placeholder with two buttons -->
                     <div class='fm-Controls with-Normal with-Action'>
                         <button class='btn btn-Action' type='submit'><span>Save</span></button>
                         <button class='btn btn-Normal'><span>Cancel</span></button>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
+
                 </form>
-                <!-- //Form -->
             </div>
+
         </section>
+
     </main>
     <!-- /build -->
 
