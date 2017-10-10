@@ -135,7 +135,8 @@
         "build/js/minid-menu.js",
         "build/js/tab.js",
         "build/js/toggleMenues.js",
-        "build/js/toggleForm.js"
+        "build/js/toggleForm.js",
+        "build/js/save-enabler.js"
       ]
     },
     "css": {
@@ -162,6 +163,7 @@
     "dev/js/tab.js": "src/js/tab.js",
     "dev/js/toggleMenues.js": "src/js/toggleMenues.js",
     "dev/js/toggleForm.js": "src/js/toggleForm.js",
-    "dev/js/handleButtonKeyPress.js": "src/js/handleButtonKeyPress.js"
+    "dev/js/handleButtonKeyPress.js": "src/js/handleButtonKeyPress.js",
+    "dev/js/save-enabler.js": "src/js/save-enabler.js"
   }
 }

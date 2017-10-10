@@ -369,6 +369,15 @@ textarea {
       border-bottom-color: $ca_focus_border;
     }
   }
+  &:disabled {
+    color: $ca_button_disabled-text;
+    background-color: $ca_button_disabled-bg;
+    border-color: $ca_button_disabled-bg;
+  }
+  &:disabled:hover {
+    color: $ca_button_disabled-text;
+    background-color: $ca_button_disabled-bg;
+  }
 }
 
 // Progress container
@@ -563,7 +572,7 @@ textarea {
     flex: 1;
     display: block;
     font-weight: $t_weight-normal;
-    padding: 0;
+    padding: 0 0.5em 0 0;
     max-width: 100%;
   }
   .fm-Checkbox_Logo {
@@ -572,6 +581,7 @@ textarea {
     align-items: center;
     height: 50px;
     width: 80px;
+    padding-left: 0;
     background-color: $ca_list-bg;
     border-radius: 2px;
     margin-right: 20px;
