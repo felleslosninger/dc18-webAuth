@@ -493,6 +493,10 @@ table {
   background-repeat: no-repeat;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTAgMTUwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmNGEyMjt9LmNscy0ye2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkFzc2V0IDM8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PGNpcmNsZSBjbGFzcz0iY2xzLTEiIGN4PSI3NSIgY3k9Ijc1IiByPSI3NSIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iNjYuNSIgeT0iOTguNzEiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgcng9IjgiIHJ5PSI4Ii8+PHJlY3QgY2xhc3M9ImNscy0yIiB4PSI2Ni41IiB5PSIzNC43MSIgd2lkdGg9IjE2IiBoZWlnaHQ9IjUwIiByeD0iOCIgcnk9IjgiLz48L2c+PC9nPjwvc3ZnPg==); }
 
+.fm-Checkbox input[type=checkbox]:checked + label:after {
+  background-repeat: no-repeat;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNC4zMSAxNC4zIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzAwNmNmZjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkFydGJvYXJkIDE8L3RpdGxlPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI3LjU5IDEwLjE3IDUuNDcgMTIuMjkgMC42OSA3LjUxIDIuODIgNS4zOSA1LjQ3IDguMDMgMTEuNSAyLjAxIDEzLjYyIDQuMTQgNy41OSAxMC4xNyIvPjwvc3ZnPg==); }
+
 .notification.with-Icon.icon-email:after {
   background-repeat: no-repeat;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA2MyA2OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjMgNjg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KPC9zdHlsZT4KPHRpdGxlPkFydGJvYXJkIDExQDJ4MzZ3NDwvdGl0bGU+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02MSwyNC41djM3LjRjMCwxLjgtMS4zLDMuMi0zLDMuMmwwLDBINS4zYy0xLjcsMC0zLTEuNC0zLTMuMmwwLDBMMi40LDI1Ii8+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01My43LDE4LjFsNy4yLDUuNmMwLjEsMC4xLDAuMSwwLjMsMCwwLjRMMzIuOCw0Ny41Yy0wLjksMC44LTIuMywwLjgtMy4zLDBsLTI3LTIyLjRjLTAuMi0wLjItMC4yLTAuNCwwLTAuNgoJbDcuNy02LjEiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTI1LjcsNi4zbDQuOS0zLjhjMC45LTAuNywyLjItMC43LDMuMiwwbDUuMSw0Ii8+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMC4yLDMxLjNWOS43YzAtMS44LDEuNC0zLjIsMy4yLTMuMmwwLDBoMzdjMS44LDAsMy4yLDEuNCwzLjIsMy4yVjMwIi8+CjxwYXRoIGQ9Ik0zNywyMC42Yy0xLTAuNC0yLjEtMC42LTMuMi0wLjZjLTMuOSwwLTcsMy4xLTcsN2MwLDIuMywxLjUsMy43LDMuMiwzLjdjMS44LDAsMy40LTEsNC4yLTIuNmgwLjFjLTAuMiwxLjIsMC41LDIuMywxLjcsMi42CgljMC4yLDAsMC4zLDAsMC41LDBjMi44LDAsNS4zLTIuNiw1LjMtNy4xYzAuMi00LjUtMy4zLTguNC03LjktOC42Yy0wLjIsMC0wLjUsMC0wLjcsMGMtNi42LDAtMTAuOCw1LjMtMTAuOCwxMS40CgljLTAuMiw0LjksMy41LDksOC40LDkuMmMwLjIsMCwwLjQsMCwwLjYsMGMxLjgsMC4xLDMuNi0wLjMsNS4zLTEuMmwtMC41LTEuM2MtMS40LDAuNy0yLjksMS4xLTQuNSwxYy00LjQsMC03LjYtMy03LjYtOAoJYzAtNiw0LjEtOS45LDguOS05LjljNC42LDAsNy4yLDMuMSw3LjIsNy40YzAsMy40LTEuNyw1LjUtMy4yLDUuNGMtMSwwLTEuMy0xLjEtMC45LTMuM0wzNywyMC42eiBNMzQuMywyNS4xYy0wLjMsMS44LTEuOSw0LTMuNiw0CgljLTEuMywwLTItMS0yLTIuMmMwLTIuOSwyLjEtNS4zLDQuNy01LjNjMC41LDAsMSwwLjEsMS41LDAuMkwzNC4zLDI1LjF6Ii8+Cjwvc3ZnPgo=); }
@@ -1664,6 +1668,13 @@ textarea {
     background-color: #134f9e; }
     .btn-Action:focus > span {
       border-bottom-color: #ffffff; }
+  .btn-Action:disabled {
+    color: #9fa9b4;
+    background-color: #f7f8fa;
+    border-color: #f7f8fa; }
+  .btn-Action:disabled:hover {
+    color: #9fa9b4;
+    background-color: #f7f8fa; }
 
 .fm-Progress_Container {
   display: flex;
@@ -1774,6 +1785,60 @@ textarea {
 
 .label + .fm-RadioButtons {
   margin-top: 0.5em; }
+
+.fm-Checkbox {
+  margin: 0;
+  position: relative;
+  border: 1px solid #e6ebf0;
+  border-radius: 4px; }
+  .fm-Checkbox input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    outline: none; }
+  .fm-Checkbox input[type=checkbox] + label {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    text-transform: none;
+    margin: 0;
+    padding: 0.7857em 1.7142em 0.7857em 1.1429em;
+    border-bottom: 1px solid #e6ebf0; }
+    .fm-Checkbox input[type=checkbox] + label:after {
+      display: block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: #ffffff;
+      border: 1px solid #e6ebf0; }
+  .fm-Checkbox input[type=checkbox]:hover + label,
+  .fm-Checkbox input[type=checkbox]:focus + label {
+    background-color: #f7f8fa; }
+  .fm-Checkbox input[type=checkbox]:last-of-type + label {
+    border-bottom: none; }
+
+.fm-Checkbox_Info {
+  flex: 1;
+  display: block;
+  font-weight: 400;
+  padding: 0 0.5em 0 0;
+  max-width: 100%; }
+
+.fm-Checkbox_Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 80px;
+  padding-left: 0;
+  background-color: #ffffff;
+  border-radius: 2px;
+  margin-right: 20px;
+  overflow: hidden; }
+  .fm-Checkbox_Logo img {
+    width: 100%; }
 
 .notification {
   padding: 1em 1em 1.5em 1em;
