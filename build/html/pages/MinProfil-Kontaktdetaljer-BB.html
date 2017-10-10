@@ -70,45 +70,52 @@
             </div>
 
             <div class='Box_main'>
-                <div class='notification with-Icon'>
+
+                <div class='Box_Section'>
                     <p>Ved bytte av postkasse kan det ta opptil syv dager før offentlig post kommer i din nye postkasse. I denne perioden må du sjekke begge postkasser for ny post.</p>
-                    <p>Flytting av post til din nye postkasse kan du gjøre i din gamle postkasse.</p>
+                    <p><strong>Du kan motta post fra det offentlige hos enten e-Boks eller Digipost</strong></p>
                 </div>
 
                 <!-- Form -->
                 <form action='#'>
                     <div class='fm-Fields'>
-                        <div class='label'>Velg digital postkasse</div>
-                        <div class='fm-RadioButtons with-Logo'>
-                            <input id='digipost' type='radio' name="provider" value="digipost" />
-                            <label for='digipost'>
-              <span class='logo'>
-                <img src='../../images/digipost-logo.jpg' alt='' />
-              </span>
-              <span>
-                Velg din postkasse hos Digipost
-              </span>
-            </label>
 
-                            <input id='eboks' type='radio' name="provider" checked='checked' value="eboks" />
-                            <label for='eboks'>
-              <span class='logo'>
-                <img src='../../images/eboks-logo.jpg' alt='' />
-              </span>
-              <span>
-                Velg din postkasse hos e-Boks
-              </span>
-            </label>
+                        <div class='fm-Field'>
+                            <div class='fm-Checkbox'>
+                                <input id='digipost' type='checkbox' name="provider" value="digipost" />
+                                <label for='digipost'>
+                <span class='fm-Checkbox_Logo'>
+                  <img src='../../images/svg/digipost.svg' alt='' />
+                </span>
+                <span class='fm-Checkbox_Info'>
+                  Klikk her for å velge postkasse hos Digipost
+                </span>
+              </label>
+                            </div>
+                        </div>
+
+                        <div class='fm-Field'>
+                            <ul class="ln-List ln-List-simple">
+                                <li>
+                                    <a href="" class="ln-List_Element">
+                  <span class="ln-List_Element_Logo">
+                    <img src='../../images/svg/eboks.svg' alt='' />
+                  </span>
+                  <div class="ln-List_Element_Service">
+                    <span class="ln-List_Element_Service_Info">Klikk her for å opprette og velge postkasse hos e-Boks</span>
+                  </div>
+                  <span class="fa fa-angle-right fa-lg"></span>
+                </a>
+                                </li>
+                            </ul>
                         </div>
                         <div class='fm-form_link with-Link'>
                             <a href='#'><span>Deaktivér postkasse</span></a>
                         </div>
-
                     </div>
-
                     <!-- Controls placeholder with two buttons -->
                     <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Action' type='submit'><span>Save</span></button>
+                        <button class='btn btn-Action' type='submit' disabled><span>Save</span></button>
                         <button class='btn btn-Normal'><span>Cancel</span></button>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
