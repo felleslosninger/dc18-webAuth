@@ -136,7 +136,8 @@
         "build/js/tab.js",
         "build/js/toggleMenues.js",
         "build/js/toggleForm.js",
-        "build/js/check-enable-save.js"
+        "build/js/check-enable-save.js",
+        "build/js/radio-enable-save.js"
       ]
     },
     "css": {
@@ -164,6 +165,7 @@
     "dev/js/toggleMenues.js": "src/js/toggleMenues.js",
     "dev/js/toggleForm.js": "src/js/toggleForm.js",
     "dev/js/handleButtonKeyPress.js": "src/js/handleButtonKeyPress.js",
-    "dev/js/check-enable-save.js": "src/js/check-enable-save.js"
+    "dev/js/check-enable-save.js": "src/js/check-enable-save.js",
+    "dev/js/radio-enable-save.js": "src/js/radio-enable-save.js"
   }
 }
