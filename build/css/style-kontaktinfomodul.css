@@ -1740,7 +1740,7 @@ textarea {
       width: 20px;
       height: 20px;
       background-color: #ffffff;
-      border: 1px solid #e6ebf0;
+      border: 1px solid #d2d2d2;
       border-radius: 15px;
       margin-right: 5px; }
   .fm-RadioButtons input[type=radio]:checked + label:after {
@@ -1786,6 +1786,13 @@ textarea {
 .label + .fm-RadioButtons {
   margin-top: 0.5em; }
 
+.fm-RadioButtons_Info {
+  flex: 1;
+  display: block;
+  font-weight: 400;
+  padding: 0 2em 0 0;
+  max-width: 100%; }
+
 .fm-Checkbox {
   margin: 0;
   position: relative;
@@ -1812,7 +1819,7 @@ textarea {
       width: 20px;
       height: 20px;
       background-color: #ffffff;
-      border: 1px solid #e6ebf0; }
+      border: 1px solid #d2d2d2; }
   .fm-Checkbox input[type=checkbox]:hover + label,
   .fm-Checkbox input[type=checkbox]:focus + label {
     background-color: #f7f8fa; }
