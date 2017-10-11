@@ -564,6 +564,7 @@ textarea {
       height: 20px;
       background-color: $c_white;
       border: 1px solid $ca_radiobutton-border;
+      border-radius: 4px; 
     }
   }
   input[type=checkbox]:checked + label:after {
