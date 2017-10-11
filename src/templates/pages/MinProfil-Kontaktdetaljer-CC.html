@@ -1,0 +1,65 @@
+<!-- build:section recursive layout.commonheader-no-mobile-menu-popup -->
+<!-- /build -->
+
+<!-- build:section recursive section.header -->
+<!-- /build -->
+
+<!-- build:process -->
+<main>
+  <!-- build:section recursive section.dmy --><!-- /build -->
+  <section class='Box'>
+    <!-- build:section recursive section.box-header_change-provider --><!--/build -->
+
+    <div class='Box_main'>
+      <div class='Box_Section'>
+        <p>Ved bytte av postkasse kan det ta opptil syv dager før offentlig post kommer i din nye postkasse. I denne perioden må du sjekke begge postkasser for ny post.</p>
+        <p><strong>Du kan motta post fra det offentlige hos enten e-Boks eller Digipost</strong></p>
+      </div>
+
+      <!-- Form -->
+      <form action='#'>
+        <div class='fm-Fields'>
+
+          <div class='fm-RadioButtons with-Logo'>
+
+            <input id='digipost' type='radio' name="provider" value="digipost" checked />
+            <label for='digipost'>
+              <span class='logo'>
+                <img src='../../images/svg/digipost.svg' alt='' />
+              </span>
+              <span class='fm-RadioButtons_Info'> <!-- NOTE: new class needed for long texts on radio-buttons -->
+                Du mottar i dag post fra det offentlige til din postkasse hos Digipost
+              </span>
+            </label>
+
+            <input id='eboks' type='radio' name="provider" value="eboks"/>
+            <label for='eboks'>
+              <span class='logo'>
+                <img src='../../images/svg/eboks.svg' alt='' />
+              </span>
+              <span class='fm-RadioButtons_Info'> <!-- NOTE: new class needed for long texts on radio-buttons -->
+                 Klikk her for å velge postkasse hos e-Boks
+              </span>
+            </label>
+
+          </div>
+          <div class='fm-form_link with-Link'>
+            <a href='#'><span>Deaktivér postkasse</span></a>
+          </div>
+
+        </div>
+
+        <!-- build:section recursive section.form-controls-two_buttons-cancel_save-disabled --><!--/build -->
+
+      </form>
+    </div>
+
+  </section>
+
+</main>
+<!-- /build -->
+
+<!-- build:section section.footer -->
+<!-- /build -->
+<!-- build:section recursive layout.commonfooter -->
+<!-- /build -->
