@@ -1977,11 +1977,8 @@ textarea {
       left: 1em;
       top: 1em; }
   .driftsmelding .title {
-    display: flex;
     font-weight: 700;
     padding-right: 0.5em; }
-  .driftsmelding .message {
-    display: flex; }
 
 .popup {
   background-color: #c0c7ca; }
