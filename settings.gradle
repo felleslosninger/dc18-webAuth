@@ -1,0 +1,3 @@
+rootProject.name = 'webauthn-server-parent'
+include ':webauthn-server-core'
+include ':webauthn-server-demo'

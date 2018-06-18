@@ -1,0 +1,11 @@
+language: java
+jdk:
+  - openjdk8
+  - oraclejdk8
+after_success:
+  - ./gradlew coveralls
+
+addons:
+  hosts:
+    - travis-issue-5227-workaround
+  hostname: travis-issue-5227-workaround

@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/keycloakdemo.iml" filepath="$PROJECT_DIR$/keycloakdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc_main.iml" group="buildSrc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc_test.iml" group="buildSrc" />
+      <module fileurl="file://$PROJECT_DIR$/buildSrc/src/main/main.iml" filepath="$PROJECT_DIR$/buildSrc/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webauthn-server-core/src/main/main1.iml" filepath="$PROJECT_DIR$/webauthn-server-core/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webauthn-server-demo/src/main/main2.iml" filepath="$PROJECT_DIR$/webauthn-server-demo/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webauthn-server-core/src/test/test.iml" filepath="$PROJECT_DIR$/webauthn-server-core/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webauthn-server-core/webauthn-server-core.iml" filepath="$PROJECT_DIR$/.idea/modules/webauthn-server-core/webauthn-server-core.iml" group="webauthn-server-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webauthn-server-core/webauthn-server-core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/webauthn-server-core/webauthn-server-core_main.iml" group="webauthn-server-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webauthn-server-core/webauthn-server-core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/webauthn-server-core/webauthn-server-core_test.iml" group="webauthn-server-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webauthn-server-demo/webauthn-server-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/webauthn-server-demo/webauthn-server-demo.iml" group="webauthn-server-demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webauthn-server-demo/webauthn-server-demo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/webauthn-server-demo/webauthn-server-demo_main.iml" group="webauthn-server-demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webauthn-server-demo/webauthn-server-demo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/webauthn-server-demo/webauthn-server-demo_test.iml" group="webauthn-server-demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webauthn-server-parent.iml" filepath="$PROJECT_DIR$/.idea/modules/webauthn-server-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webauthn-server-parent_main.iml" filepath="$PROJECT_DIR$/.idea/modules/webauthn-server-parent_main.iml" group="webauthn-server-parent" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webauthn-server-parent_test.iml" filepath="$PROJECT_DIR$/.idea/modules/webauthn-server-parent_test.iml" group="webauthn-server-parent" />
     </modules>
   </component>
 </project>

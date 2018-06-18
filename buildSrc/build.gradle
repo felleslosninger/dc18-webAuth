@@ -1,0 +1,12 @@
+apply plugin: 'groovy'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile(
+    'commons-io:commons-io:2.5',
+    'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.1.11',
+  )
+}
