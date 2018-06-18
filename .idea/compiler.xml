@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="keycloakdemo" />
-      </profile>
-    </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="keycloakdemo" target="1.8" />
+      <module name="buildSrc_main" target="1.10" />
+      <module name="buildSrc_test" target="1.10" />
+      <module name="webauthn-server-core_main" target="1.6" />
+      <module name="webauthn-server-core_test" target="1.6" />
+      <module name="webauthn-server-demo_main" target="1.8" />
+      <module name="webauthn-server-demo_test" target="1.8" />
+      <module name="webauthn-server-parent_main" target="1.6" />
+      <module name="webauthn-server-parent_test" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,112 @@
+== Version 0.1.0 ==
+
+* First release of https://www.w3.org/TR/webauthn/[Web Authentication] support
+* Merged U2F subprojects into webauthn-server-core and deleted lots of unused code
+
+
+== java-u2flib-server version history ==
+
+This project was forked from https://developers.yubico.com/java-u2flib-server/[java-u2flib-server]. Below is the version history from before the fork.
+
+
+== Version 0.19.0 ==
+
+Breaking changes:
+
+* Overhauled exception hierarchy
+ ** New exception class: `U2fCeremonyException`
+ ** New exception class: `U2fRegistrationException extends U2fCeremonyException`
+ ** New exception class: `U2fAuthenticationException extends U2fCeremonyException`
+ ** The following exception classes now extend `U2fAuthenticationException`:
+  *** `DeviceCompromisedException`
+  *** `InvalidDeviceCounterException`
+  *** `NoEligableDevicesException`
+  *** `NoEligibleDevicesException`
+ ** `U2fBadConfigurationException` is now a checked exception
+ ** `U2fBadInputException` is now a checked exception, and is no longer thrown directly by the methods of `U2F`.
+  *** Methods of `U2F` now catch this exception and wrap it in a `U2fRegistrationException` or ``U2fAuthenticationException`.
+* `DeviceRegistration.getAttestationCertificate()` now returns `null` instead of throwing `NoSuchFieldException`
+* `static ClientData.getString(JsonNode, String)` now throws `U2fBadInputException` instead of `NullPointerException`, or if the returned field is not a `String` value
+* Some `AssertionError`s and `IllegalArgumentException`s are now `U2fBadInputException`s instead
+
+
+Improvements:
+
+* `BouncyCastleCrypto` now throws more descriptive exceptions
+
+
+Bug fixes:
+
+* Improved error handling in client data input validation
+ ** Thanks to Nicholas Wilson for the contribution, see https://github.com/Yubico/java-u2flib-server/pull/25
+
+
+== Version 0.18.1 ==
+
+* Lombok now longer leaks into runtime dependencies
+
+
+== Version 0.18.0 ==
+
+=== u2flib-server-core ===
+
+Breaking changes:
+
+* "Authenticate" renamed to "sign" everywhere in `u2flib-server-core`
+** Classes `AuthenticateRequest` renamed to `SignRequest`
+** Class `AuthenticateRequestData` renamed to `SignRequestData`
+** Class `AuthenticateResponse` renamed to `SignResponse`
+** Method `Client.authenticate` renamed to `sign`
+** Class `RawAuthenticateResponse` renamed to `RawSignResponse`
+** Method `SoftKey.authenticate` renamed to `sign`
+** Method `U2F.finishAuthentication` renamed to `finishSignature`
+** Method `U2F.startAuthentication` renamed to `startSignature`
+** Method `U2fPrimitives.finishAuthentication` renamed to `finishSignature`
+** Method `U2fPrimitives.startAuthenticateion` renamed to `startSignature`
+* Constants `AUTHENTICATE_TYP` and `REGISTER_TYPE` in `U2fPrimitives` are
+  now private
+
+== Version 0.17.1 ==
+
+* u2flib-server-attestation module now uses SLF4J logging instead of
+  `Throwable.printStackTrace`
+
+
+== Version 0.17.0 ==
+
+=== u2flib-server-core ===
+
+Breaking changes:
+
+* Field `RegisterRequestData.authenticateRequests: List<AuthenticateRequest>`
+ replaced by field `registeredKeys: List<RegisteredKey>`
+
+Additions:
+
+* Fields added to class `AuthenticateRequestData`:
+  * `challenge: String`
+  * `appId: String`
+* New class `RegisteredKey`
+* Field `appId: String` added to `RegisterRequestData`
+
+=== u2flib-server-demo ===
+
+* `u2f-api.js` upgraded from version 1.0 to 1.1
+* JS calls in views updated to work with version 1.1 of the JS API
+* All views except `loginIndex` and `registerIndex` are now rendered via
+  templates
+* Navigation links added to all views
+* Error feedback improved
+
+
+== Version 0.13.1 (unreleased) ==
+
+* Changed demo server URL to `localhost:8080`.
+* Added the method `ClientData.getString` to get arbitrary clientData fields.
+* Added u2flib-server-attestation for device attestation and metadata.
+
+
+== Version 0.13.0 ==
+
+* Added built-in support for multiple devices per user.
+* Fixed demo server bug when running from jar. Thanks to axianx.
