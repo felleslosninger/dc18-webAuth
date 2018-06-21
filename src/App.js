@@ -6,6 +6,7 @@
 /* global Msg */
 /* global exp */
 import React, {Component} from 'react';
+import formurlencoded from 'form-urlencoded';
 import * as WebAuthn from './webauthn';
 import {WebAuthnHelpers} from './webauthn';
 import logo from './logo.svg';
@@ -14,19 +15,25 @@ import _ from 'lodash';
 
 const utils = WebAuthnHelpers.utils;
 
+const ServerSchemes = {
+  YUBICO: 'yubico',
+};
+const ContentTypes = {
+  JSON: 'application/json; charset=utf-8',
+  URLENCODED: 'application/x-www-form-urlencoded',
+};
 
 console.log(window.WebAuthnHelpers);
 console.log(window.CreateOptions);
-
-let requestId;
 
 const webAuthnConfig = {
   timeout: 30000,
   username: 'Per',
   registerChallengeMethod: 'POST',
-  registerChallengeEndpoint: 'https://webauthn.org/attestation/options',
-  registerResponseEndpoint: 'https://webauthn.org/attestation/result',
+  registerChallengeEndpoint: 'https://localhost:8443/webauthn/api/v1/register',
+  registerResponseEndpoint: 'https://localhost:8443/webauthn/api/v1/register/finish',
   registerResponseMethod: 'POST',
+  serverScheme: ServerSchemes.YUBICO,
 };
 
 const waApp = new WebAuthnApp(webAuthnConfig);
@@ -60,6 +67,45 @@ const getEncodedObject = (obj, paths) => {
   return {..._.toPlainObject(obj), ...result};
 };
 
+const getFetchOptions = (data, contentType) => {
+  const defaultHeaders = {
+    'Content-Type': 'application/json; charset=utf-8',
+  };
+  const defaultOptions = {
+    headers: defaultHeaders,
+    body: JSON.stringify(data),
+    method: 'POST',
+    mode: 'cors',
+    credentials: 'include',
+  };
+  const resultOptions = {};
+  const resultHeaders = {};
+
+  switch (webAuthnConfig.serverScheme) {
+    case ServerSchemes.YUBICO:
+      break;
+    default:
+      break;
+  }
+  switch (contentType) {
+    case ContentTypes.JSON:
+      resultHeaders['Content-Type'] = ContentTypes.JSON;
+      resultOptions.body = JSON.stringify(data);
+      break;
+    case ContentTypes.URLENCODED:
+      defaultOptions.headers["Content-Type"] = ContentTypes.URLENCODED;
+      defaultOptions.body = formurlencoded(data);
+      break;
+    default:
+      break;
+  }
+  return {
+    ...defaultOptions,
+    headers: {...defaultHeaders, resultHeaders},
+    ...resultOptions,
+  };
+};
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -76,23 +122,13 @@ class App extends Component {
       username: 'a',
       displayName: 'a',
     };
-    const headers = {
-      'Content-Type': 'application/json; charset=utf-8',
-    };
-    const options = {
-      headers,
-      body: JSON.stringify(data),
-      method: 'POST',
-      mode: 'cors',
-      credentials: 'include',
-    };
-    console.log('options');
-    console.log(options);
-    fetch(webAuthnConfig.registerChallengeEndpoint, options).then((response) => {
+    fetch(webAuthnConfig.registerChallengeEndpoint, getFetchOptions(data, ContentTypes.URLENCODED)).then((response) => {
       if (response.ok) return response.json();
       else throw new Error(response.statusText);
     }).then((data) => {
-      this.setState({registerResponse: data});
+      this.setState({registerResponse: data.request.publicKeyCredentialCreationOptions});
+      this.setState({requestId: data.request.requestId});
+      this.setState({requestId: data.request.requestId});
     }).catch(console.error);
   }
 
@@ -116,21 +152,18 @@ class App extends Component {
   sendCredentialsToServer() {
     console.log('this.state.publicKeyCredentialEncoded');
     console.log(this.state.publicKeyCredentialEncoded);
-    const data = this.state.publicKeyCredentialEncoded;
-    const headers = {
-      'Content-Type': 'application/json; charset=utf-8',
-      'Origin': 'https://webauthn.org',
-    };
-    const options = {
-      headers,
-      body: JSON.stringify(data),
-      method: 'POST',
-      mode: 'cors',
-      credentials: 'include',
-    };
-    console.log('options');
-    console.log(options);
-    fetch(webAuthnConfig.registerResponseEndpoint, options).then((response) => {
+    let data;
+    switch (webAuthnConfig.serverScheme) {
+      case ServerSchemes.YUBICO:
+        data = {
+          credential: this.state.publicKeyCredentialEncoded,
+          requestId: this.state.requestId,
+        };
+        break;
+      default:
+        data = this.state.publicKeyCredentialEncoded;
+    }
+    fetch(webAuthnConfig.registerResponseEndpoint, getFetchOptions(data, ContentTypes.JSON)).then((response) => {
       if (response.ok) return response.json();
       else throw new Error(response.statusText);
     }).then((data) => {
@@ -152,19 +185,19 @@ class App extends Component {
         <button
           onClick={this.register}
         >
-          Register
+          Ask server for options
         </button>
         <button
           onClick={this.generateCreateCredentials}
           disabled={!this.state.registerResponse}
         >
-          Create credentials
+          Create credentials with options
         </button>
         <button
           onClick={this.sendCredentialsToServer}
           disabled={!this.state.publicKeyCredentialObject}
         >
-          Send credentials
+          Send credentials to server
         </button>
 
         <div>
