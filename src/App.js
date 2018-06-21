@@ -1,133 +1,39 @@
-/* global WebAuthnApp */
-/* global CreateOptions */
-/* global CreateOptionsRequest */
-/* global ServerResponse */
-/* global CredentialAttestation */
-/* global Msg */
-/* global exp */
 import React, {Component} from 'react';
-import formurlencoded from 'form-urlencoded';
-import * as WebAuthn from './webauthn';
-import {WebAuthnHelpers} from './webauthn';
-import logo from './logo.svg';
-import './App.css';
 import _ from 'lodash';
 
-const utils = WebAuthnHelpers.utils;
+import {getDecodedObject, getEncodedObject, getCreateCredentialsOptions, getFetchOptions, getRegisterResponseObject} from "./webauthn/utils";
+import webAuthnConfig from './webauthn/config';
+import {ContentTypes, ServerSchemes} from "./webauthn/enums";
 
-const ServerSchemes = {
-  YUBICO: 'yubico',
-};
-const ContentTypes = {
-  JSON: 'application/json; charset=utf-8',
-  URLENCODED: 'application/x-www-form-urlencoded',
-};
+import logo from './logo.svg';
+import './App.css';
 
-console.log(window.WebAuthnHelpers);
-console.log(window.CreateOptions);
 
-const webAuthnConfig = {
-  timeout: 30000,
-  username: 'Per',
-  registerChallengeMethod: 'POST',
-  registerChallengeEndpoint: 'https://localhost:8443/webauthn/api/v1/register',
-  registerResponseEndpoint: 'https://localhost:8443/webauthn/api/v1/register/finish',
-  registerResponseMethod: 'POST',
-  serverScheme: ServerSchemes.YUBICO,
-};
 
-const waApp = new WebAuthnApp(webAuthnConfig);
-console.log(WebAuthn);
-console.log(WebAuthnApp);
-console.log(waApp);
-
-const getCreateCredentialsOptions = (serverResponse) => {
-  return {
-    publicKey: serverResponse,
-  };
-};
-
-const getRegisterResponseObject = (publicKeyCredential) => {
-  return publicKeyCredential;
-};
-
-const getDecodedObject = (obj, paths) => {
-  const clonedObj = {..._.clone(obj)};
-  for (let path of paths) {
-    _.update(clonedObj, path, utils.coerceToArrayBuffer);
-  }
-  return clonedObj;
-};
-
-const getEncodedObject = (obj, paths) => {
-  const result = {};
-  for (let path of paths) {
-    _.set(result, path, utils.coerceToBase64Url(_.get(obj, path)));
-  }
-  return {..._.toPlainObject(obj), ...result};
-};
-
-const getFetchOptions = (data, contentType) => {
-  const defaultHeaders = {
-    'Content-Type': 'application/json; charset=utf-8',
-  };
-  const defaultOptions = {
-    headers: defaultHeaders,
-    body: JSON.stringify(data),
-    method: 'POST',
-    mode: 'cors',
-    credentials: 'include',
-  };
-  const resultOptions = {};
-  const resultHeaders = {};
-
-  switch (webAuthnConfig.serverScheme) {
-    case ServerSchemes.YUBICO:
-      break;
-    default:
-      break;
-  }
-  switch (contentType) {
-    case ContentTypes.JSON:
-      resultHeaders['Content-Type'] = ContentTypes.JSON;
-      resultOptions.body = JSON.stringify(data);
-      break;
-    case ContentTypes.URLENCODED:
-      defaultOptions.headers["Content-Type"] = ContentTypes.URLENCODED;
-      defaultOptions.body = formurlencoded(data);
-      break;
-    default:
-      break;
-  }
-  return {
-    ...defaultOptions,
-    headers: {...defaultHeaders, resultHeaders},
-    ...resultOptions,
-  };
-};
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      username: Math.random(),
+    };
 
-    this.register = this.register.bind(this);
+    this.sendOptionsRequest = this.sendOptionsRequest.bind(this);
     this.generateCreateCredentials = this.generateCreateCredentials.bind(this);
     this.sendCredentialsToServer = this.sendCredentialsToServer.bind(this);
   }
 
-  register() {
+  sendOptionsRequest() {
     const data = {
-      username: 'a',
-      displayName: 'a',
+      username: this.state.username,
+      displayName: this.state.username,
     };
     fetch(webAuthnConfig.registerChallengeEndpoint, getFetchOptions(data, ContentTypes.URLENCODED)).then((response) => {
       if (response.ok) return response.json();
       else throw new Error(response.statusText);
     }).then((data) => {
       this.setState({registerResponse: data.request.publicKeyCredentialCreationOptions});
-      this.setState({requestId: data.request.requestId});
       this.setState({requestId: data.request.requestId});
     }).catch(console.error);
   }
@@ -144,8 +50,6 @@ class App extends Component {
       console.log(_.toPlainObject(credentials));
       this.setState({publicKeyCredential: credentials});
       this.setState({publicKeyCredentialEncoded: getEncodedObject(credentials, ['response.attestationObject', 'response.clientDataJSON', 'rawId'])});
-      this.setState({publicKeyCredentialObject: _.update(_.pick(credentials, ['response.attestationObject', 'rawId', 'id']), 'response.attestationObject', utils.coerceToBase64Url)});
-      this.setState({publicKeyCredentialString: JSON.stringify(_.pick(credentials, ['response.attestationObject', 'rawId']))});
     }).catch(console.error);
   }
 
@@ -169,6 +73,7 @@ class App extends Component {
     }).then((data) => {
       console.log('sendCredentialsToServer response data');
       console.log(data);
+      this.setState({registerCredentialResponse: data});
     }).catch(console.error);
   }
 
@@ -183,7 +88,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <button
-          onClick={this.register}
+          onClick={this.sendOptionsRequest}
         >
           Ask server for options
         </button>
@@ -195,7 +100,7 @@ class App extends Component {
         </button>
         <button
           onClick={this.sendCredentialsToServer}
-          disabled={!this.state.publicKeyCredentialObject}
+          disabled={!this.state.publicKeyCredentialEncoded}
         >
           Send credentials to server
         </button>

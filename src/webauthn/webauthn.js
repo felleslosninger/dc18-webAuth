@@ -1448,7 +1448,7 @@
   }
 
   /**
-   * Debug event, for tracking the internal status of login() and register()
+   * Debug event, for tracking the internal status of login() and sendOptionsRequest()
    *
    * @event WebAuthnApp#debugEvent
    * @type {CustomEvent}
@@ -1498,25 +1498,25 @@
    *
    * @event WebAuthnApp#registerEvent
    * @type {CustomEvent}
-   * @property {String} type "webauthn-register-start"
-   * @property {String} type "webauthn-register-done"
-   * @property {String} type "webauthn-register-error"
-   * @property {String} type "webauthn-register-success"
-   * @property {null|Error} detail There are no details for these events, except "webauthn-register-error"
+   * @property {String} type "webauthn-sendOptionsRequest-start"
+   * @property {String} type "webauthn-sendOptionsRequest-done"
+   * @property {String} type "webauthn-sendOptionsRequest-error"
+   * @property {String} type "webauthn-sendOptionsRequest-success"
+   * @property {null|Error} detail There are no details for these events, except "webauthn-sendOptionsRequest-error"
    * which will have the Error in detail.
    */
   function fireRegister(state, data) {
     switch (state) {
       case "start":
-        return fireEvent("webauthn-register-start");
+        return fireEvent("webauthn-sendOptionsRequest-start");
       case "done":
-        return fireEvent("webauthn-register-done");
+        return fireEvent("webauthn-sendOptionsRequest-done");
       case "error":
-        fireEvent("webauthn-register-error", data);
-        return fireEvent("webauthn-register-done");
+        fireEvent("webauthn-sendOptionsRequest-error", data);
+        return fireEvent("webauthn-sendOptionsRequest-done");
       case "success":
-        fireEvent("webauthn-register-success", data);
-        return fireEvent("webauthn-register-done");
+        fireEvent("webauthn-sendOptionsRequest-success", data);
+        return fireEvent("webauthn-sendOptionsRequest-done");
       default:
         throw new Error("unknown 'state' in fireRegister");
     }

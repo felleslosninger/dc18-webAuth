@@ -45,7 +45,7 @@ export default function register() {
           );
         });
       } else {
-        // Is not local host. Just register service worker
+        // Is not local host. Just sendOptionsRequest service worker
         registerValidSW(swUrl);
       }
     });
