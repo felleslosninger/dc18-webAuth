@@ -4,12 +4,15 @@
 /* global ServerResponse */
 /* global CredentialAttestation */
 /* global Msg */
+/* global exp */
 import React, {Component} from 'react';
 import * as WebAuthn from './webauthn';
 import logo from './logo.svg';
 import './App.css';
 
-import {utils} from './webauthn';
+import {WebAuthnHelpers} from './webauthn';
+
+const utils = WebAuthnHelpers.utils;
 
 
 console.log(window.WebAuthnHelpers);
@@ -33,16 +36,20 @@ console.log(waApp);
 
 const getCreateCredentialsOptions = (serverResponse) => {
   return {
-    pubKey: serverResponse,
+    publicKey: serverResponse,
   };
 };
 
-const decodeBinaryProperties = (obj) => {
-  obj.challenge = utils.coerceToArrayBuffer(obj.challenge);
+const getDecodedObject = (obj) => {
+  return {
+    ...obj,
+    challenge: utils.coerceToArrayBuffer(obj.challenge),
+    user: {...obj.user, id: utils.coerceToArrayBuffer(obj.user.id)},
+  };
 };
 
-const encodeBinaryProperties = (obj) => {
-  obj.challenge = utils.coerceToBase64Url(obj.challenge);
+const getEncodedObject = (obj) => {
+  return {...obj, challenge: utils.coerceToBase64Url(obj.challenge)};
 };
 
 class App extends Component {
@@ -53,7 +60,6 @@ class App extends Component {
 
     this.register = this.register.bind(this);
     this.startCreateCredentials = this.startCreateCredentials.bind(this);
-    this.sendRegisterResult = this.sendRegisterResult.bind(this);
     this.generateCreateCredentials = this.generateCreateCredentials.bind(this);
   }
 
@@ -84,7 +90,9 @@ class App extends Component {
   generateCreateCredentials() {
     console.log('this.state.registerResponse');
     console.log(this.state.registerResponse);
-    navigator.credentials.create(getCreateCredentialsOptions(this.state.registerResponse)).then((credentials) => {
+    console.log('this.state.registerResponse decoded');
+    console.log(getDecodedObject(this.state.registerResponse));
+    navigator.credentials.create(getCreateCredentialsOptions(getDecodedObject(this.state.registerResponse))).then((credentials) => {
       this.setState({publicKeyCredential: credentials});
     }).catch(console.error);
   }
@@ -124,6 +132,15 @@ class App extends Component {
         >
           Create credentials
         </button>
+
+        <div>
+          <h4>this.state:</h4>
+          <pre
+            style={{textAlign: 'left'}}
+          >
+            {JSON.stringify(this.state, null, 2)}
+          </pre>
+        </div>
       </div>
     );
   }
