@@ -1,22 +1,16 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
 
-import {getDecodedObject, getEncodedObject, getCreateCredentialsOptions, getFetchOptions, getRegisterResponseObject} from "./webauthn/utils";
-import webAuthnConfig from './webauthn/config';
-import {ContentTypes, ServerSchemes} from "./webauthn/enums";
-
-import logo from './logo.svg';
-import './App.css';
+import webAuthnConfig from "../webauthn/config";
+import {ContentTypes, ServerSchemes} from "../webauthn/enums";
+import {getCreateCredentialsOptions, getDecodedObject, getEncodedObject, getFetchOptions} from "../webauthn/utils";
 
 
-
-
-class App extends Component {
+class RegisterComponent extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      username: Math.random(),
     };
 
     this.sendOptionsRequest = this.sendOptionsRequest.bind(this);
@@ -26,8 +20,8 @@ class App extends Component {
 
   sendOptionsRequest() {
     const data = {
-      username: this.state.username,
-      displayName: this.state.username,
+      username: this.props.username,
+      displayName: this.props.username,
     };
     fetch(webAuthnConfig.registerChallengeEndpoint, getFetchOptions(data, ContentTypes.URLENCODED)).then((response) => {
       if (response.ok) return response.json();
@@ -79,14 +73,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
         <button
           onClick={this.sendOptionsRequest}
         >
@@ -104,8 +91,13 @@ class App extends Component {
         >
           Send credentials to server
         </button>
-
         <div>
+          <h4>this.props:</h4>
+          <pre
+            style={{textAlign: 'left'}}
+          >
+            {JSON.stringify(this.props, null, 2)}
+          </pre>
           <h4>this.state:</h4>
           <pre
             style={{textAlign: 'left'}}
@@ -118,4 +110,5 @@ class App extends Component {
   }
 }
 
-export default App;
+
+export default RegisterComponent;
