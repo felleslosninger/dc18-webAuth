@@ -18,6 +18,7 @@ include "webauthn4j-core"
 include 'webauthn4j-extras'
 include 'webauthn4j-test'
 include 'webauthn4j-util'
+include 'webauthn4j-server'
 
 rootProject.name = 'webauthn4j'
 
@@ -26,3 +27,4 @@ rootProject.children.each { project ->
 		project.name = "spring-security-webauthn-${project.name}"
 	}
 }
+
