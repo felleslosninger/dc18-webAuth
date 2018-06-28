@@ -16,10 +16,12 @@ repositories {
 }
 
 dependencies {
-    //compile project(':webauthn4j-core')
+    compile project(':webauthn4j-core')
 
-    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
+    compile("com.fasterxml.jackson.core:jackson-databind:2.9.6")
+    compile("com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.9.6")
 
+    compile("com.google.code.gson:gson:2.8.5")
     compile("com.sparkjava:spark-core:2.7.2")
     compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
     compile 'com.mashape.unirest:unirest-java:1.4.9'
