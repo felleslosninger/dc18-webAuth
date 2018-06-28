@@ -5,6 +5,12 @@ import formurlencoded from "form-urlencoded";
 import webAuthnConfig from './config';
 import {ServerSchemes, ContentTypes} from "./enums";
 
+/**
+ * Decodes fields specified in @paths to UInt8 byte strings
+ * @param obj
+ * @param paths
+ * @returns {{}}
+ */
 export const getDecodedObject = (obj, paths) => {
   const clonedObj = {..._.clone(obj)};
   for (let path of paths) {
@@ -13,6 +19,14 @@ export const getDecodedObject = (obj, paths) => {
   return clonedObj;
 };
 
+
+/**
+ * Encodes fields specified in @paths to UInt8 byte strings
+ *
+ * @param obj
+ * @param paths
+ * @returns {{}}
+ */
 export const getEncodedObject = (obj, paths) => {
   const result = {};
   for (let path of paths) {
@@ -34,13 +48,11 @@ export const getRegisterResponseObject = (publicKeyCredential) => {
 export const getFetchOptions = (data, contentType) => {
   const defaultHeaders = {
     'Content-Type': 'application/json; charset=utf-8',
+    'Accept': 'application/json',
   };
   const defaultOptions = {
-    headers: defaultHeaders,
     body: JSON.stringify(data),
     method: 'POST',
-    mode: 'cors',
-    credentials: 'include',
   };
   const resultOptions = {};
   const resultHeaders = {};
@@ -65,7 +77,6 @@ export const getFetchOptions = (data, contentType) => {
   }
   return {
     ...defaultOptions,
-    headers: {...defaultHeaders, resultHeaders},
     ...resultOptions,
   };
 };

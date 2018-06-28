@@ -23,12 +23,14 @@ class RegisterComponent extends Component {
       username: this.props.username,
       displayName: this.props.username,
     };
-    fetch(webAuthnConfig.registerChallengeEndpoint, getFetchOptions(data, ContentTypes.URLENCODED)).then((response) => {
+    fetch(webAuthnConfig.registerChallengeEndpoint, getFetchOptions(data, ContentTypes.JSON)).then((response) => {
+      console.log("Fetching register options");
+      console.log(response);
       if (response.ok) return response.json();
       else throw new Error(response.statusText);
     }).then((data) => {
-      this.setState({registerResponse: data.request.publicKeyCredentialCreationOptions});
-      this.setState({requestId: data.request.requestId});
+      console.log(data);
+      this.setState({registerResponse: data});
     }).catch(console.error);
   }
 
