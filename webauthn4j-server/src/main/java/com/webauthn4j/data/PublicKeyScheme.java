@@ -1,6 +1,8 @@
 package com.webauthn4j.data;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.webauthn4j.attestation.authenticator.AttestedCredentialData;
 import com.webauthn4j.client.challenge.Challenge;
 import com.webauthn4j.client.challenge.DefaultChallenge;
 
@@ -12,6 +14,8 @@ public class PublicKeyScheme {
     private User user;
     private List<CryptoScheme> pubKeyCredParams;
     private Challenge challenge;
+    @JsonIgnore
+    private List<AttestedCredentialData> AttestedCredentialDatas;
 
 
     public PublicKeyScheme(RelyingParty rp, User user, List<CryptoScheme> pubKeyCredParams, Challenge challenge) {
@@ -48,5 +52,14 @@ public class PublicKeyScheme {
 
     public Challenge getChallenge() {
         return challenge;
+    }
+
+    public void setAttestedCredentialDatas(List<AttestedCredentialData> AttestedCredentialDatas) {
+        this.AttestedCredentialDatas = AttestedCredentialDatas;
+    }
+
+    @JsonProperty("allowCredentials")
+    public List<AttestedCredentialData> getAttestedCredentialDatas() {
+        return AttestedCredentialDatas;
     }
 }
