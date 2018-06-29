@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.google.gson.Gson;
 import com.webauthn4j.WebAuthnAuthenticationContext;
 import com.webauthn4j.WebAuthnRegistrationContext;
 import com.webauthn4j.attestation.AttestationObject;
@@ -45,7 +44,6 @@ import static spark.Spark.*;
 public class SparkServer {
     private static AttestationObjectConverter attestationObjectConverter = new AttestationObjectConverter();
     private static CollectedClientDataConverter collectedClientDataConverter = new CollectedClientDataConverter();
-    private static Gson gson = new Gson();
     private static ObjectMapper mapper = ObjectMapperUtil.createWebAuthnClassesAwareJSONMapper();
     private static SimpleModule module = new SimpleModule();
     private static ServerPropertyCache serverPropertyCache = new ServerPropertyCache();

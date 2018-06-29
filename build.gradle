@@ -2,8 +2,10 @@ group 'no.difi.webauthn'
 version '0.0.1-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'application'
 
 sourceCompatibility = 1.8
+mainClassName = 'no.difi.webauthn.SparkServer'
 
 repositories {
     mavenCentral()
@@ -14,7 +16,6 @@ dependencies {
     compile('com.webauthn4j:webauthn4j-core:0.6.3.RELEASE')
     compile("com.fasterxml.jackson.core:jackson-databind:2.9.6")
     compile("com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.9.6")
-    compile("com.google.code.gson:gson:2.8.5")
     compile("com.sparkjava:spark-core:2.7.2")
     compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
 
