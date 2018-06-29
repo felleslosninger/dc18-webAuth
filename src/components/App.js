@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-
-import logo from '../logo.svg';
+import webauthnRegisterFlow from '../static/images/MDN Webauthn Registration (r3).png';
+import webauthnAuthenticationFlow from '../static/images/MDN Webauthn Authentication (r1).png';
 import './App.css';
 import RegisterComponent from "./RegisterComponent";
 import SignInComponent from "./SignInComponent";
@@ -45,13 +45,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          <h1 className="App-title">Welcome to React</h1>
+        <h4 className="App-title">{`Webauthn ${this.state.flowType} med Difi!`}</h4>
+        <header>
+          {
+            this.state.flowType === FlowTypes.REGISTER &&
+            <img src={webauthnRegisterFlow} className="App-flow-diagram" alt="Webauthn registration flow"/>
+            ||
+            this.state.flowType === FlowTypes.SIGN_IN &&
+            <img src={webauthnAuthenticationFlow} className="App-flow-diagram" alt="Webauthn authentication flow"/>
+          }
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
         <div>
           <button
             disabled={this.state.flowType === FlowTypes.REGISTER}
