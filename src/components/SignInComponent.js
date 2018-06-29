@@ -22,14 +22,13 @@ class SignInComponent extends Component {
       username: this.props.username,
       displayName: this.props.username,
     };
-    fetch(webAuthnConfig.authenicateChallengeEndpoint, getFetchOptions(data, ContentTypes.URLENCODED)).then((response) => {
+    fetch(webAuthnConfig.authenicateChallengeEndpoint, getFetchOptions(data, ContentTypes.JSON)).then((response) => {
       if (response.ok) return response.json();
       else throw new Error(response.statusText);
     }).then((data) => {
       console.log('server response options');
       console.log(data);
-      this.setState({registerResponse: data.request.publicKeyCredentialRequestOptions});
-      this.setState({requestId: data.request.requestId});
+      this.setState({registerResponse: data});
     }).catch(console.error);
   }
 
