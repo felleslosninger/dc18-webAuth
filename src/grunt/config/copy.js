@@ -37,17 +37,14 @@ module.exports = {
   },
   dev_js: {
     files: [
-      // JS SCRIPT
-//			{
-//				expand: true,
-//				cwd: config.src.js.path,
-//				src: [
-//					'*.*', '**/*'
-//				],
-//				dest: config.dev.js.path
-//			}
-      // JS VENDOR
-//			, {
+			{
+				expand: true,
+				cwd: config.src.js.path,
+				src: [
+					'*.*', '**/*'
+				],
+				dest: config.dev.js.path
+			},
       {
         expand: true,
         cwd: config.src.vendor.path,
