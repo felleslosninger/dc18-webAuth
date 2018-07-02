@@ -69,43 +69,39 @@ The one above title is displayed on desktop only. the one below on mobile only. 
             </div>
 
             <div class='Box_main'>
-                <!-- Progress dots -->
-                <div class='fm-Progress_Container'>
-                    <div class='fm-Progress_Dot active'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
+                <ul class='ln-List-simple'>
+                    <li>
+                        <a href="../../demo/webauthn/MinID-Ny-bruker-2A.html" class='ln-List_Element'>
+                            <div class='ln-List_Element_Service'>
+                                <span class='ln-List_Element_Service_Name'>I have PIN codes</span>
+                                <span class='ln-List_Element_Service_Info'>Complete registration with PIN code letter</span>
+                            </div>
+                            <span class='fa fa-angle-right fa-lg'></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class='ln-List_Element'>
+                            <div class='ln-List_Element_Service'>
+                                <span class='ln-List_Element_Service_Name'>I don´t have PIN codes</span>
+                                <span class='ln-List_Element_Service_Info'>Order PIN code letter</span>
+                            </div>
+                            <span class='fa fa-angle-right fa-lg'></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Controls placeholder with only normal button -->
+                <div class='fm-Controls with-Normal'>
+                    <button class='btn btn-Normal'><span>Cancel</span></button>
                 </div>
-                <!-- /Progress dots -->
-
-                <!-- Form -->
-                <form action='#'>
-                    <div class='fm-Fields'>
-                        <div class='fm-Field'>
-                            <label for='idnumber'>Fødselsnummer <span>(11 siffer)</span></label>
-                            <input id='idnumber' maxlength="11" type='tel' placeholder='Fødselsnummer (11 siffer)' />
-                        </div>
-                        <span class='fm-Message'>Vennligst fyll inn fødselsnummeret ditt</span>
-                    </div>
-
-                    <!-- Controls placeholder with two buttons -->
-                    <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Action' type='submit'><span>Next</span></button>
-                        <button class='btn btn-Normal'><span>Cancel</span></button>
-                    </div>
-                    <!-- //Controls placeholder with two buttons -->
-
-                </form>
+                <!-- //Controls placeholder with only normal button -->
             </div>
 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
-                    <!-- <ul> -->
-                    <!-- <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li> -->
-                    <!-- <li><a href='#'><span>Menu 2</span></a></li> -->
-                    <!-- </ul> -->
+                    <ul>
+                        <li><a href='#'><span>What does the PIN code letter look like?</span></a></li>
+                    </ul>
                 </div>
 
                 <!-- <div class='Box_footer-help'>
