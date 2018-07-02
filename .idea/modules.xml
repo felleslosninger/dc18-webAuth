@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/dc18-webAuth.iml" filepath="$PROJECT_DIR$/dc18-webAuth.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/dc18-webAuth.iml" filepath="$PROJECT_DIR$/.idea/dc18-webAuth.iml" />
+>>>>>>> 54cd6740ca9e63806c653b256da1df8ff0c60a0c
     </modules>
   </component>
 </project>
