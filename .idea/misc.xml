@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-  <component name="ProjectRootManager">
-    <output url="file://$PROJECT_DIR$/out" />
-=======
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
->>>>>>> 54cd6740ca9e63806c653b256da1df8ff0c60a0c
   </component>
 </project>
