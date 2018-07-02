@@ -29,7 +29,7 @@
     <header class='h-Main'>
 
         <div class='h-Main_Content'>
-            <a href="" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
+            <a href="index.html" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
 
             <!-- NOTE: placholder class must be present, even if it has no content -->
             <div class="h-Main_Content_Placeholder">
@@ -61,15 +61,6 @@
                 </nav>
                 <!-- /MinID-menu -->
 
-                <nav class='h-Menu h-Menu-preOpened'>
-                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Språk</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
-                    <ul>
-                        <li><a href="" class="h-Main_Menu_Element"><span>Bokmål</span></a></li>
-                        <li><a href="" class="h-Main_Menu_Element"><span>Nynorsk</span></a></li>
-                        <li><a href="" class="h-Main_Menu_Element"><span>Engelsk</span></a></li>
-                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Sámigiella</span></a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </header>
@@ -108,34 +99,33 @@ The one above title is displayed on desktop only. the one below on mobile only. 
             <div class='Box_main'>
                 <!-- Progress dots -->
                 <div class='fm-Progress_Container'>
-                    <div class='fm-Progress_Dot active'></div>
                     <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot active'></div>
                     <div class='fm-Progress_Dot'></div>
                 </div>
                 <!-- /Progress dots -->
 
+                <!-- Notification -->
+                <div class='notification with-Icon icon-pin'>
+                    Use PIN codes from letter dated 30.09.2016
+                    <div class='highlight'>Last logged in: 07.06.2017 kl: 10:01</div>
+                </div>
+                <!-- /Notification -->
+
                 <!-- Form -->
                 <form action='#'>
                     <div class='fm-Fields'>
-                        <div class='fm-Field'>
-                            <label for='idnumber'>Fødselsnummer <span>(11 siffer)</span></label>
-                            <input id='idnumber' maxlength="11" type='tel' placeholder='Fødselsnummer (11 siffer)' />
-                        </div>
-                        <span class='fm-Message'>Vennligst fyll inn fødselsnummeret ditt</span>
                         <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
                         <div class='fm-Field'>
-                            <label for='password'>Passord</label>
-                            <input id='password' type='password' placeholder='******' />
+                            <label for='mobile'>Pin code number 12 <span>(5 digits)</span></label>
+                            <input id='mobile' type='text' maxlength='5' placeholder='Pin code number 12 (5 digits)' />
                         </div>
-                        <span class='fm-Message'>Vennligst skriv inn passordet ditt</span>
-                        <div class='fm-form_link with-Link'>
-                            <a href='#'><span>Glemt passord?</span></a>
-                        </div>
+                        <span class='fm-Message'>Please fill in your PIN code</span>
                     </div>
 
                     <!-- Controls placeholder with two buttons -->
                     <div class='fm-Controls with-Normal with-Action'>
-                       <button class='btn btn-Action' type='submit'><span> <a href="MinID-2A.html">Next</a></span></button>
+                        <button class='btn btn-Action' type='submit'><span>Next</span></button>
                         <button class='btn btn-Normal'><span>Cancel</span></button>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
@@ -146,8 +136,8 @@ The one above title is displayed on desktop only. the one below on mobile only. 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
                     <ul>
-                        <li><a href='#'><span>Registrer ny bruker</span></a></li>
-                        <li><a href='#'><span>Bestill PIN-koder</span></a></li>
+                        <!-- <li><a href='#'><span>Order PIN codes</span></a></li> -->
+                        <li><button class='visuallyAsLink'><span>Order PIN codes</span></button></li>
                     </ul>
                 </div>
 
@@ -180,7 +170,16 @@ The one above title is displayed on desktop only. the one below on mobile only. 
     <!-- /SECTION: FOOTER -->
 
     <script type="text/javascript" src="../../js/vendor.min.js"></script>
-
+    <script type="text/javascript" src="../../js/accordion.js"></script>
+    <script type="text/javascript" src="../../js/country-selector.js"></script>
+    <script type="text/javascript" src="../../js/disabled-links.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript" src="../../js/minid-menu.js"></script>
+    <script type="text/javascript" src="../../js/tab.js"></script>
+    <script type="text/javascript" src="../../js/toggleMenues.js"></script>
+    <script type="text/javascript" src="../../js/toggleForm.js"></script>
+    <script type="text/javascript" src="../../js/check-enable-save.js"></script>
+    <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
 </body>
 
 </html>
