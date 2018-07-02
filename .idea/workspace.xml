@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7da33b63-a43b-438a-baf9-a9501ab43fed" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/build/demo/webauthn/MinID-2A.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/demo/webauthn/MinID-2A.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/demo/webauthn/MinID-2C.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/demo/webauthn/MinID-2C.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -47,8 +46,17 @@
       <file leaf-file-name="MinID-2C.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2C.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="100">
+              <caret line="109" column="71" selection-start-line="109" selection-start-column="71" selection-end-line="109" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="komponentoversikt.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/html/pages/komponentoversikt.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="482" selection-start-line="482" selection-end-line="494" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -58,9 +66,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>tilb</find>
-      <find>tilbake</find>
       <find>dot</find>
       <find>next</find>
+      <find>tilbake</find>
+      <find>e-boks</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,6 +162,19 @@
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="webauthn" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="dc18-webAuth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dc18-webAuth" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dc18-webAuth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dc18-webAuth" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -189,18 +211,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530526605635</updated>
-      <workItem from="1530526607115" duration="1246000" />
+      <workItem from="1530526607115" duration="2169000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1246000" />
+    <option name="totallyTimeSpent" value="2169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info id="Grunt " order="1" side_tool="true" />
@@ -249,10 +271,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build/html/pages/komponentoversikt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="482" selection-start-line="482" selection-end-line="494" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2C.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="100">
+          <caret line="109" column="71" selection-start-line="109" selection-start-column="71" selection-end-line="109" selection-end-column="71" />
         </state>
       </provider>
     </entry>
