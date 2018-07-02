@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7da33b63-a43b-438a-baf9-a9501ab43fed" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/build/demo/webauthn/MinID-2C.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/demo/webauthn/MinID-2C.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/demo/webauthn/MinID-2D.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/demo/webauthn/MinID-2D.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/demo/webauthn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/demo/webauthn/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/webauthn-redirect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/webauthn.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/webauthn.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +23,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/demo/webauthn/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="2685">
+              <caret line="179" column="29" selection-start-line="179" selection-start-column="29" selection-end-line="179" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -28,7 +32,7 @@
       <file leaf-file-name="MinID-2A.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2A.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="-553">
               <caret line="127" column="92" selection-start-line="127" selection-start-column="92" selection-end-line="127" selection-end-column="92" />
             </state>
           </provider>
@@ -37,7 +41,7 @@
       <file leaf-file-name="MinID-2B.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2B.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="-2376">
               <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
@@ -46,8 +50,17 @@
       <file leaf-file-name="MinID-2C.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2C.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="136" selection-end-column="68" />
+            <state relative-caret-position="249">
+              <caret line="188" column="35" selection-start-line="188" selection-start-column="35" selection-end-line="188" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webauthn.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/js/webauthn.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -55,8 +68,8 @@
       <file leaf-file-name="MinID-2D.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2D.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="105" column="71" selection-start-line="105" selection-start-column="71" selection-end-line="105" selection-end-column="71" />
+            <state relative-caret-position="264">
+              <caret line="159" selection-start-line="159" selection-end-line="159" />
             </state>
           </provider>
         </entry>
@@ -73,7 +86,9 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16148" />
+            <state relative-caret-position="13542">
+              <caret line="2078" column="34" selection-start-line="2078" selection-start-column="31" selection-end-line="2078" selection-end-column="34" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -90,13 +105,16 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tilb</find>
-      <find>dot</find>
-      <find>next</find>
       <find>e-boks</find>
       <find>receipt</find>
-      <find>tilbake</find>
       <find>Klikk</find>
+      <find>tilbake</find>
+      <find>sms</find>
+      <find>weba</find>
+      <find>placeholder.html</find>
+      <find>tilb</find>
+      <find>next</find>
+      <find>dot</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,9 +124,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build/demo/webauthn/MinID-2B.html" />
-        <option value="$PROJECT_DIR$/build/demo/webauthn/index.html" />
         <option value="$PROJECT_DIR$/build/demo/webauthn/MinID-2A.html" />
+        <option value="$PROJECT_DIR$/build/js/webauthn.js" />
         <option value="$PROJECT_DIR$/build/demo/webauthn/MinID-2C.html" />
+        <option value="$PROJECT_DIR$/build/js/webauthn-redirect.js" />
+        <option value="$PROJECT_DIR$/build/demo/webauthn/index.html" />
         <option value="$PROJECT_DIR$/build/demo/webauthn/MinID-2D.html" />
       </list>
     </option>
@@ -209,8 +229,7 @@
               <item name="dc18-webAuth" type="b2602c69:ProjectViewProjectNode" />
               <item name="dc18-webAuth" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -296,12 +315,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530526605635</updated>
-      <workItem from="1530526607115" duration="3464000" />
+      <workItem from="1530526607115" duration="4271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3464000" />
+    <option name="totallyTimeSpent" value="4271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="6" />
@@ -335,37 +354,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2B.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/demo/webauthn/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2A.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="127" column="92" selection-start-line="127" selection-start-column="92" selection-end-line="127" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/html/pages/komponentoversikt.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="482" selection-start-line="482" selection-end-line="494" selection-end-column="30" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16148" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/html/pages/MinID-sperre-pin-koder-2.html">
@@ -375,17 +368,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13542">
+          <caret line="2078" column="34" selection-start-line="2078" selection-start-column="31" selection-end-line="2078" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/js/webauthn-redirect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/js/webauthn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2C.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="136" selection-end-column="68" />
+        <state relative-caret-position="249">
+          <caret line="188" column="35" selection-start-line="188" selection-start-column="35" selection-end-line="188" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2B.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2376">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2A.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-553">
+          <caret line="127" column="92" selection-start-line="127" selection-start-column="92" selection-end-line="127" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/demo/webauthn/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2685">
+          <caret line="179" column="29" selection-start-line="179" selection-start-column="29" selection-end-line="179" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/demo/webauthn/MinID-2D.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="105" column="71" selection-start-line="105" selection-start-column="71" selection-end-line="105" selection-end-column="71" />
+        <state relative-caret-position="264">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
         </state>
       </provider>
     </entry>

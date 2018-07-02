@@ -2,8 +2,9 @@ const webauthn = () => {
   const $ = jQuery.noConflict();
 
 
-  $('#webauthn-register').on('click', (event) => {
+  $('#webauthn-login-redirect-btn').on('click', (event) => {
     event.preventDefault();
+    console.log('test');
     if (!navigator.credentials) {
       window.alert('You need a browser that supports Webauthn');
       return;
