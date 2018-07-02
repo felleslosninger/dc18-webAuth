@@ -72,8 +72,8 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <!-- Progress dots -->
                 <div class='fm-Progress_Container'>
                     <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot active'></div>
                     <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot active'></div>
                     <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot'></div>
@@ -82,8 +82,8 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <!-- /Progress dots -->
 
                 <!-- Notification -->
-                <div class='notification with-Icon icon-pin'>
-                    Use PIN-codes from letter dated 30.09.2016
+                <div class='notification with-Icon'>
+                    The password must comprise at least 8 characters, including digits and letters. Valid characters are lower case and capital case letters from A to Z, digits and special characters.
                 </div>
                 <!-- /Notification -->
 
@@ -92,21 +92,20 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                     <div class='fm-Fields'>
                         <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
                         <div class='fm-Field'>
-                            <label for='mobile'>Pin code number 12 <span>(5 digits)</span></label>
-                            <input id='mobile' type='text' maxlength='5' placeholder='Pin code number 12 (5 digits)' />
+                            <label for='password'>Create Password</label>
+                            <input id='password' type='password' placeholder='Create password' />
                         </div>
-                        <span class='fm-Message'>Please fill in your PIN code</span>
-                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <span class='fm-Message'>Please enter a password</span>
                         <div class='fm-Field'>
-                            <label for='mobile'>Pin code number 12 <span>(5 digits)</span></label>
-                            <input id='mobile' type='text' maxlength='5' placeholder='Pin code number 12 (5 digits)' />
+                            <label for='password2'>Re-enter password</label>
+                            <input id='password2' type='password' placeholder='Re-enter password' />
                         </div>
-                        <span class='fm-Message'>Please fill in your PIN code</span>
+                        <span class='fm-Message'>Passwords does not match</span>
                     </div>
 
                     <!-- Controls placeholder with two buttons -->
                     <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Action' type='submit'><span>Next</span></button>
+                        <a href="../../demo/webauthn/MinID-Ny-bruker-5A.html" class='btn btn-Action' type='submit'><span>Next</span></a>
                         <button class='btn btn-Normal'><span>Cancel</span></button>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
@@ -116,9 +115,10 @@ The one above title is displayed on desktop only. the one below on mobile only. 
 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
-                    <ul>
-                        <li><a href='#'><span>Order Pin codes</span></a></li>
-                    </ul>
+                    <!-- <ul> -->
+                    <!-- <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li> -->
+                    <!-- <li><a href='#'><span>Menu 2</span></a></li> -->
+                    <!-- </ul> -->
                 </div>
 
                 <!-- <div class='Box_footer-help'>
