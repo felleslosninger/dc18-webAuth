@@ -69,38 +69,55 @@ The one above title is displayed on desktop only. the one below on mobile only. 
             </div>
 
             <div class='Box_main'>
-                <ul class='ln-List-simple'>
-                    <li>
-                        <a href="../../demo/webauthn/MinID-Ny-bruker-2A.html" class='ln-List_Element'>
-                            <div class='ln-List_Element_Service'>
-                                <span class='ln-List_Element_Service_Name'>I have PIN codes</span>
-                                <span class='ln-List_Element_Service_Info'>Complete registration with PIN code letter</span>
-                            </div>
-                            <span class='fa fa-angle-right fa-lg'></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class='ln-List_Element'>
-                            <div class='ln-List_Element_Service'>
-                                <span class='ln-List_Element_Service_Name'>I don´t have PIN codes</span>
-                                <span class='ln-List_Element_Service_Info'>Order PIN code letter</span>
-                            </div>
-                            <span class='fa fa-angle-right fa-lg'></span>
-                        </a>
-                    </li>
-                </ul>
-
-                <!-- Controls placeholder with only normal button -->
-                <div class='fm-Controls with-Normal'>
-                    <button class='btn btn-Normal'><span>Cancel</span></button>
+                <!-- Progress dots -->
+                <div class='fm-Progress_Container'>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot active'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
                 </div>
-                <!-- //Controls placeholder with only normal button -->
+                <!-- /Progress dots -->
+
+                <!-- Notification -->
+                <div class='notification with-Icon icon-pin'>
+                    Use PIN-codes from letter dated 30.09.2016
+                </div>
+                <!-- /Notification -->
+
+                <!-- Form -->
+                <form action='#'>
+                    <div class='fm-Fields'>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <label for='mobile'>Pin code number 12 <span>(5 digits)</span></label>
+                            <input id='mobile' type='text' maxlength='5' placeholder='Pin code number 12 (5 digits)' />
+                        </div>
+                        <span class='fm-Message'>Please fill in your PIN code</span>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <label for='mobile'>Pin code number 12 <span>(5 digits)</span></label>
+                            <input id='mobile' type='text' maxlength='5' placeholder='Pin code number 12 (5 digits)' />
+                        </div>
+                        <span class='fm-Message'>Please fill in your PIN code</span>
+                    </div>
+
+                    <!-- Controls placeholder with two buttons -->
+                    <div class='fm-Controls with-Normal with-Action'>
+                        <a href="MinID-Ny-bruker-4A.html" class='btn btn-Action' type='submit'><span>Next</span></a>
+                        <button class='btn btn-Normal'><span>Cancel</span></button>
+                    </div>
+                    <!-- //Controls placeholder with two buttons -->
+
+                </form>
             </div>
 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
                     <ul>
-                        <li><a href='#'><span>What does the PIN code letter look like?</span></a></li>
+                        <li><a href='#'><span>Order Pin codes</span></a></li>
                     </ul>
                 </div>
 
