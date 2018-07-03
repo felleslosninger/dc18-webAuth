@@ -71,43 +71,29 @@ The one above title is displayed on desktop only. the one below on mobile only. 
             <div class='Box_main'>
                 <!-- Progress dots -->
                 <div class='fm-Progress_Container'>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot active'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot'></div>
                 </div>
                 <!-- /Progress dots -->
 
-                <!-- Notification -->
-                <div class='notification with-Icon with-Link'>
-                    Har du utenlandsk nummer, må du oppgi landskode. Har du ikke mobil?
-                    <a href=''><span>Les om alternativ innlogging</span></a>
-                </div>
-                <!-- /Notification -->
-
                 <!-- Form -->
                 <form action='#'>
                     <div class='fm-Fields'>
-                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
                         <div class='fm-Field'>
-                            <label for='mobile'>Mobile phone </label>
-                            <input id='mobile' type='tel' placeholder='Mobile phone' />
+                            <label for='idnumber'>Fødselsnummer <span>(11 siffer)</span></label>
+                            <input id='idnumber' maxlength="11" type='tel' placeholder='Fødselsnummer (11 siffer)' />
                         </div>
-                        <span class='fm-Message'>Please fill in your mobile phone number</span>
-
-                        <div class='fm-Field'>
-                            <label for='mobile'>Repeat mobile phone</label>
-                            <input id='mobile' type='tel' placeholder='Mobile phone' />
-                        </div>
-                        <span class='fm-Message'>The numbers do not match</span>
+                        <span class='fm-Message'>Vennligst fyll inn fødselsnummeret ditt</span>
                     </div>
 
                     <!-- Controls placeholder with two buttons -->
                     <div class='fm-Controls with-Normal with-Action'>
-                        <a href="../../demo/webauthn/MinID-Ny-bruker-6B.html" class='btn btn-Action' type='submit'><span>Next</span></a>
+                        <a href="MinID-Ny-bruker-3A.html" class='btn btn-Action' type='submit'><span>Next</span></a>
                         <button class='btn btn-Normal'><span>Cancel</span></button>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
