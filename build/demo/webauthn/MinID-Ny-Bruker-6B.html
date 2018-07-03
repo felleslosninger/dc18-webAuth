@@ -165,18 +165,6 @@ The one above title is displayed on desktop only. the one below on mobile only. 
 
 <!-- /SECTION: FOOTER -->
 
-<script>
-    function addItem(){
-        var li = document.createElement("LI");
-        var input = document.getElementById("add");
-        li.innerHTML = input.value;
-        input.value = "";
-
-        document.getElementById("devices").appendChild(li);
-        document.getElementsByClassName("add-devices").style.visibility = "hidden";
-    }
-</script>
-
 <script type="text/javascript" src="../../js/vendor.min.js"></script>
 <script type="text/javascript" src="../../js/accordion.js"></script>
 <script type="text/javascript" src="../../js/country-selector.js"></script>
@@ -189,6 +177,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
 <script type="text/javascript" src="../../js/check-enable-save.js"></script>
 <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
 <script type="text/javascript" src="../../js/webauthn.js"></script>
+<script type="text/javascript" src="../../js/name-devices.js"></script>
 </body>
 
 </html>
