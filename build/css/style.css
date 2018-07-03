@@ -1488,6 +1488,12 @@ legend, .legend-Style {
   display: flex;
   flex-direction: column; }
 
+.field-controls-devices {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
 .fm-Field {
   display: flex;
   flex-direction: column;
@@ -1706,9 +1712,9 @@ textarea {
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem 1rem 1rem 1rem;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;}
   .fm-Controls > * {
-    padding: 0 2rem;
+    /*padding: 0 2rem; */
     margin: 0 1rem 1rem 1rem;
     white-space: nowrap; }
   .fm-Controls.with-Action {
@@ -1722,6 +1728,9 @@ textarea {
       flex-direction: row; }
   .fm-Controls.with-Action-centered {
     align-items: center; }
+  .fm-Controls.add-to-list {
+    visibility: hidden; }
+
 
 .btn-Normal {
   color: #5e6b77;
@@ -1763,6 +1772,8 @@ textarea {
   .btn-Action:disabled:hover {
     color: #9fa9b4;
     background-color: #f7f8fa; }
+  .btn-Action.add-to-list {
+    margin-top: 1rem }
 
 .fm-Progress_Container {
   display: flex;
@@ -2282,3 +2293,7 @@ This is the temporary customization
     display: none; }
 
 /*# sourceMappingURL=style.css.map */
+
+.add-devices {
+  flex-grow: 8;
+}
