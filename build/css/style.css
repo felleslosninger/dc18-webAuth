@@ -1086,7 +1086,7 @@ table {
   min-height: 3.5em; }
 
 .Box_inside-footer {
-  border-top: 1px solid #e6ebf0;
+  /*border-top: 1px solid #e6ebf0;*/
   background-color: transparent; }
   .Box_inside-footer + .Box_footer {
     border-top-width: 0; }
