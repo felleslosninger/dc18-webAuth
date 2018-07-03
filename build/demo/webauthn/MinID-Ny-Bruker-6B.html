@@ -94,17 +94,26 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                     <ul class='ln-List ln-List-lowPriority'>
                         <li>
                             <a href="" class='ln-List_Element'>
-      <span class='ln-List_Element_Logo'>
-        <img src='../img/key.png' alt='' />
-      </span>
+                                <span class='ln-List_Element_Logo'>
+                                    <img src='../img/key.png' alt='' />
+                                </span>
                                 <div class='ln-List_Element_Service' id="webAuthn">
                                     <span class='ln-List_Element_Service_Name'>Smart-enhet</span>
-                                    <span class='ln-List_Element_Service_Info'>Trykk for å registrere smart-enhet</span>
+                                    <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smart-enhet</span>
                                 </div>
                                 <span class='fa fa-angle-right fa-lg'></span>
                             </a>
                         </li>
                     </ul>
+                </div>
+
+                <div>
+                    <ul id="devices">
+                    </ul>
+                    <div class="fm-Controls">
+                        <input type="text" id="add" size ="50"/>
+                        <input type="button" id="btnAdd" value="Add" onclick="addItem()">
+                    </div>
                 </div>
 
                 <!-- Controls placeholder with two buttons -->
@@ -152,6 +161,17 @@ The one above title is displayed on desktop only. the one below on mobile only. 
 </footer>
 
 <!-- /SECTION: FOOTER -->
+
+<script>
+    function addItem(){
+        var li = document.createElement("LI");
+        var input = document.getElementById("add");
+        li.innerHTML = input.value;
+        input.value = "";
+
+        document.getElementById("devices").appendChild(li);
+    }
+</script>
 
 <script type="text/javascript" src="../../js/vendor.min.js"></script>
 <script type="text/javascript" src="../../js/accordion.js"></script>
