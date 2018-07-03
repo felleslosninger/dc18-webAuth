@@ -78,7 +78,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <img src='../../images/nav-logo.gif' alt='tjenestetilbyders logo' />
             </div>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-logo logo-eid-gray'>Select an electronic id</h1>
+                <h1 class='Box_header-title with-logo logo-eid-gray'>Logg inn med MinID</h1>
 
                 <nav class='mi-Menu' id='js-mi-menu'>
 
@@ -106,9 +106,13 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <!-- /Progress dots -->
 
                 <!-- Notification -->
-                <div class='notification with-Icon icon-pin'>
-                    Use PIN codes from letter dated 30.09.2016
-                    <div class='highlight'>Last logged in: 07.06.2017 kl: 10:01</div>
+                <div class='notification with-Icon icon-sms'>
+                    Du vil nå motta en engangskode på SMS fra Difi.<br>
+                    Har du ikke mobilen tilgjengelig?
+                    <br>
+                    <a href=''><span>Bruk kode fra PIN-kodebrev</span></a>
+                    <br><br>
+                    <div class='highlight'>Sist innlogget: 07.06.2017 kl: 10:01</div>
                 </div>
                 <!-- /Notification -->
 
@@ -117,16 +121,16 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                     <div class='fm-Fields'>
                         <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
                         <div class='fm-Field'>
-                            <label for='mobile'>Pin code number 12 <span>(5 digits)</span></label>
-                            <input id='mobile' type='text' maxlength='5' placeholder='Pin code number 12 (5 digits)' />
+                            <label for='mobile'>KODE FRA SMS: <span></span></label>
+                            <input id='mobile' type='text' maxlength='5' placeholder='(5 tegn)' />
                         </div>
-                        <span class='fm-Message'>Please fill in your PIN code</span>
+                        <span class='fm-Message'>Vennligst skriv inn koden</span>
                     </div>
 
                     <!-- Controls placeholder with two buttons -->
                     <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Action' type='submit'><span>Next</span></button>
-                        <button class='btn btn-Normal'><span>Cancel</span></button>
+                        <button class='btn btn-Action' type='submit'><span>Neste</span></button>
+                        <button class='btn btn-Normal'><span>Avbryt</span></button>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
 
@@ -137,7 +141,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <div class='Box_footer-links'>
                     <ul>
                         <!-- <li><a href='#'><span>Order PIN codes</span></a></li> -->
-                        <li><button class='visuallyAsLink'><span>Order PIN codes</span></button></li>
+                        <li><button class='visuallyAsLink'><span>Bestill PIN-koder</span></button></li>
                     </ul>
                 </div>
 
