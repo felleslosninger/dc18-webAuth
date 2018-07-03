@@ -2,7 +2,7 @@ const webauthn = () => {
   const $ = jQuery.noConflict();
 
 
-  $('#webauthn-login-redirect-btn').on('click', (event) => {
+  $('#webAuthn').on('click', (event) => {
     event.preventDefault();
     console.log('test');
     if (!navigator.credentials) {
