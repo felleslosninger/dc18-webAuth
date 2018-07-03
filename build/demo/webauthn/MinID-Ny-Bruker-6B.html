@@ -90,7 +90,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
 
             <!-- Form -->
             <form action='#'>
-                <div class='Box_main Box_inside-footer'>
+                <div class='Box_main Box_inside-footer' onclick="showControls()">
                     <ul class='ln-List ln-List-lowPriority'>
                         <li>
                             <a href="" class='ln-List_Element'>
@@ -105,8 +105,8 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                         </li>
                     </ul>
                 </div>
-                <ul class="ln-List" id="devices"></ul>
-                <div class='fm-Controls'>
+                <ul class="ln-List" id="devices"><li id="device"></li></ul>
+                <div class='fm-Controls add-to-list' id="add-devices-controls">
                     <div class="add-devices">
                         <div class='field-controls-devices'>
                             <div class='fm-Field'>
@@ -116,7 +116,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                             <span class='fm-Message'>Vennligst fyll inn navn på smart-enheten din</span>
                         </div>
                     </div>
-                    <button class='btn btn-Action add-to-list' onclick="addItem()"><span>Legg til</span></button>
+                    <button class='btn btn-Action add-to-list' onclick="event.preventDefault();addItem()"><span>Legg til</span></button>
                 </div>
 
                 <!-- Controls placeholder with two buttons -->

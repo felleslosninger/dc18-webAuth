@@ -1728,6 +1728,9 @@ textarea {
       flex-direction: row; }
   .fm-Controls.with-Action-centered {
     align-items: center; }
+  .fm-Controls.add-to-list {
+    visibility: hidden; }
+
 
 .btn-Normal {
   color: #5e6b77;

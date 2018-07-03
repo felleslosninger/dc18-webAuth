@@ -13,6 +13,10 @@ function addItem(){
         "</div> " +
         "<span class='fa fa-angle-right fa-lg'></span> " +
         "</a>";
+    document.getElementById("device").appendChild(li);
+    document.getElementById("add-devices-controls").style.visibility = "hidden";
+}
 
-    document.getElementById("devices").appendChild(li);
+function showControls(){
+    document.getElementById("add-devices-controls").style.visibility = "visible";
 }
