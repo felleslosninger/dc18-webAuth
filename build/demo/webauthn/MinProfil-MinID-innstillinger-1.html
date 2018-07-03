@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>IDPorten</title>
+    <title>[BUILD] PAGE TITLE</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,7 @@
     <header class='h-Main'>
 
         <div class='h-Main_Content'>
-            <a href="MinID-2C.html" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
+            <a href="" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
 
             <!-- NOTE: placholder class must be present, even if it has no content -->
             <div class="h-Main_Content_Placeholder">
@@ -46,22 +46,8 @@
                     </ul>
                 </nav>
 
-                <!-- MinID menu -->
-                <!-- NOTE: We add MinID menu as part of main menu for pages containing minid menu.
-          Will be visible only on mobile sized screens for pages with minid menu, e g MinID-1.html and similar.
-          This is done to prevent double hamburger menu on these pages. -->
-                <nav class='h-Menu h-Menu-MinID'>
-                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>MinID</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
-                    <ul>
-                        <li><a href="" class="h-Main_Menu_Element"><span>MinID innstillinger</span></a></li>
-                        <li><a href="" class="h-Main_Menu_Element"><span>registrere ny MinID bruker</span></a></li>
-                        <li><a href="" class="h-Main_Menu_Element"><span>Glemt passord</span></a></li>
-                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
-                    </ul>
-                </nav>
-                <!-- /MinID-menu -->
-
             </div>
+
         </div>
     </header>
 
@@ -78,37 +64,52 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <img src='../../images/nav-logo.gif' alt='tjenestetilbyders logo' />
             </div>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-logo logo-eid-gray'>Logg inn med MinID</h1>
-
-                <nav class='mi-Menu' id='js-mi-menu'>
-
-                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='mi-Menu_Trigger mi-Menu_Trigger-disabled'>
-    <img src='../../images/svg/minid-m-kant.svg' alt="minid logo" />
-    <span class="visuallyHidden">Meny</span>
-    <span class='fa fa-bars fa-lg' aria-hidden="true"></span></a>
-                    <ul>
-                        <li><a href="" class="mi-Menu_Element"><span>MinID innstillinger</span></a></li>
-                        <li><a href="" class="mi-Menu_Element"><span>Registrere ny MinID bruker</span></a></li>
-                        <li><a href="" class="mi-Menu_Element"><span>Glemt passord</span></a></li>
-                        <li><a href="" class="mi-Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
-                    </ul>
-                </nav>
-
+                <h1 class='Box_header-title with-logo logo-eid-gray'>Settings</h1>
+                <div class='Box_header-provider'><img src='../../images/svg/minid-m-kant.svg' alt='MinID logo' /></div>
             </div>
 
-            <div class='receipt with-Link'>
-                <h2>Din WebAuthn er registrert</h2>
-            </div>
+            <div class='Box_main'>
 
 
-            <!-- Controls placeholder with two buttons -->
-            <div class='fm-Controls with-Normal with-Action'>
-                <button class='btn btn-Action' type='submit'><span>Fortsett til NAV</span></button>
-                <button class='btn btn-Normal'><span>Avbryt</span></button>
-            </div>
-            <!-- //Controls placeholder with two buttons -->
+                <!-- Form -->
+                <form action='#'>
+                    <div class='fm-Fields'>
+
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <span class='label'>Din påloggings-id</span>
+                            <div class='with-icon'>
+                                <span class='text'>min bruker-id</span>
+                                <button>
+      <span class='visuallyHidden'>Klikk her for å endre din bruker</span>
+      <span class='fa fa-pencil'></span>
+    </button>
+                            </div>
+                        </div>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <span class='label'>Ditt passord</span>
+                            <div class='with-icon'>
+                                <span class='text'>**********</span>
+                                <button>
+      <span class='visuallyHidden'>Klikk her for å endre passordet ditt</span>
+      <span class='fa fa-pencil'></span>
+    </button>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </form>
             </div>
+
+            <div class='Box_footer'>
+                <div class='Box_footer-links'>
+                    <!-- <ul> -->
+                    <!-- <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li> -->
+                    <!-- <li><a href='#'><span>Menu 2</span></a></li> -->
+                    <!-- </ul> -->
+                </div>
 
                 <!-- <div class='Box_footer-help'>
   <a href='#'><span class='fa fa-question-circle'></span><span class='visuallyHidden'>Help</span></a>
@@ -118,6 +119,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
         <!-- NOTE: provider is added twice: above box title and below box (this one).
   The one above title is displayed on desktop only. the one below on mobile only. -->
         <div class='mi-Provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
+
     </main>
     <!-- /build -->
 
