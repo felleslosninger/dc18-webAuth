@@ -1,49 +1,45 @@
 <form action="#">
-  <fieldset>
-    <div class='fm-Fields'>
-      <p class='legend-Style'>Use your National electronic ID to log in.</p>
-
-      <div class='cs-InputContainer'>
-
-        <!-- Form field with class "error" and it affects both the input field and fm-Message field -->
-        <div class="cs-Input fm-Field" id="js-country">
-          <div class='cs-Input_Placeholder'>
-            <label for="country" class="visuallyHidden">Enter or select country</label>
-            <input type="text" id="country" placeholder="Enter country name" autocomplete="off" aria-haspopup="true" aria-expanded="false" />
-            <button class="cs-Button fa fa-angle-down" id="js-trigger" aria-haspopup="true" aria-expanded="false"></button>
-          </div>
-          <input type="hidden" name="countrycode" value="" />
+    <fieldset>
+        <div class='fm-Fields'>
+            <p class='legend-Style'>Use your National electronic ID to log in.</p>
+            <div class='cs-InputContainer'>
+                <!-- Form field with class "error" and it affects both the input field and fm-Message field -->
+                <div class="cs-Input fm-Field" id="js-country">
+                    <div class='cs-Input_Placeholder'>
+                        <label for="country" class="visuallyHidden">Enter or select country</label>
+                        <input type="text" id="country" placeholder="Enter country name" autocomplete="off" aria-haspopup="true" aria-expanded="false" />
+                        <button class="cs-Button fa fa-angle-down" id="js-trigger" aria-haspopup="true" aria-expanded="false"></button>
+                    </div>
+                    <input type="hidden" name="countrycode" value="" />
+                </div>
+                <!-- //Form field -->
+                <!-- Form field error message -->
+                <span class="fm-Message">Please select a country from the list</span>
+                <!-- // Form field error message -->
+                <ul role="listbox" class="cs-List" id="js-country-list">
+                    <li role="option"><a data-id="at" href="">Austria</a></li>
+                    <li role="option"><a data-id="cz" href="">Czech Republic</a></li>
+                    <li role="option"><a data-id="dk" href="">Denmark</a></li>
+                    <li role="option"><a data-id="ee" href="">Estonia</a></li>
+                    <li role="option"><a data-id="fr" href="">France</a></li>
+                    <li role="option"><a data-id="de" href="">Germany</a></li>
+                    <li role="option"><a data-id="gr" href="">Greece</a></li>
+                    <li role="option"><a data-id="ie" href="">Ireland</a></li>
+                    <li role="option"><a data-id="it" href="">Italy</a></li>
+                    <li role="option"><a data-id="lu" href="">Luxembourg</a></li>
+                    <li role="option"><a data-id="nl" href="">Netherlands</a></li>
+                    <li role="option"><a data-id="pl" href="">Poland</a></li>
+                    <li role="option"><a data-id="pt" href="">Portugal</a></li>
+                    <li role="option"><a data-id="ro" href="">Romania</a></li>
+                    <li role="option"><a data-id="sk" href="">Slovakia</a></li>
+                    <li role="option"><a data-id="si" href="">Slovenia</a></li>
+                    <li role="option"><a data-id="es" href="">Spain</a></li>
+                    <li role="option"><a data-id="se" href="">Sweden</a></li>
+                    <li role="option"><a data-id="tr" href="">Turkey</a></li>
+                </ul>
+            </div>
         </div>
-        <!-- //Form field -->
-        <!-- Form field error message -->
-        <span class="fm-Message">Please select a country from the list</span>
-        <!-- // Form field error message -->
-
-        <ul role="listbox" class="cs-List" id="js-country-list">
-          <li role="option"><a data-id="at" href="">Austria</a></li>
-          <li role="option"><a data-id="cz" href="">Czech Republic</a></li>
-          <li role="option"><a data-id="dk" href="">Denmark</a></li>
-          <li role="option"><a data-id="ee" href="">Estonia</a></li>
-          <li role="option"><a data-id="fr" href="">France</a></li>
-          <li role="option"><a data-id="de" href="">Germany</a></li>
-          <li role="option"><a data-id="gr" href="">Greece</a></li>
-          <li role="option"><a data-id="ie" href="">Ireland</a></li>
-          <li role="option"><a data-id="it" href="">Italy</a></li>
-          <li role="option"><a data-id="lu" href="">Luxembourg</a></li>
-          <li role="option"><a data-id="nl" href="">Netherlands</a></li>
-          <li role="option"><a data-id="pl" href="">Poland</a></li>
-          <li role="option"><a data-id="pt" href="">Portugal</a></li>
-          <li role="option"><a data-id="ro" href="">Romania</a></li>
-          <li role="option"><a data-id="sk" href="">Slovakia</a></li>
-          <li role="option"><a data-id="si" href="">Slovenia</a></li>
-          <li role="option"><a data-id="es" href="">Spain</a></li>
-          <li role="option"><a data-id="se" href="">Sweden</a></li>
-          <li role="option"><a data-id="tr" href="">Turkey</a></li>
-        </ul>
-      </div>
-    </div>
-  </fieldset>
-
-  <!-- build:section recursive section.form-controls-two_buttons --><!--/build -->
-
+    </fieldset>
+    <!-- build:section recursive section.form-controls-two_buttons -->
+    <!--/build -->
 </form>
