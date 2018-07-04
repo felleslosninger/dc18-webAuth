@@ -17,25 +17,25 @@
             document.getElementById("btn-submit-remove").click();
             return;
         }
-        
+
         // custom action
         event.preventDefault();
 
         let hint = document.getElementById("confirm-remove");
         let btn = document.getElementById("btn-remove");
-        
+
         let oldtxt = btn.innerHTML; // save for restoration later
-        
+
         // I must use innerHTML here because outerHTML has the class
         // "visuallyHidden"
-        btn.innerHTML = "<span>"+hint.innerHTML+"</span>";
-        
+        btn.innerHTML = "<span>" + hint.innerHTML + "</span>";
+
         // give user a 3 second window to confirm the action
         setTimeout(() => {
             btn.innerHTML = oldtxt;
             done = false; // prevent default again next time
         }, 3000);
-    
+
         done = true; // don't prevent default next time
     });
 
