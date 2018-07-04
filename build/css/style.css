@@ -2373,10 +2373,16 @@ This is the temporary customization
 
 /*# sourceMappingURL=style.css.map */
 
+
 .add-devices {
   flex-grow: 8;
   margin: 0;
   padding: 0 1rem;
+}
+
+.device-warning {
+  padding: 0;
+  margin: 0 0 0 1rem;
 }
 
 .fullWidth {
