@@ -116,13 +116,13 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <div class='Box_main Box_inside-footer'>
                     <ul class='ln-List ln-List-lowPriority'>
                         <li>
-                            <a href="" class='ln-List_Element'>
-      <span class='ln-List_Element_Logo'>
-        <img src='../img/key.png' alt='' />
-      </span>
+                            <a href="" id='register-device' class='ln-List_Element'>
+                                <span class='ln-List_Element_Logo'>
+                                    <img src='../img/key.png' alt='' />
+                                </span>
                                 <div class='ln-List_Element_Service' id="webAuthn">
                                     <span class='ln-List_Element_Service_Name'>Smart-enhet</span>
-                                    <span class='ln-List_Element_Service_Info'>Trykk for å registrere smart-enhet</span>
+                                    <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smart-enhet</span>
                                 </div>
                             </a>
                         </li>
@@ -133,15 +133,10 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <!-- Form -->
                 <form action='#'>
                     <div class='fm-Field'>
-                        <div class='fm-Checkbox'>
-                            <input id='digipost-check' type='checkbox' checked='checked' name="provider" value="digipost" />
+                        <div class='fm-Checkbox-hide'>
+                            <input id='digipost-check' type='checkbox' name="provider" value="digipost" />
                             <label for='digipost-check'>
-                <span class='fm-Checkbox_Logo'>
-                  <i class="fa fa-key"></i>
-                </span>
-                                <span class='fm-Checkbox_Info'>
-                  Skjul varsel om WebAuthn
-                </span>
+                                <span class='fm-Checkbox_Info'>Skjul varsel om smart-enhet</span>
                             </label>
                         </div>
                     </div>
@@ -152,14 +147,12 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                         <button class='btn btn-Normal'><span>Avbryt</span></button>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
-
                 </form>
             </div>
-
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
                     <ul>
-                        <li><a href='MinID-2D.html'><span>Velykket</span></a></li><br>
+                        <li><a href='MinID-2D.html'><span>Vellykket</span></a></li><br>
                     </ul>
                 </div>
 
@@ -203,6 +196,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
     <script type="text/javascript" src="../../js/check-enable-save.js"></script>
     <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
     <script type="text/javascript" src="../../js/webauthn.js"></script>
+    <script type="text/javascript" src="../../js/check-enable-hide.js"></script>
 </body>
 
 </html>
