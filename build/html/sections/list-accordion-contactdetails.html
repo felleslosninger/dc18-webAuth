@@ -4,42 +4,20 @@
             <!-- NOTE: Add class js-initially-open if panel should open when page opens -->
             <a role='button' aria-expanded="true" aria-controls="content-1" id="alternative-1" href='' class='la-List_Element js-initially-open'>Dine kontaktdetaljer<span class='fa fa-angle-down'></span></a>
         </div>
-
         <div role="region" aria-labelledby="alternative-1" id="content-1" class="la-List_Region">
             <div class="fm-Fields">
                 <p class="ingress with-Link">
                     The information below is registrered in a common contact registrer that will be used by public athorities getting in contact with you.
                     <a href=''><span>Read more</span></a>
                 </p>
-
-                <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
-                <div class='fm-Field'>
-                    <span class='label'>Mobile phone number</span>
-                    <div class='with-icon'>
-                        <span class='text disabled'>98712345</span>
-                        <button>
-      <span class='visuallyHidden'>Klikk her for å endre ditt telefonnummer</span>
-      <span class='fa fa-pencil'></span>
-    </button>
-                    </div>
-                </div>
-                <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
-                <div class='fm-Field'>
-                    <span class='label'>e-mail address</span>
-                    <div class='with-icon'>
-                        <span class='text disabled'>ola.nordmann@online.no</span>
-                        <button>
-      <span class='visuallyHidden'>Klikk her for å endre din epost-adresse</span>
-      <span class='fa fa-pencil'></span>
-    </button>
-                    </div>
-                </div>
+                <!-- build:section recursive section.form-field_mobile-with_edit -->
+                <!--/build -->
+                <!-- build:section recursive section.form-field_email-with_edit -->
+                <!--/build -->
             </div>
-            <!-- <div class='help-Link'>
-  <a href='#'><span class='fa fa-question-circle'></span><span class='visuallyHidden'>Hjelp</span></a>
-</div> -->
+            <!-- build:section recursive section.box-body_help-icon -->
+            <!--/build -->
         </div>
-
     </li>
     <li>
         <div role='heading'>
@@ -51,34 +29,11 @@
                     With a digital postbox at e-Boks or Digipost, you can recieve post from the public sector delivered digitaly instead of on paper. The mailbox must first be created at the provider before you can take it into use.
                     <a href=''><span>Read more</span></a>
                 </p>
-                <!-- This field has label, but as content has the list
-The elements have 3 columns, that's why element has classes
-with-logo - indicating that it has logo picture
-with-icon indicating that it has an action icon
--->
-                <div class='fm-Field'>
-                    <span class='label'>Your digital postbox</span>
-                    <ul class='ln-List ln-List_Digitalpost'>
-                        <li>
-                            <a class='ln-List_Element with-logo with-icon' href='#'>
-        <span class='ln-List_Element_Logo'>
-          <img src='../../images/svg/digipost.svg' alt='' />
-        </span>
-        <div class='ln-List_Element_Service'>
-          <span class='ln-List_Element_Service_Info'>Du mottar i dag post fra det offentlige til din postkasse hos Digipost</span>
-        </div>
-        <span class='ln-List_Element_Action'>
-          <span class='visuallyHidden'>Klikk her for å endre din digital postbox innstillinger</span>
-          <span class='fa fa-pencil'></span>
-        </span>
-      </a>
-                        </li>
-                    </ul>
-                </div>
+                <!-- build:section recursive section.form-button_digital_postbox-with_edit -->
+                <!--/build -->
             </div>
-            <!-- <div class='help-Link'>
-  <a href='#'><span class='fa fa-question-circle'></span><span class='visuallyHidden'>Hjelp</span></a>
-</div> -->
+            <!-- build:section recursive section.box-body_help-icon -->
+            <!--/build -->
         </div>
     </li>
     <li>
@@ -93,15 +48,11 @@ with-icon indicating that it has an action icon
                         <a href=''><span>Read more</span></a>
                     </p>
                 </div>
-                <!-- Controls placeholder with action button only -->
-                <div class='fm-Controls with-Action'>
-                    <button class='btn btn-Action' type='submit'><span>opt out</span></button>
-                </div>
-                <!-- //Controls placeholder with action button only -->
+                <!-- build:section recursive section.form-controls-action_button_only-optout -->
+                <!--/build -->
             </form>
-            <!-- <div class='help-Link'>
-  <a href='#'><span class='fa fa-question-circle'></span><span class='visuallyHidden'>Hjelp</span></a>
-</div> -->
+            <!-- build:section recursive section.box-body_help-icon -->
+            <!--/build -->
         </div>
     </li>
 </ul>

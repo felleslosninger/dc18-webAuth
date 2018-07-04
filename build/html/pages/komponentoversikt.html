@@ -4,39 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <title>IDPorten</title>
-
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../../fonts/open-sans/open-sans.css">
     <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
-
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <link type="text/css" rel="stylesheet" href="../../css/style.css" />
-
 </head>
 
 <body>
     <!--[if lt IE 11]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-
     <!-- SECTION: HEADER -->
-
     <header class='h-Main'>
-
         <div class='h-Main_Content'>
             <a href="" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
-
             <!-- NOTE: placholder class must be present, even if it has no content -->
             <div class="h-Main_Content_Placeholder">
                 <!-- NOTE: Present on pages with service provider name and logo. Visible on mobile sreens only. -->
                 <span class="h-Main_Content_Provider">Leikanger kommune</span>
             </div>
-
             <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
             <div class='h-Menu_Container' id='js-menues'>
                 <nav class='h-Menu'>
@@ -45,18 +34,12 @@
                         <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
                     </ul>
                 </nav>
-
             </div>
-
         </div>
     </header>
-
     <!-- /SECTION: HEADER -->
-
-
     <main>
         <div>
-
             <section class='Box'>
                 <div class='driftsmelding'><span class='title'>TYPOGRAPHY</span></div>
                 <div class='Box_main'>
@@ -66,9 +49,7 @@
                         </p>
                         <p class="with-Link">Les mer om<a href=""><span>kommunikasjon på nett med det offentlige</span></a></p>
                     </div>
-
                 </div>
-
                 <div class='driftsmelding'><span class='title'>BUTTONS AND LINKS</span></div>
                 <div class='Box_main'>
                     <form>
@@ -86,7 +67,6 @@
                         </div>
                     </form>
                 </div>
-
                 <div class='driftsmelding'><span class='title'>DISABLED BUTTONS</span></div>
                 <div class='Box_main'>
                     <form class="disabled">
@@ -98,35 +78,28 @@
                         <!-- //Controls placeholder with two buttons -->
                     </form>
                 </div>
-
                 <div class='driftsmelding'><span class='title'>INPUT FIELDS</span></div>
                 <div class='Box_main'>
                     <form>
                         <div class='fm-Fields'>
-
                             <div class='fm-Field'>
                                 <label for='idnumber'>Fødselsnummer <span>(11 siffer)</span></label>
                                 <input id='idnumber' maxlength="11" type='tel' placeholder='Fødselsnummer (11 siffer)' />
                             </div>
                             <span class='fm-Message'>Vennligst fyll inn fødselsnummeret ditt</span>
-
                             <div class='fm-Field'>
                                 <label for='password'>Passord</label>
                                 <input id='password' type='password' placeholder='******' />
                             </div>
                             <span class='fm-Message'>Vennligst skriv inn passordet ditt</span>
-
                             <div class='fm-Field'>
                                 <label for='birthdate'>Date of birth</label>
                                 <input id='birthdate' type='text' placeholder='YYYY-MM-DD' />
                             </div>
                             <span class='fm-Message'>Please fill in your birthday date</span>
-
                             <br />
-
                             <label for='password'>Country Selector</label>
                             <div class='cs-InputContainer'>
-
                                 <div class="cs-Input fm-Field" id="js-country">
                                     <div class='cs-Input_Placeholder'>
                                         <label for="country" class="visuallyHidden">Enter or select country</label>
@@ -158,11 +131,9 @@
                                     <li role="option"><a data-id="tr" href="">Turkey</a></li>
                                 </ul>
                             </div>
-
                         </div>
                     </form>
                 </div>
-
                 <div class='driftsmelding'><span class='title'>INPUT ERRORS AND WARNINGS</span></div>
                 <form>
                     <div class='fm-Fields'>
@@ -175,7 +146,6 @@
                         <!-- NOTE: if both error and warning message exists, error message must come first -->
                         <span class='fm-Message'>Please fill in your birthday date</span>
                         <span class='fm-Message-warning'>Test</span>
-
                         <!-- 2) When fm-Field gets class .error the span.fm-Message is shown,
           and the input field change border color -->
                         <div class='fm-Field error'>
@@ -186,7 +156,6 @@
             (in Norwegian "fødselsnummer") and D-numbers are issued by the Norwegian Tax Administration.
             Your number should contain 11 digits and is necessary to register as a MinID user.</span>
                         <span class='fm-Message-warning'>Test</span>
-
                         <!-- 3) When fm-Field gets class .warning the span.fm-Message-warning
           is shown and the input border changes color.  -->
                         <div class='fm-Field warning'>
@@ -195,7 +164,6 @@
                         </div>
                         <span class='fm-Message'>Please enter a password</span>
                         <span class='fm-Message-warning'>NB! Capslock is on</span>
-
                         <!-- 4) When fm-Field gets class .error and .warning both messages are
           shown and input border gets the error color -->
                         <div class='fm-Field error warning'>
@@ -204,11 +172,8 @@
                         </div>
                         <span class='fm-Message'>Please enter a password</span>
                         <span class='fm-Message-warning'>NB! Capslock is on</span>
-
                     </div>
                 </form>
-
-
                 <div class='driftsmelding'><span class='title'>DISABLED INPUT FIELDS</span></div>
                 <div class='Box_main'>
                     <form class="disabled">
@@ -218,7 +183,6 @@
                                 <input id='idnumber' maxlength="11" type='tel' placeholder='Fødselsnummer (11 siffer)' />
                             </div>
                             <span class='fm-Message'>Vennligst fyll inn fødselsnummeret ditt</span>
-
                             <div class='fm-Field'>
                                 <label for='password'>Passord</label>
                                 <input id='password' type='password' placeholder='******' />
@@ -227,7 +191,6 @@
                         </div>
                     </form>
                 </div>
-
                 <div class='driftsmelding'><span class='title'>FIELDS WITH EDIT POSSIBILITY</span></div>
                 <div class='Box_main'>
                     <form>
@@ -238,9 +201,9 @@
                                 <div class='with-icon'>
                                     <span class='text disabled'>98712345</span>
                                     <button>
-      <span class='visuallyHidden'>Klikk her for å endre ditt telefonnummer</span>
-      <span class='fa fa-pencil'></span>
-    </button>
+                                        <span class='visuallyHidden'>Klikk her for å endre ditt telefonnummer</span>
+                                        <span class='fa fa-pencil'></span>
+                                    </button>
                                 </div>
                             </div>
                             <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
@@ -249,15 +212,14 @@
                                 <div class='with-icon'>
                                     <span class='text disabled'>1989-06-11</span>
                                     <button>
-      <span class='visuallyHidden'>Klikk her for å endre din fødselsdato</span>
-      <span class='fa fa-pencil'></span>
-    </button>
+                                        <span class='visuallyHidden'>Klikk her for å endre din fødselsdato</span>
+                                        <span class='fa fa-pencil'></span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
-
                 <div class='driftsmelding'><span class='title'>NOTIFICATIONS</span></div>
                 <form>
                     <div class='fm-Fields'>
@@ -295,7 +257,6 @@
                         </div>
                     </div>
                 </form>
-
                 <div class='driftsmelding'><span class='title'>STEP INDICATOR</span></div>
                 <div class='Box_main'>
                     <!-- Progress dots -->
@@ -304,7 +265,6 @@
                         <div class='fm-Progress_Dot active'></div>
                     </div>
                 </div>
-
                 <div class='driftsmelding'><span class='title'>TITLE BARS</span></div>
                 <div class='Box_header'>
                     <h1 class='Box_header-title with-logo logo-eid-gray'>Select an electronic id</h1>
@@ -315,9 +275,7 @@
                 </div>
                 <div class='Box_header'>
                     <h1 class='Box_header-title with-logo logo-eid-gray'>Select an electronic id</h1>
-
                     <nav class='mi-Menu' id='js-mi-menu'>
-
                         <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='mi-Menu_Trigger mi-Menu_Trigger-disabled'>
     <img src='../../images/svg/minid-m-kant.svg' alt="minid logo" />
     <span class="visuallyHidden">Meny</span>
@@ -329,14 +287,11 @@
                             <li><a href="" class="mi-Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
                         </ul>
                     </nav>
-
                 </div>
                 <div class='Box_header'>
                     <h1 class='Box_header-title with-logo logo-eid-gray'>Logg inn med BankID på mobil</h1>
                     <div class='Box_header-provider'><img src='../../images/BankID-mobil.png' alt='BankID på mobil logo' /></div>
                 </div>
-
-
                 <div class='driftsmelding'><span class='title'>SELECTOR</span></div>
                 <div class='Box_main'>
                     <ul class='ln-List'>
@@ -394,7 +349,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class='driftsmelding'><span class='title'>ELECTRONIC MAIL BOX</span></div>
                 <div class='Box_main'>
                     <div class="fm-Fields">
@@ -422,7 +376,6 @@ with-icon indicating that it has an action icon
                                 </li>
                             </ul>
                         </div>
-
                         <div class='fm-Field'>
                             <div class='label'>Din aktive postkasse</div>
                             <ul class="ln-List ln-List_Digitalpost">
@@ -438,9 +391,7 @@ with-icon indicating that it has an action icon
                                 </li>
                             </ul>
                         </div>
-
                         <div class='fm-Field'>
-
                             <div class='label'>Endre til</div>
                             <ul class="ln-List ln-List-simple">
                                 <li>
@@ -456,62 +407,54 @@ with-icon indicating that it has an action icon
                                 </li>
                             </ul>
                         </div>
-
                         <div class='label'>Velg digital postkasse</div>
                         <div class='fm-RadioButtons with-Logo'>
                             <input id='digipost' type='radio' name="provider" checked='checked' value="digipost" />
                             <label for='digipost'>
-              <span class='logo'>
+                                <span class='logo'>
                 <img src='../../images/svg/digipost.svg' alt='' />
               </span>
-              <span>
+                                <span>
                 Velg din postkasse hos Digipost
               </span>
-            </label>
-
+                            </label>
                             <input id='eboks' type='radio' name="provider" checked='checked' value="eboks" />
                             <label for='eboks'>
-              <span class='logo'>
+                                <span class='logo'>
                 <img src='../../images/svg/eboks.svg' alt='' />
               </span>
-              <span>
+                                <span>
                 Velg din postkasse hos e-Boks
               </span>
-            </label>
+                            </label>
                         </div>
-
                         <div class='fm-Field'>
                             <div class='fm-Checkbox'>
                                 <input id='digipost-check' type='checkbox' name="provider" value="digipost" />
                                 <label for='digipost-check'>
-                <span class='fm-Checkbox_Logo'>
+                                    <span class='fm-Checkbox_Logo'>
                   <img src='../../images/svg/eboks.svg' alt='' />
                 </span>
-                <span class='fm-Checkbox_Info'>
+                                    <span class='fm-Checkbox_Info'>
                   Klikk her for å velge postkasse hos e-Boks
                 </span>
-              </label>
+                                </label>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
                 <div class='driftsmelding'><span class='title'>ACCORDION</span></div>
-
                 <ul class='la-List'>
                     <li>
                         <div role='heading'>
                             <!-- NOTE: Add class js-initially-open if panel should open when page opens -->
                             <a role='button' aria-expanded="false" aria-controls="content-1" id="alternative-1" href='' class='la-List_Element'>Panel 1<span class='fa fa-angle-down'></span></a>
                         </div>
-
                         <div role="region" aria-labelledby="alternative-1" id="content-1" class="la-List_Region">
                             <div class='Box_Section'>
                                 <p>Content of Accordion panel 1</p>
                             </div>
                         </div>
-
                     </li>
                     <li>
                         <div role='heading'>
@@ -523,9 +466,7 @@ with-icon indicating that it has an action icon
                             </div>
                         </div>
                     </li>
-
                 </ul>
-
                 <div class='driftsmelding'><span class='title'>TABS</span></div>
                 <div class='tb-Container'>
                     <!-- Tab header -->
@@ -535,7 +476,6 @@ with-icon indicating that it has an action icon
                         <a href='#' data-target='tab-2'><span><span>Tab-2</span></span></a>
                     </div>
                     <!-- //Tab header -->
-
                     <!-- Tabs container -->
                     <div class='tb-Body'>
                         <!-- Tab 1 -->
@@ -545,7 +485,6 @@ with-icon indicating that it has an action icon
                             </div>
                         </div>
                         <!-- /Tab 1 -->
-
                         <!-- Tab 2 -->
                         <div class='tb-Tab' data-id='tab-2'>
                             <div class="Box_Section">
@@ -554,7 +493,6 @@ with-icon indicating that it has an action icon
                         </div>
                         <!-- // Tab 2 -->
                     </div>
-
                     <div class='driftsmelding'><span class='title'>OPERATIONS ALERT</span></div>
                     <!-- Driftsmelding -->
                     <div class='driftsmelding with-Icon'>
@@ -564,28 +502,23 @@ with-icon indicating that it has an action icon
                     <!-- //Driftsmelding -->
                     <br />
                     <br />
-
                     <div class='driftsmelding'><span class='title'>404</span></div>
                     <div class='Box_Section'>
                         <p class="with-Link"><a href="Statisk-HTML-404.html"><span>Eksempel</span></a></p>
                     </div>
-
                     <div class='driftsmelding'><span class='title'>WARNING</span></div>
                     <div class='Box_Section'>
                         <p class="with-Link"><a href="Statisk-HTML-1-advarsel.html"><span>Eksempel</span></a></p>
                     </div>
-
                     <div class='driftsmelding'><span class='title'>POPUP</span></div>
                     <div class='Box_Section'>
                         <p class="with-Link"><a href="MinProfil-Kontaktdetaljer-2AA.html"><span>Eksempel 1</span></a></p>
                         <p class="with-Link"><a href="Bruker-fra-utlandet-2.html"><span>Eksempel 2</span></a></p>
                     </div>
-
                     <div class='driftsmelding'><span class='title'>RECEIPT</span></div>
                     <div class='Box_Section'>
                         <p class="with-Link"><a href="MinID-Ny-bruker-7A.html"><span>Eksempel</span></a></p>
                     </div>
-
                     <div class='driftsmelding'><span class='title'>HELP LINK</span></div>
                     <div class="Box_footer">
                         <div class='Box_footer-links'></div>
@@ -593,15 +526,11 @@ with-icon indicating that it has an action icon
   <a href='#'><span class='fa fa-question-circle'></span><span class='visuallyHidden'>Help</span></a>
 </div> -->
                     </div>
-
             </section>
-
             </div>
     </main>
     <!-- /build -->
-
     <!-- SECTION: FOOTER -->
-
     <footer class="f-Main">
         <div class='f-Main_Content'>
             <div class='f-Main_Logo' aria-hidden="true"></div>
@@ -614,9 +543,7 @@ with-icon indicating that it has an action icon
             </div>
         </div>
     </footer>
-
     <!-- /SECTION: FOOTER -->
-
     <script type="text/javascript" src="../../js/vendor.min.js"></script>
     <script type="text/javascript" src="../../js/accordion.js"></script>
     <script type="text/javascript" src="../../js/country-selector.js"></script>
