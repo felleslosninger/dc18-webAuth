@@ -1763,16 +1763,16 @@ textarea {
   background-color: #ff4d4d;
   border: 1px solid #e7e8ea;
   outline: none; }
-  .btn-Normal:hover {
-    border-color: #9fa9b4;
-    background-color: #f7f8fa; }
-  .btn-Normal:active {
+  .btn-Negative:hover {
+    border-color: #ffffff;
+    background-color: #cc4d4d; }
+  .btn-Negative:active {
     border-color: #006cff;
-    background-color: #f7f8fa; }
-  .btn-Normal:focus {
+    background-color: #cc4d4d; }
+  .btn-Negative:focus {
     border-color: #006cff;
-    background-color: #f7f8fa; }
-    .btn-Normal:focus > span {
+    background-color: #cc4d4d; }
+    .btn-Negative:focus > span {
       border-bottom-color: #006cff; }
 
 .btn-Action {
