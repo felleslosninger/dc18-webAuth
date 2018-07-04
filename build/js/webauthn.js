@@ -1,6 +1,6 @@
 const webauthn = () => {
   const $ = jQuery.noConflict();
-
+  const name = $('#add').val() || $('#add').attr('placeholder');
 
   $('#webAuthn').on('click', (event) => {
     event.preventDefault();
@@ -12,7 +12,7 @@ const webauthn = () => {
     navigator.credentials.create(credentialCreationOptionsRegister)
       .then((credentials) => {
         console.log(credentials);
-        $(document).trigger('webauthn:register-success')
+        $(document).trigger('webauthn:register-success', {name, date: new Date()})
       })
       .catch(console.error);
   });
