@@ -1774,7 +1774,7 @@ textarea {
     background-color: #f7f8fa; }
   .btn-Action.add-to-list {
     margin-top: 1rem;
-    padding: 0.5rem;}
+    padding: 1rem;}
 
 .fm-Progress_Container {
   display: flex;
@@ -2297,4 +2297,5 @@ This is the temporary customization
 
 .add-devices {
   flex-grow: 8;
+  margin: 0;
 }
