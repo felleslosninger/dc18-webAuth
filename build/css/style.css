@@ -1976,7 +1976,7 @@ textarea {
     width: 100%; }
 
 .fm-Checkbox-hide {
-  margin: 0;
+  margin: 0 2rem 0 2rem;
   position: relative;
   border: 1px solid #e6ebf0;
   border-radius: 4px; }
