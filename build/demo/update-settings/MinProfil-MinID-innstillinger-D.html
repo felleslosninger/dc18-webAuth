@@ -76,31 +76,44 @@
                 <!-- Form -->
                 <form action='MinProfil-MinID-innstillinger-B.html'>
                     <div class='fm-Fields'>
-                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
-                        <div class='fm-Field'>
-                            <label for='security-key-name'>Navn på sikkerhetsnøkkel</label>
-                            <div class='with-icon'>
-                                <input id='security-key-name' type='text' placeholder='Navn på sikkerhetsnøkkel' value="min sikkerhetsnøkkel" />
-                                <button>
-                                    <span class='visuallyHidden'>Klikk her for å endre navn på sikkerhetsnøkkel</span>
-                                    <span class='fa fa-pencil'></span>
+                        <div class='notification with-Icon icon-key'>
+                            <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                            <div class='fm-Field'>
+                                <label for='security-key-name'>Navn på sikkerhetsnøkkel</label>
+                                <div class='with-icon'>
+                                    <input id='security-key-name' type='text' placeholder='Navn på sikkerhetsnøkkel' value="min sikkerhetsnøkkel" />
+                                    <button>
+                                        <span class='visuallyHidden'>Klikk her for å endre navn på sikkerhetsnøkkel</span>
+                                        <span class='fa fa-pencil'></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class='fm-Message'>Sikkerhetsnøkkel må ha et navn</span>
+
+                            <div class='fm-Field'>
+                                <label for='security-key-registration-date'>Registrert</label>
+                                <!-- rspace45 aligns the field's right edge with
+                                    the right edge of the field above by adding
+                                    45px of padding -->
+                                <input class='rspace45' id='security-key-registration-date' type='text' value="Tue, 03 Jul 2018 10:23:42 GMT" disabled />
+                            </div>
+                            <div class='fm-Controls nopadding'>
+                                <!-- rspace45 aligns the field's right edge with
+                                    the right edge of the field above by adding
+                                    45px of padding -->
+                                <button class='btn btn-Negative fullWidth nomargin rspace45'>
+                                    <span>Fjern sikkerhetsnøkkel</span>
                                 </button>
                             </div>
                         </div>
-                        <span class='fm-Message'>Sikkerhetsnøkkel må ha et navn</span>
-
-                        <div class='fm-Field'>
-                            <label for='security-key-registration-date'>Registrert</label>
-                            <input id='security-key-registration-date' type='text' value="Tue, 03 Jul 2018 10:23:42 GMT" disabled />
-                        </div>
-                    </div>
-                    <!-- Controls placeholder with two buttons -->
-                    <div class='fm-Controls with-Normal'>
-                        <button class='btn btn-Normal'><span>Fjern sikkerhetsnøkkel</span></button>
                     </div>
                     <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Action' type='submit'><span>Save</span></button>
-                        <button class='btn btn-Normal'><span>Cancel</span></button>
+                        <button class='btn btn-Action' type='submit'>
+                            <span>Save</span>
+                        </button>
+                        <button class='btn btn-Normal'>
+                            <span>Cancel</span>
+                        </button>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
                 </form>

@@ -4,3 +4,6 @@ dev
 lanekassen.gif
 
 .idea
+
+# ignore ViM .swp files
+*.swp
