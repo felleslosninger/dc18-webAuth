@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Administrer sikkerhetsnøkkel</title>
+    <title>Administrer smartenhet</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,7 +59,7 @@
 
         <section class='Box'>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-close-button'>Administrer sikkerhetsnøkkel</h1>
+                <h1 class='Box_header-title with-close-button'>Administrer smartenhet</h1>
                 <span class='Box_header-close'>
     <a href='#'>
       <span class='fa fa-close'>
@@ -76,44 +76,45 @@
                 <!-- Form -->
                 <form action='index.html'>
                     <div class='fm-Fields'>
-                        <div class='notification with-Icon icon-key'>
+                        <div class='with-Icon icon-key'>
                             <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
                             <div class='fm-Field'>
-                                <label for='security-key-name'>Navn på sikkerhetsnøkkel</label>
-                                <div class='with-icon'>
-                                    <input id='security-key-name' type='text' placeholder='Navn på sikkerhetsnøkkel' value="min sikkerhetsnøkkel" />
-                                    <button>
-                                        <span class='visuallyHidden'>Klikk her for å endre navn på sikkerhetsnøkkel</span>
-                                        <span class='fa fa-pencil'></span>
-                                    </button>
-                                </div>
+                                <label for='security-key-name'>Navn på smartenhet</label>
+                                <input id='security-key-name'
+                                       type='text'
+                                       placeholder='Navn på smartenhet'
+                                       value="min sikkerhetsnøkkel" />
                             </div>
-                            <span class='fm-Message'>Sikkerhetsnøkkel må ha et navn</span>
+                            <span class='fm-Message'>Smartenhet må ha et navn</span>
 
                             <div class='fm-Field'>
                                 <label for='security-key-registration-date'>Registrert</label>
-                                <!-- rspace45 aligns the field's right edge with
-                                    the right edge of the field above by adding
-                                    45px of padding -->
-                                <input class='rspace45' id='security-key-registration-date' type='text' value="Tue, 03 Jul 2018 10:23:42 GMT" disabled />
+                                <input id='security-key-registration-date' 
+                                       type='text' 
+                                       value="Tue, 03 Jul 2018 10:23:42 GMT" 
+                                       disabled />
                             </div>
-                            <div class='fm-Controls nopadding'>
-                                <!-- rspace45 aligns the field's right edge with
-                                    the right edge of the field above by adding
-                                    45px of padding -->
-                                <button class='btn btn-Negative fullWidth nomargin rspace45'>
-                                    <span>Fjern sikkerhetsnøkkel</span>
+                            <div class='fm-Controls with-Normal nopadding'>
+                                <button type="button" id="btn-remove" class='btn btn-Negative fullWidth nomargin'>
+                                    <span>Fjern smartenhet</span>
                                 </button>
+                                <span class="visuallyHidden" id="confirm-remove">
+                                    <!-- break tag to ensure that the button
+                                        doesn't widen when pressed -->
+                                    Trykk igjen for å<br> bekrefte fjerning
+                                </span>
                             </div>
                         </div>
                     </div>
                     <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Action' type='submit'>
+                        <button id="btn-submit" class='btn btn-Action' type='submit'>
                             <span>Lagre</span>
                         </button>
                         <button class='btn btn-Normal'>
                             <span>Avbryt</span>
                         </button>
+                        <!-- Submit form with removal option -->
+                        <button id="btn-submit-remove" class="visuallyHidden" />
                     </div>
                     <!-- //Controls placeholder with two buttons -->
                 </form>
@@ -153,6 +154,7 @@
     <script type="text/javascript" src="../../js/toggleForm.js"></script>
     <script type="text/javascript" src="../../js/check-enable-save.js"></script>
     <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
+    <script type="text/javascript" src="../../js/update-settings-eventbindings.js"></script>
 </body>
 
 </html>
