@@ -4,41 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <title>IDPorten</title>
-
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../../fonts/open-sans/open-sans.css">
     <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
-
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <link type="text/css" rel="stylesheet" href="../../css/style.css" />
-
     <link type="text/css" rel="stylesheet" href="../../css/flags.css">
-
 </head>
 
 <body>
     <!--[if lt IE 11]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-
     <!-- SECTION: HEADER -->
-
     <header class='h-Main'>
-
         <div class='h-Main_Content'>
             <a href="" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
-
             <!-- NOTE: placholder class must be present, even if it has no content -->
             <div class="h-Main_Content_Placeholder">
                 <!-- NOTE: Present on pages with service provider name and logo. Visible on mobile sreens only. -->
                 <span class="h-Main_Content_Provider">Leikanger kommune</span>
             </div>
-
             <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
             <div class='h-Menu_Container' id='js-menues'>
                 <nav class='h-Menu'>
@@ -47,7 +35,6 @@
                         <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
                     </ul>
                 </nav>
-
                 <!-- MinID menu -->
                 <!-- NOTE: We add MinID menu as part of main menu for pages containing minid menu.
           Will be visible only on mobile sized screens for pages with minid menu, e g MinID-1.html and similar.
@@ -62,7 +49,6 @@
                     </ul>
                 </nav>
                 <!-- /MinID-menu -->
-
                 <nav class='h-Menu h-Menu-preOpened'>
                     <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Språk</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
                     <ul>
@@ -75,12 +61,8 @@
             </div>
         </div>
     </header>
-
     <!-- /SECTION: HEADER -->
-
-
     <main>
-
         <section class='Box'>
             <!-- NOTE: provider is added twice: above box title (this one) and below box.
 The one above title is displayed on desktop only. the one below on mobile only. -->
@@ -91,15 +73,12 @@ The one above title is displayed on desktop only. the one below on mobile only. 
             <div class='Box_header'>
                 <h1 class='Box_header-title with-logo logo-eid-gray'>Select an electronic id</h1>
             </div>
-
             <div class='Box_main'>
                 <form action="#">
                     <fieldset>
                         <div class='fm-Fields'>
                             <p class='legend-Style'>Use your National electronic ID to log in.</p>
-
                             <div class='cs-InputContainer'>
-
                                 <!-- Form field with class "error" and it affects both the input field and fm-Message field -->
                                 <div class="cs-Input fm-Field" id="js-country">
                                     <div class='cs-Input_Placeholder'>
@@ -113,7 +92,6 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                                 <!-- Form field error message -->
                                 <span class="fm-Message">Please select a country from the list</span>
                                 <!-- // Form field error message -->
-
                                 <ul role="listbox" class="cs-List" id="js-country-list">
                                     <li role="option"><a data-id="at" href="">Austria</a></li>
                                     <li role="option"><a data-id="cz" href="">Czech Republic</a></li>
@@ -138,28 +116,23 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                             </div>
                         </div>
                     </fieldset>
-
                     <!-- Controls placeholder with two buttons -->
                     <div class='fm-Controls with-Normal with-Action'>
                         <button class='btn btn-Action' type='submit'><span>Next</span></button>
                         <button class='btn btn-Normal'><span>Cancel</span></button>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
-
                 </form>
             </div>
-
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
                     <ul>
                         <li><a href='#'><span>Foreign E-ID</span></a></li>
                     </ul>
                 </div>
-
                 <!-- <div class='Box_footer-help'>
   <a href='#'><span class='fa fa-question-circle'></span><span class='visuallyHidden'>Help</span></a>
 </div> -->
-
             </div>
         </section>
         <!-- NOTE: provider is added twice: above box title and below box (this one).
@@ -167,9 +140,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
         <div class='mi-Provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
     </main>
     <!-- /build -->
-
     <!-- SECTION: FOOTER -->
-
     <footer class="f-Main">
         <div class='f-Main_Content'>
             <div class='f-Main_Logo' aria-hidden="true"></div>
@@ -182,9 +153,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
             </div>
         </div>
     </footer>
-
     <!-- /SECTION: FOOTER -->
-
     <script type="text/javascript" src="../../js/vendor.min.js"></script>
     <script type="text/javascript" src="../../js/accordion.js"></script>
     <script type="text/javascript" src="../../js/country-selector.js"></script>
