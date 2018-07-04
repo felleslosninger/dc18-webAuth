@@ -8,29 +8,27 @@
 */
 
 .receipt {
-  text-align: center;
-  padding: 4.125em 2em 1em 2em;
-  background-size: 50px 50px;
-  background-position: center 1em;
-  @extend %check;
-  &.warning {
-    @extend %notification;
-  }
+    text-align: center;
+    padding: 4.125em 2em 1em 2em;
+    background-size: 50px 50px;
+    background-position: center 1em;
+    @extend %check;
+    &.warning {
+        @extend %notification;
+    }
 
-  p {
-    font-size: $t_size-normal;
-    line-height: 1.4em;
-    margin: 0;
-    padding-left: 1.4286em;
-    padding-right: 1.4286em;
-  }
-
-  // a {
-  //   color: $ca_body-text;
-  //   text-decoration: none;
-  //   border-bottom: 1px solid $ca_link_border;
-  //   &:hover, &:focus {
-  //     color: $ca_link_border;
-  //   }
-  // }
+    p {
+        font-size: $t_size-normal;
+        line-height: 1.4em;
+        margin: 0;
+        padding-left: 1.4286em;
+        padding-right: 1.4286em;
+    } // a {
+    //   color: $ca_body-text;
+    //   text-decoration: none;
+    //   border-bottom: 1px solid $ca_link_border;
+    //   &:hover, &:focus {
+    //     color: $ca_link_border;
+    //   }
+    // }
 }

@@ -8,65 +8,75 @@
 */
 
 .f-Main {
-  width: 100%;
-  background-color: $ca_footer-bg;
-  color: $ca_footer-text;
-  margin-top: auto;
+    width: 100%;
+    background-color: $ca_footer-bg;
+    color: $ca_footer-text;
+    margin-top: auto;
 }
 
 .f-Main_Content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: $ta_footer-text;
-  padding: 2.3em 0.7682em 10.9em 0.7682em;
-  @include mobile {
-    justify-content: flex-start;
-    padding-bottom: 9em;
-    width: auto;
-  }
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: $ta_footer-text;
+    padding: 2.3em 0.7682em 10.9em 0.7682em;
+    @include mobile {
+        justify-content: flex-start;
+        padding-bottom: 9em;
+        width: auto;
+    }
 }
 
 .f-Main_Content-singleLine {
-  justify-content: center;
+    justify-content: center;
 }
 
 .f-Main_Logo {
-  width: 30px;
-  height: 30px;
-  margin: 15px 15px 0 0;
-  background: url('../images/svg/eid.svg') no-repeat top right;
-  @include mobile {
-    width: 26px;
-    height: 26px;
-  }
+    width: 30px;
+    height: 30px;
+    margin: 15px 15px 0 0;
+    background: url('../images/svg/eid.svg') no-repeat top right;
+    @include mobile {
+        width: 26px;
+        height: 26px;
+    }
 }
 
 .f-Main_Info {
-  @include mobile {
-    display: flex;
-    flex-direction: column;
-    line-height: 2.5em;
-  }
-  p {
-    margin: 0 5px;
-  }
-  a {
-    @include text-link($ca_footer-text, $c_white, $ca_footer_link-hover, $ca_footer-text, $t_size_basis, 0.5em);
-  }
-  .f-Main_Content-singleLine & {
-    align-self: flex-end;
-  }
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        line-height: 2.5em;
+    }
+    p {
+        margin: 0 5px;
+    }
+    a {
+        @include text-link($ca_footer-text,
+        $c_white,
+        $ca_footer_link-hover,
+        $ca_footer-text,
+        $t_size_basis,
+        0.5em);
+    }
+    .f-Main_Content-singleLine & {
+        align-self: flex-end;
+    }
 }
 
 .f-Main_Link {
-  display: inline-block;
-  color: $ca_footer-text;
-  text-decoration: none;
+    display: inline-block;
+    color: $ca_footer-text;
+    text-decoration: none;
 
-  &[href^="tel:"] {
-    @include text-link($ca_footer-text, transparent, $ca_footer_link-hover, $ca_footer-text, $t_size_basis, 0.5em);
-  }
+    &[href^="tel:"] {
+        @include text-link($ca_footer-text,
+        transparent,
+        $ca_footer_link-hover,
+        $ca_footer-text,
+        $t_size_basis,
+        0.5em);
+    }
 }

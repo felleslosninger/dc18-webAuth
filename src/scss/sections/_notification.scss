@@ -1,132 +1,130 @@
-
-
-
 .notification {
-  padding: 1em 1em 1.5em 1em;
-  margin: 1em 2.2857em; // Same spacing as form fields (32px)
-  font-size: $t_size_normal;
-  line-height: 1.5em;
-  border: 2px solid $c_notification;
-  border-radius: 4px;
-  background-color: $c_white; // Need background color for use outside class Box (e g 404)
-  &.with-Icon {
-    position: relative;
-    padding-left: 4em;
-    &:after {
-      @extend %notification;
-      content: "";
-      display: block;
-      position: absolute;
-      width: 2em;
-      height: 2em;
-      left: 1em;
-      top: 1em;
+    padding: 1em 1em 1.5em 1em;
+    margin: 1em 2.2857em; // Same spacing as form fields (32px)
+    font-size: $t_size_normal;
+    line-height: 1.5em;
+    border: 2px solid $c_notification;
+    border-radius: 4px;
+    background-color: $c_white; // Need background color for use outside class Box (e g 404)
+    &.with-Icon {
+        position: relative;
+        padding-left: 4em;
+        &:after {
+            @extend %notification;
+            content: "";
+            display: block;
+            position: absolute;
+            width: 2em;
+            height: 2em;
+            left: 1em;
+            top: 1em;
+        }
     }
-  }
-  &.with-Icon.icon-pin {
-    &:after {
-      @extend %pincode;
-      width: 2.25em;
-      height: 2.25em;
+    &.with-Icon.icon-pin {
+        &:after {
+            @extend %pincode;
+            width: 2.25em;
+            height: 2.25em;
+        }
     }
-  }
-  &.with-Icon.icon-email {
-    &:after {
-      @extend %email;
-      width: 2.5em;
-      height: 2.5em;
+    &.with-Icon.icon-email {
+        &:after {
+            @extend %email;
+            width: 2.5em;
+            height: 2.5em;
+        }
     }
-  }
-  &.with-Icon.icon-sms {
-    &:after {
-      @extend %sms;
-      width: 2.5em;
-      height: 2.5em;
+    &.with-Icon.icon-sms {
+        &:after {
+            @extend %sms;
+            width: 2.5em;
+            height: 2.5em;
+        }
     }
-  }
-  &.with-Icon.icon-alert {
-    &:after {
-      @extend %alert;
-      width: 2em;
-      height: 2em;
+    &.with-Icon.icon-alert {
+        &:after {
+            @extend %alert;
+            width: 2em;
+            height: 2em;
+        }
     }
-  }
-  &.with-Icon.icon-error {
-    &:after {
-      @extend %error;
-      width: 2em;
-      height: 2em;
+    &.with-Icon.icon-error {
+        &:after {
+            @extend %error;
+            width: 2em;
+            height: 2em;
+        }
     }
-  }
 
-  h1 {
-    font-size: 1em;
-  }
+    h1 {
+        font-size: 1em;
+    }
 
-  p:first-of-type {
-    margin-top: 0;
-  }
+    p:first-of-type {
+        margin-top: 0;
+    }
 
-  .highlight {
-    margin-top: 1em;
-    font-weight: 600;
-  }
+    .highlight {
+        margin-top: 1em;
+        font-weight: 600;
+    }
 }
+
 .fm-Fields .notification {
-  margin: 0;
+    margin: 0;
 }
 
 // error
 .notification-error {
-  border-color: $c_error;
+    border-color: $c_error;
 }
 
 // Error pages uses this variant
 .notification-errorPage {
-  padding: 1em 0 1.5em 0;
-  margin: 1em 0;
-  border: none;
-  background-color: transparent;
-  font-size: $t_size-large;
-  line-height: 1.2em;
-  h1 {
-    font-size: 1em;
-    text-transform: uppercase;
-    margin: 0.5em 0 1.5em 0;
-  }
-  h2 {
-    font-size: 0.8889em;
-    margin: 2em 0 0 0;
-  }
-  p {
-    font-size: 0.7778em;
-    margin-top: 0;
-  }
+    padding: 1em 0 1.5em 0;
+    margin: 1em 0;
+    border: none;
+    background-color: transparent;
+    font-size: $t_size-large;
+    line-height: 1.2em;
+    h1 {
+        font-size: 1em;
+        text-transform: uppercase;
+        margin: 0.5em 0 1.5em 0;
+    }
+    h2 {
+        font-size: 0.8889em;
+        margin: 2em 0 0 0;
+    }
+    p {
+        font-size: 0.7778em;
+        margin-top: 0;
+    }
 }
 
 
 // DRIFTSMELDING
 .driftsmelding {
-  background: $c_notification;
-  font-size: $t_size_normal;
-  padding: 1em;
-  display: flex;
-  &.with-Icon {
-    position: relative;
-    padding-left: 4em;
-    &:after {
-      @extend %alert;
-      content: "";
-      display: block;
-      position: absolute;
-      width: 2em;
-      height: 2em;
-      left: 1em;
-      top: 1em;
+    background: $c_notification;
+    font-size: $t_size_normal;
+    padding: 1em;
+    display: flex;
+    &.with-Icon {
+        position: relative;
+        padding-left: 4em;
+        &:after {
+            @extend %alert;
+            content: "";
+            display: block;
+            position: absolute;
+            width: 2em;
+            height: 2em;
+            left: 1em;
+            top: 1em;
+        }
     }
-  }
-  .title {
-    font-weight: 700;
-    padding-right: 0.5em;
-  }
+    .title {
+        font-weight: 700;
+        padding-right: 0.5em;
+    }
 }

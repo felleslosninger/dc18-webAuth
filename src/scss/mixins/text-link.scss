@@ -1,42 +1,41 @@
 @mixin text-link($linkColor: $c_nearly_black, $borderColor: $c_blue, $activeLinkColor: $c_blue, $activeBorderColor: $c_grey, $fontSize: $t_size-normal, $padding: 0.5em) {
-  color: $linkColor;
-  text-decoration: none;
-  position: relative;
-  padding: $padding;
-  font-size: $fontSize;
-  //display: inline-block;
-  &:hover,
-  &:active {
-    color: $activeLinkColor;
-    span {
-      border-bottom-color: $activeLinkColor;
-      &.fa {
-        color: $activeLinkColor;
-      }
-    }
-  }
-  &:focus {
-    color: $activeLinkColor;
-    outline: 1px solid $activeBorderColor;
-    border-bottom-color: transparent;
+    color: $linkColor;
     text-decoration: none;
-    span {
-      border-bottom-color: transparent;
-      &.fa {
+    position: relative;
+    padding: $padding;
+    font-size: $fontSize; //display: inline-block;
+    &:hover,
+    &:active {
         color: $activeLinkColor;
-      }
+        span {
+            border-bottom-color: $activeLinkColor;
+            &.fa {
+                color: $activeLinkColor;
+            }
+        }
     }
-  }
-  span {
-    border-bottom: 1px solid $borderColor;
-    &.fa {
-      border-bottom-color: transparent;
+    &:focus {
+        color: $activeLinkColor;
+        outline: 1px solid $activeBorderColor;
+        border-bottom-color: transparent;
+        text-decoration: none;
+        span {
+            border-bottom-color: transparent;
+            &.fa {
+                color: $activeLinkColor;
+            }
+        }
     }
-  }
+    span {
+        border-bottom: 1px solid $borderColor;
+        &.fa {
+            border-bottom-color: transparent;
+        }
+    }
 }
 
 @mixin apply-text-link($fontSize: 1em, $padding: 0) {
-  a {
-    @include text-link($c_nearly_black, $c_blue, $c_blue, $c_grey, $fontSize, $padding);
-  }
+    a {
+        @include text-link($c_nearly_black, $c_blue, $c_blue, $c_grey, $fontSize, $padding);
+    }
 }
