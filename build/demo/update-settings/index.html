@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Velg foretrukket innlogging</title>
+    <title>[BUILD] PAGE TITLE</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +18,8 @@
     <link type="text/css" rel="stylesheet" href="../../css/style.css" />
 
 </head>
-<!-- use class .popup to hiden header and footer, or use .popup .with-footer to keep footer -->
 
-<body class='hide-mobileMenu popup'>
+<body>
     <!--[if lt IE 11]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -58,55 +57,68 @@
     <main>
 
         <section class='Box'>
+            <!-- NOTE: provider is added twice: above box title (this one) and below box.
+The one above title is displayed on desktop only. the one below on mobile only. -->
+            <div class='Box_Section Box_Section-ServiceProvider'>
+                <div class='Box_Section_Title'>Leikanger kommune</div>
+                <img src='../../images/nav-logo.gif' alt='tjenestetilbyders logo' />
+            </div>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-close-button'>Velg foretrukket innlogging</h1>
-                <span class='Box_header-close'>
-    <a href='#'>
-      <span class='fa fa-close'>
-        <span class='visuallyHidden'>Lukk vindu</span>
-                </span>
-                </a>
-                </span>
+                <h1 class='Box_header-title with-logo logo-eid-gray'>Settings</h1>
+                <div class='Box_header-provider'><img src='../../images/svg/minid-m-kant.svg' alt='MinID logo' /></div>
             </div>
 
             <div class='Box_main'>
 
 
                 <!-- Form -->
-                <form action='index.html'>
-                    <div class='fm-Fields with-Link'>
+                <form action='#'>
+                    <div class='fm-Fields'>
 
-                        <div class='fm-RadioButtons'>
-                            <input id='letter' type='radio' name="login-preference" checked='checked' value="letter" />
-                            <label for='letter'>Pinkode fra brev</label>
-                            <input id='sms' type='radio' name="login-preference" value="sms" />
-                            <label for='sms' class=''>Kode fra SMS (93282061)</label>
-                            <input id='webauthn' type='radio' name="login-preference" value="webauthn" />
-                            <label for='webauthn'>Smartenhet som sikkerhetsnøkkel</label>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <span class='label'>Din påloggings-id</span>
+                            <div class='with-icon'>
+                                <span class='text'>min bruker-id</span>
+                                <button>
+      <span class='visuallyHidden'>Klikk her for å endre din bruker</span>
+      <span class='fa fa-pencil'></span>
+    </button>
+                            </div>
                         </div>
-
-                        <div class='fm-form_link with-Link'>
-                            <a href=''><span>Endre telefonnummer</span></a>
-                        </div>
-
-                        <div class='fm-form_link with-Link'>
-                            <a
-                                href='MinProfil-MinID-innstillinger-D.html'><span>Administrer smartenhet</span></a>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <span class='label'>Ditt passord</span>
+                            <div class='with-icon'>
+                                <span class='text'>**********</span>
+                                <button>
+      <span class='visuallyHidden'>Klikk her for å endre passordet ditt</span>
+      <span class='fa fa-pencil'></span>
+    </button>
+                            </div>
                         </div>
 
                     </div>
-
-                    <!-- Controls placeholder with two buttons -->
-                    <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Action' type='submit'><span>Lagre</span></button>
-                        <button class='btn btn-Normal'><span>Avbryt</span></button>
-                    </div>
-                    <!-- //Controls placeholder with two buttons -->
 
                 </form>
             </div>
 
+            <div class='Box_footer'>
+                <div class='Box_footer-links'>
+                    <!-- <ul> -->
+                    <!-- <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li> -->
+                    <!-- <li><a href='#'><span>Menu 2</span></a></li> -->
+                    <!-- </ul> -->
+                </div>
+
+                <!-- <div class='Box_footer-help'>
+  <a href='#'><span class='fa fa-question-circle'></span><span class='visuallyHidden'>Help</span></a>
+</div> -->
+            </div>
         </section>
+        <!-- NOTE: provider is added twice: above box title and below box (this one).
+  The one above title is displayed on desktop only. the one below on mobile only. -->
+        <div class='mi-Provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
 
     </main>
     <!-- /build -->
