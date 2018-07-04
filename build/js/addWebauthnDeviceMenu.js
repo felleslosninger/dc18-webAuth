@@ -6,12 +6,14 @@ const addWebauthnDeviceMenu = () => {
     event.preventDefault();
     $('#webauthn-added-device').toggle();
     $('#add-webauthn-message').show();
-    $('#add-webauthn-message').text('Smartenhet er nå lagt til din bruker');
+    $('#add-webauthn-message').text('Smartenheten er nå lagt til din bruker');
+    $('#webauthn-hide-warning').toggle();
     $('#webauthn-add-device-box').toggle();
   });
 
   $('#undo-webauthn-device-btn').on('click', (event) => {
     event.preventDefault();
+    $('#webauthn-hide-warning').toggle();
     $('#add-webauthn-message').show();
     $('#add-webauthn-message').text('Smartenheten er fjernet');
     $('#webauthn-added-device').toggle();

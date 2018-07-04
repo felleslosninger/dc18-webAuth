@@ -90,13 +90,12 @@ The one above title is displayed on desktop only. the one below on mobile only. 
 
             <!-- Form -->
             <form action='#'>
-                <p id="add-webauthn-message" class="notification" style="display: none">
+                <div class="device-warning"><p id="add-webauthn-message" class="fm-Message-warning add-device" style="display: none"></p></div>
 
-                </p>
                 <div id="webauthn-add-device-box" class='Box_main Box_inside-footer' onclick="showControls()">
                     <ul class='ln-List ln-List-lowPriority'>
                         <li>
-                            <a href="" class='ln-List_Element'>
+                            <a href="" id="register-device" class='ln-List_Element'>
                                 <span class='ln-List_Element_Logo'>
                                     <img src='../img/key.png' alt='' />
                                 </span>
@@ -120,9 +119,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                                 <span class='fm-Message'>Vennligst fyll inn navn på smart-enheten din</span>
                             </div>
                         </div>
-                        <div class='fm-Controls with-Action'>
-                        <button id="undo-webauthn-device-btn" class='btn btn-Negative'><span>Fjern smartenhet</span></button>
-                        </div>
+                        <button id="undo-webauthn-device-btn" class='btn btn-Negative add-to-list'><span>Fjern smartenhet</span></button>
                     </div>
                 </div>
 

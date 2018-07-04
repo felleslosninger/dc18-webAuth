@@ -1641,6 +1641,8 @@ legend, .legend-Style {
     align-items: center; }
     .fm-Field .with-logo > *:first-child {
       max-width: 80px; }
+.fm-Field.add-to-list {
+  padding-top: 3rem; }
 
 .fm-Message,
 .fm-Message-warning {
@@ -1738,7 +1740,7 @@ textarea {
   .fm-Controls.with-Action-centered {
     align-items: center; }
   .fm-Controls.add-to-list {
-    visibility: hidden; }
+    visibility: hidden;}
 
 
 .btn-Normal {
@@ -1746,34 +1748,39 @@ textarea {
   background-color: #ffffff;
   border: 1px solid #e7e8ea;
   outline: none; }
-  .btn-Normal:hover {
-    border-color: #9fa9b4;
-    background-color: #f7f8fa; }
-  .btn-Normal:active {
-    border-color: #006cff;
-    background-color: #f7f8fa; }
-  .btn-Normal:focus {
-    border-color: #006cff;
-    background-color: #f7f8fa; }
-    .btn-Normal:focus > span {
-      border-bottom-color: #006cff; }
-    
+.btn-Normal:hover {
+  border-color: #9fa9b4;
+  background-color: #f7f8fa; }
+.btn-Normal:active {
+  border-color: #006cff;
+  background-color: #f7f8fa; }
+.btn-Normal:focus {
+  border-color: #006cff;
+  background-color: #f7f8fa; }
+.btn-Normal:focus > span {
+  border-bottom-color: #006cff; }
+
 .btn-Negative {
   color: #ffffff;
   background-color: #ff4d4d;
   border: 1px solid #e7e8ea;
   outline: none; }
-  .btn-Negative:hover {
-    border-color: #ffffff;
-    background-color: #cc4d4d; }
-  .btn-Negative:active {
-    border-color: #006cff;
-    background-color: #cc4d4d; }
-  .btn-Negative:focus {
-    border-color: #006cff;
-    background-color: #cc4d4d; }
-    .btn-Negative:focus > span {
-      border-bottom-color: #006cff; }
+.btn-Negative:hover {
+  border-color: #ffffff;
+  background-color: #cc4d4d; }
+.btn-Negative:active {
+  border-color: #006cff;
+  background-color: #cc4d4d; }
+.btn-Negative:focus {
+  border-color: #006cff;
+  background-color: #cc4d4d; }
+.btn-Negative:focus > span {
+  border-bottom-color: #006cff; }
+.btn-Negative.add-to-list {
+  margin-top: 1.3rem;
+  padding: 0rem 0.2rem;
+  font-size: small;}
+
 
 .btn-Action {
   color: #ffffff;
@@ -2367,9 +2374,16 @@ This is the temporary customization
 
 /*# sourceMappingURL=style.css.map */
 
+
 .add-devices {
   flex-grow: 8;
   margin: 0;
+  padding: 0 1rem;
+}
+
+.device-warning {
+  padding: 0;
+  margin: 0 0 0 1rem;
 }
 
 .fullWidth {
