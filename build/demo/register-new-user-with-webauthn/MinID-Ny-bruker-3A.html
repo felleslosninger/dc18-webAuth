@@ -64,7 +64,8 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <img src='../../images/nav-logo.gif' alt='tjenestetilbyders logo' />
             </div>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-logo logo-eid-gray'>Glemt passord</h1>
+                <h1 class='Box_header-title with-logo logo-eid-gray'>REGISTRER MINID-BRUKER
+                </h1>
                 <div class='Box_header-provider'><img src='../../images/svg/minid-m-kant.svg' alt='MinID logo' /></div>
             </div>
 
@@ -72,35 +73,53 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <!-- Progress dots -->
                 <div class='fm-Progress_Container'>
                     <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot active'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
                 </div>
                 <!-- /Progress dots -->
 
-
-                <div class='receipt with-Link'>
-                    <h2>Gratulerer</h2>
-                    <p>Ny bruker er nå opprettet. Du kan endre dine kontaktdetaljer i <a href=''><span>Dine kontaktopplysninger</span></a></p>
-
+                <!-- Notification -->
+                <div class='notification with-Icon icon-pin'>
+                    Bruk PIN-kodebrev datert 30.09.2016
                 </div>
-                <!-- Controls placeholder with centered action button only. used in receipts -->
-                <div class='fm-Controls with-Action with-Action-centered'>
-                    <a href="../../demo/webauthn/index.html" class='btn btn-Action' type='submit'><span>Logg inn</span></a>
-                </div>
-                <!-- //Controls placeholder with action button only -->
+                <!-- /Notification -->
 
+                <!-- Form -->
+                <form action='#'>
+                    <div class='fm-Fields'>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <label for='mobile'>PIN-KODE NR. 12<span>(5 siffer)</span></label>
+                            <input id='mobile' type='text' maxlength='5' placeholder='(5 siffer)' />
+                        </div>
+                        <span class='fm-Message'>Vennligst fyll inn din PIN-kode</span>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <label for='mobile'>PIN-KODE NR. 12 <span>(5 siffer)</span></label>
+                            <input id='mobile' type='text' maxlength='5' placeholder='(5 siffer)' />
+                        </div>
+                        <span class='fm-Message'>Vennligst fyll inn din PIN-kode</span>
+                    </div>
+
+                    <!-- Controls placeholder with two buttons -->
+                    <div class='fm-Controls with-Normal with-Action'>
+                        <a href="MinID-Ny-bruker-4A.html" class='btn btn-Action' type='submit'><span>Neste</span></a>
+                        <button class='btn btn-Normal'><span>Avbryt</span></button>
+                    </div>
+                    <!-- //Controls placeholder with two buttons -->
+
+                </form>
             </div>
 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
-                    <!-- <ul> -->
-                    <!-- <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li> -->
-                    <!-- <li><a href='#'><span>Menu 2</span></a></li> -->
-                    <!-- </ul> -->
+                    <ul>
+                        <li><a href='#'><span>Order Pin codes</span></a></li>
+                    </ul>
                 </div>
 
                 <!-- <div class='Box_footer-help'>

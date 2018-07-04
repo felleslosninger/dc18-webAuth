@@ -1719,7 +1719,7 @@ textarea {
   padding: 1rem 1rem 1rem 1rem;
   flex-wrap: wrap;}
   .fm-Controls > * {
-    /*padding: 0 2rem; */
+    padding: 0 2rem;
     margin: 0 1rem 1rem 1rem;
     white-space: nowrap; }
   .fm-Controls.with-Action {
@@ -1795,7 +1795,8 @@ textarea {
     color: #9fa9b4;
     background-color: #f7f8fa; }
   .btn-Action.add-to-list {
-    margin-top: 1rem }
+    margin-top: 1rem;
+    padding: 0.5rem;}
 
 .fm-Progress_Container {
   display: flex;

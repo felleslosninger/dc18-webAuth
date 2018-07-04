@@ -64,37 +64,51 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <img src='../../images/nav-logo.gif' alt='tjenestetilbyders logo' />
             </div>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-logo logo-eid-gray'>Register as a new MinID user</h1>
+                <h1 class='Box_header-title with-logo logo-eid-gray'>REGISTRER MINID-BRUKER</h1>
                 <div class='Box_header-provider'><img src='../../images/svg/minid-m-kant.svg' alt='MinID logo' /></div>
             </div>
 
             <div class='Box_main'>
                 <!-- Progress dots -->
                 <div class='fm-Progress_Container'>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot active'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot'></div>
                     <div class='fm-Progress_Dot'></div>
                 </div>
                 <!-- /Progress dots -->
 
+                <!-- Notification -->
+                <div class='notification with-Icon with-Link'>
+                    Har du utenlandsk nummer, må du oppgi landskode. Har du ikke mobil?
+                    <a href=''><span>Les om alternativ innlogging</span></a>
+                </div>
+                <!-- /Notification -->
+
                 <!-- Form -->
                 <form action='#'>
                     <div class='fm-Fields'>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
                         <div class='fm-Field'>
-                            <label for='idnumber'>Fødselsnummer <span>(11 siffer)</span></label>
-                            <input id='idnumber' maxlength="11" type='tel' placeholder='Fødselsnummer (11 siffer)' />
+                            <label for='mobile'>Mobilnummer</label>
+                            <input id='mobile' type='tel' placeholder='Mobilnummer' />
                         </div>
-                        <span class='fm-Message'>Vennligst fyll inn fødselsnummeret ditt</span>
+                        <span class='fm-Message'>Vennligst fyll inn ditt mobilnummer</span>
+
+                        <div class='fm-Field'>
+                            <label for='mobile'>Gjenta mobilnummer</label>
+                            <input id='mobile' type='tel' placeholder='Mobilnummer' />
+                        </div>
+                        <span class='fm-Message'>Numrene matcher ikke</span>
                     </div>
 
                     <!-- Controls placeholder with two buttons -->
                     <div class='fm-Controls with-Normal with-Action'>
-                        <a href="../../demo/webauthn/MinID-Ny-bruker-3A.html" class='btn btn-Action' type='submit'><span>Next</span></a>
-                        <button class='btn btn-Normal'><span>Cancel</span></button>
+                        <a href="MinID-Ny-Bruker-6B.html" class='btn btn-Action' type='submit'><span>Neste</span></a>
+                        <button class='btn btn-Normal'><span>Avbryt</span></button>
                     </div>
                     <!-- //Controls placeholder with two buttons -->
 
