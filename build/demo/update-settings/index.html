@@ -76,12 +76,15 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                                 </button>
                             </div>
                         </div>
-                        <!-- TODO: add <tlf nr.> -->
+                        
                         <!-- Preferred login -->
                         <div class='fm-Field'>
                             <span class='label'>Foretrukket innloggingsmetode</span>
                             <div class='with-icon'>
-                                <span class='text'>Kode fra SMS (93282061)</span>
+                                <!-- populate field with data -->
+                                <span class='text'>
+                                    <span class='auth-type'></span>
+                                </span>
                                 <!-- TODO: improve this, probably use CSS classes to indicate action -->
                                 <button type="button" onclick="window.location.href='MinProfil-MinID-innstillinger-B.html'">
                                     <span class='visuallyHidden'>Klikk her for å endre foretrukket innlogging</span>
@@ -134,6 +137,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
     <script type="text/javascript" src="../../js/toggleForm.js"></script>
     <script type="text/javascript" src="../../js/check-enable-save.js"></script>
     <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
+    <script type="text/javascript" src="../../js/update-localstorage-fields.js"></script>
 </body>
 
 </html>
