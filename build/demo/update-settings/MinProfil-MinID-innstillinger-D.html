@@ -28,127 +28,150 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css"/>
 </head>
 <!-- use class .popup to hiden header and footer, or use .popup .with-footer to keep footer -->
 
 <body class='hide-mobileMenu popup'>
-    <!--[if lt IE 11]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<!--[if lt IE 11]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
 <![endif]-->
-    <!-- SECTION: HEADER -->
-    <header class='h-Main'>
-        <div class='h-Main_Content'>
-            <a href="MinProfil-MinID-innstillinger-B.html" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
-            <!-- NOTE: placholder class must be present, even if it has no content -->
-            <div class="h-Main_Content_Placeholder">
-                <!-- NOTE: Present on pages with service provider name and logo. Visible on mobile sreens only. -->
-                <span class="h-Main_Content_Provider">Leikanger kommune</span>
-            </div>
-            <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
-            <div class='h-Menu_Container' id='js-menues'>
-                <nav class='h-Menu'>
-                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Kontaktdetaljer</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
-                    <ul>
-                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
-                    </ul>
-                </nav>
-            </div>
+<!-- SECTION: HEADER -->
+<header class='h-Main'>
+    <div class='h-Main_Content'>
+        <a href="" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
+        <!-- NOTE: placholder class must be present, even if it has no content -->
+        <div class="h-Main_Content_Placeholder">
+            <!-- NOTE: Present on pages with service provider name and logo. Visible on mobile sreens only. -->
+            <span class="h-Main_Content_Provider">Leikanger kommune</span>
         </div>
-    </header>
-    <!-- /SECTION: HEADER -->
-    <main>
-        <section class='Box'>
-            <div class='Box_header'>
-                <h1 class='Box_header-title with-close-button'>Administrer smartenhet</h1>
-                <span class='Box_header-close'>
+        <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
+        <div class='h-Menu_Container' id='js-menues'>
+            <nav class='h-Menu'>
+                <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Kontaktdetaljer</span><span
+                        class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
+                <ul>
+                    <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- /SECTION: HEADER -->
+<main>
+    <section class='Box'>
+        <div class='Box_header'>
+            <h1 class='Box_header-title with-close-button'>Administrer smartenhet</h1>
+            <span class='Box_header-close'>
     <a href='#'>
       <span class='fa fa-close'>
         <span class='visuallyHidden'>Lukk dette vinduet</span>
                 </span>
                 </a>
                 </span>
-            </div>
-            <div class='Box_main'>
-                <!-- TODO: info -->
-                <!-- TODO: new form -->
-                <!-- Form -->
-                <form action='MinProfil-MinID-innstillinger-B.html'>
-                    <div class='fm-Fields'>
-                        <div class='with-Icon icon-key'>
-                            <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
-                            <div class='fm-Field'>
-                                <label for='security-key-name'>Navn på smartenhet</label>
-                                <input id='security-key-name'
-                                       type='text'
-                                       placeholder='Navn på smartenhet'
-                                       class='securitykey-name' />
-                            </div>
-                            <span class='fm-Message'>Smartenhet må ha et navn</span>
-                            <div class='fm-Field'>
-                                <label for='security-key-registration-date'>Registrert</label>
-                                <input id='security-key-registration-date'
-                                       type='text'
-                                       class='securitykey-time'
-                                       disabled />
-                            </div>
-                            <div class='fm-Controls with-Normal nopadding'>
-                                <button type="button" id="btn-remove" class='btn btn-Negative fullWidth nomargin'>
-                                    <span>Fjern smartenhet</span>
-                                </button>
-                                <span class="visuallyHidden" id="confirm-remove">
+        </div>
+        <div class='Box_main'>
+            <!-- TODO: info -->
+            <!-- TODO: new form -->
+            <!-- Form -->
+            <form action='MinProfil-MinID-innstillinger-B.html'>
+                <div class='fm-Fields'>
+                    <div class='with-Icon icon-key'>
+                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
+                        <div class='fm-Field'>
+                            <label for='security-key-name'>Navn på smartenhet</label>
+                            <input id='security-key-name'
+                                   type='text'
+                                   placeholder='Navn på smartenhet'
+                                   class='securitykey-name'/>
+                        </div>
+                        <span class='fm-Message'>Smartenhet må ha et navn</span>
+                        <div class='fm-Field'>
+                            <label for='security-key-registration-date'>Registrert</label>
+                            <input id='security-key-registration-date'
+                                   type='text'
+                                   class='securitykey-time'
+                                   disabled/>
+                        </div>
+                        <div class='fm-Controls with-Normal nopadding' id="remove-security-key-dialog">
+                            <button type="button" id="btn-remove" class='btn btn-Negative fullWidth nomargin'>
+                                <span>Fjern smartenhet</span>
+                            </button>
+                            <span class="visuallyHidden" id="confirm-remove">
                                     <!-- break tag to ensure that the button
                                         doesn't widen when pressed -->
                                     Trykk igjen for å<br> bekrefte fjerning
                                 </span>
+                        </div>
+                        <div id="add-security-key-form">
+                            <div class="device-warning">
+                                <p id="add-webauthn-message" class="fm-Message-warning add-device"
+                                   style="display: none"></p>
+                            </div>
+                            <div id="webauthn-add-device-box" class='Box_main Box_inside-footer'>
+                                <ul class='ln-List ln-List-lowPriority'>
+                                    <li>
+                                        <a href="#" id="register-device" class='ln-List_Element'>
+                                <span class='ln-List_Element_Logo'>
+                                    <img src='../img/key.png' alt=''/>
+                                </span>
+                                            <div class='ln-List_Element_Service' id="webAuthn" role="button">
+                                                <span class='ln-List_Element_Service_Name'>Smartenhet</span>
+                                                <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smartenhet</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class='fm-Controls with-Normal with-Action'>
-                        <button id="btn-submit" class='btn btn-Action' type='submit'>
-                            <span>Lagre</span>
-                        </button>
-                        <button class='btn btn-Normal btn-Abort partially'>
-                            <span>Avbryt</span>
-                        </button>
-                        <!-- Submit form with removal option -->
-                        <button id="btn-submit-remove" class="visuallyHidden" />
-                    </div>
-                    <!-- //Controls placeholder with two buttons -->
-                </form>
-                <!-- //Form -->
-            </div>
-        </section>
-    </main>
-    <!-- /build -->
-    <!-- SECTION: FOOTER -->
-    <footer class="f-Main">
-        <div class='f-Main_Content'>
-            <div class='f-Main_Logo' aria-hidden="true"></div>
-            <div class='f-Main_Info'>
-                <a href="" class='f-Main_Link'><span>Kontaktskjema</span></a>
-                <a href="tel:+4780030300" class='f-Main_Link'><span>Tlf: 800 30 300</span></a>
-                <a href="" class='f-Main_Link'><span>Hjelp til innlogging</span></a>
-                <a href="" class='f-Main_Link'><span>Sikkerhet og personvern</span></a>
-                <p>Driftet av Direktoratet for forvaltning og IKT (Difi)</p>
-            </div>
+                </div>
+                <div class='fm-Controls with-Normal with-Action'>
+                    <button id="btn-submit" class='btn btn-Action' type='submit'>
+                        <span>Tilbake</span>
+                    </button>
+                    <!-- Submit form with removal option -->
+                </div>
+                <!-- //Controls placeholder with two buttons -->
+            </form>
+            <!-- //Form -->
+            <button id="btn-submit-remove" class="visuallyHidden"/>
         </div>
-    </footer>
-    <!-- /SECTION: FOOTER -->
-    <script type="text/javascript" src="../../js/vendor.min.js"></script>
-    <script type="text/javascript" src="../../js/accordion.js"></script>
-    <script type="text/javascript" src="../../js/country-selector.js"></script>
-    <script type="text/javascript" src="../../js/disabled-links.js"></script>
-    <script type="text/javascript" src="../../js/header.js"></script>
-    <script type="text/javascript" src="../../js/minid-menu.js"></script>
-    <script type="text/javascript" src="../../js/tab.js"></script>
-    <script type="text/javascript" src="../../js/toggleMenues.js"></script>
-    <script type="text/javascript" src="../../js/toggleForm.js"></script>
-    <script type="text/javascript" src="../../js/check-enable-save.js"></script>
-    <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
-    <script type="text/javascript" src="../../js/update-localstorage-fields.js"></script>
-    <script type="text/javascript" src="../../js/localStorage.js"></script>
-    <script type="text/javascript" src="../../js/MinProfil-MinID-innstillinger-D.js"></script>
-    <script type="text/javascript" src="../../js/abort-buttons.js"></script>
+    </section>
+</main>
+<!-- /build -->
+<!-- SECTION: FOOTER -->
+<footer class="f-Main">
+    <div class='f-Main_Content'>
+        <div class='f-Main_Logo' aria-hidden="true"></div>
+        <div class='f-Main_Info'>
+            <a href="" class='f-Main_Link'><span>Kontaktskjema</span></a>
+            <a href="tel:+4780030300" class='f-Main_Link'><span>Tlf: 800 30 300</span></a>
+            <a href="" class='f-Main_Link'><span>Hjelp til innlogging</span></a>
+            <a href="" class='f-Main_Link'><span>Sikkerhet og personvern</span></a>
+            <p>Driftet av Direktoratet for forvaltning og IKT (Difi)</p>
+        </div>
+    </div>
+</footer>
+<!-- /SECTION: FOOTER -->
+<script type="text/javascript" src="../../js/vendor.min.js"></script>
+<script type="text/javascript" src="../../js/accordion.js"></script>
+<script type="text/javascript" src="../../js/country-selector.js"></script>
+<script type="text/javascript" src="../../js/disabled-links.js"></script>
+<script type="text/javascript" src="../../js/header.js"></script>
+<script type="text/javascript" src="../../js/minid-menu.js"></script>
+<script type="text/javascript" src="../../js/tab.js"></script>
+<script type="text/javascript" src="../../js/toggleMenues.js"></script>
+<script type="text/javascript" src="../../js/toggleForm.js"></script>
+<script type="text/javascript" src="../../js/check-enable-save.js"></script>
+<script type="text/javascript" src="../../js/radio-enable-save.js"></script>
+<script type="text/javascript" src="../../js/localStorage.js"></script>
+<script type="text/javascript" src="../../js/MinProfil-MinID-innstillinger-D.js"></script>
+<script type="text/javascript" src="../../js/webauthn.js"></script>
+<script type="text/javascript" src="../../js/name-devices.js"></script>
+<script type="text/javascript" src="../../js/addWebauthnDeviceMenu.js"></script>
+<script type="text/javascript" src="../../js/update-localstorage-fields.js"></script>
 </body>
 
 </html>
