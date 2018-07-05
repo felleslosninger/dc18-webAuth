@@ -18,6 +18,7 @@ const addWebauthnDeviceMenu = () => {
         $('#add-webauthn-message').show();
         $('#add-webauthn-message').text('Smartenheten er fjernet');
         $('#webauthn-added-device').toggle();
+        $('#add-devices-controls').toggle();
         $('#webauthn-add-device-box').toggle();
     });
 };
