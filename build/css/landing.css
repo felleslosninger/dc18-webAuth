@@ -1,75 +1,115 @@
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 75px;
+    height: 75px;
 }
 
 .App-header {
-  background-color: white;
-  padding: 5px;
-  color: white;
+    background-color: white;
+    padding: 5px;
+    color: white;
 }
 
 #loginBox {
-  border: 2px solid #e7ffee;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  width: auto;
-  margin: auto;
-  padding: 65px;
-  bottom: 0;
-  background-color: white;
-  color: black;
+    border: 2px solid #e7ffee;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    width: auto;
+    margin: auto;
+    padding: 65px;
+    bottom: 0;
+    background-color: white;
+    color: black;
 }
 
-section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 30px;
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 30px;
 }
 
 
-.main_background{
-  position: relative;
-  justify-content: center;
-  min-height: 100vh;
-  color: #fff;
-  text-align: center;
+.main_background {
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
 }
 
-.main_background .background-image{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-color: black;
-  z-index: -1;
+.main_background .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: black;
+    z-index: -1;
 }
 
-.main_background .background-image:after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #363e43;
-  opacity: 0.65;
+.main_background .background-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #363e43;
+    opacity: 0.65;
 }
 
-.w3-btn,.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
-.w3-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
-.w3-btn,.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-.w3-disabled,.w3-btn:disabled,.w3-button:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
-.w3-btn.w3-disabled:hover,.w3-btn:disabled:hover{box-shadow:none}
+.w3-btn,
+.w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.w3-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.w3-btn,
+.w3-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.w3-disabled,
+.w3-btn:disabled,
+.w3-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.w3-disabled *,
+:disabled * {
+    pointer-events: none
+}
+
+.w3-btn.w3-disabled:hover,
+.w3-btn:disabled:hover {
+    box-shadow: none
+}
