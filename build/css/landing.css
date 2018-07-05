@@ -142,3 +142,164 @@ section {
 .w3-btn:disabled:hover {
     box-shadow: none
 }
+
+
+
+
+
+.f-Main {
+    width: 100%;
+    background-color: #253343;
+    color: #ffffff;
+    margin-top: auto;
+}
+
+.f-Main_Content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.8125em;
+    padding: 2.3em 0.7682em 10.9em 0.7682em;
+}
+
+@media (max-width: 767px) {
+    .f-Main_Content {
+        justify-content: flex-start;
+        padding-bottom: 9em;
+        width: auto;
+    }
+}
+
+.f-Main_Content-singleLine {
+    justify-content: center;
+}
+
+.f-Main_Logo {
+    width: 30px;
+    height: 30px;
+    margin: 15px 15px 0 0;
+    background: url("../images/svg/eid.svg") no-repeat top right;
+}
+
+@media (max-width: 767px) {
+    .f-Main_Logo {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 767px) {
+    .f-Main_Info {
+        display: flex;
+        flex-direction: column;
+        line-height: 2.5em;
+    }
+}
+
+.f-Main_Info p {
+    margin: 0 5px;
+}
+
+.f-Main_Info a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.f-Main_Info a:hover,
+.f-Main_Info a:active {
+    color: #c8c8c8;
+}
+
+.f-Main_Info a:hover span,
+.f-Main_Info a:active span {
+    border-bottom-color: #c8c8c8;
+}
+
+.f-Main_Info a:hover span.fa,
+.f-Main_Info a:active span.fa {
+    color: #c8c8c8;
+}
+
+.f-Main_Info a:focus {
+    color: #c8c8c8;
+    outline: 1px solid #ffffff;
+    border-bottom-color: transparent;
+    text-decoration: none;
+}
+
+.f-Main_Info a:focus span {
+    border-bottom-color: transparent;
+}
+
+.f-Main_Info a:focus span.fa {
+    color: #c8c8c8;
+}
+
+.f-Main_Info a span {
+    border-bottom: 1px solid #ffffff;
+}
+
+.f-Main_Info a span.fa {
+    border-bottom-color: transparent;
+}
+
+.f-Main_Content-singleLine .f-Main_Info {
+    align-self: flex-end;
+}
+
+.f-Main_Link {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.f-Main_Link[href^="tel:"] {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.f-Main_Link[href^="tel:"]:hover,
+.f-Main_Link[href^="tel:"]:active {
+    color: #c8c8c8;
+}
+
+.f-Main_Link[href^="tel:"]:hover span,
+.f-Main_Link[href^="tel:"]:active span {
+    border-bottom-color: #c8c8c8;
+}
+
+.f-Main_Link[href^="tel:"]:hover span.fa,
+.f-Main_Link[href^="tel:"]:active span.fa {
+    color: #c8c8c8;
+}
+
+.f-Main_Link[href^="tel:"]:focus {
+    color: #c8c8c8;
+    outline: 1px solid #ffffff;
+    border-bottom-color: transparent;
+    text-decoration: none;
+}
+
+.f-Main_Link[href^="tel:"]:focus span {
+    border-bottom-color: transparent;
+}
+
+.f-Main_Link[href^="tel:"]:focus span.fa {
+    color: #c8c8c8;
+}
+
+.f-Main_Link[href^="tel:"] span {
+    border-bottom: 1px solid transparent;
+}
+
+.f-Main_Link[href^="tel:"] span.fa {
+    border-bottom-color: transparent;
+}
