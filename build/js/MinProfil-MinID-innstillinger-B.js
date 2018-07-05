@@ -18,3 +18,16 @@
         }
     });
 })();
+
+(function() {
+    let $ = jQuery.noConflict();
+
+    if (getSecurityKeyName() === (null || undefined)) {
+        $("#webauthn").attr('disabled', true);
+        $( "#webauthn-radio" ).addClass( "fm-RadioButtons disabled" );
+    } else {
+        $("#webauthn").attr('disabled', false);
+        $( "#webauthn-radio" ).removeClass( "fm-RadioButtons disabled" );
+    }
+
+})();
