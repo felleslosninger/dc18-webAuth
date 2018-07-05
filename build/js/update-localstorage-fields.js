@@ -1,29 +1,29 @@
+// getters
+var getSecurityKeyName = () => (JSON.parse(window.localStorage.getItem("webauthn-device"))||{}).name;
+var getSecurityKeyCreationTime = () => (JSON.parse(window.localStorage.getItem("webauthn-device"))||{}).date;
+var getAuthType = () => window.localStorage.getItem("auth-type") || "letter";
+var getPhoneNumber = () => "93282061"; // dummy value
+var getAuthTypeHumanReadable = () => {
+    switch (getAuthType()) {
+        case "letter":
+            return "Pinkode fra brev";
+        case "sms":
+            return "Kode fra SMS (" + getPhoneNumber() + ")";
+        case "webauthn":
+            let ret = "Smartenhet som sikkerhetsnøkkel";
+            let keyname = getSecurityKeyName();
+            if (keyname)
+                ret += " (" + keyname + ")";
+            return ret;
+        default:
+            console.log("Error: not supported auth type", getAuthType());
+            return null;
+    }
+};
+// ...
+
 (function() {
     let $ = jQuery.noConflict();
-
-    // getters
-    let getSecurityKeyName = () => (JSON.parse(window.localStorage.getItem("webauthn-device"))||{}).name;
-    let getSecurityKeyCreationTime = () => (JSON.parse(window.localStorage.getItem("webauthn-device"))||{}).date;
-    let getAuthType = () => window.localStorage.getItem("auth-type") || "letter";
-    let getPhoneNumber = () => "93282061"; // dummy value
-    let getAuthTypeHumanReadable = () => {
-        switch (getAuthType()) {
-            case "letter":
-                return "Pinkode fra brev";
-            case "sms":
-                return "Kode fra SMS (" + getPhoneNumber() + ")";
-            case "webauthn":
-                let ret = "Smartenhet som sikkerhetsnøkkel";
-                let keyname = getSecurityKeyName();
-                if (keyname)
-                    ret += " (" + keyname + ")";
-                return ret;
-            default:
-                console.log("Error: not supported auth type", getAuthType());
-                return null;
-        }
-    };
-    // ...
     
     let updateFields = () => {
         $(".securitykey-name").html(getSecurityKeyName());
