@@ -18,3 +18,14 @@
         }
     });
 })();
+
+(function() {
+    let $ = jQuery.noConflict();
+
+    if (getSecurityKeyName() === (null || undefined)) {
+        $("#webauthn").attr('disabled', true);
+    } else {
+        $("#webauthn").attr('disabled', false);
+    }
+
+})();
