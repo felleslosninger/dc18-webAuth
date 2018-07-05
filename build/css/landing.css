@@ -23,8 +23,8 @@ body {
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     width: auto;
+    height: auto;
     margin: auto;
-    padding: 65px;
     bottom: 0;
     background-color: white;
     color: black;
@@ -68,6 +68,11 @@ section {
     opacity: 0.65;
 }
 
+.w3-container {
+    width: auto;
+    padding: 5px;
+}
+
 .w3-btn,
 .w3-button {
     border: none;
@@ -79,7 +84,7 @@ section {
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-    width: 100%;
+    width: 190px;
     background-color: #00ccff;
     padding: 15px;
     margin-top: 4px;
