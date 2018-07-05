@@ -8,4 +8,13 @@
             }
         });
     });
+
+    let selectedValue = getAuthType(); // currently preferred login type
+
+    // check the option that is the currently preferred login type by default
+    $("input[type='radio']").each((index, elem) => {
+        if (elem.value === selectedValue) {
+            elem.checked = true;
+        }
+    });
 })();
