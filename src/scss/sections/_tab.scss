@@ -1,128 +1,120 @@
-
 .tb-Header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  &.tab-3 {
-    a {
-      width: percentage(1/3);
-    }
-  }
-  &.tab-4 {
-    a {
-      width: percentage(1/4);
-    }
-  }
-  a {
     display: flex;
-    position: relative;
-    height: 3.5em;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-    font-size: $t_size-normal;
-    font-weight: 600;
-    color: $c_blue;
-    text-decoration: none;
-    background: $c_white;
-
-    & + a:not(.active) {
-      border-left: 1px solid $c_medium_grey;
-    }
-
-    &:after {
-      position: absolute;
-      content: "";
-      display: block;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: $c_medium_grey3;
-      height: 1px;
-    }
-
-    // Default hover state
-    &:hover, &:active {
-      background: $c_light_grey;
-      &:after {
-        background-color: $ca_normal;
-        height: 3px;
-      }
-    }
-
-    // Default focus state
-    &:focus {
-      background: $c_light_grey;
-      &:after {
-        background-color: transparent;
-        height: 3px;
-      }
-      > span {
-        border-color: $c_grey;
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        > span {
-          border-bottom-color: $ca_focus;
+    flex-direction: row;
+    justify-content: space-between;
+    &.tab-3 {
+        a {
+            width: percentage(1/3);
         }
-      }
     }
+    &.tab-4 {
+        a {
+            width: percentage(1/4);
+        }
+    }
+    a {
+        display: flex;
+        position: relative;
+        height: 3.5em;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        font-size: $t_size-normal;
+        font-weight: 600;
+        color: $c_blue;
+        text-decoration: none;
+        background: $c_white;
 
-    &.active {
-      background-color: $ca_normal;
-      color: $c_white;
+        &+a:not(.active) {
+            border-left: 1px solid $c_medium_grey;
+        }
 
-
-      // Active button focus state
-      &:focus {
-        background-color: $ca_focus;
         &:after {
-          background-color: transparent;
+            position: absolute;
+            content: "";
+            display: block;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: $c_medium_grey3;
+            height: 1px;
+        } // Default hover state
+        &:hover,
+        &:active {
+            background: $c_light_grey;
+            &:after {
+                background-color: $ca_normal;
+                height: 3px;
+            }
+        } // Default focus state
+        &:focus {
+            background: $c_light_grey;
+            &:after {
+                background-color: transparent;
+                height: 3px;
+            }
+            >span {
+                border-color: $c_grey;
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                >span {
+                    border-bottom-color: $ca_focus;
+                }
+            }
         }
-        > span {
-          border-color: $c_white;
-          width: calc(100% - 8px);
-          height: calc(100% - 8px);
-          > span {
-            border-bottom-color: $c_white;
-          }
+
+        &.active {
+            background-color: $ca_normal;
+            color: $c_white; // Active button focus state
+            &:focus {
+                background-color: $ca_focus;
+                &:after {
+                    background-color: transparent;
+                }
+                >span {
+                    border-color: $c_white;
+                    width: calc(100% - 8px);
+                    height: calc(100% - 8px);
+                    >span {
+                        border-bottom-color: $c_white;
+                    }
+                }
+            } // Active button hover state
+            &:hover,
+            &:active,
+            &:active:focus {
+                background: $ca_hover;
+                &:after {
+                    background-color: $c_black;
+                }
+                >span {
+                    border-color: transparent;
+                    >span {
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
         }
-      }
-      // Active button hover state
-      &:hover, &:active, &:active:focus {
-        background: $ca_hover;
-        &:after {
-          background-color: $c_black;
+
+        >span {
+            display: flex;
+            border: 2px solid transparent;
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            justify-content: center;
+            align-items: center;
+            >span {
+                border-bottom: 1px solid transparent;
+                line-height: 1.4em;
+            }
         }
-        > span {
-          border-color: transparent;
-          > span {
-            border-bottom-color: transparent;
-          }
-        }
-      }
     }
-
-    > span {
-      display: flex;
-      border: 2px solid transparent;
-      width: calc(100% - 8px);
-      height: calc(100% - 8px);
-      justify-content: center;
-      align-items: center;
-      > span {
-        border-bottom: 1px solid transparent;
-        line-height: 1.4em;
-      }
-    }
-
-  }
-
 }
 
 
 .tb-Tab {
-  display: none;
-  &.active {
-    display: block;
-  }
+    display: none;
+    &.active {
+        display: block;
+    }
 }

@@ -1,54 +1,51 @@
 <!-- build:section recursive layout.commonheader -->
 <!-- /build -->
-
 <!-- build:section recursive section.header-eid -->
 <!-- /build -->
-
 <!-- build:process -->
 <main>
-  <!-- build:section recursive section.dmy --><!-- /build -->
-  <section class='Box'>
-    <!-- build:section recursive section.box-header-top --><!--/build -->
-    <!-- build:section recursive section.box-header --><!--/build -->
-
-    <div class='Box_main'>
-      <div class='tb-Container'>
-        <!-- Tab header -->
-        <!-- class .tab-2 defines two tabs and is default. There are available classes .tab-3, .tab-4 too -->
-        <div class='tb-Header tab-2'>
-          <a href='#' class='active' data-target='tab-1'><span><span>Norwegian E-ID</span></span></a>
-          <a href='#' data-target='tab-2'><span><span>Foreign E-ID</span></span></a>
-        </div>
-        <!-- //Tab header -->
-
-        <!-- Tabs container -->
-        <div class='tb-Body'>
-          <!-- Tab 1 -->
-          <div class='tb-Tab active' data-id='tab-1'>
-            <!-- build:section recursive section.list-normal --><!--/build -->
-          </div>
-          <!-- /Tab 1 -->
-
-          <!-- Tab 2 -->
-          <div class='tb-Tab' data-id='tab-2'>
-            <!-- This is used here just to show different content than in tab 1-->
-            <!-- build:section recursive section.list-normal-v2_changed_order --><!--/build -->
-            <!-- // This is used here just to show different content than in tab 1-->
-          </div>
-            <!-- // Tab 2 -->
-        </div>
-
-    </div>
-
-    <!-- build:section recursive section.box-footer --><!--/build -->
-  </section>
-  <!-- NOTE: provider is added twice: above box title and below box (this one).
+    <!-- build:section recursive section.dmy -->
+    <!-- /build -->
+    <section class='Box'>
+        <!-- build:section recursive section.box-header-top -->
+        <!--/build -->
+        <!-- build:section recursive section.box-header -->
+        <!--/build -->
+        <div class='Box_main'>
+            <div class='tb-Container'>
+                <!-- Tab header -->
+                <!-- class .tab-2 defines two tabs and is default. There are available classes .tab-3, .tab-4 too -->
+                <div class='tb-Header tab-2'>
+                    <a href='#' class='active' data-target='tab-1'><span><span>Norwegian E-ID</span></span></a>
+                    <a href='#' data-target='tab-2'><span><span>Foreign E-ID</span></span></a>
+                </div>
+                <!-- //Tab header -->
+                <!-- Tabs container -->
+                <div class='tb-Body'>
+                    <!-- Tab 1 -->
+                    <div class='tb-Tab active' data-id='tab-1'>
+                        <!-- build:section recursive section.list-normal -->
+                        <!--/build -->
+                    </div>
+                    <!-- /Tab 1 -->
+                    <!-- Tab 2 -->
+                    <div class='tb-Tab' data-id='tab-2'>
+                        <!-- This is used here just to show different content than in tab 1-->
+                        <!-- build:section recursive section.list-normal-v2_changed_order -->
+                        <!--/build -->
+                        <!-- // This is used here just to show different content than in tab 1-->
+                    </div>
+                    <!-- // Tab 2 -->
+                </div>
+            </div>
+            <!-- build:section recursive section.box-footer -->
+            <!--/build -->
+    </section>
+    <!-- NOTE: provider is added twice: above box title and below box (this one).
   The one above title is displayed on desktop only. the one below on mobile only. -->
-  <div class='mi-Provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
-  
+    <div class='mi-Provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
 </main>
 <!-- /build -->
-
 <!-- build:section section.footer -->
 <!-- /build -->
 <!-- build:section recursive layout.commonfooter -->

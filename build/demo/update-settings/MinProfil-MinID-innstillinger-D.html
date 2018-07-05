@@ -4,19 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <title>IDPorten</title>
-
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../../fonts/open-sans/open-sans.css">
     <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
-
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <link type="text/css" rel="stylesheet" href="../../css/style.css" />
-
 </head>
 <!-- use class .popup to hiden header and footer, or use .popup .with-footer to keep footer -->
 
@@ -24,20 +18,15 @@
     <!--[if lt IE 11]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-
     <!-- SECTION: HEADER -->
-
     <header class='h-Main'>
-
         <div class='h-Main_Content'>
             <a href="" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
-
             <!-- NOTE: placholder class must be present, even if it has no content -->
             <div class="h-Main_Content_Placeholder">
                 <!-- NOTE: Present on pages with service provider name and logo. Visible on mobile sreens only. -->
                 <span class="h-Main_Content_Provider">Leikanger kommune</span>
             </div>
-
             <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
             <div class='h-Menu_Container' id='js-menues'>
                 <nav class='h-Menu'>
@@ -46,17 +35,11 @@
                         <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
                     </ul>
                 </nav>
-
             </div>
-
         </div>
     </header>
-
     <!-- /SECTION: HEADER -->
-
-
     <main>
-
         <section class='Box'>
             <div class='Box_header'>
                 <h1 class='Box_header-title with-close-button'>Administrer smartenhet</h1>
@@ -68,9 +51,7 @@
                 </a>
                 </span>
             </div>
-
             <div class='Box_main'>
-
                 <!-- TODO: info -->
                 <!-- TODO: new form -->
                 <!-- Form -->
@@ -83,15 +64,14 @@
                                 <input id='security-key-name'
                                        type='text'
                                        placeholder='Navn på smartenhet'
-                                       value="min sikkerhetsnøkkel" />
+                                       class='securitykey-name' />
                             </div>
                             <span class='fm-Message'>Smartenhet må ha et navn</span>
-
                             <div class='fm-Field'>
                                 <label for='security-key-registration-date'>Registrert</label>
                                 <input id='security-key-registration-date' 
                                        type='text' 
-                                       value="Tue, 03 Jul 2018 10:23:42 GMT" 
+                                       class='securitykey-time'
                                        disabled />
                             </div>
                             <div class='fm-Controls with-Normal nopadding'>
@@ -121,13 +101,9 @@
                 <!-- //Form -->
             </div>
         </section>
-
-
     </main>
     <!-- /build -->
-
     <!-- SECTION: FOOTER -->
-
     <footer class="f-Main">
         <div class='f-Main_Content'>
             <div class='f-Main_Logo' aria-hidden="true"></div>
@@ -140,9 +116,7 @@
             </div>
         </div>
     </footer>
-
     <!-- /SECTION: FOOTER -->
-
     <script type="text/javascript" src="../../js/vendor.min.js"></script>
     <script type="text/javascript" src="../../js/accordion.js"></script>
     <script type="text/javascript" src="../../js/country-selector.js"></script>
@@ -155,6 +129,7 @@
     <script type="text/javascript" src="../../js/check-enable-save.js"></script>
     <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
     <script type="text/javascript" src="../../js/update-settings-eventbindings.js"></script>
+    <script type="text/javascript" src="../../js/update-localstorage-fields.js"></script>
 </body>
 
 </html>

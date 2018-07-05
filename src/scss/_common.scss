@@ -3,160 +3,163 @@
 */
 
 html {
-  height: 100%;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
 }
 
 body {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  background-color: $ca_body-bg;
-  color: $ca_body-text;
-  font-family: $t_fontfamily;
-  line-height: 1.5em;
-  letter-spacing: 0.1px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: $ca_body-bg;
+    color: $ca_body-text;
+    font-family: $t_fontfamily;
+    line-height: 1.5em;
+    letter-spacing: 0.1px;
 }
 
 main {
-  flex: 1 0 auto; // fill the space, and make sure the footer resides at the bottom
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  margin: {
-    top: 3em;
-    bottom: 3em;
-  }
+    flex: 1 0 auto; // fill the space, and make sure the footer resides at the bottom
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: {
+        top: 3em;
+        bottom: 3em;
+    }
 }
 
 hr {
-  border: 0;
-  border-bottom: 1px solid $ca_box_border;
-  width: 100%;
+    border: 0;
+    border-bottom: 1px solid $ca_box_border;
+    width: 100%;
 }
 
 h1 {
-  font-size: $t_size-normal;
-  margin: 0;
+    font-size: $t_size-normal;
+    margin: 0;
 }
 
 h2 {
-  font-size: $t_size-basis;
-  margin: 20px 0 5px 0;
+    font-size: $t_size-basis;
+    margin: 20px 0 5px 0;
 }
 
 button {
-  font-family: $t_fontfamily;
-  border: none;
-  box-shadow: none;
+    font-family: $t_fontfamily;
+    border: none;
+    box-shadow: none;
 }
 
 iframe {
-  margin: 1em;
-  border: 0;
-  width: 100%;
+    margin: 1em;
+    border: 0;
+    width: 100%;
 }
 
 // Mobile view
 @include mobile {
-  main {
-    display: block;
-    margin-top: 0;
-  }
+    main {
+        display: block;
+        margin-top: 0;
+    }
 }
 
 .small {
-  font-size: $t_size-small;
-}
-.normal {
-  font-size: $t_size-normal;
+    font-size: $t_size-small;
 }
 
-.visuallyHidden { // used for labels etc visible only to screen readers and support tools
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+.normal {
+    font-size: $t_size-normal;
+}
+
+.visuallyHidden {
+    // used for labels etc visible only to screen readers and support tools
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 .visuallyAsLink {
-  display: inline-block;
-  @include text-link($c_nearly_black, $c_blue, $c_blue, $c_grey, $t_size-normal, 0);
-  background-color: transparent;
-  border-radius: 0;
-  .notification &,
-  p & {
-    font-size: 1em;
-  }
-  .fm-Fields & {
-    display: flex;
-    padding: 0.5em;
-    height: auto;
-    margin: 0;
-  }
+    display: inline-block;
+    @include text-link($c_nearly_black, $c_blue, $c_blue, $c_grey, $t_size-normal, 0);
+    background-color: transparent;
+    border-radius: 0;
+    .notification &,
+    p & {
+        font-size: 1em;
+    }
+    .fm-Fields & {
+        display: flex;
+        padding: 0.5em;
+        height: auto;
+        margin: 0;
+    }
 }
 
 .with-Link {
-  @include apply-text-link();
+    @include apply-text-link();
 }
 
 .capitalize {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .ingress {
-  display: block;
-  font-size: $t_size-normal;
-  margin: 1rem  0 0;
-  padding: 0 0 1rem;
-  border-bottom: 1px solid $c_light_grey3;
+    display: block;
+    font-size: $t_size-normal;
+    margin: 1rem 0 0;
+    padding: 0 0 1rem;
+    border-bottom: 1px solid $c_light_grey3;
 }
 
 .help-Link {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 2.5rem 2rem;
-  a {
-    align-self: flex-end;
-    text-decoration: none;
-    color: $ca_box_help_icon;
-    &:hover, &:focus {
-      color: $c_blue;
-    }
-  }
-  .fa {
     display: flex;
-    justify-content: center;
-    text-decoration: none;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    margin: auto;
-  }
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 2.5rem 2rem;
+    a {
+        align-self: flex-end;
+        text-decoration: none;
+        color: $ca_box_help_icon;
+        &:hover,
+        &:focus {
+            color: $c_blue;
+        }
+    }
+    .fa {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        margin: auto;
+    }
 }
 
 table {
-  width: 100%;
-  margin: 1em 0;
-  tr {
-    padding: 0.5em 0;
-  }
-  td {
-    font-size: $t_size-normal;
-    padding: 1em 0.5em 0.35em 0.5em;
-    border-bottom: 1px solid $c_light_grey2;
-    &:first-child {
-      padding-left: 0;
+    width: 100%;
+    margin: 1em 0;
+    tr {
+        padding: 0.5em 0;
     }
-    &:last-child {
-      padding-right: 0;
+    td {
+        font-size: $t_size-normal;
+        padding: 1em 0.5em 0.35em 0.5em;
+        border-bottom: 1px solid $c_light_grey2;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
     }
-  }
 }

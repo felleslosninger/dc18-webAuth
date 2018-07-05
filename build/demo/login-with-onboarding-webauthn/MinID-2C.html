@@ -4,39 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <title>IDPorten</title>
-
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../../fonts/open-sans/open-sans.css">
     <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
-
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <link type="text/css" rel="stylesheet" href="../../css/style.css" />
-
 </head>
 
 <body>
     <!--[if lt IE 11]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-
     <!-- SECTION: HEADER -->
-
     <header class='h-Main'>
-
         <div class='h-Main_Content'>
             <a href="MinID-2A.html" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
-
             <!-- NOTE: placholder class must be present, even if it has no content -->
             <div class="h-Main_Content_Placeholder">
                 <!-- NOTE: Present on pages with service provider name and logo. Visible on mobile sreens only. -->
                 <span class="h-Main_Content_Provider">Leikanger kommune</span>
             </div>
-
             <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
             <div class='h-Menu_Container' id='js-menues'>
                 <nav class='h-Menu'>
@@ -45,7 +34,6 @@
                         <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
                     </ul>
                 </nav>
-
                 <!-- MinID menu -->
                 <!-- NOTE: We add MinID menu as part of main menu for pages containing minid menu.
           Will be visible only on mobile sized screens for pages with minid menu, e g MinID-1.html and similar.
@@ -60,16 +48,11 @@
                     </ul>
                 </nav>
                 <!-- /MinID-menu -->
-
             </div>
         </div>
     </header>
-
     <!-- /SECTION: HEADER -->
-
-
     <main>
-
         <section class='Box'>
             <!-- NOTE: provider is added twice: above box title (this one) and below box.
 The one above title is displayed on desktop only. the one below on mobile only. -->
@@ -79,9 +62,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
             </div>
             <div class='Box_header'>
                 <h1 class='Box_header-title with-logo logo-eid-gray'>Logg inn med MinID</h1>
-
                 <nav class='mi-Menu' id='js-mi-menu'>
-
                     <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='mi-Menu_Trigger mi-Menu_Trigger-disabled'>
     <img src='../../images/svg/minid-m-kant.svg' alt="minid logo" />
     <span class="visuallyHidden">Meny</span>
@@ -93,9 +74,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                         <li><a href="" class="mi-Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
                     </ul>
                 </nav>
-
             </div>
-
             <div class='Box_main'>
                 <!-- Progress dots -->
                 <div class='fm-Progress_Container'>
@@ -104,17 +83,17 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                     <div class='fm-Progress_Dot active'></div>
                 </div>
                 <!-- /Progress dots -->
-
                 <!-- Notification -->
                 <div class='notification with-Icon with-Link'>
-                    Har du en smart-enhet som enten bruker touch-ID eller annsiktsgjennkjenning kan du bruke den som alternativ
-                    innloggingsmetode for MinID.<br><br>
+                    Har du en smartenhet som enten bruker touch-ID eller annsiktsgjennkjenning kan du bruke den som alternativ innloggingsmetode for MinID.
+                    <br>
+                    <br>
                     <a href=''><span>Les om alternativ innlogging</span></a>
                 </div>
                 <!-- /Notification -->
-
-                <div class="device-warning"><p id="add-webauthn-message" class="fm-Message-warning add-device" style="display: none"></p></div>
-
+                <div class="device-warning">
+                    <p id="add-webauthn-message" class="fm-Message-warning add-device" style="display: none"></p>
+                </div>
                 <div id="webauthn-add-device-box" class='Box_main Box_inside-footer' onclick="showControls()">
                     <ul class='ln-List ln-List-lowPriority'>
                         <li>
@@ -123,39 +102,38 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                                     <img src='../img/key.png' alt='' />
                                 </span>
                                 <div class='ln-List_Element_Service' id="webAuthn">
-                                    <span class='ln-List_Element_Service_Name'>Smart-enhet</span>
-                                    <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smart-enhet</span>
+                                    <span class='ln-List_Element_Service_Name'>Smartenhet</span>
+                                    <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smartenhet</span>
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div id="webauthn-added-device" style="display: none">
-                    <ul class="ln-List" id="devices"><li id="device"></li></ul>
+                    <ul class="ln-List" id="devices">
+                        <li id="device"></li>
+                    </ul>
                     <div class='fm-Controls add-to-list' id="add-devices-controls">
                         <div class="add-devices">
                             <div class='field-controls-devices'>
                                 <div class='fm-Field'>
-                                    <label for='add'>Navn på smart-enhet</label>
+                                    <label for='add'>Navn på smartenhet</label>
                                     <input id='add' type="text" placeholder='Yubikey' />
                                 </div>
-                                <span class='fm-Message'>Vennligst fyll inn navn på smart-enheten din</span>
+                                <span class='fm-Message'>Vennligst fyll inn navn på smartenheten din</span>
                             </div>
                         </div>
                         <button id="undo-webauthn-device-btn" class='btn btn-Negative add-to-list'><span>Fjern smartenhet</span></button>
                     </div>
                 </div>
-
-
                 <!-- Form -->
                 <form action='#'>
                     <div id="webauthn-hide-warning" class='fm-Checkbox-hide'>
                         <input id='digipost-check' type='checkbox' name="provider" value="digipost" />
                         <label for='digipost-check'>
-                            <span class='fm-Checkbox_Info'>Skjul varsel om smart-enhet</span>
+                            <span class='fm-Checkbox_Info'>Skjul varsel om smartenhet</span>
                         </label>
                     </div>
-
                     <!-- Controls placeholder with two buttons -->
                     <div class="fm-Field add-to-list">
                         <div class='fm-Controls with-Normal with-Action'>
@@ -169,10 +147,10 @@ The one above title is displayed on desktop only. the one below on mobile only. 
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
                     <ul>
-                        <li><a href='MinID-2D.html'><span>Vellykket</span></a></li><br>
+                        <li><a href='MinID-2D.html'><span>Vellykket</span></a></li>
+                        <br>
                     </ul>
                 </div>
-
                 <!-- <div class='Box_footer-help'>
   <a href='#'><span class='fa fa-question-circle'></span><span class='visuallyHidden'>Help</span></a>
 </div> -->
@@ -183,9 +161,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
         <div class='mi-Provider'><img src='../../images/nav-logo.gif' alt='Nav logo' /></div>
     </main>
     <!-- /build -->
-
     <!-- SECTION: FOOTER -->
-
     <footer class="f-Main">
         <div class='f-Main_Content'>
             <div class='f-Main_Logo' aria-hidden="true"></div>
@@ -198,9 +174,7 @@ The one above title is displayed on desktop only. the one below on mobile only. 
             </div>
         </div>
     </footer>
-
     <!-- /SECTION: FOOTER -->
-
     <script type="text/javascript" src="../../js/vendor.min.js"></script>
     <script type="text/javascript" src="../../js/accordion.js"></script>
     <script type="text/javascript" src="../../js/country-selector.js"></script>
