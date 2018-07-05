@@ -6,6 +6,6 @@
     });
     $(".btn-Abort.fully").on("click", e => {
         e.preventDefault();
-        window.location.href = "../landing-page/index.html";
+        window.location.href = "index.html";
     });
 })();
