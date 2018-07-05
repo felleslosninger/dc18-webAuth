@@ -59,7 +59,7 @@
                     <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>MinID</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
                     <ul>
                         <li><a href="" class="h-Main_Menu_Element"><span>MinID innstillinger</span></a></li>
-                        <li><a href="../../demo/register-new-user-with-webauthn/MinID-Ny-bruker-1.html" class="h-Main_Menu_Element"><span>Registrer ny MinID bruker</span></a></li>
+                        <li><a href="" class="h-Main_Menu_Element"><span>registrere ny MinID bruker</span></a></li>
                         <li><a href="" class="h-Main_Menu_Element"><span>Glemt passord</span></a></li>
                         <li><a href="" class="h-Main_Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
                     </ul>
@@ -87,58 +87,103 @@ The one above title is displayed on desktop only. the one below on mobile only. 
                 <img src='../../images/nav-logo.gif' alt='tjenestetilbyders logo' />
             </div>
             <div class='Box_header'>
-                <h1 class='Box_header-title with-logo logo-eid-gray'>LOGG INN MED MINID</h1>
-                <nav class='mi-Menu' id='js-mi-menu'>
-                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='mi-Menu_Trigger mi-Menu_Trigger-disabled'>
-                    <img src='../../images/svg/minid-m-kant.svg' alt="minid logo" />
-                    <span class="visuallyHidden">Meny</span>
-                    <span class='fa fa-bars fa-lg' aria-hidden="true"></span></a>
-                    <ul>
-                        <li><a href="" class="mi-Menu_Element"><span>MinID innstillinger</span></a></li>
-                        <li><a href="" class="mi-Menu_Element"><span>Registrer ny MinID bruker</span></a></li>
-                        <li><a href="" class="mi-Menu_Element"><span>Glemt passord</span></a></li>
-                        <li><a href="" class="mi-Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
-                    </ul>
-                </nav>
+                <h1 class='Box_header-title with-logo logo-eid-gray'>VELG ELEKTRONISK ID</h1>
             </div>
             <div class='Box_main'>
-                <!-- Progress dots -->
-                <div class='fm-Progress_Container'>
-                    <div class='fm-Progress_Dot active'></div>
-                    <div class='fm-Progress_Dot'></div>
-                </div>
-                <!-- /Progress dots -->
-                <!-- Form -->
-                <form action='../login-with-webauthn/MinID-2E.html'>
-                    <div class='fm-Fields'>
-                        <div class='fm-Field'>
-                            <label for='idnumber'>Fødselsnummer <span>(11 siffer)</span></label>
-                            <input id='idnumber' maxlength="11" type='tel' placeholder='Fødselsnummer (11 siffer)' />
+                <ul class='ln-List'>
+                    <li>
+                        <a href="../login-with-onboarding-webauthn/index.html" class='ln-List_Element'>
+      <span class='ln-List_Element_Logo'>
+        <img src='../../images/svg/Minid.svg' alt='' />
+      </span>
+                        <div class='ln-List_Element_Service'>
+                            <span class='ln-List_Element_Service_Name'>Minid</span>
+                            <span class='ln-List_Element_Service_Info'>Med kode fra SMS eller PIN-kodebrev</span>
                         </div>
-                        <span class='fm-Message'>Vennligst fyll inn fødselsnummeret ditt</span>
-                        <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
-                        <div class='fm-Field'>
-                            <label for='password'>Passord</label>
-                            <input id='password' type='password' placeholder='******' />
+                        <span class='fa fa-angle-right fa-lg'></span>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="" class='ln-List_Element'>
+      <span class='ln-List_Element_Logo'>
+        <img src='../../images/svg/Bankid.svg' alt='' />
+      </span>
+                        <div class='ln-List_Element_Service'>
+                            <span class='ln-List_Element_Service_Name'>Bankid</span>
+                            <span class='ln-List_Element_Service_Info'>Med koder fra bankbrikken din</span>
                         </div>
-                        <span class='fm-Message'>Vennligst skriv inn passordet ditt</span>
-                        <div class='fm-form_link with-Link'>
-                            <a href='#'><span>Glemt passord?</span></a>
+                        <span class='fa fa-angle-right fa-lg'></span>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="" class='ln-List_Element'>
+      <span class='ln-List_Element_Logo'>
+        <img src='../../images/svg/Bankid_mobil.svg' alt='' />
+      </span>
+                        <div class='ln-List_Element_Service'>
+                            <span class='ln-List_Element_Service_Name'>Bankid på mobil</span>
+                            <span class='ln-List_Element_Service_Info'>Med sikker legitimasjon på mobilen</span>
                         </div>
-                    </div>
-                    <!-- Controls placeholder with two buttons -->
-                    <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Action' type='submit'><span>Neste</span></button>
-                        <button class='btn btn-Normal btn-Abort landing'><span>Avbryt</span></button>
-                    </div>
-                    <!-- //Controls placeholder with two buttons -->
-                </form>
+                        <span class='fa fa-angle-right fa-lg'></span>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="" class='ln-List_Element'>
+      <span class='ln-List_Element_Logo'>
+        <img src='../../images/svg/buypass.svg' alt='' />
+      </span>
+                        <div class='ln-List_Element_Service'>
+                            <span class='ln-List_Element_Service_Name'>BUYPASS ID PÅ SMARTKORT</span>
+                            <span class='ln-List_Element_Service_Info'>Med smartkort og kortleser</span>
+                        </div>
+                        <span class='fa fa-angle-right fa-lg'></span>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="" class='ln-List_Element'>
+      <span class='ln-List_Element_Logo'>
+        <img src='../../images/svg/buypass_mobil.svg' alt='' />
+      </span>
+                        <div class='ln-List_Element_Service'>
+                            <span class='ln-List_Element_Service_Name'>BUYPASS ID i mobil</span>
+                            <span class='ln-List_Element_Service_Info'>Med passord/SMS eller mobilapp</span>
+                        </div>
+                        <span class='fa fa-angle-right fa-lg'></span>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="" class='ln-List_Element'>
+      <span class='ln-List_Element_Logo'>
+        <img src='../../images/svg/commfides.svg' alt='' />
+      </span>
+                        <div class='ln-List_Element_Service'>
+                            <span class='ln-List_Element_Service_Name'>COMMFIDES</span>
+                            <span class='ln-List_Element_Service_Info'>Med USB-pinne eller smartkort</span>
+                        </div>
+                        <span class='fa fa-angle-right fa-lg'></span>
+                    </a>
+                    </li>
+                </ul>
+            </div>
+            <div class='Box_main Box_inside-footer'>
+                <ul class='ln-List ln-List-lowPriority'>
+                    <li>
+                        <a href="" class='ln-List_Element'>
+      <span class='ln-List_Element_Logo'>
+        <img src='../../images/nav.jpg' alt='' />
+      </span>
+                        <div class='ln-List_Element_Service'>
+                            <span class='ln-List_Element_Service_Name'>GÅ TIL FLERE<br>INNLOGGINGSMETODER</span>
+                        </div>
+                        <span class='fa fa-angle-right fa-lg'></span>
+                    </a>
+                    </li>
+                </ul>
             </div>
             <div class='Box_footer'>
                 <div class='Box_footer-links'>
                     <ul>
-                        <li><a href="../register-new-user-with-webauthn/MinID-Ny-bruker-1.html"><span>Registrer ny bruker</span></a></li>
-                        <li><a href='#'><span>Bestill PIN-koder</span></a></li>
+                        <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li>
                     </ul>
                 </div>
                 <!-- <div class='Box_footer-help'>
@@ -167,6 +212,16 @@ The one above title is displayed on desktop only. the one below on mobile only. 
     <!-- /SECTION: FOOTER -->
     <script type="text/javascript" src="../../js/vendor.min.js"></script>
     <script type="text/javascript" src="../../js/abort-buttons.js"></script>
+    <script type="text/javascript" src="../../js/accordion.js"></script>
+    <script type="text/javascript" src="../../js/country-selector.js"></script>
+    <script type="text/javascript" src="../../js/disabled-links.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript" src="../../js/minid-menu.js"></script>
+    <script type="text/javascript" src="../../js/tab.js"></script>
+    <script type="text/javascript" src="../../js/toggleMenues.js"></script>
+    <script type="text/javascript" src="../../js/toggleForm.js"></script>
+    <script type="text/javascript" src="../../js/check-enable-save.js"></script>
+    <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
 </body>
 
 </html>
