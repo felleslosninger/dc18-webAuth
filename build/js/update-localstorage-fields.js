@@ -1,6 +1,6 @@
 // getters
-var getSecurityKeyName = () => (JSON.parse(window.localStorage.getItem("webauthn-device"))||{}).name;
-var getSecurityKeyCreationTime = () => (JSON.parse(window.localStorage.getItem("webauthn-device"))||{}).date;
+var getSecurityKeyName = () => (JSON.parse(window.localStorage.getItem("webauthn-device")) || {}).name;
+var getSecurityKeyCreationTime = () => (JSON.parse(window.localStorage.getItem("webauthn-device")) || {}).date;
 var getAuthType = () => window.localStorage.getItem("auth-type") || "letter";
 var getPhoneNumber = () => "93282061"; // dummy value
 var getAuthTypeHumanReadable = () => {
@@ -24,7 +24,7 @@ var getAuthTypeHumanReadable = () => {
 
 (function() {
     let $ = jQuery.noConflict();
-    
+
     let updateFields = () => {
         $(".securitykey-name").html(getSecurityKeyName());
         $('.securitykey-time').html(getSecurityKeyCreationTime());
@@ -36,7 +36,7 @@ var getAuthTypeHumanReadable = () => {
         $('.auth-type').html(getAuthTypeHumanReadable());
         // ...
     }
-    
+
     // add event listener on storage change
     $(window).on('storage', e => {
         console.log("Storage changed"); // test output
