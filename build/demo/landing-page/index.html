@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Difi</title>
+    <title>Velkommen til Difi</title>
     <link rel="stylesheet" type="text/css" href="../../css/landing.css">
+    <script type="text/javascript" src="../../../src/vendor/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/fade.js" ></script>
 </head>
 <body>
 <div class="App">
     <header class="App-header">
-        <img src="../img/logo-difi.png" class="App-logo" alt="logo"/>
+        <img src="../img/difiLogo.png" class="App-logo" alt="logo"/>
     </header>
     <section class="main_background">
-        <div class="background-image" style="background-image: url('../img/bg5.jpg');">
+        <div class="background-image" style="background-image: url('../img/background.jpg');">
         </div>
         <div id="loginBox">
             <div class="w3-container">
-                <h2>Login</h2>
+                <h2 id="loginText">LOGIN</h2>
                 <a href="../login-with-onboarding-webauthn/index.html" class="w3-btn w3-black">
                     Onboarding
                 </a>
@@ -36,5 +38,32 @@
         </div>
     </section>
 </div>
+<!-- SECTION: FOOTER -->
+<footer class="f-Main">
+    <div class='f-Main_Content'>
+        <div class='f-Main_Logo' aria-hidden="true"></div>
+        <div class='f-Main_Info'>
+            <a href="" class='f-Main_Link'><span>Kontaktskjema</span></a>
+            <a href="tel:+4780030300" class='f-Main_Link'><span>Tlf: 800 30 300</span></a>
+            <a href="" class='f-Main_Link'><span>Hjelp til innlogging</span></a>
+            <a href="" class='f-Main_Link'><span>Sikkerhet og personvern</span></a>
+            <p>Driftet av Direktoratet for forvaltning og IKT (Difi)</p>
+        </div>
+    </div>
+</footer>
+<!-- /SECTION: FOOTER -->
+<script type="text/javascript" src="../../js/vendor.min.js"></script>
+<script type="text/javascript" src="../../js/accordion.js"></script>
+<script type="text/javascript" src="../../js/country-selector.js"></script>
+<script type="text/javascript" src="../../js/disabled-links.js"></script>
+<script type="text/javascript" src="../../js/header.js"></script>
+<script type="text/javascript" src="../../js/minid-menu.js"></script>
+<script type="text/javascript" src="../../js/tab.js"></script>
+<script type="text/javascript" src="../../js/toggleMenues.js"></script>
+<script type="text/javascript" src="../../js/toggleForm.js"></script>
+<script type="text/javascript" src="../../js/check-enable-save.js"></script>
+<script type="text/javascript" src="../../js/radio-enable-save.js"></script>
+<script type="text/javascript" src="../../js/webauthn.js"></script>
+<script type="text/javascript" src="../../js/check-enable-hide.js"></script>
 </body>
 </html>

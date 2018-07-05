@@ -1,6 +1,23 @@
+@font-face {
+    font-family: "Webly Sleek";
+    src: url(../fonts/weblysleek_ui/weblysleekuil.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Webly Sleek bold";
+    src: url(../fonts/weblysleek_ui/weblysleekuil.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Webly Sleek italic";
+    src: url(../fonts/weblysleek_ui/weblysleekuil.ttf) format("truetype");
+}
+
+
 body {
     margin: 0;
     padding: 0;
+    font-family: "Webly Sleek";
 }
 
 .App {
@@ -15,6 +32,11 @@ body {
     background-color: white;
     padding: 5px;
     color: white;
+}
+
+#loginText {
+    text-decoration: underline;
+    text-decoration-color: #00ccff;
 }
 
 #loginBox {
@@ -34,7 +56,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 30px;
 }
 
 
@@ -70,7 +91,7 @@ section {
 
 .w3-container {
     width: auto;
-    padding: 5px;
+    padding: 20px;
 }
 
 .w3-btn,
