@@ -48,6 +48,9 @@ content you want them to have.
 
 <!-- gets current security key device name and puts it in value attr -->
 <input type='text' class='securitykey-name' />
+
+<!-- include this file in the "include scripts" section of your html file -->
+<script type="text/javascript" src="../../js/update-localstorage-fields.js"></script>
 ```
 
 **NOTE:** The input tag also receives the data in the inner html - this is not a
