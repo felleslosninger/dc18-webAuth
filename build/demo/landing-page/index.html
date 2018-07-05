@@ -1,69 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Velkommen til Difi</title>
     <link rel="stylesheet" type="text/css" href="../../css/landing.css">
     <script type="text/javascript" src="../../../src/vendor/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../../js/fade.js" ></script>
+    <script type="text/javascript" src="../../js/fade.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="../favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
-<div class="App">
-    <header class="App-header">
-        <img src="../img/difiLogo.png" class="App-logo" alt="logo"/>
-    </header>
-    <section class="main_background">
-        <div class="background-image" style="background-image: url('../img/background.jpg');">
-        </div>
-        <div id="loginBox">
-            <div class="w3-container">
-                <h2 id="loginText">LOGIN</h2>
-                <a href="../login-with-onboarding-webauthn/index.html" class="w3-btn w3-black">
+    <div class="App">
+        <header class="App-header">
+            <img src="../img/difiLogo.png" class="App-logo" alt="logo" />
+        </header>
+        <section class="main_background">
+            <div class="background-image" style="background-image: url('../img/background.jpg');">
+            </div>
+            <div id="loginBox">
+                <div class="w3-container">
+                    <h2 id="loginText">LOGIN</h2>
+                    <a href="../login-with-onboarding-webauthn/index.html" class="w3-btn w3-black">
                     Onboarding
                 </a>
-                <br>
-                <a href="../login-with-webauthn/index.html" class="w3-btn w3-black">
-                    Onboarding (When registered)
+                    <br>
+                    <a href="../login-with-webauthn/index.html" class="w3-btn w3-black">
+                    WebAuthn
                 </a>
-                <br>
-                <a href="../register-new-user-with-webauthn/index.html" class="w3-btn w3-black">
+                    <br>
+                    <a href="../register-new-user-with-webauthn/index.html" class="w3-btn w3-black">
                     Register New User
                 </a>
-                <br>
-                <a href="../update-settings/index.html" class="w3-btn w3-black">
+                    <br>
+                    <a href="../update-settings/index.html" class="w3-btn w3-black">
                     Settings
                 </a>
-                <br>
+                    <br>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- SECTION: FOOTER -->
+    <footer class="f-Main">
+        <div class='f-Main_Content'>
+            <div class='f-Main_Logo' aria-hidden="true"></div>
+            <div class='f-Main_Info'>
+                <a href="" class='f-Main_Link'><span>Kontaktskjema</span></a>
+                <a href="tel:+4780030300" class='f-Main_Link'><span>Tlf: 800 30 300</span></a>
+                <a href="" class='f-Main_Link'><span>Hjelp til innlogging</span></a>
+                <a href="" class='f-Main_Link'><span>Sikkerhet og personvern</span></a>
+                <p>Driftet av Direktoratet for forvaltning og IKT (Difi)</p>
             </div>
         </div>
-    </section>
-</div>
-<!-- SECTION: FOOTER -->
-<footer class="f-Main">
-    <div class='f-Main_Content'>
-        <div class='f-Main_Logo' aria-hidden="true"></div>
-        <div class='f-Main_Info'>
-            <a href="" class='f-Main_Link'><span>Kontaktskjema</span></a>
-            <a href="tel:+4780030300" class='f-Main_Link'><span>Tlf: 800 30 300</span></a>
-            <a href="" class='f-Main_Link'><span>Hjelp til innlogging</span></a>
-            <a href="" class='f-Main_Link'><span>Sikkerhet og personvern</span></a>
-            <p>Driftet av Direktoratet for forvaltning og IKT (Difi)</p>
-        </div>
-    </div>
-</footer>
-<!-- /SECTION: FOOTER -->
-<script type="text/javascript" src="../../js/vendor.min.js"></script>
-<script type="text/javascript" src="../../js/accordion.js"></script>
-<script type="text/javascript" src="../../js/country-selector.js"></script>
-<script type="text/javascript" src="../../js/disabled-links.js"></script>
-<script type="text/javascript" src="../../js/header.js"></script>
-<script type="text/javascript" src="../../js/minid-menu.js"></script>
-<script type="text/javascript" src="../../js/tab.js"></script>
-<script type="text/javascript" src="../../js/toggleMenues.js"></script>
-<script type="text/javascript" src="../../js/toggleForm.js"></script>
-<script type="text/javascript" src="../../js/check-enable-save.js"></script>
-<script type="text/javascript" src="../../js/radio-enable-save.js"></script>
-<script type="text/javascript" src="../../js/webauthn.js"></script>
-<script type="text/javascript" src="../../js/check-enable-hide.js"></script>
+    </footer>
+    <!-- /SECTION: FOOTER -->
+    <script type="text/javascript" src="../../js/vendor.min.js"></script>
+    <script type="text/javascript" src="../../js/accordion.js"></script>
+    <script type="text/javascript" src="../../js/country-selector.js"></script>
+    <script type="text/javascript" src="../../js/disabled-links.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript" src="../../js/minid-menu.js"></script>
+    <script type="text/javascript" src="../../js/tab.js"></script>
+    <script type="text/javascript" src="../../js/toggleMenues.js"></script>
+    <script type="text/javascript" src="../../js/toggleForm.js"></script>
+    <script type="text/javascript" src="../../js/check-enable-save.js"></script>
+    <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
+    <script type="text/javascript" src="../../js/webauthn.js"></script>
+    <script type="text/javascript" src="../../js/check-enable-hide.js"></script>
 </body>
+
 </html>
