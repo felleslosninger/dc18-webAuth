@@ -1,6 +1,6 @@
 const webauthn = () => {
     const $ = jQuery.noConflict();
-    const name = $('#add').val() || $('#add').attr('placeholder');
+    const name = $('#security-key-name').val() || $('#security-key-name').attr('placeholder');
 
     $('#webAuthn').on('click', (event) => {
         event.preventDefault();
