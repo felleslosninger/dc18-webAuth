@@ -17,6 +17,11 @@ body {
     color: white;
 }
 
+#loginText {
+    text-decoration: underline;
+    text-decoration-color: #00ccff;
+}
+
 #loginBox {
     border: 2px solid #e7ffee;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);

@@ -5,12 +5,7 @@
     <title>Velkommen til Difi</title>
     <link rel="stylesheet" type="text/css" href="../../css/landing.css">
     <script type="text/javascript" src="../../../src/vendor/jquery-3.2.1.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".background-image").hide(0).delay(0).fadeIn(2800);
-            $("#loginBox").hide(0).delay(0).fadeIn(3000);
-        });
-    </script>
+    <script type="text/javascript" src="../../js/fade.js" ></script>
 </head>
 <body>
 <div class="App">
@@ -22,7 +17,7 @@
         </div>
         <div id="loginBox">
             <div class="w3-container">
-                <h2>Login</h2>
+                <h2 id="loginText">LOGIN</h2>
                 <a href="../login-with-onboarding-webauthn/index.html" class="w3-btn w3-black">
                     Onboarding
                 </a>
