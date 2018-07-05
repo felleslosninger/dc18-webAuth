@@ -22,7 +22,7 @@
 (function() {
     let $ = jQuery.noConflict();
 
-    if (getSecurityKeyName() === (null || undefined)) {
+    if (hasSecurityKey() === false) {
         $("#webauthn").attr('disabled', true);
         $( "#webauthn-radio" ).addClass( "fm-RadioButtons disabled" );
     } else {
