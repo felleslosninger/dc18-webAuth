@@ -42,6 +42,6 @@
     // Actually remove the security key
     // Form is submitted when this function returns
     $("#btn-submit-remove").on("click", function(event) {
-        // TODO: remove key
+        window.localStorage.setItem("webauthn-device", JSON.stringify({}));
     });
 })();
