@@ -3,6 +3,13 @@ var getSecurityKeyName = () => (JSON.parse(window.localStorage.getItem("webauthn
 var getSecurityKeyCreationTime = () => (JSON.parse(window.localStorage.getItem("webauthn-device")) || {}).date;
 var getAuthType = () => window.localStorage.getItem("auth-type") || "letter";
 var getPhoneNumber = () => "93282061"; // dummy value
+var hasSecurityKey = () => {
+    if (getSecurityKeyName() === (null || undefined)) {
+        return false;
+    } else {
+        return true;
+    }
+}
 var getAuthTypeHumanReadable = () => {
     switch (getAuthType()) {
         case "letter":
