@@ -13,7 +13,6 @@
     src: url(../fonts/weblysleek_ui/weblysleekuil.ttf) format("truetype");
 }
 
-
 body {
     margin: 0;
     padding: 0;
@@ -142,10 +141,6 @@ section {
 .w3-btn:disabled:hover {
     box-shadow: none
 }
-
-
-
-
 
 .f-Main {
     width: 100%;
