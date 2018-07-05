@@ -8,4 +8,8 @@
         e.preventDefault();
         window.location.href = "index.html";
     });
+    $(".btn-Abort.landing").on("click", e => {
+        e.preventDefault();
+        window.location.href = "../landing-page/index.html";
+    });
 })();
