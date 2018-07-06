@@ -10,6 +10,10 @@
     });
     $(".btn-Abort.landing").on("click", e => {
         e.preventDefault();
-        window.location.href = "../common/index.html";
+        window.location.href = "../common/index-login.html";
+    });
+    $(".btn-Abort.landing2").on("click", e => {
+        e.preventDefault();
+        window.location.href = "../common/index-webauthn.html";
     });
 })();
