@@ -75,7 +75,7 @@
             <!-- TODO: info -->
             <!-- TODO: new form -->
             <!-- Form -->
-            <form action='MinProfil-MinID-innstillinger-B.html'>
+            <form action='MinProfil-MinID-innstillinger-B.html' id="webauthn-device-form">
                 <div class='fm-Fields'>
                     <div class='with-Icon icon-key'>
                         <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
@@ -129,7 +129,10 @@
                 </div>
                 <div class='fm-Controls with-Normal with-Action'>
                     <button id="btn-submit" class='btn btn-Action' type='submit'>
-                        <span>Tilbake</span>
+                        <span>Lagre</span>
+                    </button>
+                    <button class='btn btn-Normal btn-Abort partially'>
+                        <span>Avbryt</span>
                     </button>
                     <!-- Submit form with removal option -->
                 </div>
@@ -172,6 +175,8 @@
 <script type="text/javascript" src="../../js/name-devices.js"></script>
 <script type="text/javascript" src="../../js/addWebauthnDeviceMenu.js"></script>
 <script type="text/javascript" src="../../js/update-localstorage-fields.js"></script>
+<script type="text/javascript" src="../../js/handleSaveWebauthnDevice.js"></script>
+<script type="text/javascript" src="../../js/abort-buttons.js"></script>
 </body>
 
 </html>
