@@ -2289,7 +2289,6 @@ legend a span.fa,
 .fm-Field {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
 }
 
 .fm-Field:first-child {
@@ -2530,10 +2529,6 @@ legend a span.fa,
 
 .fm-Field .with-logo>*:first-child {
     max-width: 80px;
-}
-
-.fm-Field.add-to-list {
-    padding-top: 3rem;
 }
 
 .fm-Message,
