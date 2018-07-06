@@ -29,6 +29,18 @@ const localStorage = () => {
         window.localStorage.setItem("webauthn-device", JSON.stringify(norm));
     });
 
+    $(document).on('redirect:create-referrer', (event, data) => {
+        console.log('redirect:create-referrer in localStorage.js');
+        console.log("Setting referrer of " + data.referree + " to " + data.refererrer);
+        window.localStorage.setItem("referrer:" + data.referree, data.referrer);
+    });
+
+    $(document).on('redirect:remove-referrer', (event, data) => {
+        console.log('redirect:remove-referrer in localStorage.js');
+        console.log("Removing referrer of " + data);
+        window.localStorage.removeItem("referrer:" + data);
+    });
+    
     /**
      * Function to be called after the Webauthn device is removed.
      */
