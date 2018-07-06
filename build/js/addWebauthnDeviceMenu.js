@@ -1,13 +1,21 @@
 const addWebauthnDeviceMenu = () => {
   const $ = jQuery.noConflict();
 
-  $(document).on('webauthn:register-success', (event) => {
-    event.preventDefault();
+  const showWebauthnDevice = (message) => {
     $('#webauthn-added-device').toggle();
-    $('#add-webauthn-message').show();
-    $('#add-webauthn-message').text('Smartenheten er registrert');
+    if (message) {
+      $('#add-webauthn-message').show();
+      $('#add-webauthn-message').text(message);
+    } else {
+      $('#add-webauthn-message').hide();
+    }
     $('#webauthn-hide-warning').toggle();
     $('#webauthn-add-device-box').toggle();
+  };
+
+  $(document).on('webauthn:register-success', (event) => {
+    event.preventDefault();
+    showWebauthnDevice('Smartenheten er registrert');
   });
 
   $(document).on('webauthn:prompt-user-presence', (event) => {
@@ -26,6 +34,12 @@ const addWebauthnDeviceMenu = () => {
     $('#add-devices-controls').toggle();
     $('#webauthn-add-device-box').toggle();
   });
+
+
+  const webauthnDevice = JSON.parse(window.localStorage.getItem('webauthn-device'));
+  if (webauthnDevice) {
+    showWebauthnDevice();
+  }
 };
 
 
