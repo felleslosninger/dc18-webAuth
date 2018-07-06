@@ -44,4 +44,11 @@
     $("#btn-submit-remove").on("click", function(event) {
         $(document).trigger('webauthn:remove-device');
     });
+
+    $("#btn-submit").on("click", function(event) {
+        $(document).trigger('webauthn:update-device', {
+            name: $("#security-key-name").val(),
+            date: $("#security-key-registration-date").val()
+        });
+    });
 })();

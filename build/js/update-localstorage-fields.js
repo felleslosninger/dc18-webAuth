@@ -57,10 +57,21 @@ var getAuthTypeHumanReadable = () => {
     console.log('updateFieldsWithDevice');
     console.log(data);
     if (!data) return;
+    
+    let dt = data.date;
+    if (!dt){
+      console.log("ERROR: data.date not found");
+      return;
+    }
+    if (typeof dt === "string")
+      dt = new Date(Date.parse(dt)); // try to convert the data to a date
+      // NOTE: The above may cause an error. This indicates a programming error.
+      // It should be graciously handled, but let's not worry about it for now.
+    
     $(".securitykey-name").html(data.name);
-    $('.securitykey-time').html(data.date.toISOString());
+    $('.securitykey-time').html(dt.toISOString());
     $("input[type='text'].securitykey-name").val(data.name);
-    $("input[type='text'].securitykey-time").val(data.date.toISOString());
+    $("input[type='text'].securitykey-time").val(dt.toISOString());
   };
   const clearFields = () => {
     console.log('clearFields');
@@ -90,6 +101,13 @@ var getAuthTypeHumanReadable = () => {
     $('#add-webauthn-message').text('Smartenheten er nå fjernet');
     $('#remove-security-key-dialog').hide();
     $('#webauthn-add-device-box').show();
+  });
+  $(document).on('webauthn:update-device', (event, data) => {
+    console.log("webauthn:update-device in update-localstorage-fields.js");
+    updateFieldsWithDevice(event, data);
+  });
+  $(document).on('webauthn:update-auth-type', (event, data) => {
+    // TODO
   });
 
   // update fields initially
