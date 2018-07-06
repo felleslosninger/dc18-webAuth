@@ -12,11 +12,8 @@ const addWebauthnDeviceMenu = () => {
 
   $(document).on('webauthn:prompt-user-presence', (event) => {
     event.preventDefault();
-    $('#webauthn-added-device').toggle();
     $('#add-webauthn-message').show();
     $('#add-webauthn-message').text('Trykk på smartenheten');
-    $('#webauthn-hide-warning').toggle();
-    $('#webauthn-add-device-box').toggle();
   });
 
 
