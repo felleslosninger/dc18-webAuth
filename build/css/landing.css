@@ -301,3 +301,24 @@ section {
 .f-Main_Link[href^="tel:"] span.fa {
     border-bottom-color: transparent;
 }
+
+a.logoutBtn{
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 120px;
+    background-color: #00ccff;
+    padding: 15px;
+    margin-top: 4px;
+}
+
+a.logoutBtn:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.9;
+}
