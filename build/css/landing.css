@@ -301,3 +301,14 @@ section {
 .f-Main_Link[href^="tel:"] span.fa {
     border-bottom-color: transparent;
 }
+
+a.btn{
+    color: #fff;
+    border-radius: 2px;
+    padding: 4px;
+    background-color: #b0e0e6;
+    text-align: center;
+    height: auto;
+    width: auto;
+    text-decoration: none;
+}
