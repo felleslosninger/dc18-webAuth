@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../fonts/open-sans/open-sans.css">
     <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link type="text/css" rel="stylesheet" href="../../css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
     <link rel="apple-touch-icon" sizes="57x57" href="../favicon.ico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../favicon.ico/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../favicon.ico/apple-icon-72x72.png">
@@ -28,14 +29,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link type="text/css" rel="stylesheet" href="../../css/style.css"/>
 </head>
 <!-- use class .popup to hiden header and footer, or use .popup .with-footer to keep footer -->
 
 <body class='hide-mobileMenu popup'>
 <!--[if lt IE 11]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 <!-- SECTION: HEADER -->
 <header class='h-Main'>
@@ -49,8 +48,7 @@
         <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
         <div class='h-Menu_Container' id='js-menues'>
             <nav class='h-Menu'>
-                <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Kontaktdetaljer</span><span
-                        class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
+                <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Kontaktdetaljer</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
                 <ul>
                     <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
                 </ul>
@@ -62,76 +60,30 @@
 <main>
     <section class='Box'>
         <div class='Box_header'>
-            <h1 class='Box_header-title with-close-button'>Administrer smartenhet</h1>
+            <h1 class='Box_header-title with-close-button'>Deaktivér smartenhet</h1>
             <span class='Box_header-close'>
-    <a href='MinProfil-MinID-innstillinger-B.html'>
+    <a href='MinProfil-MinID-innstillinger-D.html'>
       <span class='fa fa-close'>
-        <span class='visuallyHidden'>Lukk dette vinduet</span>
+        <span class='visuallyHidden'>Close window</span>
                 </span>
                 </a>
                 </span>
         </div>
         <div class='Box_main'>
-            <!-- TODO: info -->
-            <!-- TODO: new form -->
             <!-- Form -->
-            <form action='MinProfil-MinID-innstillinger-B.html' id="webauthn-device-form">
-                <div>
-                    <div id="webauthn-add-device-box" class='Box_main Box_inside-footer' onclick="showControls()">
-                        <p class="notification with-Icon with-Link add-device" id="add-webauthn-message" style="display: none"></p>
-                        <ul class='ln-List ln-List-lowPriority'>
-                            <li>
-                                <a href="" id="register-device" class='ln-List_Element'>
-                                <span class='ln-List_Element_Logo'>
-                                    <img src='../img/key.png' alt='' />
-                                </span>
-                                    <div class='ln-List_Element_Service' id="webAuthn">
-                                        <span class='ln-List_Element_Service_Name'>Smartenhet</span>
-                                        <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smartenhet</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="webauthn-added-device" style="display: none">
-                        <ul class="ln-List" id="devices">
-                            <li id="device"></li>
-                        </ul>
-                        <div class='fm-Fields'>
-                            <div class='fm-Field'>
-                                <div class='label'>Din aktive smartenhet</div>
-                                <ul class="ln-List ln-List_Digitalpost">
-                                    <li>
-                                        <div class="ln-List_Element with-logo" href="#">
-                                        <span class="ln-List_Element_Logo">
-                    <img src="../img/key.png" alt="">
-                  </span>
-                                            <div class="ln-List_Element_Service">
-                                                <span class="ln-List_Element_Service_Info"><strong>Yubikey</strong>, registrert 09.07.18</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class='fm-form_link with-Link'>
-                                <a href='MinID-remove-device.html'><span>Deaktivér smartenhet</span></a>
-                            </div>
-                        </div>
+            <form action='MinProfil-MinID-innstillinger-D.html'>
+                <div class='fm-Fields'>
+                    <div class='notification with-Icon'>
+                        Ved å trykke DEAKTIVÉR vil din smartenhet ikke lengre være mulig å bruke.
                     </div>
                 </div>
-
+                <!-- Controls placeholder with two buttons -->
                 <div class='fm-Controls with-Normal with-Action'>
-                    <button id="btn-submit" class='btn btn-Action' type='submit'>
-                        <span>Lagre</span>
-                    </button>
-                    <button class='btn btn-Normal btn-Abort partially'>
-                        <span>Avbryt</span>
-                    </button>
-                    <!-- Submit form with removal option -->
+                    <button class='btn btn-Action' type='submit' id="undo-webauthn-device-btn"><span>Deaktivér</span></button>
+                    <button class='btn btn-Normal'><span>Avbryt</span></button>
                 </div>
                 <!-- //Controls placeholder with two buttons -->
             </form>
-            <!-- //Form -->
         </div>
     </section>
 </main>
@@ -161,14 +113,13 @@
 <script type="text/javascript" src="../../js/toggleForm.js"></script>
 <script type="text/javascript" src="../../js/check-enable-save.js"></script>
 <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
-<script type="text/javascript" src="../../js/localStorage.js"></script>
-<script type="text/javascript" src="../../js/MinProfil-MinID-innstillinger-D.js"></script>
 <script type="text/javascript" src="../../js/webauthn.js"></script>
+<script type="text/javascript" src="../../js/check-enable-hide.js"></script>
 <script type="text/javascript" src="../../js/name-devices.js"></script>
 <script type="text/javascript" src="../../js/addWebauthnDeviceMenu.js"></script>
-<script type="text/javascript" src="../../js/update-localstorage-fields.js"></script>
-<script type="text/javascript" src="../../js/handleSaveWebauthnDevice.js"></script>
+<script type="text/javascript" src="../../js/localStorage.js"></script>
 <script type="text/javascript" src="../../js/abort-buttons.js"></script>
+<script type="text/javascript" src="../../js/register-device.js"></script>
 </body>
 
 </html>
