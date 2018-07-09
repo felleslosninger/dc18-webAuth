@@ -1,6 +1,14 @@
 // getters
 var getSecurityKeyName = () => (JSON.parse(window.localStorage.getItem("webauthn-device")) || {}).name;
 var getSecurityKeyCreationTime = () => (JSON.parse(window.localStorage.getItem("webauthn-device")) || {}).date;
+var getSecurityKeyCreationDate = () => {
+  const webauthnDevice =  JSON.parse(window.localStorage.getItem("webauthn-device"));
+  if (webauthnDevice) {
+    return new Date(webauthnDevice.date).toLocaleDateString();
+  } else {
+    return '';
+  }
+};
 var getAuthType = () => window.localStorage.getItem("auth-type") || "letter";
 var getPhoneNumber = () => "93282061"; // dummy value
 var hasSecurityKey = () => {
@@ -32,6 +40,7 @@ var getAuthTypeHumanReadable = () => {
     console.log('Updating fields');
     $(".securitykey-name").html(getSecurityKeyName());
     $('.securitykey-time').html(getSecurityKeyCreationTime());
+    $('.securitykey-info').html(`<strong>${getSecurityKeyName()}</strong><span>, registrert ${getSecurityKeyCreationDate()}</span>`);
     // specifically input[text] needs to put this as the value instead of setting
     // the inner html
     // Yes, this is horrible
@@ -66,6 +75,7 @@ var getAuthTypeHumanReadable = () => {
 
     $(".securitykey-name").html(data.name);
     $('.securitykey-time').html(dt.toISOString());
+    $('.securitykey-info').html(`<strong>${getSecurityKeyName()}</strong><span>, registrert ${getSecurityKeyCreationDate()}</span>`);
     $("input[type='text'].securitykey-name").val(data.name);
     $("input[type='text'].securitykey-time").val(dt.toISOString());
   };
@@ -73,6 +83,7 @@ var getAuthTypeHumanReadable = () => {
     console.log('clearFields');
     $(".securitykey-name").html('');
     $('.securitykey-time').html('');
+    $('.securitykey-info').html('');
     $("input[type='text'].securitykey-name").val('');
     $("input[type='text'].securitykey-time").val('');
   };
