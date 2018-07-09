@@ -1,4 +1,4 @@
-#Id-porten redesign
+# Id-porten redesign
 
 ### How to build
 
@@ -32,6 +32,7 @@ content you want them to have.
 
 - securitykey-name (the user defined name of the security key)
 - securitykey-time (the time the security key was registered)
+- securitykey-info (short html string with name and date only)
 - auth-type (the type of second factor authorization the user has selected,
   in human readable format)
 
