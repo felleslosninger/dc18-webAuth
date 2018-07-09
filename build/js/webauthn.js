@@ -2,9 +2,9 @@ const DEFAULT_DEVICE_NAME = 'Yubikey';
 
 const webauthn = () => {
   const $ = jQuery.noConflict();
-  const name = $('#security-key-name').val() || DEFAULT_DEVICE_NAME;
 
   $('#webAuthn').on('click', (event) => {
+    const name = $('#security-key-name').val() || DEFAULT_DEVICE_NAME;
     event.preventDefault();
     console.log('test');
     if (!navigator.credentials) {
@@ -31,11 +31,11 @@ const webauthn = () => {
       .then((credentials) => {
         console.log(credentials);
         $(document).trigger('webauthn:login-success')
-          window.location.href = "../landing-page/min-side.html";
+        window.location.href = "../landing-page/min-side.html";
       })
       .catch((error) => {
-          console.error(error);
-          window.location.href = "../landing-page/min-side.html";
+        console.error(error);
+        window.location.href = "../landing-page/min-side.html";
       });
   });
 
