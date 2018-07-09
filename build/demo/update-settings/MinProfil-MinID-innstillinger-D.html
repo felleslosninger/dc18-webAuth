@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../fonts/open-sans/open-sans.css">
     <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css"/>
     <link rel="apple-touch-icon" sizes="57x57" href="../favicon.ico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../favicon.ico/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../favicon.ico/apple-icon-72x72.png">
@@ -77,7 +77,7 @@
             <!-- Form -->
             <form action='MinProfil-MinID-innstillinger-B.html' id="webauthn-device-form">
                 <div class='fm-Fields'>
-                    <div class='with-Icon icon-key'>
+                    <div id="webauthn-device-info-settings">
                         <!-- When fm-Field gets class .error then input and span.message change their look and present the error message -->
                         <div class='fm-Field'>
                             <label for='security-key-name'>Navn på smartenhet</label>
@@ -94,38 +94,38 @@
                                    class='securitykey-time'
                                    disabled/>
                         </div>
-                        <div class='fm-Controls with-Normal nopadding' id="remove-security-key-dialog">
-                            <button type="button" id="btn-remove" class='btn btn-Negative fullWidth nomargin'>
-                                <span>Fjern smartenhet</span>
-                            </button>
-                            <span class="visuallyHidden" id="confirm-remove">
+                    </div>
+                    <div class='fm-Controls with-Normal nopadding' id="remove-security-key-dialog">
+                        <button type="button" id="btn-remove" class='btn btn-Negative fullWidth nomargin'>
+                            <span>Fjern smartenhet</span>
+                        </button>
+                        <span class="visuallyHidden" id="confirm-remove">
                                     <!-- break tag to ensure that the button
                                         doesn't widen when pressed -->
                                     Trykk igjen for å<br> bekrefte fjerning
                                 </span>
+                    </div>
+                    <div id="add-security-key-form">
+                        <div class="device-warning">
+                            <p id="add-webauthn-message" class="fm-Message-warning add-device"
+                               style="display: none"></p>
                         </div>
-                        <div id="add-security-key-form">
-                            <div class="device-warning">
-                                <p id="add-webauthn-message" class="fm-Message-warning add-device"
-                                   style="display: none"></p>
-                            </div>
-                            <div id="webauthn-add-device-box" class='Box_main Box_inside-footer'>
-                                <ul class='ln-List ln-List-lowPriority'>
-                                    <li>
-                                        <div id="webAuthn" role="button">
-                                            <a href="#" id="register-device" class='ln-List_Element'>
+                        <div id="webauthn-add-device-box" class='Box_main Box_inside-footer'>
+                            <ul class='ln-List ln-List-lowPriority'>
+                                <li>
+                                    <div id="webAuthn" role="button">
+                                        <a href="#" id="register-device" class='ln-List_Element'>
                                                 <span class='ln-List_Element_Logo'>
                                                     <img src='../img/key.png' alt=''/>
                                                 </span>
-                                                <div class='ln-List_Element_Service' >
-                                                    <span class='ln-List_Element_Service_Name'>Smartenhet</span>
-                                                    <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smartenhet</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                                            <div class='ln-List_Element_Service'>
+                                                <span class='ln-List_Element_Service_Name'>Smartenhet</span>
+                                                <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smartenhet</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
