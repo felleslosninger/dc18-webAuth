@@ -47,6 +47,18 @@ const localStorage = () => {
         console.log("Removing referrer of " + data);
         window.localStorage.removeItem("referrer:" + data);
     });
+
+    $(document).on('auth-type:set', (event, data) => {
+        console.log('auth-type:set in localStorage.js');
+        console.log("Setting auth-type to " + data);
+        window.localStorage.setItem('auth-type', data);
+    });
+
+    $(document).on('auth-type:remove', (event) => {
+        console.log('auth-type:remove in localStorage.js')
+        console.log("Resetting auth-type to default");
+        window.localStorage.removeItem('auth-type');
+    });
     
     /**
      * Function to be called after the Webauthn device is removed.
