@@ -5,6 +5,8 @@ function hideInfo() {
         $('#webauthn-info').hide();
         $('#nextbtn').html("Lagre");
         $('#registerSuccess').attr('action', "MinID-2D.html")
+        $('#nextBtn').html("Neste");
+
     })
 }
 
