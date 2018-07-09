@@ -2,7 +2,7 @@
 var getSecurityKeyName = () => (JSON.parse(window.localStorage.getItem("webauthn-device")) || {}).name;
 var getSecurityKeyCreationTime = () => (JSON.parse(window.localStorage.getItem("webauthn-device")) || {}).date;
 var getSecurityKeyCreationDate = () => {
-  const webauthnDevice =  JSON.parse(window.localStorage.getItem("webauthn-device"));
+  const webauthnDevice = JSON.parse(window.localStorage.getItem("webauthn-device"));
   if (webauthnDevice) {
     return new Date(webauthnDevice.date).toLocaleDateString();
   } else {
@@ -12,11 +12,11 @@ var getSecurityKeyCreationDate = () => {
 var getAuthType = () => window.localStorage.getItem("auth-type") || "letter";
 var getPhoneNumber = () => "93282061"; // dummy value
 var hasSecurityKey = () => {
-    if (getSecurityKeyName() === (null || undefined)) {
-        return false;
-    } else {
-        return true;
-    }
+  if (getSecurityKeyName() === (null || undefined)) {
+    return false;
+  } else {
+    return true;
+  }
 }
 var getAuthTypeHumanReadable = () => {
   switch (getAuthType()) {
@@ -38,16 +38,18 @@ var getAuthTypeHumanReadable = () => {
 
   let updateFields = () => {
     console.log('Updating fields');
-    $(".securitykey-name").html(getSecurityKeyName());
-    $('.securitykey-time').html(getSecurityKeyCreationTime());
-    $('.securitykey-info').html(`<strong>${getSecurityKeyName()}</strong><span>, registrert ${getSecurityKeyCreationDate()}</span>`);
-    // specifically input[text] needs to put this as the value instead of setting
-    // the inner html
-    // Yes, this is horrible
-    $("input[type='text'].securitykey-name").val(getSecurityKeyName());
-    $("input[type='text'].securitykey-time").val(getSecurityKeyCreationTime());
+    if (window.localStorage.getItem('webauthn-device') && JSON.parse(window.localStorage.getItem('webauthn-device'))) {
+      $(".securitykey-name").html(getSecurityKeyName());
+      $('.securitykey-time').html(getSecurityKeyCreationTime());
+      $('.securitykey-info').html(`<strong>${getSecurityKeyName()}</strong><span>, registrert ${getSecurityKeyCreationDate()}</span>`);
+      // specifically input[text] needs to put this as the value instead of setting
+      // the inner html
+      // Yes, this is horrible
+      $("input[type='text'].securitykey-name").val(getSecurityKeyName());
+      $("input[type='text'].securitykey-time").val(getSecurityKeyCreationTime());
+      // ...
+    }
     $('.auth-type').html(getAuthTypeHumanReadable());
-    // ...
   };
 
   const renderButtons = () => {
@@ -64,14 +66,14 @@ var getAuthTypeHumanReadable = () => {
     if (!data) return;
 
     let dt = data.date;
-    if (!dt){
+    if (!dt) {
       console.log("ERROR: data.date not found");
       return;
     }
     if (typeof dt === "string")
       dt = new Date(Date.parse(dt)); // try to convert the data to a date
-      // NOTE: The above may cause an error. This indicates a programming error.
-      // It should be graciously handled, but let's not worry about it for now.
+    // NOTE: The above may cause an error. This indicates a programming error.
+    // It should be graciously handled, but let's not worry about it for now.
 
     $(".securitykey-name").html(data.name);
     $('.securitykey-time').html(dt.toISOString());
