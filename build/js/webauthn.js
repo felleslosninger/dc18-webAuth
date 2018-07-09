@@ -1,6 +1,8 @@
+const DEFAULT_DEVICE_NAME = 'Yubikey';
+
 const webauthn = () => {
   const $ = jQuery.noConflict();
-  const name = $('#security-key-name').val() || $('#security-key-name').attr('placeholder');
+  const name = $('#security-key-name').val() || DEFAULT_DEVICE_NAME;
 
   $('#webAuthn').on('click', (event) => {
     event.preventDefault();
