@@ -27,6 +27,7 @@ summary {
 
 
 
+
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
@@ -38,6 +39,7 @@ video {
     *display: inline;
     *zoom: 1;
 }
+
 
 
 
@@ -55,6 +57,7 @@ audio:not([controls]) {
 
 
 
+
 /**
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
@@ -63,6 +66,7 @@ audio:not([controls]) {
 [hidden] {
     display: none;
 }
+
 
 
 
@@ -91,6 +95,7 @@ html {
 
 
 
+
 /**
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
@@ -107,6 +112,7 @@ textarea {
 
 
 
+
 /**
  * Address margins handled incorrectly in IE 6/7.
  */
@@ -114,6 +120,7 @@ textarea {
 body {
     margin: 0;
 }
+
 
 
 
@@ -134,6 +141,7 @@ a:focus {
 
 
 
+
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
@@ -142,6 +150,7 @@ a:active,
 a:hover {
     outline: 0;
 }
+
 
 
 
@@ -190,6 +199,7 @@ h6 {
 
 
 
+
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
@@ -197,6 +207,7 @@ h6 {
 abbr[title] {
     border-bottom: 1px dotted;
 }
+
 
 
 
@@ -217,6 +228,7 @@ blockquote {
 
 
 
+
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
@@ -224,6 +236,7 @@ blockquote {
 dfn {
     font-style: italic;
 }
+
 
 
 
@@ -242,6 +255,7 @@ hr {
 
 
 
+
 /**
  * Address styling not present in IE 6/7/8/9.
  */
@@ -254,6 +268,7 @@ mark {
 
 
 
+
 /**
  * Address margins set differently in IE 6/7.
  */
@@ -262,6 +277,7 @@ p,
 pre {
     margin: 1em 0;
 }
+
 
 
 
@@ -282,6 +298,7 @@ samp {
 
 
 
+
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
@@ -295,6 +312,7 @@ pre {
 
 
 
+
 /**
  * Address CSS quotes not supported in IE 6/7.
  */
@@ -302,6 +320,7 @@ pre {
 q {
     quotes: none;
 }
+
 
 
 
@@ -319,6 +338,7 @@ q:after {
 
 
 
+
 /**
  * Address inconsistent and variable font size in all browsers.
  */
@@ -326,6 +346,7 @@ q:after {
 small {
     font-size: 80%;
 }
+
 
 
 
@@ -353,6 +374,7 @@ sub {
 
 
 
+
 /* ==========================================================================
    Lists
    ========================================================================== */
@@ -376,6 +398,7 @@ dd {
 
 
 
+
 /**
  * Address paddings set differently in IE 6/7.
  */
@@ -389,6 +412,7 @@ ul {
 
 
 
+
 /**
  * Correct list images handled incorrectly in IE 7.
  */
@@ -398,6 +422,7 @@ nav ol {
     list-style: none;
     list-style-image: none;
 }
+
 
 
 
@@ -422,6 +447,7 @@ img {
 
 
 
+
 /**
  * Correct overflow displayed oddly in IE 9.
  */
@@ -429,6 +455,7 @@ img {
 svg:not(:root) {
     overflow: hidden;
 }
+
 
 
 
@@ -449,6 +476,7 @@ figure {
 
 
 
+
 /* ==========================================================================
    Forms
    ========================================================================== */
@@ -465,6 +493,7 @@ form {
 
 
 
+
 /**
  * Define consistent border, margin, and padding.
  */
@@ -474,6 +503,7 @@ fieldset {
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
 }
+
 
 
 
@@ -493,6 +523,7 @@ legend {
     *margin-left: -7px;
     /* 3 */
 }
+
 
 
 
@@ -521,6 +552,7 @@ textarea {
 
 
 
+
 /**
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
@@ -530,6 +562,7 @@ button,
 input {
     line-height: normal;
 }
+
 
 
 
@@ -545,6 +578,7 @@ button,
 select {
     text-transform: none;
 }
+
 
 
 
@@ -574,6 +608,7 @@ input[type="submit"] {
 
 
 
+
 /**
  * Re-set default cursor for disabled elements.
  */
@@ -582,6 +617,7 @@ button[disabled],
 html input[disabled] {
     cursor: default;
 }
+
 
 
 
@@ -608,6 +644,7 @@ input[type="radio"] {
 
 
 
+
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
@@ -626,6 +663,7 @@ input[type="search"] {
 
 
 
+
 /**
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
@@ -635,6 +673,7 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
+
 
 
 
@@ -652,6 +691,7 @@ input::-moz-focus-inner {
 
 
 
+
 /**
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
@@ -663,6 +703,7 @@ textarea {
     vertical-align: top;
     /* 2 */
 }
+
 
 
 
@@ -716,6 +757,7 @@ table {
         transform: rotate(0);
     }
 }
+
 
 
 
@@ -792,6 +834,7 @@ table {
     background-repeat: no-repeat;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MyA2OCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOm5vbmU7c3Ryb2tlOiMwMDA7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLXdpZHRoOjJweDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkFydGJvYXJkIDExQDJ4MzZ3PC90aXRsZT48ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik00NS40Niw0NC41OVY2Mi43MUEzLjI5LDMuMjksMCwwLDEsNDIuMTcsNjZIOS4yYTMuMjksMy4yOSwwLDAsMS0zLjI5LTMuMjlWNS4yOUEzLjI5LDMuMjksMCwwLDEsOS4yLDJoMzNhMy4yOSwzLjI5LDAsMCwxLDMuMjksMy4yOVY4Ljc1Ii8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNTMuNjgsMTQuMThoLTI3YTQsNCwwLDAsMC0zLjk1LDMuOTVWMzQuNThhNCw0LDAsMCwwLDMuOTUsMy45NUgzMHY2LjFhLjY2LjY2LDAsMCwwLDEuMS40OWw3LjIxLTYuNDNhLjY2LjY2LDAsMCwxLC40NC0uMTdoMTVhNCw0LDAsMCwwLDMuOTUtMy45NVYxOC4xM0E0LDQsMCwwLDAsNTMuNjgsMTQuMThaIi8+PGxpbmUgY2xhc3M9ImNscy0xIiB4MT0iMjkuMjgiIHkxPSIyMiIgeDI9IjUwLjI4IiB5Mj0iMjIiLz48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSIyOS4yOCIgeTE9IjMxIiB4Mj0iNTAuMjgiIHkyPSIzMSIvPjxsaW5lIGNsYXNzPSJjbHMtMSIgeDE9IjIwLjI4IiB5MT0iNTkiIHgyPSIzMS4yOCIgeTI9IjU5Ii8+PC9nPjwvc3ZnPg==);
 }
+
 
 
 
@@ -1050,6 +1093,7 @@ table td:first-child {
 table td:last-child {
     padding-right: 0;
 }
+
 
 
 
@@ -1374,6 +1418,7 @@ table td:last-child {
 .h-Main_Menu_Element:focus span {
     border-color: #ffffff;
 }
+
 
 
 
@@ -1887,6 +1932,7 @@ table td:last-child {
         padding-right: 0;
     }
 }
+
 
 
 
@@ -2947,8 +2993,8 @@ textarea {
 }
 
 #webauthn-radio {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -3088,6 +3134,7 @@ textarea {
 
 
 
+
 /*
 * Styles for country selector
 *
@@ -3173,6 +3220,7 @@ textarea {
     color: #006cff;
     background-color: #f7f8fa;
 }
+
 
 
 
@@ -3370,6 +3418,7 @@ textarea {
 
 
 
+
 /*
 * Styles for MinID pages
 *
@@ -3528,6 +3577,7 @@ textarea {
 
 
 
+
 /*
 * Styles for receipt pages
 *
@@ -3551,6 +3601,7 @@ textarea {
     padding-left: 1.4286em;
     padding-right: 1.4286em;
 }
+
 
 
 
@@ -3582,6 +3633,7 @@ This is the temporary customization
 .popup:not(.with-footer) .f-Main_Content>* {
     display: none;
 }
+
 
 
 
