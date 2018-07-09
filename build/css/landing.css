@@ -95,7 +95,8 @@ section {
 
 .w3-container {
     width: auto;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .w3-btn,
