@@ -52,7 +52,12 @@ const localStorage = () => {
      * Function to be called after the Webauthn device is removed.
      */
     const resetPreferredAuthType = () => {
-        window.localStorage.removeItem('auth-type');
+        // if auth-type is not webauthn, do not modify, because it would be
+        // confusing to the user if, for instance, their second factor
+        // authentication type changed from SMS to letter PIN codes when
+        // removing the unrelated WebAuthn device
+        if (window.localStorage.getItem('auth-type') === 'webauthn')
+            window.localStorage.removeItem('auth-type');
     };
 
     /**
