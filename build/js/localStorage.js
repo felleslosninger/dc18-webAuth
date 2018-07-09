@@ -7,6 +7,13 @@ const localStorage = () => {
     $(document).on('webauthn:register-success', (event, data) => {
         console.log('webauthn:register-success in localStorage.js');
         window.localStorage.setItem("webauthn-device", JSON.stringify(data));
+        
+        // For the best user experience, ensure that the 2FA type is webauthn
+        // after just registering device, since usually when registering a
+        // device it's because you wanna use it
+        selectWebAuthnPreferredAuthType();
+        console.log('newly registered webauthn device set as preferred '
+            +'2nd factor authentication');
     });
 
     /**
@@ -46,6 +53,13 @@ const localStorage = () => {
      */
     const resetPreferredAuthType = () => {
         window.localStorage.removeItem('auth-type');
+    };
+
+    /**
+     * Function to be called after the Webauthn device has been registered.
+     */
+    const selectWebAuthnPreferredAuthType = () => {
+        window.localStorage.setItem('auth-type', 'webauthn');
     };
 
     /**
