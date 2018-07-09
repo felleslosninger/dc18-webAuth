@@ -17,11 +17,7 @@ var getAuthTypeHumanReadable = () => {
     case "sms":
       return "Kode fra SMS (" + getPhoneNumber() + ")";
     case "webauthn":
-      let ret = "Smartenhet som sikkerhetsnøkkel";
-      let keyname = getSecurityKeyName();
-      if (keyname)
-        ret += " (" + keyname + ")";
-      return ret;
+      return "Smartenhet som sikkerhetsnøkkel";
     default:
       console.log("Error: not supported auth type", getAuthType());
       return null;
