@@ -38,6 +38,8 @@ body {
 #loginText {
     text-decoration: underline;
     text-decoration-color: #00ccff;
+    font-family: "Webly Sleek bold";
+    font-weight: bold;
 }
 
 #loginBox {
