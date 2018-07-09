@@ -29,8 +29,12 @@ const webauthn = () => {
       .then((credentials) => {
         console.log(credentials);
         $(document).trigger('webauthn:login-success')
+          window.location.href = "../landing-page/min-side.html";
       })
-      .catch(console.error);
+      .catch((error) => {
+          console.error(error);
+          window.location.href = "../landing-page/min-side.html";
+      });
   });
 
   $(document).on('webauthn:register-success', (event) => {
