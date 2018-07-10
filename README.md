@@ -1,5 +1,29 @@
 # Id-porten redesign
 
+### Docker build instructions
+
+#### Create the image
+
+```
+$ docker build -t dc2018/flow .
+```
+
+#### Run the server
+
+```
+$ docker run -p 8080:9000 -d dc2018/flow
+```
+
+#### Kill the server
+
+```
+$ docker kill "$(docker ps | grep "dc2018/flow" | sed -n 's/\(............\).*/\1/p')"
+```
+
+#### View the pages
+
+First, build and run the docker image. With the server running, open your web browser and navigate to `localhost:8080/build/demo/landing-page/index.html` and go from there, or get an overview of the files in the demo folder by viewing the directory structure of `localhost:8080/build/demo`.
+
 ### How to build
 
 Prerequisites
