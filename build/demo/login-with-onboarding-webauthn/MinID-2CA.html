@@ -60,9 +60,9 @@
 <main>
     <section class='Box'>
         <div class='Box_header'>
-            <h1 class='Box_header-title with-close-button'>Deaktivér smartenhet</h1>
+            <h1 class='Box_header-title with-close-button'>Registrer smartenhet</h1>
             <span class='Box_header-close'>
-    <a href='MinID-2C.html'>
+    <a href='MinID-2CA.html'>
       <span class='fa fa-close'>
         <span class='visuallyHidden'>Close window</span>
                 </span>
@@ -71,16 +71,60 @@
         </div>
         <div class='Box_main'>
             <!-- Form -->
-            <form action='MinID-2CA.html'>
+            <form action='../landing-page/min-side.html'>
                 <div class='fm-Fields'>
-                    <div class='notification with-Icon'>
-                        Ved å trykke DEAKTIVÉR vil din smartenhet ikke lengre være mulig å bruke.
+                    <div class='notification with-Icon with-Link' id="webauthn-info">
+                        Har du en smartenhet som enten bruker touch-ID eller annsiktsgjennkjenning kan du bruke den som alternativ innloggingsmetode for MinID.
+                        <br>
+                        <br>
+                        <a href=''><span>Les om alternativ innlogging</span></a>
+                    </div>
+                </div>
+                <p class="notification with-Icon with-Link" id="add-webauthn-message" class="fm-Message-warning add-device" style="display: none"></p>
+                <div id="webauthn-add-device-box" class='Box_main Box_inside-footer' onclick="showControls()">
+                    <ul class='ln-List ln-List-lowPriority'>
+                        <li>
+                            <a href="" id="register-device" class='ln-List_Element'>
+                                <span class='ln-List_Element_Logo'>
+                                    <img src='../img/key.png' alt='' />
+                                </span>
+                                <div class='ln-List_Element_Service' id="webAuthn">
+                                    <span class='ln-List_Element_Service_Name'>Smartenhet</span>
+                                    <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smartenhet</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="webauthn-added-device" style="display: none">
+                    <ul class="ln-List" id="devices">
+                        <li id="device"></li>
+                    </ul>
+                    <div class='fm-Fields'>
+                        <div class='fm-Field'>
+                            <div class='label'>Din aktive smartenhet</div>
+                            <ul class="ln-List ln-List_Digitalpost">
+                                <li>
+                                    <div class="ln-List_Element with-logo" href="#">
+                                        <span class="ln-List_Element_Logo">
+                    <img src="../img/key.png" alt="">
+                  </span>
+                                        <div class="ln-List_Element_Service">
+                                            <span class="ln-List_Element_Service_Info"><strong>Yubikey</strong>, registrert 09.07.18</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class='fm-form_link with-Link'>
+                            <a href='MinID-2CB.html'><span>Deaktivér smartenhet</span></a>
+                        </div>
                     </div>
                 </div>
                 <!-- Controls placeholder with two buttons -->
                 <div class='fm-Controls with-Normal with-Action'>
-                    <button class='btn btn-Action' type='submit' id="undo-webauthn-device-btn"><span>Deaktivér</span></button>
-                    <button class='btn btn-Normal'><span>Avbryt</span></button>
+                    <button class='btn btn-Action' type='submit'><span id="nextbtn">Fortsett til Difi</span></button>
+                    <button class='btn btn-Normal'><span><a href="../landing-page/min-side.html">Avbryt</a></span></button>
                 </div>
                 <!-- //Controls placeholder with two buttons -->
             </form>
