@@ -33,58 +33,58 @@
 <!-- use class .popup to hiden header and footer, or use .popup .with-footer to keep footer -->
 
 <body class='hide-mobileMenu popup'>
-<!--[if lt IE 11]>
+    <!--[if lt IE 11]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<!-- SECTION: HEADER -->
-<header class='h-Main'>
-    <div class='h-Main_Content'>
-        <a href="" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
-        <!-- NOTE: placholder class must be present, even if it has no content -->
-        <div class="h-Main_Content_Placeholder">
-            <!-- NOTE: Present on pages with service provider name and logo. Visible on mobile sreens only. -->
-            <span class="h-Main_Content_Provider">Direktoratet for forvaltning og IKT</span>
+    <!-- SECTION: HEADER -->
+    <header class='h-Main'>
+        <div class='h-Main_Content'>
+            <a href="" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
+            <!-- NOTE: placholder class must be present, even if it has no content -->
+            <div class="h-Main_Content_Placeholder">
+                <!-- NOTE: Present on pages with service provider name and logo. Visible on mobile sreens only. -->
+                <span class="h-Main_Content_Provider">Direktoratet for forvaltning og IKT</span>
+            </div>
+            <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
+            <div class='h-Menu_Container' id='js-menues'>
+                <nav class='h-Menu'>
+                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Kontaktdetaljer</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
+                    <ul>
+                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
-        <div class='h-Menu_Container' id='js-menues'>
-            <nav class='h-Menu'>
-                <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Kontaktdetaljer</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
-                <ul>
-                    <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
-<!-- /SECTION: HEADER -->
-<main>
-    <section class='Box'>
-        <div class='Box_header'>
-            <h1 class='Box_header-title with-close-button'>Registrer smartenhet</h1>
-            <span class='Box_header-close'>
+    </header>
+    <!-- /SECTION: HEADER -->
+    <main>
+        <section class='Box'>
+            <div class='Box_header'>
+                <h1 class='Box_header-title with-close-button'>Registrer smartenhet</h1>
+                <span class='Box_header-close'>
     <a href='MinID-2CA.html'>
       <span class='fa fa-close'>
         <span class='visuallyHidden'>Close window</span>
                 </span>
                 </a>
                 </span>
-        </div>
-        <div class='Box_main'>
-            <!-- Form -->
-            <form action='../landing-page/min-side.html'>
-                <div class='fm-Fields'>
-                    <div class='notification with-Icon with-Link' id="webauthn-info">
-                        Har du en smartenhet som enten bruker touch-ID eller annsiktsgjennkjenning kan du bruke den som alternativ innloggingsmetode for MinID.
-                        <br>
-                        <br>
-                        <a href=''><span>Les om alternativ innlogging</span></a>
+            </div>
+            <div class='Box_main'>
+                <!-- Form -->
+                <form action='../landing-page/min-side.html'>
+                    <div class='fm-Fields'>
+                        <div class='notification with-Icon with-Link' id="webauthn-info">
+                            Har du en smartenhet som enten bruker touch-ID eller annsiktsgjennkjenning kan du bruke den som alternativ innloggingsmetode for MinID.
+                            <br>
+                            <br>
+                            <a href=''><span>Les om alternativ innlogging</span></a>
+                        </div>
                     </div>
-                </div>
-                <p class="notification with-Icon with-Link" id="add-webauthn-message" class="fm-Message-warning add-device" style="display: none"></p>
-                <div id="webauthn-add-device-box" class='Box_main Box_inside-footer' onclick="showControls()">
-                    <ul class='ln-List ln-List-lowPriority'>
-                        <li>
-                            <a href="" id="register-device" class='ln-List_Element'>
+                    <p class="notification with-Icon with-Link" id="add-webauthn-message" class="fm-Message-warning add-device" style="display: none"></p>
+                    <div id="webauthn-add-device-box" class='Box_main Box_inside-footer' onclick="showControls()">
+                        <ul class='ln-List ln-List-lowPriority'>
+                            <li>
+                                <a href="" id="register-device" class='ln-List_Element'>
                                 <span class='ln-List_Element_Logo'>
                                     <img src='../img/key.png' alt='' />
                                 </span>
@@ -93,77 +93,77 @@
                                     <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smartenhet</span>
                                 </div>
                             </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="webauthn-added-device" style="display: none">
-                    <ul class="ln-List" id="devices">
-                        <li id="device"></li>
-                    </ul>
-                    <div class='fm-Fields'>
-                        <div class='fm-Field'>
-                            <div class='label'>Din aktive smartenhet</div>
-                            <ul class="ln-List ln-List_Digitalpost">
-                                <li>
-                                    <div class="ln-List_Element with-logo" href="#">
-                                        <span class="ln-List_Element_Logo">
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="webauthn-added-device" style="display: none">
+                        <ul class="ln-List" id="devices">
+                            <li id="device"></li>
+                        </ul>
+                        <div class='fm-Fields'>
+                            <div class='fm-Field'>
+                                <div class='label'>Din aktive smartenhet</div>
+                                <ul class="ln-List ln-List_Digitalpost">
+                                    <li>
+                                        <div class="ln-List_Element with-logo" href="#">
+                                            <span class="ln-List_Element_Logo">
                     <img src="../img/key.png" alt="">
                   </span>
-                                        <div class="ln-List_Element_Service">
-                                            <span class="ln-List_Element_Service_Info"><strong>Yubikey</strong>, registrert 09.07.18</span>
+                                            <div class="ln-List_Element_Service">
+                                                <span class="ln-List_Element_Service_Info"><strong>Yubikey</strong>, registrert 09.07.18</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class='fm-form_link with-Link'>
-                            <a href='MinID-2CB.html'><span>Deaktivér smartenhet</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class='fm-form_link with-Link'>
+                                <a href='MinID-2CB.html'><span>Deaktivér smartenhet</span></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Controls placeholder with two buttons -->
-                <div class='fm-Controls with-Normal with-Action'>
-                    <button class='btn btn-Action' type='submit'><span id="nextbtn">Fortsett til Difi</span></button>
-                    <button class='btn btn-Normal'><span><a href="../landing-page/min-side.html">Avbryt</a></span></button>
-                </div>
-                <!-- //Controls placeholder with two buttons -->
-            </form>
+                    <!-- Controls placeholder with two buttons -->
+                    <div class='fm-Controls with-Normal with-Action'>
+                        <button class='btn btn-Action' type='submit'><span id="nextbtn">Fortsett til Difi</span></button>
+                        <button class='btn btn-Normal'><span><a href="../landing-page/min-side.html">Avbryt</a></span></button>
+                    </div>
+                    <!-- //Controls placeholder with two buttons -->
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- /build -->
+    <!-- SECTION: FOOTER -->
+    <footer class="f-Main">
+        <div class='f-Main_Content'>
+            <div class='f-Main_Logo' aria-hidden="true"></div>
+            <div class='f-Main_Info'>
+                <a href="" class='f-Main_Link'><span>Kontaktskjema</span></a>
+                <a href="tel:+4780030300" class='f-Main_Link'><span>Tlf: 800 30 300</span></a>
+                <a href="" class='f-Main_Link'><span>Hjelp til innlogging</span></a>
+                <a href="" class='f-Main_Link'><span>Sikkerhet og personvern</span></a>
+                <p>Driftet av Direktoratet for forvaltning og IKT (Difi)</p>
+            </div>
         </div>
-    </section>
-</main>
-<!-- /build -->
-<!-- SECTION: FOOTER -->
-<footer class="f-Main">
-    <div class='f-Main_Content'>
-        <div class='f-Main_Logo' aria-hidden="true"></div>
-        <div class='f-Main_Info'>
-            <a href="" class='f-Main_Link'><span>Kontaktskjema</span></a>
-            <a href="tel:+4780030300" class='f-Main_Link'><span>Tlf: 800 30 300</span></a>
-            <a href="" class='f-Main_Link'><span>Hjelp til innlogging</span></a>
-            <a href="" class='f-Main_Link'><span>Sikkerhet og personvern</span></a>
-            <p>Driftet av Direktoratet for forvaltning og IKT (Difi)</p>
-        </div>
-    </div>
-</footer>
-<!-- /SECTION: FOOTER -->
-<script type="text/javascript" src="../../js/vendor.min.js"></script>
-<script type="text/javascript" src="../../js/accordion.js"></script>
-<script type="text/javascript" src="../../js/country-selector.js"></script>
-<script type="text/javascript" src="../../js/disabled-links.js"></script>
-<script type="text/javascript" src="../../js/header.js"></script>
-<script type="text/javascript" src="../../js/minid-menu.js"></script>
-<script type="text/javascript" src="../../js/tab.js"></script>
-<script type="text/javascript" src="../../js/toggleMenues.js"></script>
-<script type="text/javascript" src="../../js/toggleForm.js"></script>
-<script type="text/javascript" src="../../js/check-enable-save.js"></script>
-<script type="text/javascript" src="../../js/radio-enable-save.js"></script>
-<script type="text/javascript" src="../../js/webauthn.js"></script>
-<script type="text/javascript" src="../../js/check-enable-hide.js"></script>
-<script type="text/javascript" src="../../js/name-devices.js"></script>
-<script type="text/javascript" src="../../js/addWebauthnDeviceMenu.js"></script>
-<script type="text/javascript" src="../../js/localStorage.js"></script>
-<script type="text/javascript" src="../../js/abort-buttons.js"></script>
-<script type="text/javascript" src="../../js/register-device.js"></script>
+    </footer>
+    <!-- /SECTION: FOOTER -->
+    <script type="text/javascript" src="../../js/vendor.min.js"></script>
+    <script type="text/javascript" src="../../js/accordion.js"></script>
+    <script type="text/javascript" src="../../js/country-selector.js"></script>
+    <script type="text/javascript" src="../../js/disabled-links.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript" src="../../js/minid-menu.js"></script>
+    <script type="text/javascript" src="../../js/tab.js"></script>
+    <script type="text/javascript" src="../../js/toggleMenues.js"></script>
+    <script type="text/javascript" src="../../js/toggleForm.js"></script>
+    <script type="text/javascript" src="../../js/check-enable-save.js"></script>
+    <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
+    <script type="text/javascript" src="../../js/webauthn.js"></script>
+    <script type="text/javascript" src="../../js/check-enable-hide.js"></script>
+    <script type="text/javascript" src="../../js/name-devices.js"></script>
+    <script type="text/javascript" src="../../js/addWebauthnDeviceMenu.js"></script>
+    <script type="text/javascript" src="../../js/localStorage.js"></script>
+    <script type="text/javascript" src="../../js/abort-buttons.js"></script>
+    <script type="text/javascript" src="../../js/register-device.js"></script>
 </body>
 
 </html>
