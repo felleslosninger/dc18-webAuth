@@ -7,13 +7,13 @@ const localStorage = () => {
     $(document).on('webauthn:register-success', (event, data) => {
         console.log('webauthn:register-success in localStorage.js');
         window.localStorage.setItem("webauthn-device", JSON.stringify(data));
-        
+
         // For the best user experience, ensure that the 2FA type is webauthn
         // after just registering device, since usually when registering a
         // device it's because you wanna use it
         selectWebAuthnPreferredAuthType();
-        console.log('newly registered webauthn device set as preferred '
-            +'2nd factor authentication');
+        console.log('newly registered webauthn device set as preferred ' +
+            '2nd factor authentication');
     });
 
     /**
@@ -25,7 +25,7 @@ const localStorage = () => {
         console.log('webauthn-device cleared from local storage');
         resetPreferredAuthType();
     });
-    
+
     $(document).on('webauthn:update-device', (event, data) => {
         console.log('webauthn:update-device in localStorage.js');
         let norm = normalizeWebAuthnDeviceData(data);
@@ -59,7 +59,7 @@ const localStorage = () => {
         console.log("Resetting auth-type to default");
         window.localStorage.removeItem('auth-type');
     });
-    
+
     /**
      * Function to be called after the Webauthn device is removed.
      */
@@ -84,26 +84,28 @@ const localStorage = () => {
      */
     const normalizeWebAuthnDeviceData = data => {
         if (!data)
-          return {error: "Device data not found"};
+            return { error: "Device data not found" };
         if (!data.name)
-          return {error: "Device name not in data"};
+            return { error: "Device name not in data" };
         if (!data.date)
-          return {error: "Device registration date not in data"};
+            return { error: "Device registration date not in data" };
         let dt = data.date;
         if (typeof dt === "string") {
-          dt = Date.parse(data.date)
-          if (!dt)
-            return {error: "Device registration date not in valid date format:" +
-                " non-parseable string"};
-        }
-        else if (dt instanceof Date) {
+            dt = Date.parse(data.date)
+            if (!dt)
+                return {
+                    error: "Device registration date not in valid date format:" +
+                        " non-parseable string"
+                };
+        } else if (dt instanceof Date) {
             dt = dt.getTime();
+        } else if (typeof dt !== "number") {
+            return {
+                error: "Device registration date not in valid date format:" +
+                    " not a date string, date object or timestamp"
+            };
         }
-        else if (typeof dt !== "number") {
-            return {error: "Device registration date not in valid date format:" +
-                " not a date string, date object or timestamp"};
-        }
-        return {name: data.name, date: new Date(dt)};
+        return { name: data.name, date: new Date(dt) };
     };
 };
 

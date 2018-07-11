@@ -24,10 +24,10 @@
 
     if (hasSecurityKey() === false) {
         $("#webauthn").attr('disabled', true);
-        $( "#webauthn-radio" ).addClass( "fm-RadioButtons disabled" );
+        $("#webauthn-radio").addClass("fm-RadioButtons disabled");
     } else {
         $("#webauthn").attr('disabled', false);
-        $( "#webauthn-radio" ).removeClass( "fm-RadioButtons disabled" );
+        $("#webauthn-radio").removeClass("fm-RadioButtons disabled");
     }
 
 })();
