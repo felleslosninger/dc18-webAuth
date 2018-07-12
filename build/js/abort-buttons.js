@@ -6,7 +6,7 @@
     });
     $(".btn-Abort.fully").on("click", e => {
         e.preventDefault();
-        window.location.href = "index.html";
+        window.location.href = "index-onboarding.html";
     });
     $(".btn-Abort.landing").on("click", e => {
         e.preventDefault();
