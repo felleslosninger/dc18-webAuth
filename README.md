@@ -16,11 +16,13 @@ TODO
 
 ### Running the Spark server
 
-1. Generate a jks keystore in `./secret/webauthn4j.jks`
+1. Generate a jks keystore in `./secret/webauthn4j.jks`. The password should be "dificamp".
 2. bash: `./gradlew :run` windows: `gradlew :run`
 3. It should work now
 
 ### Running the client
+
+TODO: Fix the client, apparently all NPM configurations are gone
 
 1. Run `npm install`
 2. Run `npm start`
