@@ -199,3 +199,10 @@ typings/
 
 # next.js build output
 .next
+
+.classpath
+.project
+.settings/
+bin/
+target/
+package-lock.json
