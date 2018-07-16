@@ -1,4 +1,16 @@
-# Keycloak Webauthn Authenticator
+# Experimental branch - Keycloak Webauthn Authenticator
+
+**NOTE:** This branch is based off of [Viktor Andersen's keycloak-webauthn-authenticator](https://github.com/viktorfa/keycloak-webauthn-authenticator), which is again largely based on [Stian Thorgersen's keycloak-experimental](https://github.com/stianst/keycloak-experimental) (fido-u2f subfolder).
+
+## Goal
+
+This branch explores the possibility of using WebAuthn together with Keycloak - or, more accurately, U2F authentication. However, the code or explanation of the procedure might be helpful in attempting to understand how also the newer WebAuthn standard may be used to authenticate using a Keycloak security server.
+
+## Status
+
+Using the Keycloak authentication server amounts to writing a custom Authenticator and a corresponding AuthenticatorFactory. The Authenticator implements the methods `authenticate()`, which sends a challenge to the client, and `action()`, which validates the client response and determines if the client is properly authenticated. The AuthenticatorFactory is required for Keycloak to be able to instantiate the Authenticator. In addition, some providers and corresponsing factories were created.
+
+We managed to get a working login-flow using U2F based on this format, and using a separate Keycloak server with Spring Security. It should be possible to extend this example to also work with WebAuthn, possibly by using the [WebAuthn4J library]() to perform the WebAuthn-specific device registration and authentication procedures.
 
 ## Instructions
 
@@ -10,10 +22,11 @@
 * An appropriately configured Spring Boot application such as [this one](https://github.com/difi/dc18-webAuth)
 
 #### Build and deploy the project
-1. Clone the Git repo `git clone git@github.com:viktorfa/keycloak-webauthn-authenticator.git` or `git clone https://github.com/viktorfa/keycloak-webauthn-authenticator.git` if you don't have ssh credentials.
-2. Enter the folder with `cd keycloak-webauthn-authenticator`
-3. Make sure Keycloak is running. Verify this by entering [https://localhost:8443](https://localhost:8443).
-4. Build and deploy with Maven `mvn clean install wildfly:deploy`.
+1. Clone the Git repo `git clone git@github.com:difi/dc2018-webAuth.git` or `git clone https://github.com/difi/dc2018-webAuth.git` if you don't have ssh credentials.
+2. Enter the folder with `cd dc2018-webAuth`
+3. Checkout this branch with `git checkout experiment-keycloak-webauthn-authenticator`
+4. Make sure Keycloak is running. Verify this by entering [https://localhost:8443](https://localhost:8443).
+5. Build and deploy with Maven `mvn clean install wildfly:deploy`.
 
 
 #### Configure Keycloak
