@@ -1,3 +1,5 @@
+**NOTE:** For unrelated experimental server/client branches, checkout `experiment-keycloak-webauthn-authenticator`, `experiment-webauthn4j-spark-demo-1` and `experiment-barebones-spring-security-webauthn`. They represent three different approaches to implementing WebAuthn authentication servers; one implements a (U2F) Keycloak authenticator based on [keycloak-experimental](https://github.com/stianst/keycloak-experimental), another contains a React app communicating with a Spark server using [WebAuthn4J](https://github.com/webauthn4j/webauthn4j), and the third aims to be a bare-bones minimal implementation of [spring-security-webauthn](https://github.com/ynojima/spring-security-webauthn).
+
 # Id-porten redesign
 
 ### Docker build instructions
