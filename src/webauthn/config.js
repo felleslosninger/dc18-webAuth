@@ -5,9 +5,9 @@ const webAuthnConfig = {
   username: 'Per',
   registerChallengeMethod: 'POST',
   registerChallengeEndpoint: 'https://localhost:4567/register',
-  authenicateChallengeEndpoint: 'https://localhost:8443/webauthn/api/v1/authenticate',
+  authenicateChallengeEndpoint: 'https://localhost:4567/authenticate',
   registerResponseEndpoint: 'https://localhost:4567/register/finish',
-  authenticateResponseEndpoint: 'https://localhost:8443/webauthn/api/v1/authenticate/finish',
+  authenticateResponseEndpoint: 'https://localhost:4567/authenticate/finish',
   registerResponseMethod: 'POST',
   serverScheme: ServerSchemes.SPARK,
 };
