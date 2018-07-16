@@ -10,21 +10,32 @@ The project was initially built to communicate with [this WebAuthn demo](https:/
 
 ## Status
 
-TODO
+The project currently works, but requires a bit of configuration. To run the Spark server, a keystore must be generated with password "dificamp", and to run the client server the environment variable "HTTPS" must be set to "true". The data received from the server is displayed on the page. It's not clear whether authentication is handled any differently from registration.
 
 ## Running the project
 
 ### Running the Spark server
 
-1. Generate a jks keystore in `./secret/webauthn4j.jks`. The password should be "dificamp".
-2. bash: `./gradlew :run` windows: `gradlew :run`
-3. It should work now
+```
+$ mkdir secret
+
+$ keytool -genkey -alias mydomain -keyalg RSA -keystore secret/webauthn4j.jks -keysize 2048
+>>> NOTE: password is "dificamp"
+
+$ ./gradlew :run
+>>> NOTE: or "gradlew run" on Windows
+```
 
 ### Running the client
 
-TODO: Fix the client, apparently all NPM configurations are gone
+```
+$ npm install
 
-1. Run `npm install`
-2. Run `npm start`
+$ HTTPS=true npm start
+```
 
-This should automatically open a browser window to http://localhost:3000/, where the client is set up to communicate with the Spark server
+This should automatically open a browser window to https://localhost:3000/, where the client is set up to communicate with the Spark server. If you get any warnings, add an exception for the current domain.
+
+In order to test this demo, go to https://localost:3000/. You are brought to the "Register" tab. There is no need to enter a username; the server automatically generates a random number as your username. Click "Ask server for options" to get data from the server, then click "Create credentials with options" to create credentials using the authenticator, and finally click "Send credentials to server" to perform the registration.
+
+When registered, you can also press the "Sign in" button to go to the "Sign in" tab. In order to sign in with WebAuthn, you perform the same actions.
