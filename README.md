@@ -1,3 +1,19 @@
+# Experimental branch: Spark WebAuthn Server using WebAuthn4J
+
+**NOTE**: This branch is based on [Yoshikazu Nojima's webauthn4j](https://github.com/webauthn4j/webauthn4j). It attempts to build a Spark server for WebAuthn authentication on top of it. It's supposed to share a common history with experiment-webauthn4j-spark-server-1, but due to problems with git when importing the code, this didn't turn out to be the case, and merging them at this point creates conflicts I'm not sure how to solve.
+
+## Goal
+
+This is an attempt to build a Spark server directly on top of the WebAuthn4J library, in order to correctly interface with the React client in the experiment-react-webauthn-client branch (and later, the experiment-webauthn4j-spark-server-1 branch). It aims to extend the generic WebAuthn4J library with server-specific code that utilizes the library in authentication.
+
+## Status
+
+I don't know the status of this branch, since it doesn't seem to share a history with the other Spark server branch despite coming from [the same origin](https://github.com/viktorfa/webauthn4j-spark-demo). However, the other Spark server seems to be working together with the React app.
+
+This code is preserved merely as a documentation of a dead end, as well as a record of code related to the Spark server and WebAuthn4J in case it should be needed.
+
+**NOTE:** Below follows the README from WebAuthn4J, preserved in case it might be useful.
+
 # WebAuthn4J
 
 [![Build Status](https://travis-ci.org/webauthn4j/webauthn4j.svg?branch=master)](https://travis-ci.org/webauthn4j/webauthn4j)
