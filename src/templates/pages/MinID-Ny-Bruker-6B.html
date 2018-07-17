@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html dir="ltr" lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Difi | Direktoratet for forvaltning og IKT</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../fonts/open-sans/open-sans.css">
+    <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="../favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <!--[if lt IE 11]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <!-- SECTION: HEADER -->
+    <header class='h-Main'>
+        <div class='h-Main_Content'>
+            <a href="MinID-Ny-bruker-6A.html" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
+            <!-- NOTE: placholder class must be present, even if it has no content -->
+            <div class="h-Main_Content_Placeholder">
+                <!-- NOTE: Present on pages with service provider name and logo. Visible on mobile sreens only. -->
+                <span class="h-Main_Content_Provider">Direktoratet for forvaltning og IKT</span>
+            </div>
+            <a href='' role='button' class='h-Menu_Trigger-mobile'><span class="fa fa-bars"></span></a>
+            <div class='h-Menu_Container' id='js-menues'>
+                <nav class='h-Menu'>
+                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>Kontaktdetaljer</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
+                    <ul>
+                        <li><a href="" class="h-Main_Menu_Element js-last"><span>Endre</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- /SECTION: HEADER -->
+    <main>
+        <section class='Box'>
+            <!-- NOTE: provider is added twice: above box title (this one) and below box.
+The one above title is displayed on desktop only. the one below on mobile only. -->
+            <div class='Box_Section Box_Section-ServiceProvider'>
+                <div class='Box_Section_Title'>Direktoratet for forvaltning og IKT</div>
+                <img src='../img/difiLogo.png' alt='tjenestetilbyders logo' />
+            </div>
+            <div class='Box_header'>
+                <h1 class='Box_header-title with-logo logo-eid-gray'>REGISTRER MINID-BRUKER</h1>
+                <div class='Box_header-provider'><img src='../../images/svg/minid-m-kant.svg' alt='MinID logo' /></div>
+            </div>
+            <div class='Box_main'>
+                <!-- Progress dots -->
+                <div class='fm-Progress_Container'>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot'></div>
+                    <div class='fm-Progress_Dot active'></div>
+                </div>
+                <!-- /Progress dots -->
+                <!-- Notification -->
+                <div class='notification with-Icon with-Link' id="webauthn-info">
+                    Har du en smartenhet som enten bruker touch-ID eller annsiktsgjennkjenning kan du bruke den som alternativ innloggingsmetode for MinID.
+                    <a href=''><span>Les om alternativ innlogging</span></a>
+                </div>
+                <!-- /Notification -->
+                <!-- Form -->
+                <form action='../landing-page/min-side.html'>
+                    <div class="device-warning">
+                        <p id="add-webauthn-message" class="notification with-Icon with-Link" style="display: none"></p>
+                    </div>
+                    <div id="webauthn-add-device-box" class='Box_main Box_inside-footer' onclick="showControls()">
+                        <ul class='ln-List ln-List-lowPriority'>
+                            <li>
+                                <a href="" id="register-device" class='ln-List_Element'>
+                                <span class='ln-List_Element_Logo'>
+                                    <img src='../img/key.png' alt='' />
+                                </span>
+                                <div class='ln-List_Element_Service' id="webAuthn">
+                                    <span class='ln-List_Element_Service_Name'>Smartenhet</span>
+                                    <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smartenhet</span>
+                                </div>
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="webauthn-added-device" style="display: none">
+                        <ul class="ln-List" id="devices">
+                            <li id="device"></li>
+                        </ul>
+                        <div class='fm-Fields'>
+                            <div class='fm-Field'>
+                                <div class='label'>Din aktive smartenhet</div>
+                                <ul class="ln-List ln-List_Digitalpost">
+                                    <li>
+                                        <div class="ln-List_Element with-logo" href="#">
+                                            <span class="ln-List_Element_Logo">
+                    <img src="../img/key.png" alt="">
+                  </span>
+                                            <div class="ln-List_Element_Service">
+                                                <span class="ln-List_Element_Service_Info"><strong>Yubikey</strong>, registrert 09.07.18</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class='fm-form_link with-Link'>
+                                <a href='MinID-Ny-bruker-6C.html'><span>Deaktivér smartenhet</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form -->
+                    <form action="../landing-page/min-side.html" id="registerSuccess">
+                        <!-- Controls placeholder with two buttons -->
+                        <div class="fm-Field add-to-list">
+                            <div class='fm-Controls with-Normal with-Action'>
+                                <button class='btn btn-Action' type='submit'><span id="nextbtn">Fortsett til Difi</span></button>
+                                <button class='btn btn-Normal btn-Abort landing2'><span>Avbryt</span></button>
+                            </div>
+                        </div>
+                        <!-- //Controls placeholder with two buttons -->
+                    </form>
+                    <div class='Box_footer'>
+                        <div class='Box_footer-links'>
+                            <!-- <ul> -->
+                            <!-- <li><a href='#'><span>Slik skaffer du elektronisk ID</span></a></li> -->
+                            <!-- <li><a href='#'><span>Menu 2</span></a></li> -->
+                            <!-- </ul> -->
+                        </div>
+                        <!-- <div class='Box_footer-help'>
+<a href='#'><span class='fa fa-question-circle'></span><span class='visuallyHidden'>Help</span></a>
+</div> -->
+                    </div>
+        </section>
+        <!-- NOTE: provider is added twice: above box title and below box (this one).
+The one above title is displayed on desktop only. the one below on mobile only. -->
+        <div class='mi-Provider'><img src='../img/difiLogo.png' alt='Nav logo' /></div>
+    </main>
+    <!-- /build -->
+    <!-- SECTION: FOOTER -->
+    <footer class="f-Main">
+        <div class='f-Main_Content'>
+            <div class='f-Main_Logo' aria-hidden="true"></div>
+            <div class='f-Main_Info'>
+                <a href="" class='f-Main_Link'><span>Kontaktskjema</span></a>
+                <a href="tel:+4780030300" class='f-Main_Link'><span>Tlf: 800 30 300</span></a>
+                <a href="" class='f-Main_Link'><span>Hjelp til innlogging</span></a>
+                <a href="" class='f-Main_Link'><span>Sikkerhet og personvern</span></a>
+                <p>Driftet av Direktoratet for forvaltning og IKT (Difi)</p>
+            </div>
+        </div>
+    </footer>
+    <!-- /SECTION: FOOTER -->
+    <script type="text/javascript" src="../../js/vendor.min.js"></script>
+    <script type="text/javascript" src="../../js/accordion.js"></script>
+    <script type="text/javascript" src="../../js/country-selector.js"></script>
+    <script type="text/javascript" src="../../js/disabled-links.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript" src="../../js/minid-menu.js"></script>
+    <script type="text/javascript" src="../../js/tab.js"></script>
+    <script type="text/javascript" src="../../js/toggleMenues.js"></script>
+    <script type="text/javascript" src="../../js/toggleForm.js"></script>
+    <script type="text/javascript" src="../../js/check-enable-save.js"></script>
+    <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
+    <script type="text/javascript" src="../../js/webauthn.js"></script>
+    <script type="text/javascript" src="../../js/name-devices.js"></script>
+    <script type="text/javascript" src="../../js/addWebauthnDeviceMenu.js"></script>
+    <script type="text/javascript" src="../../js/localStorage.js"></script>
+    <script type="text/javascript" src="../../js/abort-buttons.js"></script>
+    <script type="text/javascript" src="../../js/register-device.js"></script>
+</body>
+
+</html>
