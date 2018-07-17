@@ -37,7 +37,7 @@
     <!-- SECTION: HEADER -->
     <header class='h-Main'>
         <div class='h-Main_Content'>
-            <a href="../login-with-webauthn/index.html" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
+            <a href="MinID-2C.html" class="h_Main_Content_Link"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span><span>Tilbake</span></a>
             <!-- NOTE: placholder class must be present, even if it has no content -->
             <div class="h-Main_Content_Placeholder">
                 <!-- NOTE: Present on pages with service provider name and logo. Visible on mobile sreens only. -->
@@ -53,8 +53,8 @@
                 </nav>
                 <!-- MinID menu -->
                 <!-- NOTE: We add MinID menu as part of main menu for pages containing minid menu.
-      Will be visible only on mobile sized screens for pages with minid menu, e g MinID-1.html and similar.
-      This is done to prevent double hamburger menu on these pages. -->
+          Will be visible only on mobile sized screens for pages with minid menu, e g MinID-1.html and similar.
+          This is done to prevent double hamburger menu on these pages. -->
                 <nav class='h-Menu h-Menu-MinID'>
                     <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='h-Menu_Trigger'><span>MinID</span><span class='fa fa-angle-down fa-lg' aria-hidden="true"></span></a>
                     <ul>
@@ -71,72 +71,45 @@
     <!-- /SECTION: HEADER -->
     <main>
         <section class='Box'>
-            <!-- NOTE: provider is added twice: above box title (this one) and below box.
+            <form action="../landing-page/min-side.html">
+                <!-- NOTE: provider is added twice: above box title (this one) and below box.
 The one above title is displayed on desktop only. the one below on mobile only. -->
-            <div class='Box_Section Box_Section-ServiceProvider'>
-                <div class='Box_Section_Title'>Direktoratet for forvaltning og IKT</div>
-                <img src='../img/difiLogo.png' alt='tjenestetilbyders logo' />
-            </div>
-            <div class='Box_header'>
-                <h1 class='Box_header-title with-logo logo-eid-gray'>Logg inn med MinID</h1>
-                <nav class='mi-Menu' id='js-mi-menu'>
-                    <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='mi-Menu_Trigger mi-Menu_Trigger-disabled'>
-                    <img src='../../images/svg/minid-m-kant.svg' alt="minid logo" />
-                    <span class="visuallyHidden">Meny</span>
-                    <span class='fa fa-bars fa-lg' aria-hidden="true"></span></a>
-                    <ul>
-                        <li><a href="../update-settings/index.html" class="mi-Menu_Element referrer"><span>MinID innstillinger</span></a></li>
-                        <li><a href="" class="mi-Menu_Element"><span>Registrere ny MinID bruker</span></a></li>
-                        <li><a href="" class="mi-Menu_Element"><span>Glemt passord</span></a></li>
-                        <li><a href="" class="mi-Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class='Box_main'>
-                <!-- Progress dots -->
-                <div class='fm-Progress_Container'>
-                    <div class='fm-Progress_Dot'></div>
-                    <div class='fm-Progress_Dot active'></div>
+                <div class='Box_Section Box_Section-ServiceProvider'>
+                    <div class='Box_Section_Title'>Direktoratet for forvaltning og IKT</div>
+                    <img src='../img/difiLogo.png' alt='tjenestetilbyders logo' />
                 </div>
-                <!-- /Progress dots -->
-                <div class='fm-Fields'>
-                    <div class='notification with-Icon with-Link icon-sms'>
-                        Har du ikke smartenheten i nærheten?
-                        <br>
-                        <a href=''><span>Bruk SMS-kode sendt til din mobil</span></a>
-                    </div>
+                <div class='Box_header'>
+                    <h1 class='Box_header-title with-logo logo-eid-gray'>Logg inn med MinID</h1>
+                    <nav class='mi-Menu' id='js-mi-menu'>
+                        <a href='' role='button' aria-haspopup="true" aria-expanded="false" class='mi-Menu_Trigger mi-Menu_Trigger-disabled'>
+    <img src='../../images/svg/minid-m-kant.svg' alt="minid logo" />
+    <span class="visuallyHidden">Meny</span>
+    <span class='fa fa-bars fa-lg' aria-hidden="true"></span></a>
+                        <ul>
+                            <li><a href="../update-settings/index.html" class="mi-Menu_Element referrer"><span>MinID innstillinger</span></a></li>
+                            <li><a href="" class="mi-Menu_Element"><span>Registrere ny MinID bruker</span></a></li>
+                            <li><a href="" class="mi-Menu_Element"><span>Glemt passord</span></a></li>
+                            <li><a href="" class="mi-Menu_Element js-last"><span>Bestill PIN-koder</span></a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class='Box_main Box_inside-footer'>
-                    <ul class='ln-List ln-List-lowPriority'>
-                        <li>
-                            <div id="webauthn-login" role="button">
-                                <a href="#" id="register-device" class='ln-List_Element'>
-                                                <span class='ln-List_Element_Logo'>
-                                                    <img src='../img/key.png' alt=''/>
-                                                </span>
-                                    <div class='ln-List_Element_Service' >
-                                        <span class='ln-List_Element_Service_Name'>Smartenhet</span>
-                                        <span class='ln-List_Element_Service_Info'>Trykk for å logge inn med din smartenhet<br>
-                                        (<strong>Yubikey</strong>, registrert 17.07.18)
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
+                <div class='receipt with-Link'>
+                    <h2>Din smartenhet er registrert</h2>
                 </div>
-                <!-- Form -->
-                <form action='#'>
-                    <!-- Controls placeholder with two buttons -->
-                    <div class='fm-Controls with-Normal with-Action'>
-                        <button class='btn btn-Normal btn-Abort landing'><span>Avbryt</span></button>
-                    </div>
-                    <!-- //Controls placeholder with two buttons -->
-                </form>
+                <!-- Controls placeholder with two buttons -->
+                <div class='fm-Controls with-Normal with-Action'>
+                    <button class='btn btn-Action' type='submit'><span>Fortsett til DIFI</span></button>
+                    <button class='btn btn-Normal btn-Abort landing2'><span>Avbryt</span></button>
+                </div>
+                <!-- //Controls placeholder with two buttons -->
+            </form>
+            <!-- <div class='Box_footer-help'>
+  <a href='#'><span class='fa fa-question-circle'></span><span class='visuallyHidden'>Help</span></a>
+</div> -->
             </div>
         </section>
         <!-- NOTE: provider is added twice: above box title and below box (this one).
-The one above title is displayed on desktop only. the one below on mobile only. -->
+  The one above title is displayed on desktop only. the one below on mobile only. -->
         <div class='mi-Provider'><img src='../img/difiLogo.png' alt='Nav logo' /></div>
     </main>
     <!-- /build -->
@@ -165,8 +138,6 @@ The one above title is displayed on desktop only. the one below on mobile only. 
     <script type="text/javascript" src="../../js/toggleForm.js"></script>
     <script type="text/javascript" src="../../js/check-enable-save.js"></script>
     <script type="text/javascript" src="../../js/radio-enable-save.js"></script>
-    <script type="text/javascript" src="../../js/webauthn.js"></script>
-    <script type="text/javascript" src="../../js/check-enable-hide.js"></script>
     <script type="text/javascript" src="../../js/abort-buttons.js"></script>
 </body>
 
