@@ -7,18 +7,28 @@
     </div>
 </div>
 <p class="notification with-Icon with-Link" id="add-webauthn-message" class="fm-Message-warning add-device" style="display: none"></p>
-<div id="webauthn-add-device-box" class='Box_main Box_inside-footer' onclick="showControls()">
-    <ul class='ln-List ln-List-lowPriority'>
-        <li>
-            <a href="" id="register-device" class='ln-List_Element'>
-                                <span class='ln-List_Element_Logo'>
-                                    <img src='../img/key.png' alt='' />
-                                </span>
-                <div class='ln-List_Element_Service' id="webAuthn">
-                    <span class='ln-List_Element_Service_Name'>Smartenhet</span>
-                    <span class='ln-List_Element_Service_Info'>Trykk for å registrere din smartenhet</span>
-                </div>
-            </a>
-        </li>
+<div id="webauthn-added-device" style="display: none">
+    <ul class="ln-List" id="devices">
+        <li id="device"></li>
     </ul>
+    <div class='fm-Fields'>
+        <div class='fm-Field'>
+            <div class='label'>Din aktive smartenhet</div>
+            <ul class="ln-List ln-List_Digitalpost">
+                <li>
+                    <div class="ln-List_Element with-logo" href="#">
+                                            <span class="ln-List_Element_Logo">
+                    <img src="../img/key.png" alt="">
+                  </span>
+                        <div class="ln-List_Element_Service">
+                            <span class="ln-List_Element_Service_Info"><strong>Yubikey</strong>, registrert 09.07.18</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class='fm-form_link with-Link'>
+            <a href=''><span>Deaktivér smartenhet</span></a>
+        </div>
+    </div>
 </div>
