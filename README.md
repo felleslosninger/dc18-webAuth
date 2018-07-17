@@ -10,7 +10,7 @@ This branch explores the possibility of using WebAuthn together with Keycloak - 
 
 Using the Keycloak authentication server amounts to writing a custom Authenticator and a corresponding AuthenticatorFactory. The Authenticator implements the methods `authenticate()`, which sends a challenge to the client, and `action()`, which validates the client response and determines if the client is properly authenticated. The AuthenticatorFactory is required for Keycloak to be able to instantiate the Authenticator. In addition, some providers and corresponsing factories were created.
 
-We managed to get a working login-flow using U2F based on this format, and using a separate Keycloak server with Spring Security. It should be possible to extend this example to also work with WebAuthn, possibly by using the [WebAuthn4J library]() to perform the WebAuthn-specific device registration and authentication procedures.
+We managed to get a working login-flow using U2F based on this format, and using a separate Keycloak server with Spring Security. It should be possible to extend this example to also work with WebAuthn, possibly by using the [WebAuthn4J library](https://github.com/webauthn4j/webauthn4j) to perform the WebAuthn-specific device registration and authentication procedures. However, attempting to modify the code to make use of WebAuthn broke the project - currently it fails to build with dependency errors.
 
 ## Instructions
 
